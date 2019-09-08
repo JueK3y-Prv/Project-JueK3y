@@ -50,7 +50,7 @@ body {
 }
 
 #footer {
-	background-color: #adc0c4;
+	background-color: #a9bdc2;
 	padding: 50px 0;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 a {
-	color: #1abc9c;
+	color: #C1E9C2;
 	text-decoration: none;
 }
 a hover {
@@ -107,7 +107,7 @@ p {
 }
   	
 .post-date{
- color: #D2D2D2;
+ color: #828d8f;
   	
  font-size: 14px;
  font-weight: bold;
@@ -121,5 +121,7 @@ h1, h2, h3, h4 {
 }
 
 .post-content:nth-child(even) {
-	background-color: #C2D4D8;
+  background-color: #C2D4D8;
+  border: 1.5px black solid;
+  padding: 7px;
 }

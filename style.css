@@ -9,7 +9,6 @@ body {
   	}
 
 #header {
-	background-color: #1abc9c;
 	height: 150px;
 	line-height: 150px;
 }
@@ -51,7 +50,7 @@ body {
 }
 
 #footer {
-	background-color: #2f2f2f;
+	background-color: #DAE9D7;
 	padding: 50px 0;
 }
 

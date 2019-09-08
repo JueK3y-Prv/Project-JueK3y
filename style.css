@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 body {
 	margin: 0;
  color: #555;
   		
- font-family: 'Montserrat', sans-serif;
+ font-family: 'Ubuntu', sans-serif;
+ background-color: #C2D4D8;
   	}
 
 #header {
@@ -89,7 +90,7 @@ p {
 }
 
 .about {
-	max-width: 800px;
+ max-width: 800px;
  margin: 0 auto;
  padding: 60px 0;
  text-algin: center;

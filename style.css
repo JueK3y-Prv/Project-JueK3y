@@ -2,17 +2,19 @@
 
 body {
  margin: 0;
- color: #555;
-	
- background-color: #FFFFFF;		
+ color: #555;	
  font-family: 'Ubuntu', sans-serif;
   	}
 
-#titleimg {
+.oben {
 	background-image: linear-gradient(rgba(0,0,0,0
 .5), rgba(0,0,0,0.5))url(USA-Blue.jpg);
  background-position: center;
 	background-size: cover;
+}
+
+.unten {
+   background-color: #FFFFFF;		  
 }
 
 #header {
@@ -26,11 +28,14 @@ body {
 	
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+    
+    padding: 4px 8px;
+    border: 1.2px solid #fff;
 }
 
 #header a:hover {
-	color: #222;
-	text-decoration: underline;
+	color: #777;
+	text-decoration: blink;
 }
 
 #header-title {
@@ -54,12 +59,14 @@ body {
 
 .contact a{
   text-decoration : none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #000;
+  border: 2px solid #000;
   display: block;
   padding: 10px;
+  margin: -100px;
   width: 120px;
-  text-ali gn : center;
+  height: 1em;
+  text-align: center;
   z-index : 1;
 }
 
@@ -72,7 +79,7 @@ body {
   display: block;
   width: 0;
   height: 100%;
-  background: red;
+  background: #000;
   position: absolute;
   transition: .3s;
   z-index: -1;
@@ -105,7 +112,7 @@ body {
 .column {
 	min-width: 300px;
 	display: inline-block;
-	vertical-algin: top;
+    vertical-align: top;
 }
 
 a {
@@ -114,7 +121,7 @@ a {
 }
 a:hover {
 	color: #F6A623;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 p {
@@ -131,13 +138,13 @@ p {
  max-width: 800px;
  margin: 0 auto;
  padding: 60px 0;
- text-algin: center;
+ text-align: center;
 }
 
 .post-author img, .about-author img{
  width: 75px;
  height: 75px;
- vertical-algin: middle;
+ vertical-align: middle;
  border-radius: 50%;
 }
   		

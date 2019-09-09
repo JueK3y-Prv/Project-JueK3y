@@ -90,7 +90,7 @@ a {
 	color: #C5EDC6;
 	text-decoration: none;
 }
-a hover {
+a:hover {
 	color: #F6A623;
   text-decoration: underline;
 }
@@ -140,5 +140,5 @@ h1, h2, h3, h4 {
 .post-content:nth-child(even) {
   background-color: #E6E6E6;
   border: 1.5px #E6E6E6 solid;
-  padding: 7px;
+  padding: 1.2%;
 }

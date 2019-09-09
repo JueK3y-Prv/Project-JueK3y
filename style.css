@@ -44,15 +44,32 @@ body {
 	padding-left: 20px;
 }
 
+#contact {
+  width: 400px;
+  height: 100px;
+  padding: 10px;
+  border: 2px white solid;
+}
+
 .container{
 	max-width: 1000px;
 	margin: 0 auto;
+}
+
+#titleimg {
+  width: 100%;
+  height: auto;
 }
 
 #footer {
 	background-color: #a9bdc2;
 	padding: 50px 0;
 }
+
+#footer a:hover {
+	color: white;
+}
+
 
 #footer h4 {
 	color: white;
@@ -73,6 +90,7 @@ body {
 a {
 	color: #C5EDC6;
 	text-decoration: none;
+  
 }
 a hover {
 	color: #F6A623;

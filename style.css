@@ -9,7 +9,7 @@ body {
   	}
 
 #header {
-	height: 500px;
+	height: 150px;
 	line-height: 150px;
 }
 
@@ -51,10 +51,30 @@ body {
   border: 2px white solid;
 }
 
-#titleimg {
-  background:url(USA-Blue.jpg);
-  background-size: contain;
+
+.fullscreen {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover; 
+   width: 100vw;
+   height: 100vh;
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
 }
+
+@media (max-width: 1259px) {
+   .fullscreen { 
+      background-image: url("USA-Blue.jpg"); 
+   }
+}
+
+@media (min-width:1260px) {
+   .fullscreen { 
+      background-image: url("USA-Blue.jpg"); 
+   }
+}
+
 
 .container{
 	max-width: 1000px;

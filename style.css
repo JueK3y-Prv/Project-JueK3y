@@ -22,7 +22,7 @@ body {
 }
 
 #header a{
-	color: white;
+	color: #000;
 	text-decoration: none;
 	
 	text-transform: uppercase;
@@ -53,11 +53,30 @@ body {
 	padding-left: 20px;
 }
 
-#contact {
-  width: 400px;
-  height: 100px;
+.contact a{
+  text-decoration : none;
+  color: #fff;
+  border: 2px solid #fff;
+  display: block;
   padding: 10px;
-  border: 2px white solid;
+  width: 120px;
+  text-ali gn : center;
+  z-index : 1;
+}
+
+.contact a:hover {
+  border: 2px solid red;
+  transition: .3s;
+}
+
+.contact span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: red;
+  position: absolute;
+  transition: .3s;
+  z-index: -1;
 }
 
 .container{

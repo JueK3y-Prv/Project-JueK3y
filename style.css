@@ -4,7 +4,7 @@ body {
  margin: 0;
  color: #555;
 	
- background-color: #C2D4D8;		
+ background-color: #FFFFFF;		
  font-family: 'Ubuntu', sans-serif;
   	}
 
@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
 }
 
 .post-content:nth-child(even) {
-  background-color: #a9bdc2;
-  border: 1.5px #a9bdc2 solid;
+  background-color: #222222;
+  border: 1.5px #222222 solid;
   padding: 7px;
 }

@@ -3,20 +3,34 @@
   <head>
    <title>Home | JueK3y</title>
    <link rel="stylesheet" type="text/css" href="style.css">
+   <script type="text/javascript">
+function hover(ctrl,onoff) {
+  ctrl.style.borderColor=((onoff)?"#000":"#fff");
+  ctrl.style.color=((onoff)?"000000":"#000");
+
+  //ctrl.style.backgroundColor=((onoff)?"#ffffff":"#00000");
+  //ctrl.style.color=((onoff)?"#00000":"#ffffff");
+}
+</script>
   </head>
   <body>
-   <div id="titleimg">
+   <div class="oben">
     <div id="header">
      <div class="container">
       <a id="header-title" href="index.html">JueK3y</a>
        <ul id="header-nav">
         <li><a href="about.html">Über mich</a></li>
         <li><a href="404.html">Test-Page</a></li>
-        <li><a class="contact" href="mailto:juek3y@gmail.com">Kontakt</a><span></span></li>
+        <li><a class="contact" href="mailto:juek3y@gmail.com"  onmouseover="hover(this,1);" onmouseout="hover(this,0);">Kontakt<span></span></a>
+        </li>
        </ul>
      </div>
     </div>
+         <br>
+         <br>
+         <br>
    </div>
+   <div class="unten">
     <div id="content1">
     <div class="post-container">
      <div class="post">
@@ -64,5 +78,7 @@
      </div>
     </div>
    </div>
-  </body>
- </html>
+  </div>
+ </div>
+ </body>
+</html>

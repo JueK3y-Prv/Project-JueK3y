@@ -11,7 +11,6 @@ body {
 #header {
 	height: 150px;
 	line-height: 150px;
-	background:url(USA-Blue.jpg);
 }
 
 #header a{
@@ -52,6 +51,11 @@ body {
   border: 2px white solid;
 }
 
+#titleimg {
+  background:url(USA-Blue.jpg);
+  background-size: cover;
+}
+
 .container{
 	max-width: 1000px;
 	margin: 0 auto;
@@ -65,7 +69,6 @@ body {
 #footer a:hover {
 	color: white;
 }
-
 
 #footer h4 {
 	color: white;
@@ -86,7 +89,6 @@ body {
 a {
 	color: #C5EDC6;
 	text-decoration: none;
-  
 }
 a hover {
 	color: #F6A623;

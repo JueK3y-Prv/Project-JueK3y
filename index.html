@@ -5,20 +5,39 @@
    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-   <div class="fullscreen">
-    <div class="label">
-     <div id="header">
-      <div class="container">
-       <a id="header-title" href="index.html">JueK3y</a>
+   <style>
+.fullscreen {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover; 
+   width: 100vw;
+   height: 100vh;
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+}
+@media (max-width: 1259px) {
+   .fullscreen { 
+      background-image: url("image-980.jpg"); 
+   }
+}
+
+@media (min-width:1260px) {
+   .fullscreen { 
+      background-image: url("image-1960.jpg"); 
+   }
+}
+   </style>
+    <div id="header">
+     <div class="container">
+      <a id="header-title" href="index.html">JueK3y</a>
        <ul id="header-nav">
         <li><a href="about.html">Über mich</a></li>
         <li><a href="404.html">Test-Page</a></li>
         <li><a id="contact" href="mailto:juek3y@gmail.com">Kontakt</a></li>
        </ul>
-      </div>
      </div>
     </div>
-   </div>
    <div id="content1">
     <div class="post-container">
      <div class="post">

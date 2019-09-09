@@ -8,6 +8,11 @@ body {
  font-family: 'Ubuntu', sans-serif;
   	}
 
+#titleimg {
+	background-image: url(USA-Blue.jpg);
+	background-size: 300px 200px;
+}
+
 #header {
 	height: 150px;
 	line-height: 150px;

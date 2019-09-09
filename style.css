@@ -62,7 +62,7 @@ body {
 }
 
 #footer {
-	background-color: #a9bdc2;
+	background-color: #222222;
 	padding: 50px 0;
 }
 
@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
 }
 
 .post-content:nth-child(even) {
-  background-color: #222222;
-  border: 1.5px #222222 solid;
+  background-color: #E6E6E6;
+  border: 1.5px #E6E6E6 solid;
   padding: 7px;
 }

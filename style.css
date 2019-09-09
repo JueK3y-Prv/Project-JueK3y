@@ -53,7 +53,7 @@ body {
 
 #titleimg {
   background:url(USA-Blue.jpg);
-  background-size: cover;
+  background-size: contain;
 }
 
 .container{

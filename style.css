@@ -17,12 +17,85 @@ body {
    background-color: #FFFFFF;		  
 }
 
-#header {
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+    @import url(https://fonts.google.com/specimen/Julius+Sans+One);
+    @import url(https://fonts.google.com/specimen/Josefin+Slab);
+
+    body {
+     margin: 0;
+     color: #555;
+     font-family: 'Ubuntu', sans-serif;
+        }
+
+    .oben {
+        background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Wasser2Ready.jpg);
+        background-position: center;
+        background-size: cover;
+        background-color: #ccc;
+        height: 1000px;
+        background-repeat: no-repeat;
+        position: relative;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+
+    .unten {
+       background-color: #FFFFFF;	
+       font-family: 'Ubuntu', sans-serif;
+    }
+
+    #header {
+        height: 150px;
+        line-height: 150px;
+    }
+
+    #header a{
+        color: #fff;
+        text-decoration: none;
+
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }   
+
+    #header a:hover {
+        text-decoration: blink;
+        color: rgba(229, 229, 229, 0.7);
+    }
+
+    #header-title {
+        display: block;
+        float: left;
+
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Josefin Slab', sans-serif;
+    }
+
+    #header-tagline {
+        display: ;
+        float: left;
+        line-height: auto;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Josefin Slab', sans-serif;
+    }
+
+    #header-nav {
+        display: block;
+        float: right;
+        margin-top: 0;
+    }
+
+    #header-nav li {
+        display: inline;
+        padding-left: 20px;
+    }
+
+    #header2 {
 	height: 150px;
 	line-height: 150px;
-}
+    }
 
-#header a{
+    #header2 a{
 	color: #000;
 	text-decoration: none;
 	
@@ -31,31 +104,128 @@ body {
     
     padding: 4px 8px;
     border: 1.2px solid #fff;
-}
+    }
 
-#header a:hover {
+    #header2 a:hover {
 	color: #777;
 	text-decoration: blink;
-}
+    }
 
-#header-title {
-	display: block;
-	float: left;
-	
-	font-size: 20px;
-	font-weight: bold;
-}
+    .contact a{
+      text-decoration : none;
+      color: #000;
+      border: 2px solid #000;
+      display: block;
+      padding: 10px;
+      margin: -100px;
+      width: 120px;
+      height: 1em;
+      text-align: center;
+      z-index : 1;
+    }
 
-#header-nav {
-	display: block;
-	float: right;
-	margin-top: 0;
-}
+    .contact a:hover {
+      border: 2px solid red;
+      transition: .3s;
+    }
 
-#header-nav li {
-	display: inline;
-	padding-left: 20px;
-}
+    .contact span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #000;
+      position: absolute;
+      transition: .3s;
+      z-index: -1;
+    }
+
+    .container{
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    #footer {
+        background-color: #222222;
+        padding: 50px 0;
+    }
+
+    #footer a:hover {
+        color: white;
+    }
+
+    #footer h4 {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    #footer p {
+        color: white;
+    }
+
+    .column {
+        min-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    a {
+        color: #C5EDC6;
+        text-decoration: none;
+    }
+
+    a:hover {
+      color: #F6A623;
+      text-decoration: none;
+    }
+
+    p {
+     line-height: 1.5;
+    }
+
+    .post {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 60px 0;
+    }
+
+    .about {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 60px 0;
+     text-align: center;
+    }
+
+    .post-author img, .about-author img{
+     width: 75px;
+     height: 75px;
+     vertical-align: middle;
+     border-radius: 50%;
+    }
+
+    .post-author span, .about-author span{
+     margin-left: 16px;
+    }
+
+    .post-date{
+     color: #828d8f;
+
+     font-size: 14px;
+     font-weight: bold;
+
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+    }
+
+    h1, h2, h3, h4 {
+     color: #333;
+    }
+
+    .post-content:nth-child(even) {
+      background-color: #E6E6E6;
+      border: 1.5px #E6E6E6 solid;
+      padding: 1.2%;
+    }
 
 .contact a{
   text-decoration : none;

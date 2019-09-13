@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+ height: 500px;
+ background-image: linear-gradient(to bottom, pink, purple);
+	font-family: sans-serif;
+}
+.banner-text {
+	width: 80%;
+	color: #fff;
+	margin: 16% auto 0;
+}
+.banner-text h1 {
+	font-size: 60px;
+}
+.banner-text p {
+	font-size: 16px;
+	margin: 40px 0 50px;
+}
+.banner-text ul {
+	list-style-type: none;
+	display: inline-flex;
+}
+.banner-text ul li {
+	margin-right: 25px;
+	position: relative;
+}
+.banner-text ul li a {
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #fff;
+	display: block;
+	padding: 10px;
+	width: 120px;
+	text-align: center;
+	z-index: 1;
+}
+.banner-text ul li a:hover {
+	border: 2px solid black;
+	transition: .3s;
+}
+.banner-text ul li span {
+	display: block;
+	width: 0;
+	height: 100%;
+	background: black;
+	top: 0;
+	position: absolute;
+	transition: .3s;
+	z-index: -1;
+}
+.banner-text ul li:hover span {
+	width: 100%;
+}

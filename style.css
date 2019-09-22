@@ -16,7 +16,7 @@
     button {
   padding: 8px 16px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   width: 120px;
   background: linear-gradient(90deg, #888 50%, #fff 50%); /*#888 zu black*/
   -webkit-background-clip: text;
@@ -123,18 +123,19 @@ span {
         line-height: 140px;
     }
 
-    #header a{
+    #header a, a:after {
         color: #fff;
         text-decoration: none;
 
         text-transform: uppercase;
         letter-spacing: 0.1em;
+        transition: .5s;
     }   
 
     #header a:hover {
         text-decoration: blink;
         color: rgba(229, 229, 229, 0.7);
-	 transition: .5s;
+        transition: .5s;
     }
 
     #header-title {
@@ -168,36 +169,25 @@ span {
 	line-height: 140px;
     }
 
-    #header2 a{
+    #header2 a, a:after {
 	color: #000;
 	text-decoration: none;
 	
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    transition: .5s;
     }
 
     #header2 a:hover {
 	color: #777;
-	text-decoration: blink;
-	transition: .5s;
+    text-decoration: blink;
+    transition: .5s;
     }
 
     .container{
         max-width: 1700px;
         margin: 0 auto;
     }
-    
-
-    .mail a{
-    	color: #555;
-    	text-decoration: none;
-    }
-
-    .mail a:hover{
-    	color: #999;
-    	text-decoration: blink;
-    }
-
 
     #footer {
         background-color: #222222;

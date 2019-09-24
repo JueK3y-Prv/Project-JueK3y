@@ -227,12 +227,12 @@ p {
   line-height: 1.6;
 }
 
-.kontakt {
+a{
   color:#000;
   text-decoration: none;
 }
 
-.kontakt:hover {
+a:hover{
   color: lightgray;
   text-decoration: none;
 }

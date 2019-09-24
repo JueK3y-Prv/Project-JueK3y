@@ -31,16 +31,29 @@ nav {
     font-family: 'Poppins', sans-serif;
 }
 
-.logo a{
+.logo {
     color: #fff;
     margin-top: 50px;
     margin-left: -300px;
     font-family: 'Poiret One', Georgia, Times, serif;
     font-size: 49px;
-    line-height: 65px;
+    line-height: 40px;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.logo a:hover{
+  color: lightgray;
+  text-decoration: none;
+  transition: .3s;
 }
 
 .nav-links {
@@ -61,6 +74,10 @@ nav {
     font-weight: bold;
     font-size: 14px;
     transition: .3s;
+}
+.nav-links a:hover {
+  color: lightgray;
+  transition: .3s;
 }
 
 .burger {
@@ -210,12 +227,12 @@ p {
   line-height: 1.6;
 }
 
-a {
+.kontakt {
   color:#000;
   text-decoration: none;
 }
 
-a:hover {
+.kontakt:hover {
   color: lightgray;
   text-decoration: none;
 }

@@ -108,9 +108,9 @@ nav {
     .nav-links {
         position: absolute;
         right: 300px;
-        height: 92vh;
-        top: 4vh;
-        background: white;
+        height: 100.5vh;
+        top: -6vh;
+        background: black;
         display: flex;
         flex-direction: column;
         align-items: center;

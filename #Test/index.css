@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins' !important;
+}
+
+body {
+      background: url(title.jpg) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.logo {
+      font-family: 'Poiret One', Georgia, Times, serif;
+      font-size: 20px;
+      line-height: 30px;
+      float: left;
+      margin: 1.2em 0 0 2.2em;
+      color: #fff;
+}
+
+.nav {
+      line-height: 40px;
+      margin: 1.2em;
+      position: absolute;
+      right: 0;
+}
+
+.nav ul li {
+      list-style: none;
+      display: inline-block;
+      color: #fff;
+      padding-right: 36px;
+}
+
+.social-media {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+}
+
+.social-media ul li {
+      list-style: none;
+      color: #fff;
+      padding-top: 20px;
+}
+
+.side-strip {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -4em;
+      transform: rotate(90deg);
+      color: #fff;
+      letter-spacing: 4px;
+}
+
+.myBtn {
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+ button {
+      display: block;
+      padding: 16px 40px;
+      font-family: Poppins;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 6px;
+      color: #fff;
+      border: 1.5px solid #fff;
+      text-transform: uppercase;
+      outline: none;
+      overflow: hidden;
+      background: none;
+      z-index: 1;
+      cursor: crosshair;
+      transition: 0.8s ease-out;
+ }
+ 
+ .myBtn:hover {
+      color: #101010;
+      cursor: crosshair;
+ }
+ 
+ .myBtn:before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      transition: top 0.8s ease-out;
+ }
+ 
+ .myBtn:hover:before {
+      top: 0;
+ }
+ 
+.overlay {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+}
+
+.overlay img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      height: 100vh;
+      padding: 0;
+      background-position: center;
+}
+
+.overlay h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 25px;
+      font-weight: bolder;
+      letter-spacing: 10px;
+}
+
+.nav a, .social-media a {
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+}
+
+.nav a:hover, .social-media a:hover {
+      color: lightgray;
+      text-decoration: none;
+      transition: .3s;
+}

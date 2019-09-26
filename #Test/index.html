@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="shortcut icon" href="LOGO_tran.png" type="image/png">
+      <title>Start | JueK3y</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="index.css">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+      <!-- font-awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+      <!-- greensock -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body>
+
+      <div class="overlay">
+            <!-- <img src="LOGO_full.png"> -->
+            <h1>Live your life</h1>
+      </div>
+
+      <div class="wrapper">
+            <div class="logo">JueK3y</div>
+            <div class="nav">
+                  <ul>
+                        <li><a href="#bio">Bio</a></li>
+                        <li><a href="galerie_de.html">Galerie</a></li>
+                        <li><a href="project_de.html">Projekte</a></li>
+                        <li><a href="contact_de.html">Kontakt</a></li>
+                  </ul>
+            </div>
+            <div class="social-media">
+                  <ul>
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <li><a href="https://www.instagram.com/juek3y"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/juek3y"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+            </div>
+            <div class="side-strip">
+                  <span>THE ART OF VISUALIZATION</span>
+            </div>
+      <button class="myBtn"><c href="galerie_de.html">EXPLORE</c></button>
+      </div>
+
+
+      <script type="text/javascript">
+
+      TweenMax.to(".overlay h1", 2, {
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.to(".overlay", 2, {
+            delay: 0.9,
+            top: "-100%",
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".logo", 1, {
+            delay: 2.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.staggerFrom(".nav ul li", 1, {
+            delay: 2.4, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.staggerFrom(".social-media ul li", 1, {
+            delay: 2.4, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.from(".side-strip", 2, {
+            delay: 2.4,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".myBtn", 2, {
+            delay: 2.4,
+            opacity: 0,
+            y: -40,
+            ease: Expo.easeInOut
+      })
+
+      /* TweenMax.from(".row", 2, {
+            delay: 2.4,
+            opacity: 0,
+            x: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".row h6", 2, {
+            delay: 3,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".row p", 2, {
+            delay: 3.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header h1", 2, {
+            delay: 3.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header p", 2, {
+            delay: 3.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".header button", 2, {
+            delay: 3.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      }) */
+      </script>
+</body>
+</html>

@@ -19,7 +19,6 @@ body {
       line-height: 30px;
       float: left;
       margin: 1.2em 0 0 2.2em;
-      color: #fff;
 }
 
 .nav {
@@ -143,13 +142,13 @@ body {
       letter-spacing: 10px;
 }
 
-.nav a, .social-media a {
+.nav a, .social-media a, .logo a{
       color: white;
       text-decoration: none;
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover {
+.nav a:hover, .social-media a:hover, .logo a:hover{
       color: lightgray;
       text-decoration: none;
       transition: .3s;

@@ -39,6 +39,7 @@ body {
 .social-media {
       position: absolute;
       top: 50%;
+      left: 1%;
       transform: translateY(-50%);
 }
 
@@ -58,6 +59,13 @@ body {
       letter-spacing: 4px;
 }
 
+.myBtn {
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
 .myBtn a{
       text-decoration: none;
       color: #fff;
@@ -66,13 +74,6 @@ body {
 .myBtn a:hover{
       text-decoration: none;
       color: #000;
-}
-
-.myBtn {
-      position: absolute;
-      bottom: 3%;
-      left: 50%;
-      transform: translate(-50%, -50%);
 }
 
  button {
@@ -266,6 +267,9 @@ body {
       .nav-btn i:nth-child(3) {
             margin-top: 4px;
       }
+      .Line {
+            display: none;
+      }
 }
 
 #nav:checked + .nav-btn {
@@ -302,3 +306,12 @@ body {
 .hidden {
       display: none;
 }
+
+/* .Line li {
+      margin-left: 7.5%;
+      display: block;
+      height: 100vh;
+      width: 0px;
+      border: 0.5px solid rgba(230, 230, 230, 0.2);
+      background: none;
+} */

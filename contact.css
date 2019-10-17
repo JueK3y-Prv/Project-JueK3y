@@ -253,7 +253,7 @@ a:hover {
 .mail a{
   padding: 200px;
   color: black;
-  margin: 0 auto;
+  text-align: center;
   transition: .3s;
   text-decoration: none;
   transition: .3s;

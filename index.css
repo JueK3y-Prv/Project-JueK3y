@@ -158,6 +158,16 @@ body {
       display: none;
 }
 
+@media screen and (max-height: 640) {
+      .side-strip {
+            display: none;
+      }
+      button {
+            padding: 10px 20px;
+            right: 50%;
+      }
+}
+      
 @media screen and (max-width: 768px) {
       .social-media {
             display: none;

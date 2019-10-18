@@ -245,7 +245,7 @@ a:hover {
 
 .mail {
   margin-top: 11%;
-  text-algin: center;
+  text-align: center;
   font-weight: 500;
 }
 
@@ -259,6 +259,14 @@ a:hover {
 .mail a:hover {
   color: #888;
   transition: .3s;
+}
+
+hr {
+  width: 810px; 
+  border: 0.1px solid #d4d4d4;
+  height: 1px;
+  margin-left: 29%;
+  margin-right: 50%
 }
 
 #footer {

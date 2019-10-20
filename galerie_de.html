@@ -9,9 +9,41 @@
     <link rel="stylesheet" href="galerie.css">
     <link rel="shortcut icon" href="LOGO_tran.png" type="image/png">
     <title>Galerie | JueK3y</title>
+    <style>
+            .loader_bg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                z-index: 4;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+            }
+            .loader-circle {
+                border-top: 1px solid #00212b;
+                border-radius: 50%;
+                width: 160px;
+                height: 160px;
+                animation:spin 1s linear infinite;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            </style>
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader-circle"></div>
+    </div>
     <div class="wrapper" id="parallax">
         <div class="logo"><a href="index.html">JueK3y</a></div>
             <div class="nav">
@@ -69,5 +101,11 @@
    </div>
   </div>
   <script src="parallax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  setTimeout(function() {
+      $('.loader_bg').fadeToggle();
+  }, 1500);
+  </script>
 </body>
 </html>

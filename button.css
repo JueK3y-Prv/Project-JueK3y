@@ -55,9 +55,7 @@ button a:before
  background-size: 400%;
  border-radius: 40px;
  opacity: 0;
- transition: 0.5s;
-
- 
+ transition: 0.5s; 
 }
 button a:hover:before
 {
@@ -65,4 +63,10 @@ button a:hover:before
  filter: blur(20px);
  opacity:1;
  animation: animate 5s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    button a {
+        top: 75%;
+    }
 }

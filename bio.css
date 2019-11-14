@@ -2,6 +2,12 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url("https://use.typekit.net/mfh5xwg.css");
+@font-face {
+  font-family: 'Dreamlight';
+  src: url('fonts/Dreamlight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
     margin: 0px;
@@ -15,33 +21,36 @@
     height: 83vh;
     background-color: white;
     text-align: center;
-    font-family: adobe-garamond-pro;
-    font-weight: 500;
-    font-style: normal;
     font-size: 36px;
     letter-spacing: 7px;
     line-height: 5px;
+    
 }
 
+
 .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /*min-height: 8vh;*/
-    background-color: transparent;
-    font-family: 'Poppins', sans-serif;
-    line-height: 40px;
-    margin: 1.2em;
-    position: absolute;
-    right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*min-height: 8vh;*/
+  background-color: transparent;
+  line-height: 40px;
+  margin: 2.4em;
+  margin-right: 5.2em;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 .logo {
-  font-family: 'Poiret One', Georgia, Times, serif;
-  font-size: 20px;
+  font-family: 'Dreamlight', Georgia, Times, serif;
+  font-size: 24px;
   line-height: 30px;
   float: left;
-  margin: 1.2em 0 0 2.2em;
+  margin: 2.2em;
+  margin-left: 5.2em;
+  cursor: pointer;
 }
 
 .nav ul li {
@@ -138,6 +147,7 @@ hr {
   padding: 50px;
   bottom: 50%;
   margin-left: 500px;
+  cursor: crosshair;
 }
 
 #footer a {
@@ -241,7 +251,6 @@ hr {
         display: block;
         width: 48px;
         height: 48px;
-        cursor: pointer;
         z-index: 9999;
         border-radius: 50%;
   }

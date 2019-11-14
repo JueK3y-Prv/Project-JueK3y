@@ -23,13 +23,17 @@
     line-height: 5px;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    /*min-height: 8vh;*/
     background-color: transparent;
     font-family: 'Poppins', sans-serif;
+    line-height: 40px;
+    margin: 1.2em;
+    position: absolute;
+    right: 0;
 }
 
 .logo {
@@ -38,13 +42,6 @@ nav {
   line-height: 30px;
   float: left;
   margin: 1.2em 0 0 2.2em;
-}
-
-.nav {
-  line-height: 40px;
-  margin: 1.2em;
-  position: absolute;
-  right: 0;
 }
 
 .nav ul li {

@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@font-face {
+  font-family: 'Dreamlight';
+  src: url('fonts/Dreamlight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
     margin: 0px;
@@ -26,27 +32,26 @@
 }
 
 .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /*min-height: 8vh;*/
-    background: transparent;
-    font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*min-height: 8vh;*/
+  background-color: transparent;
+  line-height: 40px;
+  margin: 2.4em;
+  margin-right: 5.2em;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
 }
 
 .logo {
-  font-family: 'Poiret One', Georgia, Times, serif;
-  font-size: 20px;
+  font-family: 'Dreamlight', Georgia, Times, serif;
+  font-size: 24px;
   line-height: 30px;
   float: left;
-  margin: 1.2em 0 0 2.2em;
-}
-
-.nav {
-  line-height: 40px;
-  margin: 1.2em;
-  position: absolute;
-  right: 0;
+  margin: 2.2em;
+  margin-left: 5.2em;
 }
 
 .nav ul li {
@@ -138,7 +143,6 @@
         display: block;
         width: 48px;
         height: 48px;
-        cursor: pointer;
         z-index: 9999;
         border-radius: 50%;
   }

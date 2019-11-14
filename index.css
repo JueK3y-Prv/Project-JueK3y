@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
-
+@font-face {
+      font-family: 'Dreamlight';
+      src: url('fonts/Dreamlight.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
 html, body {
       margin: 0;
       padding: 0;
@@ -12,21 +18,27 @@ body {
       background: url(title2.jpg) no-repeat 50% 50%;
       background-size: cover;
 }
-
 .logo {
-      font-family: 'Poiret One', Georgia, Times, serif;
-      font-size: 20px;
+      font-family: 'Dreamlight', Georgia, Times, serif;
+      font-size: 24px;
       line-height: 30px;
       float: left;
-      margin: 1.2em 0 0 2.2em;
-}
+      margin: 1.5em 0 0 2.2em;
+    }
+    
 
-.nav {
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      /*min-height: 8vh;*/
+      background-color: transparent;
       line-height: 40px;
-      margin: 1.2em;
+      margin: 1.7em;
+      font-size: 18px;
       position: absolute;
       right: 0;
-}
+  }
 
 .nav ul li {
       list-style: none;
@@ -38,7 +50,7 @@ body {
 .social-media {
       position: absolute;
       top: 50%;
-      left: 1%;
+      left: 1.5%;
       transform: translateY(-50%);
 }
 

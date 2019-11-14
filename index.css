@@ -185,9 +185,9 @@ body {
       .social-media {
             display: none;
       }
-      .logo {
-            padding: 0;
-      }
+        .logo {
+  	margin: 1em 0 0 1.5em;
+  }
       .overlay {
             text-align: center;
       }

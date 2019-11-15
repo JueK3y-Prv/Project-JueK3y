@@ -21,14 +21,17 @@
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
       <!-- greensock -->
+      <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 </head>
 <body>
-      <div class="overlay">
-            <!-- <img src="LOGO_full.png"> -->
-            <h1>Live your life</h1>
-      </div>
 
+      <div class="overlay1">
+            <!-- <img src="LOGO_full.png"> -->
+            <div class="data"><h1>Live your life</></h1></div>
+      </div>
+      <div class="bg"></div>
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
             <div class="nav">
@@ -60,162 +63,162 @@
             <div class="side-strip">
                   <span>THE ART OF VISUALIZATION</span>
             </div>
-      <a href="galerie_de.html"><button class="myBtn" /*onclick="fadeOut()"*/>EXPLORE</button></a>
+      <!-- <a href="galerie_de.html"> --> <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
       </div>
 
+      <!-- <div class="overlay-2"></div>
+
+      <div class="content">
+            <h1>Ich teste gerade etwas aus. Und du?</h1>
+      </div> -->
 
       <script type="text/javascript">
 
-      /*      function fadeOut() {                    //Bedarfsfunktion, wenn Title Inhalt haben soll
-            TweenMax.to(".overlay h1", 2, {
-            delay: 0.8,
+            const text = baffle(".overlay1 h1");
+            text.set({
+                  characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+                  speed: 95
+            });
+            text.start();
+            text.reveal(3700);
+      
+            </script>
+
+      <script type="text/javascript">     //Fade in
+
+      TweenMax.to(".overlay1 h1", 2, {
+            delay: 1.5,
             opacity: 0,
             y: -60,
             ease: Expo.easeInOut
       })
 
-      TweenMax.to(".overlay", 2, {
-            delay: 0.8,
+      TweenMax.to(".overlay1", 2, {
+            delay: 2.1,
             top: "-100%",
             ease: Expo.easeInOut
       })
 
-      TweenMax.to(".logo", 1, {
-            delay: 0.8,
+      TweenMax.from(".bg", 1, {
+            delay: 2.1,
             opacity: 0,
             y: 20,
-      })
-
-      TweenMax.to(".nav-btn", 1, {
-            delay: 0.8,
-            opacity: 0,
-            x: 20,
-      })
-
-      TweenMax.to(".nav ul li", 1, {
-            delay: 0.8, 
-            opacity: 0, 
-            y: 20, 
-            ease: Power2.easeInOut
-      }, 0.2)
-
-      TweenMax.to(".social-media ul li", 1, {
-            delay: 0.4, 
-            opacity: 0, 
-            y: 20, 
-            ease: Power2.easeInOut
-      }, 0.2)
-
-      TweenMax.to(".side-strip", 1, {
-            opacity: 0,
-            y: 40,
-            delay: 0.4,
-      })
-
-      TweenMax.to(".myBtn", 2, {
-            opacity: 0,
-            y: 40,
-            delay: 0,
-      })
-      }     */
-
-
-
-      TweenMax.to(".overlay h1", 2, {
-            opacity: 0,
-            y: -60,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.to(".overlay", 2, {
-            delay: 0.9,
-            top: "-100%",
             ease: Expo.easeInOut
       })
 
       TweenMax.from(".logo", 1, {
-            delay: 2.4,
+            delay: 3.1,
             opacity: 0,
             y: 20,
             ease: Expo.easeInOut
       })
 
-      TweenMax.from(".nav-btn", 1, {
-            delay: 2.6,
-            opacity: 0,
-            x: 20,
-            ease: Expo.easeInOut
-      })
-
       TweenMax.staggerFrom(".nav ul li", 1, {
-            delay: 2.4, 
+            delay: 3.3, 
             opacity: 0, 
             y: 20, 
             ease: Expo.easeInOut
       }, 0.2)
 
       TweenMax.staggerFrom(".social-media ul li", 1, {
-            delay: 2.4, 
+            delay: 3.3, 
             opacity: 0, 
             y: 20, 
             ease: Expo.easeInOut
       }, 0.2)
 
       TweenMax.from(".side-strip", 2, {
-            delay: 2.4,
+            delay: 3.3,
             opacity: 0,
             y: 40,
             ease: Expo.easeInOut
       })
 
       TweenMax.from(".myBtn", 2, {
-            delay: 2.4,
+            delay: 3.3,
             opacity: 0,
             y: -40,     //y: 40
             ease: Expo.easeInOut
       })
-
-      /* TweenMax.from(".row", 2, {
-            delay: 2.4,
+      
+      TweenMax.from(".nav-btn", 1, {
+            delay: 3.5,
             opacity: 0,
-            x: 40,
+            x: 20,
             ease: Expo.easeInOut
       })
 
-      TweenMax.from(".row h6", 2, {
-            delay: 3,
-            opacity: 0,
-            y: 40,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".row p", 2, {
-            delay: 3.2,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".header h1", 2, {
-            delay: 3.2,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".header p", 2, {
-            delay: 3.4,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".header button", 2, {
-            delay: 3.6,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      }) */
       </script>
+      
+      <script>                            //Fade out
+      
+      function fadeOut() {
+
+      TweenMax.to(".myBtn", 1, {
+     y: -100,
+     opacity: 0
+      });
+
+      TweenMax.to(".side-strip", 2, {
+     delay: 0.5,
+     opacity: 0,
+     y: -40,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".social-media ul li", 2, {
+     delay: 0.7,
+     opacity: 0,
+     y: -20,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".nav ul li", 2, {
+     delay: 0.7,
+     opacity: 0,
+     y: -20,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".logo", 2, {
+     delay: 0.9,
+     opacity: 0,
+     y: -40,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".bg", 2, {
+     ease: Power2.easeInOut
+      });
+
+      TweenMax.to(".bg", 2, {
+     delay: 2.6,
+     top: "-110%",
+     ease: Expo.easeInOut
+      });
+      
+      TweenMax.to(".overlay-2", 2, {
+     delay: 3,
+     top: "-110%",
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".content", 2, {
+     delay: 3.2,
+     opacity: 0,
+     ease: Power2.easeInOut
+      });
+
+      TweenMax.to(".content", 2, {
+     opacity: 1,
+     y: -300,
+     delay: 3.2,
+     ease: Power2.easeInOut
+      });
+
+      }
+
+      </script>
+
 </body>
 </html>

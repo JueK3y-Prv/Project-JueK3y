@@ -16,6 +16,7 @@
 }
 
 .wrapper {
+    margin-top: 10%;;
     padding: 0;
     width: 100%;
     height: 83vh;
@@ -26,7 +27,11 @@
     line-height: 5px;
     
 }
-
+button {
+  display: block;
+  outline: none;;
+  overflow: hidden;
+}
 
 .nav {
   display: flex;
@@ -178,6 +183,7 @@ hr {
     height: 78vh;
     font-size: 30px;
     letter-spacing: 4px;
+    margin-top: 15%;
   }
   .logo {
   	margin: 1em 0 0 1.5em;

@@ -4,7 +4,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="description" content="JueK3y´s Website | Fotografie | Design | Coding">
       <link rel="shortcut icon" href="LOGO_tran.png" type="image/png">
       <title>Start | JueK3y</title>
 
@@ -30,9 +29,9 @@
 
       <div class="overlay1">
             <!-- <img src="LOGO_full.png"> -->
-            <div class="data"><h1>Live your life</></h1></div>
+            <div class="data"><h1>Live your life</h1></div>
       </div>
-      <div class="bg"></div>
+      <div class="bg">
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
             <div class="nav">
@@ -60,18 +59,24 @@
             </div>
             <div class="Line">
                   <li></li>
+                  <li></li>
             </div>
             <div class="side-strip">
                   <span>THE ART OF VISUALIZATION</span>
             </div>
-      <!-- <a href="galerie_de.html"> --> <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+      <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
       </div>
+</div>
+      <div class="overlay-2"></div>
 
-      <!-- <div class="overlay-2"></div>
-
-      <div class="content">
-            <h1>Ich teste gerade etwas aus. Und du?</h1>
-      </div> -->
+      <div class="bio_fg">
+      <div id="bio">
+            <h1>Psscht!</h1>   
+            <p>
+             Hier entsteht noch was!<br>Komm später wieder.</p>
+            <!-- <a href="galerie_de.html">Galerie</a> -->
+      </div>
+      </div>
 
       <script type="text/javascript">
 
@@ -97,13 +102,6 @@
       TweenMax.to(".overlay1", 2, {
             delay: 2.1,
             top: "-100%",
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".bg", 1, {
-            delay: 2.1,
-            opacity: 0,
-            y: 20,
             ease: Expo.easeInOut
       })
 
@@ -193,19 +191,19 @@
       });
 
       TweenMax.to(".bg", 2, {
-     delay: 2.6,
-     top: "-110%",
+     delay: 1.5,
+     y: "-110%",
      ease: Expo.easeInOut
       });
-      
+
       TweenMax.to(".overlay-2", 2, {
-     delay: 3,
+     delay: 1.9,
      top: "-110%",
      ease: Expo.easeInOut
       });
 
       TweenMax.from(".content", 2, {
-     delay: 3.2,
+     delay: 2.5,
      opacity: 0,
      ease: Power2.easeInOut
       });
@@ -213,7 +211,7 @@
       TweenMax.to(".content", 2, {
      opacity: 1,
      y: -300,
-     delay: 3.2,
+     delay: 2.5,
      ease: Power2.easeInOut
       });
 

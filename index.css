@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-      background: url(White.png) no-repeat 50% 50%;
+      background: url(White_Dark.png) no-repeat 50% 50%;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -179,7 +179,6 @@ body {
       transform: translate(0, -50%);
       text-align: center;
       letter-spacing: 7px;
-      background-color: rgba(0,0,0,0.4);
  }
  
  #bio h1 {

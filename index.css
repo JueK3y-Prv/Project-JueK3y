@@ -213,7 +213,7 @@ body {
 }
 
 .nav a:hover, .social-media a:hover, .logo a:hover{
-      color: lightgray;
+      color: rgb(197, 196, 196);
       text-decoration: none;
       transition: .3s;
 }
@@ -238,7 +238,7 @@ body {
             display: none;
       }
       button {
-            padding: 10px 20px;
+            padding: 10px 22.2px;
             right: 50%;
       }
 }

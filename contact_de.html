@@ -38,28 +38,35 @@
                     </div>
             </div>
     <div class="bottom">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
   <div id="content" class="wrapper">
    <div class="container">
        <p>
-         Fragen oder Anmerkungen? <br>Wenn ja, bist du hier genau richtig!</p>
+         Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
       </div>
-      <div class="mail">
-          <a href="mailto:juek3y@gmail.com">juek3y@gmail.com</a>
-      </div>
+      <form method="POST" data-netlify="true">
+            <div class="fields">
+                <div class="field half">
+                    <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="field half">
+                    <input type="email" name="email" id="email" placeholder="E-Mail" />
+                </div>
+                <div class="field">
+                    <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
+                </div>
+                <!--Hochladen einer Datei-->
+                <!--<div class="field">
+                    <input type="file" name="myfile" id="myfile" placeholder="Datei hochladen" rows="7" />
+                </div>-->
+                <!--Spam-Filter-->
+                <div class="field">
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Verschicken" class="button_primary" /></li>
+            </ul>
+        </form>
      </div>
     </div>
     <hr>

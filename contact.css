@@ -42,9 +42,9 @@
 }
 
 .wrapper {
-    padding: 0;
+    padding: 13rem 0 0;
     width: 100%;
-    height: 73vh;
+    height: 100vh;
     background-color: white;
     text-align: center;
     font-size: 36px;
@@ -148,7 +148,6 @@ h1, h2, h3, h4 {
 }
 
 p {
-
   line-height: 1.6;
 }
 
@@ -187,7 +186,7 @@ a:hover {
 }
 
 hr {
-  width: 810px;     /*810px*/
+  width: 810px;
   border: 0.1px solid #d4d4d4;
   height: 1px;
   margin-left: 29%;
@@ -234,13 +233,14 @@ hr {
   .logo {
   	margin: 1em 0 0 1.5em;
   }
-  .mail {
-    margin-top: 30%;
-  }
   hr {
-    width: 50%;    /*53,2194%*/
+    margin-top: 110%;
+    width: 46.8%;    /*53,2194%*/
+    padding: 0;
+    
   }
   #footer {
+    bottom: 100%;
     margin-left: 0;
     text-align: center;
   }
@@ -335,3 +335,163 @@ hr {
         margin-top: 4px;
   }
 }
+
+/* Form */
+
+	form {
+		margin: 7rem 10rem 0 10rem;
+	}
+
+		form > :last-child {
+			margin-bottom: 0;
+		}
+
+		form > .fields {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin: -2rem 0 2rem -2rem;
+			width: calc(100% + 4rem);
+		}
+
+			form > .fields > .field {
+				-moz-flex-grow: 0;
+				-webkit-flex-grow: 0;
+				-ms-flex-grow: 0;
+				flex-grow: 0;
+				-moz-flex-shrink: 0;
+				-webkit-flex-shrink: 0;
+				-ms-flex-shrink: 0;
+				flex-shrink: 0;
+				padding: 2rem 0 0 2rem;
+				width: calc(100% - 2rem);
+			}
+
+				form > .fields > .field > :last-child {
+					margin-bottom: 0;
+				}
+
+				form > .fields > .field.half {
+					width: calc(50% - 1rem);
+				}
+
+				form > .fields > .field.third {
+					width: calc(100%/3 - 0.66667rem);
+				}
+
+				form > .fields > .field.quarter {
+					width: calc(25% - 0.5rem);
+				}
+
+        li {
+          list-style: none;
+        }
+        
+        
+
+		@media screen and (max-width: 480px) {
+
+			form {
+        margin-left: 10%;
+        width: 80%;
+      }
+		}
+
+	input[type="text"],
+	input[type="email"],
+	select,
+  textarea,
+  input[type="text"]:after,
+	input[type="email"]:after,
+	select:after,
+	textarea:after{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		color: inherit;
+		display: block;
+		text-decoration: none;
+		width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    color: #888;
+    padding: 10px 6px;
+    font-size: 14px;
+    transition: .3s;
+	}
+
+		input[type="text"]:invalid,
+		input[type="email"]:invalid,
+		select:invalid,
+		textarea:invalid {
+			box-shadow: none;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		select:focus,
+		textarea:focus {
+      border-color: #2ee4bb;
+      transition: .3s;
+    }
+
+
+
+
+    /* Button */
+
+	input[type="submit"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-webkit-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-ms-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		background-color: transparent;
+		border-radius: 0.225rem;
+		border: 0;
+		box-shadow: inset 0 0 0 2px rgba(136, 136, 136, 0.25);
+		color: #888 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.6rem;
+		font-weight: 600;
+		height: 3rem;
+		letter-spacing: 0.175em;
+		line-height: 3rem;
+		padding: 0 2rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+		input[type="submit"]:hover {
+			box-shadow: inset 0 0 0 2px #2ee4bb;
+			color: #2ee4bb !important;
+		}
+
+		input[type="submit"]:active {
+			box-shadow: inset 0 0 0 2px #2ee4bb;
+			color: #2ee4bb !important;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			input[type="submit"] {
+				font-size: 0.7rem;
+				height: 3.3rem;
+				line-height: 3.3rem;
+			}
+
+		}

@@ -46,10 +46,10 @@
       <form method="POST" data-netlify="true">
             <div class="fields">
                 <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Name" />
+                    <input type="text" name="name" id="name" placeholder="Name" required="required" />
                 </div>
                 <div class="field half">
-                    <input type="email" name="email" id="email" placeholder="E-Mail" />
+                    <input type="email" name="email" cid="email" placeholder="E-Mail" required="required" />
                 </div>
                 <div class="field">
                     <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
@@ -60,7 +60,7 @@
                 </div>-->
                 <!--Spam-Filter-->
                 <div class="field">
-                    <div data-netlify-recaptcha="true"></div>
+                    <div data-netlify-recaptcha="true" id="captcha"></div>
                 </div>
             </div>
             <ul class="actions">
@@ -86,6 +86,5 @@
     </div>
    </div>
   </div>
-  <script src="parallax.js"></script>
 </body>
 </html>

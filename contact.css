@@ -384,7 +384,7 @@ hr {
         display: block;
       }
       hr {
-        margin-top: 110%;
+        margin-top: 41%;
         width: 46.8%;    /*53,2194%*/
         padding: 0;
         
@@ -494,6 +494,10 @@ hr {
       textarea {
         height: 5rem;
       }
+
+								input[type="text"] {
+									padding: 10px 5px;
+								}
 
       input[type="submit"] {
 	font-size: 0.7rem;

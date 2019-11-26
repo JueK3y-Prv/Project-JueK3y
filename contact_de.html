@@ -47,10 +47,10 @@
       <form method="POST" data-netlify="true">
             <div class="fields">
                 <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
+                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Es muss ein Name eingetragen werden.')" pattern="[A-z ']*" />
                 </div>
                 <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
+                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Es muss eine E-Mail eingetragen werden.')" />
                 </div>
                 <div class="field">
                     <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>

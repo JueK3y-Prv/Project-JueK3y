@@ -344,15 +344,18 @@ body {
 
       .nav-btn i:nth-child(1) {
             margin-top: 16px;
+            width: 17px;
       }
 
       .nav-btn i:nth-child(2) {
             margin-top: 4px;
+            width: 20px;
             opacity: 1;
       }
 
       .nav-btn i:nth-child(3) {
             margin-top: 4px;
+            width: 12px;
       }
       .Line {
             display: none;
@@ -370,14 +373,17 @@ body {
 
 #nav:checked + .nav-btn i:nth-child(1) {
       transform: translateY(6px) rotate(45deg);
+      width: 20px;
 }
 
 #nav:checked + .nav-btn i:nth-child(2) {
       opacity: 0;
+      width: 20px;
 }
 
 #nav:checked + .nav-btn i:nth-child(3) {
       transform: translateY(-6px) rotate(135deg);
+      width: 20px;
 }
 
 #nav:checked ~ .nav-wrapper {
@@ -402,4 +408,3 @@ body {
       border: 0.5px solid rgba(230, 230, 230, 0.2);
       background: none;
 } */
-

@@ -40,16 +40,17 @@
     <div class="bottom">
   <div id="content" class="wrapper">
    <div class="container">
-       <p>
+       <p class="text1">
          Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
+       <p class="text">Noch Fragen?<br>Kontaktiere mich!</p>
       </div>
       <form method="POST" data-netlify="true">
             <div class="fields">
                 <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Name" required="required" />
+                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
                 </div>
                 <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" required="required" />
+                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
                 </div>
                 <div class="field">
                     <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
@@ -60,14 +61,19 @@
                 </div>-->
                 <!--Spam-Filter-->
                 <div class="field">
-                    <div data-netlify-recaptcha="true" id="captcha" required="required"></div>
+                    <div data-netlify-recaptcha="true" id="captcha"></div>
                 </div>
             </div>
             <ul class="actions">
                 <li><input type="submit" value="Verschicken" class="button_primary" /></li>
             </ul>
         </form>
-     </div>
+        <!--
+        <div>Github Icon made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a></div>
+        <div>Instagram Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></div>
+        <div>Twitter Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></div>
+        -->
+    </div>
     </div>
     <hr>
    <div id="footer">

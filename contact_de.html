@@ -16,7 +16,10 @@
     
     <!--logo-->
     <link rel="shortcut icon" href="LOGO_tran.png" type="image/png">
-    
+
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  
     <title>Kontakt | JueK3y</title>
 </head>
 <body>
@@ -47,10 +50,10 @@
       <form method="POST" data-netlify="true">
             <div class="fields">
                 <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Es muss ein Name eingetragen werden.')" pattern="[A-z ']*" />
+                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
                 </div>
                 <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Es muss eine E-Mail eingetragen werden.')" />
+                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
                 </div>
                 <div class="field">
                     <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
@@ -68,6 +71,12 @@
                 <li><input type="submit" value="Verschicken" class="button_primary" /></li>
             </ul>
         </form>
+        <div class="share-button">
+          <span><i class="fas fa-share-alt"></i></span>
+          <a href="https://github.com/JueK3y"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/juek3y/"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/juek3y"><i class="fab fa-twitter"></i></a>
+        </div>
         <!--
         <div>Github Icon made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a></div>
         <div>Instagram Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></div>
@@ -75,22 +84,5 @@
         -->
     </div>
     </div>
-    <hr>
-   <div id="footer">
-    <div class="container">
-     <div class="column">
-      <h4>Meine Links</h4>
-      <p>
-       <a href="https://instagram.com/juek3y">Instagram</a>
-       <a href="https://twitter.com/juek3y">Twitter</a>
-      </p>
-     </div>
-     <div class="column">   
-      <h4>Meine Geschichte</h4>
-         <p>Hei. Mein Name ist Julian und ich bin 17 Jahre alt. Diese Website ist noch im Aufbau!</p>
-     </div>
-    </div>
-   </div>
-  </div>
 </body>
 </html>

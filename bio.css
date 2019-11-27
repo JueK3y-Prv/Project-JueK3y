@@ -75,15 +75,18 @@ button {
 }
 
 #nav:checked + .nav-btn i:nth-child(1) {
-  transform: translateY(6px) rotate(90deg);
+  width: 20px;
+transform: translateY(6px) rotate(90deg);
 }
 
 #nav:checked + .nav-btn i:nth-child(2) {
   opacity: 0;
+  width: 20px;
 }
 
 #nav:checked + .nav-btn i:nth-child(3) {
   transform: translateY(-6px) rotate(180deg);
+  width: 20px;
 }
 
 #nav:checked ~ .nav-wrapper {
@@ -275,14 +278,17 @@ hr {
 
   .nav-btn i:nth-child(1) {
         margin-top: 16px;
+        width: 17px;
   }
 
   .nav-btn i:nth-child(2) {
         margin-top: 4px;
         opacity: 1;
+        width: 20px;
   }
 
   .nav-btn i:nth-child(3) {
         margin-top: 4px;
+        width: 12px;
   }
 }

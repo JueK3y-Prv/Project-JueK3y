@@ -440,7 +440,7 @@ hr {
       .wrapper {
         width: 100%;
         height: 78vh;
-        padding: 9rem 0;
+        padding: 7rem 0;
         font-size: 30px;
         letter-spacing: 4px;
       }
@@ -559,7 +559,7 @@ hr {
       }
 
       form {
-        margin: 5rem;
+        margin: 4rem;
         margin-left: 10%;
         width: 80%;
       }
@@ -581,4 +581,8 @@ hr {
       .share-button {
         left: 40%;
       }
+      .share-button:hover{
+      width: 220px;
+      left: 22.1%;
     }
+  }

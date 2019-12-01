@@ -43,16 +43,21 @@
                         </label>
                   <div class="nav-wrapper">
                   <ul>
-                        <li><a href="bio_de.html">Bio</a></li>
-                        <li><a href="galerie_de.html">Galerie</a></li>
-                        <li><a href="galerie_de.html#project">Projekte</a></li>
-                        <li><a href="contact_de.html">Kontakt</a></li>
+                        <li><a href="bio_de.html" title="Biographie" class="underline">Biographie</a></li>
+                        <li><a href="galerie_de.html" title="Galerie" class="underline">Galerie</a></li>
+                        <li><a href="contact_de.html" title="Kontakt" class="underline">Kontakt</a></li>
+                        <li><a href="index.html" title="Deutsch" id="active">DE</a> | <a href="index_en.html" title="EN">EN</a></li>
+                        <!--<select class="language" onchange="la(this.value)" title="Sprache">
+                              <option disabled selected>Sprache</option>
+                              <option value="index.html" title="Deutsch">Deutsch</option>
+                              <option value="index_eng.html" title="Englisch">Englisch</option>
+                        </select>-->
                   </ul>
                   </div>
             </div>
             <div class="social-media">
                   <ul>
-                        <li><a></a><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <li><a href="https://github.com/JueK3y" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.instagram.com/juek3y" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.twitter.com/juek3y" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                   </ul>
@@ -119,6 +124,13 @@
             ease: Expo.easeInOut
       }, 0.2)
 
+      TweenMax.staggerFrom(".language", 1, {
+            delay: 3.8, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
       TweenMax.staggerFrom(".social-media ul li", 1, {
             delay: 3.3, 
             opacity: 0, 
@@ -127,21 +139,21 @@
       }, 0.2)
 
       TweenMax.from(".side-strip", 2, {
-            delay: 3.3,
+            delay: 3.4,
             opacity: 0,
             y: 40,
             ease: Expo.easeInOut
       })
 
       TweenMax.from(".myBtn", 2, {
-            delay: 3.3,
+            delay: 3.6,
             opacity: 0,
             y: -40,     //y: 40
             ease: Expo.easeInOut
       })
       
       TweenMax.from(".nav-btn", 1, {
-            delay: 3.5,
+            delay: 3.8,
             opacity: 0,
             x: 20,
             ease: Expo.easeInOut
@@ -216,7 +228,12 @@
       });
 
       }
+      </script>
 
+      <script>
+      function la(src) {
+            window.location=src;
+      }
       </script>
 
 </body>

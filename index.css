@@ -346,7 +346,6 @@ option {
       }
 
       .nav-wrapper ul li a {
-            padding: 10px 24px;
             opacity: 0;
             color: #000;
             font-size: 14px;

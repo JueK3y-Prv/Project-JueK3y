@@ -213,7 +213,7 @@ body {
 }
 
 .nav a:hover, .social-media a:hover, .logo a:hover{
-      color: rgb(197, 196, 196);
+      color: #C2C5A2;
       text-decoration: none;
       transition: .3s;
 }
@@ -232,6 +232,41 @@ body {
       text-decoration: none;
       color: #777;
 }
+
+#active {
+      color: #C2C5A2;
+}
+
+.underline::after{
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #C2C5A2;
+      transition: width .3s;
+}
+
+.underline:hover::after{
+      width: 100%;
+      transition: width .3s;
+}
+
+/* select {
+      border: none;
+      background: transparent;
+      color: #fff;
+      transition: .3s;
+}
+
+select:hover {
+      color: rgb(184, 184, 184);
+}
+
+option {
+      border: none;
+      background: rgb(200, 200, 200);
+      color: rgb(0, 0, 0);
+} */
 
 @media screen and (max-height: 640px) {
       .side-strip {

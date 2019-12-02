@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="shortcut icon" href="img/LOGO_tran.png" type="image/png">
+      <title>Start | JueK3y</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="CSS/index.css">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+      <!-- font-awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+      <!-- greensock -->
+      <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body>
+
+      <div class="overlay1">
+            <!-- <img src="LOGO_full.png"> -->
+            <div class="data"><h1>Live your life</h1></div>
+      </div>
+      <div class="bg">
+      <div class="wrapper">
+            <div class="logo"><a href="index.html">JueK3y</a></div>
+            <div class="nav">
+                        <input type="checkbox" id="nav" class="hidden">
+                        <label for="nav" class="nav-btn">
+                              <i></i>
+                              <i></i>
+                              <i></i>
+                        </label>
+                  <div class="nav-wrapper">
+                  <ul>
+                        <li><a href="de/bio.html" title="Biographie" class="underline">Biographie</a></li>
+                        <li><a href="de/galerie.html" title="Galerie" class="underline">Galerie</a></li>
+                        <li><a href="de/contact.html" title="Kontakt" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="en/index.html" title="EN"> | EN</a></li>
+                        <!--<select class="language" onchange="la(this.value)" title="Sprache">
+                              <option disabled selected>Sprache</option>
+                              <option value="index.html" title="Deutsch">Deutsch</option>
+                              <option value="index_eng.html" title="Englisch">Englisch</option>
+                        </select>-->
+                  </ul>
+                  </div>
+            </div>
+            <div class="social-media">
+                  <ul>
+                        <li><a href="https://www.github.com/juek3y" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/juek3y" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/juek3y" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+            </div>
+            <div class="Line">
+                  <li></li>
+                  <li></li>
+            </div>
+            <div class="side-strip">
+                  <span>THE ART OF VISUALIZATION</span>
+            </div>
+      <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+      </div>
+</div>
+      <div class="overlay-2"></div>
+
+      <div class="bio_fg">
+      <div id="bio">
+            <h1>Psscht!</h1>   
+            <p>
+             Hier entsteht noch was!<br>Komm später wieder.</p>
+            <!-- <a href="galerie_de.html">Galerie</a> -->
+      </div>
+      </div>
+
+      <script type="text/javascript">
+
+            const text = baffle(".overlay1 h1");
+            text.set({
+                  characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+                  speed: 95
+            });
+            text.start();
+            text.reveal(3700);
+      
+            </script>
+
+      <script type="text/javascript">     //Fade in
+
+      TweenMax.to(".overlay1 h1", 2, {
+            delay: 1.5,
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.to(".overlay1", 2, {
+            delay: 2.1,
+            top: "-100%",
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".logo", 1, {
+            delay: 3.1,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.staggerFrom(".nav ul li", 1, {
+            delay: 3.3, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.staggerFrom(".language", 1, {
+            delay: 3.8, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.staggerFrom(".social-media ul li", 1, {
+            delay: 3.3, 
+            opacity: 0, 
+            y: 20, 
+            ease: Expo.easeInOut
+      }, 0.2)
+
+      TweenMax.from(".side-strip", 2, {
+            delay: 3.4,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      })
+
+      TweenMax.from(".myBtn", 2, {
+            delay: 3.6,
+            opacity: 0,
+            y: -40,     //y: 40
+            ease: Expo.easeInOut
+      })
+      
+      TweenMax.from(".nav-btn", 1, {
+            delay: 3.8,
+            opacity: 0,
+            x: 20,
+            ease: Expo.easeInOut
+      })
+
+      </script>
+      
+      <script>                            //Fade out
+      
+      function fadeOut() {
+
+      TweenMax.to(".myBtn", 1, {
+     y: -100,
+     opacity: 0
+      });
+
+      TweenMax.to(".side-strip", 2, {
+     delay: 0.5,
+     opacity: 0,
+     y: -40,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".social-media ul li", 2, {
+     delay: 0.7,
+     opacity: 0,
+     y: -20,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".nav ul li", 2, {
+     delay: 0.7,
+     opacity: 0,
+     y: -20,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".logo", 2, {
+     delay: 0.9,
+     opacity: 0,
+     y: -40,
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".bg", 2, {
+     ease: Power2.easeInOut
+      });
+
+      TweenMax.to(".bg", 2, {
+     delay: 1.5,
+     y: "-110%",
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".overlay-2", 2, {
+     delay: 1.9,
+     top: "-110%",
+     ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".content", 2, {
+     delay: 2.5,
+     opacity: 0,
+     ease: Power2.easeInOut
+      });
+
+      TweenMax.to(".content", 2, {
+     opacity: 1,
+     y: -300,
+     delay: 2.5,
+     ease: Power2.easeInOut
+      });
+
+      }
+      </script>
+
+      <script>
+      function la(src) {
+            window.location=src;
+      }
+      </script>
+
+</body>
+</html>

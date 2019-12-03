@@ -220,7 +220,10 @@
   }
   .underline::after {
       display: none;
-}
+  }
+  #footer .container {
+    display: none;
+  }
 }
 
 #nav:checked + .nav-btn {

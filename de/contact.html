@@ -64,11 +64,11 @@
                 </div>-->
                 <!--Spam-Filter-->
                 <div class="field">
-                    <!--<div data-netlify-recaptcha="true" id="captcha"></div>-->
-                    <div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
+                    <div data-netlify-recaptcha="true" id="captcha"></div>
+                    <!--<div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
                     <?php $json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf0wsUUAAAAAFmq7XCoNIXxOQ_2BCCNrJtvmA1e&response='.$_POST['g-recaptcha-response']);
 $data = json_decode($json);
-var_dump($data); ?>
+var_dump($data); ?>-->
                 </div>
             </div>
             <ul class="actions">

@@ -211,6 +211,18 @@ hr {
       transition: width .3s;
 }
 
+.nav .active_nav {
+  color: #C2C5A2;
+}
+
+.active_nav::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #C2C5A2;
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 100%;

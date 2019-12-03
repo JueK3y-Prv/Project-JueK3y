@@ -304,31 +304,48 @@ a:hover {
 }
 
 .column {
-  min-width: 300px;
   display: inline-block;
   vertical-align: top;
 }
 
 #footer {
-  background-color: #222222;
-  padding: 50px 0;
+  background-color: #2d3436;
+  padding: 50px;
+  font-size: 16px;
+  cursor: crosshair;
+}
+
+#footer .column {
+  margin-left: 140px;
+}
+
+#footer .container {
+  margin-left: 350px;
 }
 
 #footer a {
-  color: #C5EDC6;
+  color: rgb(215, 215, 215);
   text-decoration: none;
+  transition: .3s;
 }
 
 #footer a:hover {
-  color: white;
+  color: #C2C5A2;
+  transition: .3s;
 }
 
 #footer h4 {
-  color: white;
+  color: rgb(215, 215, 215);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 #footer p {
-  color: white;
+  color: rgb(215, 215, 215);
+}
+
+.social-media {
+  font-size: 22px;
+  letter-spacing: 8.5px;
+  cursor: pointer;
 }

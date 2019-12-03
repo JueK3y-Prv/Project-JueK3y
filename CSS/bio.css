@@ -19,18 +19,12 @@
     margin-top: 10%;;
     padding: 0;
     width: 100%;
-    height: 83vh;
+    height: 67vh;
     background-color: white;
     text-align: center;
     font-size: 36px;
     letter-spacing: 7px;
     line-height: 5px;
-    
-}
-button {
-  display: block;
-  outline: none;;
-  overflow: hidden;
 }
 
 .nav {
@@ -191,6 +185,14 @@ hr {
   color: #000;
 }
 
+.social-media {
+  margin-top: 2%;
+  margin-left: 1%;
+  font-size: 22px;
+  letter-spacing: 12px;
+  cursor: pointer;
+}
+
 #active {
       color: #C2C5A2;
 }
@@ -321,5 +323,8 @@ hr {
   }
   .underline::after {
       display: none;
+}
+#text {
+  padding-top: 40px;
 }
 }

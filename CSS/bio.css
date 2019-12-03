@@ -335,8 +335,11 @@ hr {
   }
   .underline::after {
       display: none;
-}
-#text {
-  padding-top: 40px;
-}
+  }
+  #text {
+    padding-top: 40px;
+  }
+  .active_nav::after {
+    display: none;
+  }
 }

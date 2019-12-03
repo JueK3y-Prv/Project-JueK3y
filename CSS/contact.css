@@ -565,4 +565,7 @@ a:hover {
       width: 220px;
       left: 22.1%;
     }
+    .active_nav::after {
+      display: none;
+    }
   }

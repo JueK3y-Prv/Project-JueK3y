@@ -227,6 +227,11 @@
     .active_nav::after {
       display: none;
     }
+    .bilder {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 500px;
+  }
   }
 
   #nav:checked + .nav-btn {

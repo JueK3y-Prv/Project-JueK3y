@@ -64,7 +64,7 @@
 }
 
 #nav:checked + .nav-btn i {
-  background: #000;
+  background: #151522;
   transition: transform 0.2s ease;
 }
 
@@ -133,7 +133,7 @@ p {
 }
 
 a {
-  color:#000;
+  color: #151522;
   text-decoration: none;
 }
 
@@ -165,7 +165,7 @@ hr {
 }
 
 #footer a {
-  color: #000;
+  color: #151522;
   text-decoration: none;
   transition: .3s;
 }
@@ -176,13 +176,13 @@ hr {
 }
 
 #footer h4 {
-  color: #000;
+  color: #151522;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 #footer p {
-  color: #000;
+  color: #151522;
 }
 
 .social-media {
@@ -290,7 +290,7 @@ hr {
 
   .nav-wrapper ul li a {
         opacity: 0;
-        color: #000;
+        color: #151522;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1.2px;
@@ -313,7 +313,7 @@ hr {
         display: block;
         width: 20px;
         height: 2px;
-        background: #000;
+        background: #151522;
         border-radius: 2px;
         margin-left: 14px;
   }

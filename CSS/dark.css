@@ -26,6 +26,6 @@
     }
     
 	img { 
-	filter: grayscale(30%); 
+	background-image: Galerie_Bg_Dark.png;
     }
 }

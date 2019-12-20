@@ -1,123 +1,376 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../js/parallax.min.js"></script>
-	
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    
-    <!--icon-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!--stylesheet-->	
-    <link rel="stylesheet" href="../CSS/galerie.css">
-    
-    <!--scrollbar-->
-    <link rel="stylesheet" href="../CSS/scrollbar.css">
-    
-    <!--logo-->
-    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
-    
-    <!--loading-->
-    <style>
-            .loader_bg {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                z-index: 4;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background-color: #fff;
-            }
-            .loader-circle {
-                border-top: 1px solid #00212b;
-                border-radius: 50%;
-                width: 160px;
-                height: 160px;
-                animation:spin 1s linear infinite;
-            }
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100%{
-                    transform: rotate(360deg);
-                }
-            }
-            </style>
-	
-    <title>Galerie | JueK3y</title>
-</head>
+  @import url(https://fonts.googleapis.com/css?family=Cabin);
+  @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+  @font-face {
+    font-family: 'Dreamlight';
+    src: url('../fonts/Dreamlight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-<body>
-    <div class="loader_bg">
-        <div class="loader-circle"></div>
-    </div>
-    <div class="wrapper">
-        <div class="logo"><a href="../index.html">JueK3y</a></div>
-            <div class="nav">
-                <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </label>
-                 <div class="nav-wrapper">
-                  <ul>
-                        <li><a href="bio.html" title="Biographie" class="underline">Biographie</a></li>
-                        <li><a href="galerie.html" title="Galerie" class="active_nav">Galerie</a></li>
-                        <li><a href="contact.html" title="Kontakt" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/galerie.html" title="EN"> | EN</a></li>
-                    </ul>
-                    </div>
-            </div>
-        </div>
-    <div class="bottom">
-  <div id="content">
-   <div class="container">
-    <div class="bilder">
-     <div class="bilder-image">
-	<img src="../img/JueK3y.jpg">
-       </div>
-       <h1>Bilder</h1>
-       <p>
-         Hier kannst du alle meine Bilder sehen. Nachdem hier noch alles im Aufbau ist, siehst du jetzt nur wenige Bilder. Aber keine Angst, die Zahl der Bilder wird wachsen! Bei Anmerkungen kannst du mich gerne <a href="contact.html">kontaktieren.</a></p>
-      </div>
-     </div>
-    </div>
-    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="../img/Schnee.jpg">
-        
-    </div>
-   <div id="footer">
-    <div class="container">
-     <div class="column" id="link">
-      <h4>Meine Links</h4>
-      <div class="social-media">
-              <a href="https://www.github.com/juek3y" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <a href="https://www.instagram.com/juek3y" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              <a href="https://www.twitter.com/juek3y" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </div>
-     </div>
-     <div class="column">
-      <h4>Meine Geschichte</h4>
-         <p>Hei. Mein Name ist Julian und ich bin 17 Jahre alt. Diese Website ist noch im Aufbau!</p>
-     </div>
-    </div>
-   </div>
-  </div>
-  <script src="../js/parallax.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-  setTimeout(function() {
-      $('.loader_bg').fadeToggle();
-  }, 1500);
-  </script>
-</body>
-</html>
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+
+  .wrapper {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Galerie_Bg_Dark.png) no-repeat 50% 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .parallax {
+      padding: 0;
+      width: 100%;
+      height: 50vh;
+      position: relative;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*min-height: 8vh;*/
+    background-color: transparent;
+    line-height: 40px;
+    margin: 3.5em;
+    margin-right: 5.8em;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+  }
+
+  .logo {
+    font-family: 'Dreamlight', Georgia, Times, serif;
+    font-size: 32px;
+    line-height: 30px;
+    float: left;
+    margin: 2.2em;
+    margin-left: 5.2em;
+  }
+
+  .nav ul li {
+    list-style: none;
+    display: inline-block;
+    color: #fff;
+    padding-right: 36px;
+  }
+
+  .nav a, .logo a{
+        color: black;
+        text-decoration: none;
+        transition: .3s;
+  }
+
+  .nav a:hover, .logo a:hover{
+        color: #C2C5A2;
+        text-decoration: none;
+        transition: .3s;
+  }
+
+  #active {
+        color: #C2C5A2;
+  }
+
+  .underline::after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #C2C5A2;
+        transition: width .3s;
+  }
+
+  .underline:hover::after{
+        width: 100%;
+        transition: width .3s;
+  }
+
+  .nav .active_nav {
+    color: #C2C5A2;
+  }
+
+  .active_nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #C2C5A2;
+  }
+
+  @media screen and (max-width: 768px) {
+    #footer .container {
+      display: none;
+    }
+    .social-media {
+          display: none;
+    }
+    .logo {
+      font-size: 24px;
+      margin: 1em 0 0 1.5em;
+    }
+    .logo {
+      font-size: 24px;
+          padding: 0;
+    }
+    .overlay {
+          text-align: center;
+    }
+    .side-strip {
+          display: none;
+    }
+    button {
+          padding: 10px 20px;
+          right: 50%;
+    }
+    .nav-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: #fff;
+          opacity: 0;
+          transition: all 0.2s ease;
+    }
+
+    .nav-wrapper ul {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+    }
+
+    .nav-wrapper ul li {
+          display: block;
+          float: none;
+          width: 100%;
+          text-align: right;
+          margin-bottom: 10px;
+    }
+
+    .nav-wrapper ul li:nth-child(1) a {
+          transition-delay: 0.2s;
+    }
+
+    .nav-wrapper ul li:nth-child(2) a {
+          transition-delay: 0.3s;
+    }
+
+    .nav-wrapper ul li:nth-child(3) a {
+          transition-delay: 0.4s;
+    }
+
+    .nav-wrapper ul li:nth-child(4) a {
+          transition-delay: 0.5s;
+    }
+
+    .nav-wrapper ul li:not(:first-child) {
+          margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+          opacity: 0;
+          color: #000;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 1.2px;
+          transform: translateX(-20px);
+          transition: all 0.2s ease;
+    }
+
+    .nav-btn {
+          position: fixed;
+          right: 10px;
+          top: 10px;
+          display: block;
+          width: 48px;
+          height: 48px;
+          z-index: 9999;
+          border-radius: 50%;
+    }
+
+    .nav-btn i {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: #000;
+          border-radius: 2px;
+          margin-left: 14px;
+    }
+
+    .nav-btn i:nth-child(1) {
+          margin-top: 16px;
+          width: 17px;
+    }
+
+    .nav-btn i:nth-child(2) {
+          margin-top: 4px;
+          opacity: 1;
+          width: 20px;
+    }
+
+    .nav-btn i:nth-child(3) {
+          margin-top: 4px;
+          width: 12px;
+    }
+    .Line {
+          display: none;
+    }
+    .underline::after {
+        display: none;
+    }
+    .active_nav::after {
+      display: none;
+    }
+    .bilder {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 500px;
+  }
+  }
+
+  #nav:checked + .nav-btn {
+    transform: rotate(45deg);
+  }
+
+  #nav:checked + .nav-btn i {
+    background: #000;
+    transition: transform 0.2s ease;
+  }
+
+  #nav:checked + .nav-btn i:nth-child(1) {
+    width: 20px;
+  transform: translateY(6px) rotate(90deg);
+  }
+
+  #nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+  width: 20px;
+  }
+
+  #nav:checked + .nav-btn i:nth-child(3) {
+    width: 20px;
+  transform: translateY(-6px) rotate(180deg);
+  }
+
+  #nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+  }
+
+  #nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* .Line li {
+    margin-left: 7.5%;
+    display: block;
+    height: 100vh;
+    width: 0px;
+    border: 0.5px solid rgba(230, 230, 230, 0.2);
+    background: none;
+  } */
+
+
+  .bottom {
+    background-color: #ECEDEF;
+    font-family: 'Poppins';
+    font-size: 17px;
+  }
+
+  .container{
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+  .bilder {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .bilder-image img{
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+
+  h1, h2, h3, h4 {
+    color: #333;
+    line-height: 2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    color:#000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #C2C5A2;
+    text-decoration: none;
+  }
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #footer {
+    background-color: #2d3436;
+    padding: 50px;
+    font-size: 16px;
+    cursor: crosshair;
+  }
+
+  #footer .column {
+    margin-left: 140px;
+  }
+
+  #footer .container {
+    margin-left: 350px;
+  }
+
+  #footer a {
+    color: rgb(215, 215, 215);
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  #footer a:hover {
+    color: #C2C5A2;
+    transition: .3s;
+  }
+
+  #footer h4 {
+    color: rgb(215, 215, 215);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  #footer p {
+    color: rgb(215, 215, 215);
+  }
+
+  .social-media {
+    font-size: 22px;
+    letter-spacing: 8.5px;
+    cursor: pointer;
+  }

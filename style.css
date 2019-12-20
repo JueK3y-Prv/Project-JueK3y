@@ -105,6 +105,23 @@ body {
 	transition: .15s;
 	background-color: rgb(58, 57, 75);
 }
+ a {
+ transition: .15s;
+ text-decoration: none;
+	font-family: sans-serif;
+ font-size: 12px;
+ color: #FFD1DA;
+ letter-spacing: 2px;
+ position: absolute;
+ bottom: 3%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+a:hover {
+	transition: .15s;
+	color: ;
+}
+
 
 /*Responsive*/
 
@@ -125,21 +142,29 @@ body {
 	width: 250px;
 	}
 	.msg {
-	top: 20vh;
-	left: 50%;
+	top: 10vh;
+	left: 55%;
 	text-align: center;
+	letter-spacing: 40px;
 	}
 	.notifymsg {
-	bottom: 23vh;
+		display: none;
+	/*bottom: 23vh;
 	left: 50%;
-	text-align: center;
-	}
-	.field .submit {
-		bottom: -3vh;
-		left: 30%;
+	text-align: center;*/
 	}
 	.field {
-	bottom: 10vh;
+	bottom: 12vh;
 	left: 50%;
+	}
+	.field .email {
+		width: 250px;
+		border-radius: 6px;
+	}
+	.field .submit {
+	width: 265px;
+	bottom: -1.5vh;
+	left: 0;
+	border-radius: 6px;
 	}
 }

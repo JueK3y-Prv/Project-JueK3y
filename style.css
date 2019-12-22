@@ -105,23 +105,40 @@ body {
 	transition: .15s;
 	background-color: rgb(58, 57, 75);
 }
- a {
- transition: .2s;
- text-decoration: none;
+
+/*Link*/
+
+a {
+	transition: .2s;
+	text-decoration: none;
 	font-family: sans-serif;
- font-size: 12px;
- color: #665357;
- letter-spacing: 2px;
- position: absolute;
- bottom: 3%;
- left: 50%;
- transform: translate(-50%, -50%);
+	font-size: 12px;
+	color: #665357;
+	letter-spacing: 2px;
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 a:hover {
 	transition: .2s;
 	color: #b29298;
 }
-
+.social-media a {
+	bottom: 8.5%;
+	font-size: 22px;
+	letter-spacing: 12px;
+	cursor: pointer;
+  }
+#github {
+	left: 10%;
+}
+#instagram {
+	left: 15%;
+}
+#twitter {
+	left: 20%;
+}
 
 /*Responsive*/
 

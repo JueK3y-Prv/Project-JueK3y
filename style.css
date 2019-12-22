@@ -12,7 +12,7 @@ body {
  background: linear-gradient(#313247 0%, #19181D 30%);
  position: absolute;
  top: 28%;
- left: 35.5%;
+ left: 39%;		/*35.5%*/
 }
 .circle:before,
 .circle:after {

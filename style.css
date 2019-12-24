@@ -191,4 +191,7 @@ a:hover {
  bottom: 3%;
  left: 50%;
  }
+ .social-media a {
+ display: none;
+ }
 }

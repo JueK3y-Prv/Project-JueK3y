@@ -102,6 +102,7 @@ body {
  z-index: 999;
 }
 .field .submit:hover {
+	cursor: pointer;
 	transition: .15s;
 	background-color: rgb(58, 57, 75);
 }
@@ -125,19 +126,19 @@ a:hover {
 	color: #b29298;
 }
 .social-media a {
-	bottom: 8.5%;
+	bottom: 1%;
 	font-size: 22px;
 	letter-spacing: 12px;
 	cursor: pointer;
   }
 #github {
-	left: 10%;
+	left: 6%;
 }
 #instagram {
-	left: 15%;
+	left: 9%;
 }
 #twitter {
-	left: 20%;
+	left: 12%;
 }
 
 /*Responsive*/

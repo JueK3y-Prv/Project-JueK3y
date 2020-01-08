@@ -224,6 +224,9 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+	#brake {
+		display: none;
+	}
 	  .hidden {
 	  	display: none;
 	  }
@@ -232,7 +235,7 @@ hr {
     height: 78vh;
     font-size: 30px;
     letter-spacing: 4px;
-    margin-top: 15%;
+    margin-top: 20%;
   }
   .logo {
     font-size: 24px;

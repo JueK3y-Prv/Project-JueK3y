@@ -8,20 +8,75 @@
   font-weight: normal;
   font-style: normal;
 }
-  
+@font-face {
+  font-family: 'Ailerons';
+  src: url('../fonts/Ailerons.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OneDay';
+  src: url('../fonts/ONEDAY.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    cursor: crosshair;
 }
 
+.mittle {
+  margin-top: 10%;
+  padding: 0;
+  width: 100%;
+  height: 70.5vh;
+}
+
+#rotated_text {
+  transform: rotate(90deg);
+  height: 20%;
+  margin-top: 25%;
+  margin-right: 6%;
+  font-family: 'OneDay'; 
+  font-style: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1em;
+  line-height: 5px;
+}
+
+#rotated_text::after {
+  position: absolute;
+  top: 3px;
+  content: '';
+  background: #000;
+  width: 100px;
+  height: 1px;
+}
+
+.picture {
+  top: 50%;
+  margin-left: 14%;
+  height: 45vh;
+  width: auto;
+  transform: rotate(90deg);
+}
+
+
+
+
+
+
+
 .wrapper {
-    margin-top: 10%;;
+    margin-top: 10%;
     padding: 0;
     width: 100%;
     height: 70.5vh;
     background-color: white;
-    text-align: center;
     font-size: 36px;
     letter-spacing: 7px;
     line-height: 5px;
@@ -110,14 +165,6 @@ transform: translateY(6px) rotate(90deg);
   display: none;
 }
 
-.bottom {
-  background-color: white;
-  font-family: adobe-garamond-pro, serif; 
-  font-weight: 400;
-  font-style: normal;
-  cursor: crosshair;
-}
-
 .container{
   max-width: 1700px;
   margin: 0 auto;
@@ -148,7 +195,7 @@ a:hover {
   vertical-align: top;
 }
 
-hr {
+#down {
   width: 810px;     /*810px*/
   border: 0.1px solid #d4d4d4;
   height: 1px;
@@ -224,9 +271,6 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
-	#brake {
-		display: none;
-	}
 	  .hidden {
 	  	display: none;
 	  }
@@ -235,7 +279,7 @@ hr {
     height: 78vh;
     font-size: 30px;
     letter-spacing: 4px;
-    margin-top: 20%;
+    margin-top: 15%;
   }
   .logo {
     font-size: 24px;

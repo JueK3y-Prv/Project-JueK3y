@@ -65,11 +65,10 @@
   transform: rotate(90deg);
 }
 
-
-
-
-
-
+.text {
+  margin-bottom: 80%;
+  margin-left: 57%;
+}
 
 .wrapper {
     margin-top: 10%;

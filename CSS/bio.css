@@ -271,22 +271,20 @@ a:hover {
 @media screen and (max-width: 768px) {
 	  .hidden {
 	  	display: none;
-	  }
-  .wrapper {
+    }
+  .site-1 {
     width: 100%;
     height: 78vh;
-    font-size: 30px;
-    letter-spacing: 4px;
-    margin-top: 15%;
   }
   .logo {
     font-size: 24px;
   	margin: 1em 0 0 1.5em;
   }
-  hr {
+  #down {
     width: 50%;    /*53,2194%*/
   }
   #footer {
+    max-width: 90%;
     margin-left: 0;
     text-align: center;
   }
@@ -364,7 +362,7 @@ a:hover {
         height: 2px;
         background: #151522;
         border-radius: 2px;
-        margin-left: 14px;
+        /*margin-left: 14px;*/
   }
 
   .nav-btn i:nth-child(1) {
@@ -385,8 +383,21 @@ a:hover {
   .underline::after {
       display: none;
   }
-  #text {
-    padding-top: 40px;
+
+  img {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .biographie {
+    display: none;
+  }
+
+  .header_rotated {
+    display: none;
   }
   .active_nav::after {
     display: none;

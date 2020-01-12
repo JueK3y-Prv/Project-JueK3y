@@ -9,6 +9,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'Exodus';
+  src: url('../fonts/Exodus/ExodusDemo-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Ailerons';
   src: url('../fonts/Ailerons.otf') format('opentype');
   font-weight: normal;
@@ -28,59 +34,6 @@
     cursor: crosshair;
 }
 
-.mittle {
-  margin-top: 10%;
-  padding: 0;
-  width: 100%;
-  height: 70.5vh;
-}
-
-#rotated_text {
-  transform: rotate(90deg);
-  height: 20%;
-  margin-top: 25%;
-  margin-right: 6%;
-  font-family: 'OneDay'; 
-  font-style: uppercase;
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 1em;
-  line-height: 5px;
-}
-
-#rotated_text::after {
-  position: absolute;
-  top: 3px;
-  content: '';
-  background: #000;
-  width: 100px;
-  height: 1px;
-}
-
-.picture {
-  top: 50%;
-  margin-left: 14%;
-  height: 45vh;
-  width: auto;
-  transform: rotate(90deg);
-}
-
-.text {
-  margin-bottom: 80%;
-  margin-left: 57%;
-}
-
-.wrapper {
-    margin-top: 10%;
-    padding: 0;
-    width: 100%;
-    height: 70.5vh;
-    background-color: white;
-    font-size: 36px;
-    letter-spacing: 7px;
-    line-height: 5px;
-}
-
 .nav {
   display: flex;
   justify-content: space-around;
@@ -93,7 +46,6 @@
   font-size: 18px;
   position: absolute;
   right: 0;
-  cursor: pointer;
 }
 
 .logo {
@@ -103,7 +55,6 @@
   float: left;
   margin: 2.2em;
   margin-left: 5.2em;
-  cursor: pointer;
 }
 
 .nav ul li {
@@ -164,6 +115,55 @@ transform: translateY(6px) rotate(90deg);
   display: none;
 }
 
+.site-1 {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+img {
+  transform: rotate(90deg);
+  width: 35%; 
+  height: auto;
+  margin-top: 6.5%;
+  margin-left: 10.5%;
+}
+
+.header {
+  margin-top: -19%;
+  margin-left: 45%;
+  font-family: 'Exodus';
+  font-size: 36px;
+  line-height: 1.5em;
+}
+
+.biographie {
+  max-width: 450px;
+  margin-top: -17%;
+  margin-left: 50%;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+.header_rotated {
+  transform: rotate(90deg);
+  margin-top: 57.7%;
+  margin-left: -9%;
+  font-family: 'Ubuntu';
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.header_rotated::after {
+  position: absolute;
+  content: '';
+  background: black;
+  top: 8px;
+  left: 180px;
+  width: 75px;
+  height: 1px;
+}
+
 .container{
   max-width: 1700px;
   margin: 0 auto;
@@ -181,6 +181,7 @@ p {
 a {
   color:#151522;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -207,7 +208,6 @@ a:hover {
   padding: 50px;
   bottom: 50%;
   margin-left: 500px;
-  cursor: crosshair;
 }
 
 #footer a {
@@ -236,7 +236,6 @@ a:hover {
   margin-left: 1%;
   font-size: 22px;
   letter-spacing: 12px;
-  cursor: pointer;
 }
 
 #active {

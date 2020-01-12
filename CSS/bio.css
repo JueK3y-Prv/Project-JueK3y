@@ -274,7 +274,7 @@ a:hover {
     }
   .site-1 {
     width: 100%;
-    height: 78vh;
+    height: 135vh;
   }
   .logo {
     font-size: 24px;
@@ -284,7 +284,6 @@ a:hover {
     width: 50%;    /*53,2194%*/
   }
   #footer {
-    max-width: 90%;
     margin-left: 0;
     text-align: center;
   }
@@ -385,15 +384,30 @@ a:hover {
   }
 
   img {
-    display: none;
+    width: 100%; 
+    height: auto;
+    margin-top: 35%;
+    margin-left: 0%;
   }
 
   .header {
-    display: none;
+    margin-top: 18%;
+    margin-left: 21%;
+    font-size: 28px;
   }
 
   .biographie {
     display: none;
+  }
+
+  #bio_resp {
+  text-align: center;
+  max-width: 75%;
+  margin-top: 2%;
+  margin-left: 12.5%;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  line-height: 1.7em;
   }
 
   .header_rotated {

@@ -145,6 +145,10 @@ img {
   line-height: 1.7em;
 }
 
+#bio_resp {
+ display: none;
+}
+
 .header_rotated {
   transform: rotate(90deg);
   margin-top: 57.7%;

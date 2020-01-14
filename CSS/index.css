@@ -120,6 +120,10 @@ body {
       transform: scale(1.2);
 }
 
+.settings_resp {
+	display: none;
+}
+
 .myBtn {
       position: absolute;
       bottom: 3%;
@@ -220,7 +224,7 @@ body {
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover {
+.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover {
       color: #C2C5A2;
       text-decoration: none;
       transition: .3s;
@@ -295,6 +299,13 @@ option {
       }
       .side-strip {
             display: none;
+      }
+      .settings {
+      	display: none;
+      }
+      .settings_resp {
+      	display: inline-block;
+      	top: 90%;
       }
       button {
             padding: 12px 26.64px;
@@ -372,7 +383,7 @@ option {
             border-radius: 50%;
       }
 
-      .nav-btn i {
+      .nav-btn i { /* Hamburger*/
             display: block;
             width: 20px;
             height: 2px;

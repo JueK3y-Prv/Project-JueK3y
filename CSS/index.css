@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-      background: url(../img/White_Dark.png) no-repeat 50% 50%;
+      background: #dbdbdb;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -113,6 +113,13 @@ body {
       letter-spacing: 4px;
 }
 
+.settings {
+      position: absolute;
+      top: 89%;
+      left: 95.15%;
+      transform: scale(1.2);
+}
+
 .myBtn {
       position: absolute;
       bottom: 3%;
@@ -185,7 +192,7 @@ body {
  #bio h1 {
       font-family: Poppins;
       font-size: 45px;
-      color: #fff;
+      color: #000;
       font-weight: 700;
       margin-bottom: 10px;
       text-align: center;
@@ -195,7 +202,7 @@ body {
       font-size: 36px;
       margin-top: 0;
       text-align: center;
-      color: #fff;
+      color: #000;
       font-weight: 400;
  } 
 
@@ -207,20 +214,16 @@ body {
       background: rgb(153, 156, 117);
  }
 
-.nav a, .social-media a, .logo a{
+.nav a, .social-media a, .logo a, .settings a {
       color: white;
       text-decoration: none;
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover, .logo a:hover{
+.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover {
       color: #C2C5A2;
       text-decoration: none;
       transition: .3s;
-}
-
-.share {                            /*Bedarfsfunktion, wenn Sm als Button sein soll (Media)*/
-      display: none;
 }
 
 #bio a {

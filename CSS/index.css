@@ -96,6 +96,10 @@ body {
       margin-left: 38%;
 }
 
+.settings_resp a {
+	display: none;
+}
+
 .bg {
       z-index: 1;
       position: absolute;
@@ -258,7 +262,7 @@ body {
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover, .logo a:hover, .settings_resp a:hover, .ovl-settings a:hover {
+.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover {
       color: #C2C5A2;
       text-decoration: none;
       transition: .3s;
@@ -334,9 +338,11 @@ option {
       .side-strip {
             display: none;
       }
-      .settings_resp {
+      .settings a {
+      	display: none;
+      }
+      .settings_resp a{
       	display: inline-block;
-      	top: 90%;
       }
       button {
             padding: 12px 26.64px;

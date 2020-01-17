@@ -182,6 +182,32 @@ details[open] {
  100% {opacity: 1;} 
 }
 
+
+/* add wrapper, continue with font-size */
+@keyframes invisiblyGrowFontSize {
+	0% {
+    font-size: 0;
+    opacity: 0;
+	}
+	100% {
+    font-size: 1em;
+    opacity: 0;
+	}
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+	100% {
+		opacity: 1;
+	}
+}
+.details7[open] .content {
+	animation-name: invisiblyGrowFontSize, fadeIn;
+  animation-duration: 500ms, 200ms;
+  animation-delay: 0ms, 500ms;
+}
+
 .text {
     padding-top: 10%;
     padding-left: 20%;
@@ -218,7 +244,7 @@ a:hover {
         margin: 1em 0 0 1.5em;
       }
       .text {
-    padding-top: 25%;
+    padding-top: 35%;
     padding-left: 10%;
     max-width: 90%;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/parallax.min.js"></script>
+	
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    
+    <!--icon-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--stylesheet-->	
+    <link rel="stylesheet" href="../CSS/test_galerie.css">
+    
+    <!--scrollbar-->
+    <link rel="stylesheet" href="../CSS/scrollbar.css">
+    
+    <!--logo-->
+    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+    
+    <!--loading-->
+    <style>
+            .loader_bg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                z-index: 4;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+            }
+            .loader-circle {
+                border-top: 1px solid #00212b;
+                border-radius: 50%;
+                width: 160px;
+                height: 160px;
+                animation:spin 1s linear infinite;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            </style>
+	
+    <title>Galerie | JueK3y</title>
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader-circle"></div>
+    </div>
+    <div class="wrapper">
+        <div class="logo"><a href="index.html">JueK3y</a></div>
+            <div class="nav">
+                <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </label>
+                 <div class="nav-wrapper">
+                  <ul>
+                        <li><a href="bio.html" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li><a href="galerie.html" title="Alle möglichen Fotografien" class="active_nav">Galerie</a></li>
+                        <li><a href="contact.html" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/galerie.html" title="English"> | EN</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+                <div class="box"></div>  
+                <div class="img"></div>
+  <script src="../js/parallax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  setTimeout(function() {
+      $('.loader_bg').fadeToggle();
+  }, 1500);
+  </script>
+</body>
+</html>

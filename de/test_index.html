@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="../CSS/test_index.css">
+      <!--logo-->
+      <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- font-awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Fade Out -->
+      <script src="../js/index_fadeout.js"></script>
+      <!-- bootstrap -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <!-- greensock -->
+      <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+      <title>Start | JueK3y</title>
+</head>
+<body>
+      <div class="overlay1">
+            <div class="data"><h1>Live your life</h1></div>
+      </div>
+      <div class="bg">
+      <div class="ovl-settings">
+            <a title="Zurück" onclick="settings_out()">
+                  <i></i>
+                  <i></i>
+            </a>
+            <br>
+            <br>
+            <a id="one" href="settings.html#Impressum">Impressum</a>
+            <br>
+            <a id="two" href="settings.html#Datenschutz">Datenschutz</a>
+            <br>
+            <a id="three" href="settings.html#Cookies">Cookie Einstellungen</a>
+      </div>
+            <div class="logo"><a href="index.html">JueK3y</a></div>
+            <div class="nav">
+                        <input type="checkbox" id="nav" class="hidden">
+                        <label for="nav" class="nav-btn">         <!-- Hamburger -->
+                              <i></i>
+                              <i></i>
+                              <i></i>
+                        </label>
+                  <div class="nav-wrapper">
+                  <ul>
+                        <li><a href="bio.html" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li><a href="galerie.html" title="Alle möglichen Fotografien" class="underline">Galerie</a></li>
+                        <li><a href="contact.html" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/index.html" title="English"> | EN</a></li>
+                        <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        
+                  </ul>
+                  </div>
+            </div>
+            <div class="social-media">
+                  <ul>
+                        <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+            </div>
+            <div class="Line">
+                  <li></li>
+                  <li></li>
+            </div>
+            <div class="side-strip">
+                  <span>THE ART OF VISUALIZATION</span>
+            </div>
+      <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+</div>
+      <div class="overlay-2"></div>
+
+      <div class="bio_fg">
+      <div id="bio">
+            <h1>Psscht!</h1>   
+            <p>
+             Hier entsteht noch was!<br>Komm später wieder.</p>
+      </div>
+      </div>
+
+
+
+      <script>
+      function settings_in() {
+            TweenMax.to(".ovl-settings", 2, {
+                  delay: 0.2,
+                  right: "0%",
+                  ease: Expo.easeInOut
+            })
+      }
+      function settings_out() {
+            TweenMax.to(".ovl-settings", 2, {
+                delay: 0.1,
+                right: "-33.3%",
+                ease: Expo.easeInOut
+              })
+            }
+      </script>
+
+
+
+      <!--Shuffle-->
+      <script type="text/javascript">
+            const text = baffle(".overlay1 h1");
+            text.set({
+                  characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+                  speed: 95
+            });
+            text.start();
+            text.reveal(3700);
+      </script>
+
+      <!--Fade In-->
+      <script>
+      TweenMax.to(".overlay1 h1", 2, {
+    delay: 1.5,
+    opacity: 0,
+    y: -60,
+    ease: Expo.easeInOut
+})
+
+TweenMax.to(".overlay1", 2, {
+    delay: 2.1,
+    top: "-100%",
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".logo", 1, {
+    delay: 3.1,
+    opacity: 0,
+    y: 20,
+    ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom(".nav ul li", 1, {
+    delay: 3.3, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.staggerFrom(".language", 1, {
+    delay: 3.8, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.staggerFrom(".social-media ul li", 1, {
+    delay: 3.3, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.from(".side-strip", 2, {
+    delay: 3.4,
+    opacity: 0,
+    y: 40,
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".myBtn", 2, {
+    delay: 3.6,
+    opacity: 0,
+    y: -40,     //y: 40
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".nav-btn", 1, {
+    delay: 3.8,
+    opacity: 0,
+    x: 20,
+    ease: Expo.easeInOut
+})
+      </script>
+
+      <script>
+      function la(src) {
+            window.location=src;
+      }
+      </script>
+</body>
+</html>

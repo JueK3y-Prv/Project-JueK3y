@@ -31,6 +31,7 @@
             <div class="data"><h1>Live your life</h1></div>
       </div>
       <div class="bg">
+       	<div class="delay_out"></div>
       <div class="ovl-settings">
             <a title="Zurück" onclick="settings_out()">
                   <i></i>
@@ -38,11 +39,15 @@
             </a>
             <br>
             <br>
-            <a id="one" href="settings.html#Impressum">Impressum</a>
+            	<a id="one" href="javascript:delay('settings.html#story')" onclick="delay_out()">Story</a>
             <br>
-            <a id="two" href="settings.html#Datenschutz">Datenschutz</a>
+            	<a id="two" href="javascript:delay('settings.html#bugs')" onclick="delay_out()">Report Bugs</a>
             <br>
-            <a id="three" href="settings.html#Cookies">Cookie Einstellungen</a>
+            	<a id="three" href="javascript:delay('settings.html#FAQ')" onclick="delay_out()">FAQ</a>
+            <br>
+            <a id="four" href="javascript:delay('settings.html#Impressum')" onclick="delay_out()">Impressum</a>
+            <br>
+            <a id="five" href="javascript:delay('settings.html#Datenschutz')" onclick="delay_out()">Datenschutz</a>
       </div>
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
@@ -98,10 +103,20 @@
       function settings_in() {
             TweenMax.to(".ovl-settings", 2, {
                   delay: 0.2,
+                  left: "66.6%",
+                  ease: Expo.easeInOut
+            })
+      }
+      
+      function delay_out() {
+      	
+TweenMax.to(".delay_out", 2, {
+                  delay: 0,
                   right: "0%",
                   ease: Expo.easeInOut
             })
       }
+      
       function settings_out() {
             TweenMax.to(".ovl-settings", 2, {
                 delay: 0.1,
@@ -110,8 +125,6 @@
               })
             }
       </script>
-
-
 
       <!--Shuffle-->
       <script type="text/javascript">
@@ -194,5 +207,10 @@ TweenMax.from(".nav-btn", 1, {
             window.location=src;
       }
       </script>
+      
+      <!--Delay-->
+      <script>
+      	function delay (URL) { setTimeout( function() { window.location = URL }, 1500 ); }
+      	</script>
 </body>
 </html>

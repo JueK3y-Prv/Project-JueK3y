@@ -39,15 +39,15 @@
             </a>
             <br>
             <br>
-            	<a id="one" href="javascript:delay('settings.html#story')" onclick="delay_out()">Story</a>
+            	<a class="clk" id="one" href="javascript:delay('settings.html#story')">Story</a>
             <br>
-            	<a id="two" href="javascript:delay('settings.html#bugs')" onclick="delay_out()">Report Bugs</a>
+            	<a class="clk" id="two" href="javascript:delay('settings.html#bugs')">Report Bugs</a>
             <br>
-            	<a id="three" href="javascript:delay('settings.html#FAQ')" onclick="delay_out()">FAQ</a>
+            	<a class="clk" id="three" href="javascript:delay('settings.html#FAQ')">FAQ</a>
             <br>
-            <a id="four" href="javascript:delay('settings.html#Impressum')" onclick="delay_out()">Impressum</a>
+            <a class="clk" id="four" href="javascript:delay('settings.html#Impressum')">Impressum</a>
             <br>
-            <a id="five" href="javascript:delay('settings.html#Datenschutz')" onclick="delay_out()">Datenschutz</a>
+            <a class="clk" id="five" href="javascript:delay('settings.html#Datenschutz')">Datenschutz</a>
       </div>
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
@@ -84,6 +84,10 @@
             <div class="side-strip">
                   <span>THE ART OF VISUALIZATION</span>
             </div>
+            <div class="arrow">
+            	  <a title="Vorheriges Bild" onclick="back()" id="blur"><div id="back"></div></a>
+            	  	<a title="Nächstes Bild" onclick="forward()" id="blur"><div id="forward"></div></a>
+            </div>
       <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
       </div>
 </div>
@@ -97,6 +101,13 @@
       </div>
       </div>
 
+<script>
+$(document).ready(function(){
+  $(".clk").click(function(){
+    $("*").fadeOut();
+  });
+});
+</script>
 
 
       <script>
@@ -210,7 +221,8 @@ TweenMax.from(".nav-btn", 1, {
       
       <!--Delay-->
       <script>
-      	function delay (URL) { setTimeout( function() { window.location = URL }, 1500 ); }
+      	function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
+      	//1500
       	</script>
 </body>
 </html>

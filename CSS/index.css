@@ -179,7 +179,7 @@ body {
 }
 
 
-/*.arrow {          /*Positon & Blur*/
+.arrow {          /*Positon & Blur*/
 	position: relative;
 	margin-right: 100%;
 	margin-bottom: 100%;
@@ -209,7 +209,7 @@ a #blur {
 a:hover #blur {
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.5);
-}*/
+}
 
 
 .myBtn {

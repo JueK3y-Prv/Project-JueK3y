@@ -178,31 +178,39 @@ body {
       letter-spacing: 4px;
 }
 
-.arrow {
-	bottom: 0;
+
+.arrow {          /*Positon & Blur*/
+	position: relative;
+	margin-right: 100%;
+	margin-bottom: 100%;
+	width: 300px;
+	height: 100px;
+	background: inherit;
+ border-radius: 2px;
+ overflow: hidden;
+}
+
+.arrow:after{
+	position: absolute;
 	right: 0;
-}
-
-#blur{
-  position: relative;
-  width: 300px;
-  height: 100px;
-  background: inherit;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-#blur:after{
- content: '';
+ bottom: 0;
  width: 300px;
  height: 100px;
- background: inherit; 
- position: absolute;
- right: 0;
- bottom: 0;
+ background: inherit;
+ content: '';
  box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
  filter: blur(10px);
 }
+
+a #blur {
+	text-decoration: none;
+}
+
+a:hover #blur {
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.5);
+}
+
 
 .myBtn {
       position: absolute;

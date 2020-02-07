@@ -102,12 +102,8 @@ transform: translateY(6px) rotate(90deg);
       transition: .3s;
 }
 
-.settings a {
-	display: inline-block;
-}
-
 .settings_resp a{
-	display: none;
+	display: inline-block;
 }
 
 .hidden {

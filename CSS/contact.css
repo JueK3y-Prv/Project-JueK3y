@@ -191,12 +191,8 @@ a {
   text-decoration: none;
 }
 
-.settings a {
-	display: inline-block;
-}
-
 .settings_resp a{
-	display: none;
+	display: inline-block;
 }
 
 a:hover {
@@ -446,11 +442,8 @@ a:hover {
         
       }
       .settings_resp a{
-  	display: inline-block;
-  }
-  .settings a{
-  	display: none;
-  }
+        display: inline-block;
+      }
       #footer {
         bottom: 100%;
         margin-left: 0;

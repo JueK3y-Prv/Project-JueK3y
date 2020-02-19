@@ -19,7 +19,10 @@
   
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
-
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
     <title>Kontakt | JueK3y</title>
 </head>
 <body>
@@ -37,8 +40,7 @@
                         <li><a href="galerie.html" title="Galerie" class="underline">Galerie</a></li>
                         <li><a href="contact.html" title="Kontakt" class="active_nav">Kontakt</a></li>
                         <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/contact.html" title="EN"> | EN</a></li>
-                        <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                        <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="fading"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
                     </div>
             </div>
@@ -86,5 +88,17 @@ var_dump($data); ?>-->
     </div>
     </div>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--Delay-->
+<script>
+    function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
+    //1500
+</script>
+<script>
+    $(document).ready(function(){
+      $(".fading").click(function(){
+        $("*").fadeOut();
+      });
+    });
+    </script>
 </body>
 </html>

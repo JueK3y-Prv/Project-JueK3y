@@ -31,9 +31,10 @@
             <div class="data"><h1>Live your life</h1></div>
       </div>
       <div class="bg">
-       	<div class="delay_out"></div>
+             <div class="delay_out"></div>
+             <!--<div class="settings_title"><span>Settings</span></div>-->
       <div class="ovl-settings">
-            <a title="Zurück" onclick="settings_out()">
+            <a class="back" title="Zurück" onclick="settings_out()">
                   <i></i>
                   <i></i>
             </a>
@@ -45,9 +46,9 @@
             <br>
             	<a class="clk" id="three" href="javascript:delay('settings.html#FAQ')">FAQ</a>
             <br>
-            <a class="clk" id="four" href="javascript:delay('settings.html#Impressum')">Impressum</a>
+                  <a class="clk" id="four" href="javascript:delay('settings.html#Impressum')">Impressum</a>
             <br>
-            <a class="clk" id="five" href="javascript:delay('settings.html#Datenschutz')">Datenschutz</a>
+                  <a class="clk" id="five" href="javascript:delay('settings.html#Datenschutz')">Datenschutz</a>
       </div>
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
@@ -120,6 +121,12 @@ $(document).ready(function(){
             TweenMax.to(".ovl-settings", 2, {
                   delay: 0.2,
                   left: "66.6%",
+                  ease: Expo.easeInOut
+            })
+            TweenMax.to(".settings_title", 2, {
+                  delay: 0.2,
+                  left: "66.6%",
+                  opacity: 100,
                   ease: Expo.easeInOut
             })
       }

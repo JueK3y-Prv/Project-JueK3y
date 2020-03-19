@@ -276,6 +276,13 @@ a:hover {
   .header {
     margin-top: -19.7%;
   }
+  #down {
+    width: 50%;    /*53,2194%*/
+  }
+  #footer {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -287,13 +294,6 @@ a:hover {
 @media screen and (max-width: 1420px) {
   .header {
     margin-top: -21.5%;
-  }
-  #down {
-    width: 50%;    /*53,2194%*/
-  }
-  #footer {
-    margin-left: 0;
-    text-align: center;
   }
 }
 

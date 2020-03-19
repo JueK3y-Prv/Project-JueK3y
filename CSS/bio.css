@@ -102,6 +102,10 @@ transform: translateY(6px) rotate(90deg);
       transition: .3s;
 }
 
+.settings_resp i{
+  cursor: pointer;
+}
+
 .settings_resp a{
 	display: inline-block;
 }
@@ -124,7 +128,7 @@ img {
 }
 
 .header {
-  margin-top: -19%;
+  margin-top: -18.2%;
   margin-left: 45%;
   font-family: 'Exodus';
   font-size: 36px;
@@ -146,9 +150,9 @@ img {
 
 .header_rotated {
   transform: rotate(90deg);
-  margin-top: 57.7%;
+  margin-top: 56.7%;
   margin-left: -9%;
-  font-family: 'Ubuntu';
+  font-family: 'Baskvill';
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }
@@ -266,6 +270,89 @@ a:hover {
   width: 100%;
   height: 2px;
   background: #C2C5A2;
+}
+
+@media screen and (max-width: 1550px) {
+  .header {
+    margin-top: -19.7%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .header {
+    margin-top: -20.5%;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .header {
+    margin-top: -21.5%;
+  }
+  #down {
+    width: 50%;    /*53,2194%*/
+  }
+  #footer {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .header {
+    margin-top: -23.4%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .header {
+    margin-top: -23.5%;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .header {
+    margin-top: -26.2%;
+  }
+  .header_rotated::after {
+    top: 9px;
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    margin-top: -32.6%;
+  }
+  .header_rotated::after {
+    width: 45px;
+  }
+  .biographie {
+    max-width: 400px;
+    margin-top: -21.5%;
+  }
+  .logo {
+    margin-left: 3em;
+  }
+  .nav {
+    margin-right: 3em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .header {
+    margin-top: -34.4%;
+  }
+  .header_rotated {
+    display: none;
+  }
+  .header_rotated::after {
+    display: none;
+  }
+  .biographie {
+    max-width: 400px;
+    margin-top: -22.5%;
+    margin-left: 45.5%;
+  }
 }
 
 @media screen and (max-width: 768px) {

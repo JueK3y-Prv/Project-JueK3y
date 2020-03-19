@@ -305,13 +305,16 @@ a:hover {
 
 @media screen and (max-width: 1160px) {
   .header {
-    margin-top: -23.5%;
+    margin-top: -25.7%;
+  }
+  .header_rotated::after {
+    width: 70px;
   }
 }
 
 @media screen and (max-width: 1030px) {
   .header {
-    margin-top: -26.2%;
+    margin-top: -28.7%;
   }
   .header_rotated::after {
     top: 9px;
@@ -319,12 +322,22 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 965px) {
   .header {
-    margin-top: -32.6%;
+    margin-top: -30.5%;
   }
   .header_rotated::after {
-    width: 45px;
+    top: 9px;
+    width: 26px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    margin-top: -35.5%;
+  }
+  .header_rotated::after {
+    width: 50px;
   }
   .biographie {
     max-width: 400px;
@@ -340,7 +353,7 @@ a:hover {
 
 @media screen and (max-width: 810px) {
   .header {
-    margin-top: -34.4%;
+    margin-top: -37.8%;
   }
   .header_rotated {
     display: none;
@@ -350,7 +363,7 @@ a:hover {
   }
   .biographie {
     max-width: 400px;
-    margin-top: -22.5%;
+    margin-top: -24%;
     margin-left: 45.5%;
   }
 }

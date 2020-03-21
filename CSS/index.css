@@ -5,6 +5,12 @@
       font-weight: normal;
       font-style: normal;
     }
+@font-face {
+      font-family: 'Ailerons';
+      src: url('../fonts/Ailerons.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
     
 html, body {
       margin: 0;
@@ -35,8 +41,9 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 25px;
-      font-weight: bolder;
+      font-family: 'Ailerons';
+      font-size: 30px;
+      font-weight: 400;
       letter-spacing: 10px;
 }
 
@@ -110,7 +117,6 @@ body {
 #four {
 	margin-left: 45%;
 }
-
 #five {
 	margin-left: 43%;
 }
@@ -320,13 +326,13 @@ a:hover #blur {
       background: rgb(153, 156, 117);
  }
 
-.nav a, .social-media a, .logo a, .settings a {
+.nav a, .social-media a, .logo a, .settings a, .contact_icon a {
       color: white;
       text-decoration: none;
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover {
+.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover, .contact_icon a:hover {
       color: #C2C5A2;
       text-decoration: none;
       transition: .3s;

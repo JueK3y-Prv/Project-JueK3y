@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #EBECF0;
+  background: #f0f0f0;
 }
 .nav {
   cursor: pointer;
@@ -134,13 +134,13 @@ transform: translateY(6px) rotate(90deg);
   margin: 20px;
   padding: 40px 30px;
   border-radius: 40px;
-  background: #EBECF0;
-  box-shadow:  20px 20px 40px #cfd0d3, 
+  background: #f0f0f0;
+  box-shadow:  20px 20px 40px #d1d1d1, 
                -20px -20px 40px #ffffff;
 }
 .container .card:hover {
-  box-shadow: inset 11px 11px 25px #c5c6ca, 
-          inset -11px -11px 25px #ffffff;
+  box-shadow: inset 11px 11px 25px #cecece, 
+            inset -11px -11px 25px #ffffff;
 }
 .container .card .imgBx {
   position: relative;
@@ -195,19 +195,19 @@ transform: translateY(6px) rotate(90deg);
   color: #F28743;
 }
 .container .card .contentBx a {
-  text-align: center;    
+  text-align: center;
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 15px;
+  margin-top: 30px;
   font-size: 16px;
   text-decoration: none;
   border-radius: 40px;
-  box-shadow:  20px 20px 40px #cfd0d3, 
+  box-shadow:  20px 20px 40px #d1d1d1, 
                -20px -20px 40px #ffffff;
 }
 .container .card .contentBx a:hover {
-  box-shadow: inset 5px 5px 23px #d1d2d6, 
-          inset -5px -5px 23px #ffffff;
+  box-shadow: inset 7px 7px 26px #d8d8d8, 
+            inset -7px -7px 26px #ffffff;
 }
 .container .card a:hover span {
   display: block;

@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-      background: #dbdbdb;
+      background: #161515;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -240,6 +240,7 @@ a:hover #blur {
 }
 
 .myBtn a{
+      font-family: 'Ailerons';
       text-decoration: none;
       color: #fff;
 }
@@ -252,7 +253,6 @@ a:hover #blur {
  button {
       display: block;
       padding: 18px 40px;
-      font-family: Poppins;
       font-weight: 700;
       font-size: 12px;
       letter-spacing: 6px;

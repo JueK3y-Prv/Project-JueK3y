@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="../CSS/scrollbar.css">
 
     <!--icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
 
@@ -36,43 +36,123 @@
                         <li><a href="bio.html" title="Biographie" class="underline">Biographie</a></li>
                         <li><a href="galerie.html" title="Galerie" class="underline">Galerie</a></li>
                         <li><a href="contact.html" title="Kontakt" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/contact.html" title="EN"> | EN</a></li>
-                        <li class="settings"><a href="settings.html" id="active" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/settings.html" title="EN"> | EN</a></li>
+                        <li class="settings"><a href="settings.html" id="active" title="Einstellungen"><i class="fa fa-cog fa-spin-hover" aria-hidden="true"></i></a></li>
                     </ul>
-                    </div>
+                </div>
             </div>
             <div class="text">
             	<details><summary class="header" id="story">Der Grund für diese Website</summary>
-            	<p>Diese Website entstand aufgrund einer Challenge, welche ich mir selber gestellt habe. Mit den Grundlagen der Webentwicklung habe ich mich ab Sommer 2019 beschäftigt, meine erste Homepage habe ich am 25. August 2019 auf <a href="https://github.com/JueK3y">GitHub</a> veröffentlicht. Seitdem beschäftige ich mich durchgehend mit der Webentwicklung und dem Webdesign, weshalb ich mich auch dazu entschieden habe, die Website so umfangreich zu gestalten, wie es für mich möglich ist. Das Wissen & die Anwendung habe ich mir weitesgehend selber beigebracht, weshalb ich stetig Änderungen und Verbesserungen vornehmen werde.</p>
+            	<p>Diese Website entstand aufgrund einer Challenge, welche ich mir selber gestellt habe. 
+                    Mit den Grundlagen der Webentwicklung habe ich mich ab Sommer 2019 beschäftigt, meine erste Homepage habe ich am 25. August 2019 auf <a href="https://github.com/JueK3y" title="Mein GitHub Profil" target="_blank">GitHub</a> veröffentlicht. 
+                    Seitdem beschäftige ich mich durchgehend mit der Webentwicklung und dem Webdesign, weshalb ich mich auch dazu entschieden habe, die Website so umfangreich zu gestalten, wie es für mich möglich ist. 
+                    Das Wissen & die Anwendung habe ich mir weitesgehend selber beigebracht, weshalb ich stetig Änderungen und Verbesserungen vornehmen werde.</p>
                 </details>
                 <br>
                 <br>
-            	<details><summary class="header" id="FAQ">FAQ</summary>
-            	<p>Häufig gestellte Fragen:
-                    <br><span>Wurde die Website mit einem Homepage-Baukasten erstellt?</span>
+            	<details id="faq-t"><summary class="header" id="FAQ">FAQ</summary>
+            	<p>
+                    <br><span>"Wurde die Website mit einem Homepage-Baukasten erstellt?"</span>
                     <br>Nein, die Website wurde von Grund auf selbst programmiert.
-                    <br><span>Seit wann gibt es diese Website schon?</span>
-                    <br>Am 25 August 2019 habe ich das erste Mal etwas unter dieser Domain veröffentlicht.
-                    <br><span>Über welchen Anbieter hast du eine Website gehostet?</span>
-                    <br>Netlify greift auf den Code in GitHub zu und hostet für mich die Website [Stand 23.03.2020].
-                    <br><span>Kann ich auch so eine Website programmieren?</span>
+                    <br>
+                    <br><span>"Seit wann gibt es diese Website schon?"</span>
+                    <br>Am <span id="color">25. August 2019</span> habe ich das erste Mal etwas unter dieser Domain veröffentlicht.
+                    <br>
+                    <br><span>"Über welchen Anbieter hast du eine Website gehostet?"</span>
+                    <br><a href="https://www.netlify.com/" title="Website von Netlify" target="_blank">Netlify</a> greift auf den Code in GitHub zu und hostet für mich die Website [Stand 23.03.2020].
+                    <br>
+                    <br><span>"Kann ich auch so eine Website programmieren?"</span>
                     <br>Ja, natürlich. Wenn du konstant und motiviert am Projekt arbeitest, kann nur etwas gutes dabei rauskommen :)
-                   </details>
-                <br>
-                <br>
-            	<details><summary class="header" id="help">Report Bugs</summary>
-            	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <br>
+                    <br><span>"Ich komme mit der Navigation nicht zurecht."</span>
+                    <br>[Desktop-Version] In der obersten Leiste finden Sie 7 Wörter und Symbole.
+                        <br>Bei Wörtern/Symbolen mit <span id="color">folgender Farbe</span> haben Sie diese bereits ausgewählt bzw. befinden sich bereits bei dem jeweilgen Punkt.
+                        <br>Bei einem Links-Klick auf das jeweilige Wort/Symbol gelangen Sie zu den folgenden Punkten (von Links nach Rechts):
+                        <br><a href="index.html">Start</a>, <a href="bio.html">Biographie</a>, <a href="experience.html">Experience</a>, <a href="contact.html">Kontakt</a>, <a href="../de/settings.html">Websitesprache auf Deutsch umstellen</a>, <a href="../en/settings.html">Websitesprache auf Englisch umstellen</a>, <a href="settings.html">Einstellungen</a>
+                    <br>
+                    <br><span>"Ich habe einen Fehler gefunden (Webpage nicht zugänglich, Falsche Umleitung, Inhalte werden nicht angezeigt...)."</span>
+                    <br>Bitte schildern Sie mir den Fehler im Kontaktformular im Punkt 'Technische Kontaktaufnahme'. Danke für Ihre Unterstützung!
+                    <br>
+                    <br><span>"Ich würde Folgendes anders machen: ..."</span>
+                    <br>Für Verbesserungsvorschläge füllen Sie bitte das Kontaktformular im Punkt 'Technische Kontaktaufnahme' aus.
+                    <br>
+                    <br><span>"Ich habe Fragen zum Urheberrecht."</span>
+                    <br>1. Navigieren Sie zum Punkt 'Impressum' und dort zu 'Urheberrecht'.
+                    <br>2. Bei weiteren Fragen füllen Sie bitte das Kontaktformular im Punkt 'Technische Kontaktaufnahme' aus.
+                </p>
                 </details>
                 <br>
                 <br>
-            	<details><summary class="header" id="Impressum">Impressum</summary>
-            	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            	<details><summary class="header" id="help">Technische Kontaktaufnahme</summary>
+            	<p>Da sich diese Website noch im BETA-Zustand befindet, kann es durchaus zu unerwünschten Problemem kommen.
+                   <br>Bitte nutzen Sie das untenstehende Kontaktformular bei folgenden Situationen:
+                   <br>- Hinweis auf mögliche Fehlfunktionen der Website
+                   <br>- Verbesserungsvorschlag für die Website
+                   <br>- Fragen zum Urheberrecht (Beachten Sie den Punkt 'Urheberrecht' im Impressum)
+                   <br>- Fragen zu Codeabschnitten
+                   <br>- Weiterverwendung von Bildern oder Programmabschnitten
+                </p>
+                </details>
+                <br>
+                <br>
+            	<details id="impressum-t"><summary class="header" id="Impressum">Impressum</summary>
+            	<p><span><br>Verantwortlich für Inhalte i. S. v § 5 TMG</span>
+                    <br>Julian Kennedy
+                    <br>Egelseestraße 10
+                    <br>86949 Windach
+                    <br>Deutschland
+                    <br>
+                    <br>Kontakt:
+                    <br>E-Mail: juek3y@gmail.com
+                    <br><a href="contact/privat.html" title="Kontaktformular für private Anfragen">Privates</a> oder <a href="contact/business.html" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a> Kontaktformular
+                    <br>
+                    <br>
+                    <!-- Nur nötig für Unternehmen <br><span>Streitschlichtung</span>
+                    <br>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren (nach VSBG) vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                    <br>Verantwortlich für zentrale journalistisch-redaktionell gestaltete Inhalte i.S.v. § 55 Abs. 2 RStV
+                    <br>
+                    <br>Herr Julian Kennedy
+                    <br>Egelseestraße 10
+                    <br>86949 Windach
+                    <br>Deutschland
+                    <br>
+                    <br>Kontakt:
+                    <br>E-Mail: juek3y@gmail.com
+                    <br><a href="contact/privat.html" title="Kontaktformular für private Anfragen">Privates</a> oder <a href="contact/business.html" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a> Kontaktformular
+                    <br>
+                    <br>
+                    <br><span>Haftung für Inhalte</span>
+                    <br>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht generell verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch regelmäßig erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                    <br>
+                    <br>-->
+                    <br><span>Haftung für Links</span>
+                    <br>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                    <br>
+                    <br>
+                    <br><span>Urheberrecht</span>
+                    <br>Die von uns oder in unserem Auftrag erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
+                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
+                    Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
+                    Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. 
+                    Insbesondere werden Inhalte Dritter als solche gekennzeichnet. 
+                    Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis (Unter technische Kontaktaufnahme). 
+                    Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                    <br>
+                    <br>
+                    <br><span>Von Dritte bereitgestellte Inhalte</span>
+                    <br>- <a href="https://fontawesome.com/v4.7.0/icon/cog">Settings icon by fontawesome</a>
+                    <br>- <a href="https://icons8.com/icon/48545/organization">Organization icon by Icons8</a>
+                    <br>- <a href="https://icons8.com/icon/103851/account">Account icon by Icons8</a>   
+                    <br>- <a href="https://icons8.com/icon/103873/fragezeichen">Fragezeichen icon by Icons8</a>
+                </p>
             	</details>
                 <br>
                 <br>
-                <details>
+                <details id="datenschutz-t">
                 	<summary class="header" id="Datenschutz">Datenschutz</summary>
-            	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p></details
+            	    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                </details>
             </div>
 </body>
 </html>

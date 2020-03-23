@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    
+    <!--stylesheet-->
+    <link rel="stylesheet" href="../CSS/contact.css">
+    
+    <!--scrollbar-->
+    <link rel="stylesheet" href="../CSS/scrollbar.css">
+
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  
+    <!--logo-->
+    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    <title>Kontakt | JueK3y</title>
+</head>
+<body>
+        <div class="logo"><a href="index.html">JueK3y</a></div>
+            <div class="nav">
+                <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </label>
+                 <div class="nav-wrapper">
+                  <ul>
+                        <li><a href="bio.html" title="Biographie" class="underline">Biographie</a></li>
+                        <li><a href="galerie.html" title="Galerie" class="underline">Galerie</a></li>
+                        <li><a href="contact.html" title="Kontakt" class="active_nav">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/contact.html" title="EN"> | EN</a></li>
+                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="fading"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                    </ul>
+                    </div>
+            </div>
+    <div class="bottom">
+  <div id="content" class="wrapper">
+   <div class="container">
+       <p class="text1">
+         Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
+       <p class="text">Noch Fragen?<br>Kontaktiere mich!</p>
+      </div>
+      <form name="contact" method="POST" data-netlify="true">
+            <div class="fields">
+                <div class="field half">
+                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
+                </div>
+                <div class="field half">
+                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
+                </div>
+                <div class="field">
+                    <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
+                </div>
+                <!--Hochladen einer Datei-->
+                <!--<div class="field">
+                    <input type="file" name="myfile" id="myfile" placeholder="Datei hochladen" rows="7" />
+                </div>-->
+                <!--Spam-Filter-->
+                <div class="field">
+                    <div data-netlify-recaptcha="true" id="captcha"></div>
+                    <!--<div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
+                    <?php $json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf0wsUUAAAAAFmq7XCoNIXxOQ_2BCCNrJtvmA1e&response='.$_POST['g-recaptcha-response']);
+$data = json_decode($json);
+var_dump($data); ?>-->
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Verschicken" class="button_primary" /></li>
+            </ul>
+        </form>
+        <div class="share-button">
+          <span><i class="fas fa-share-alt"></i></span>
+          <a href="https://github.com/JueK3y" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/juek3y/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/juek3y" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    </div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--Delay-->
+<script>
+    function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
+    //1500
+</script>
+<script>
+    $(document).ready(function(){
+      $(".fading").click(function(){
+        $("*").fadeOut();
+      });
+    });
+    </script>
+</body>
+</html>

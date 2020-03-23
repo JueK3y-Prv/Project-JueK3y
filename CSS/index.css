@@ -1,570 +1,239 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@font-face {
-      font-family: 'Dreamlight';
-      src: url('../fonts/Dreamlight.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-@font-face {
-      font-family: 'Ailerons';
-      src: url('../fonts/Ailerons.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    
-html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="../CSS/index.css">
+      <!--logo-->
+      <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- font-awesome -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-body {
-      background: #161515;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      position: fixed;
-}
+      <!-- Fade Out -->
+      <script src="../js/index_fadeout.js"></script>
+      <!-- bootstrap -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <!-- greensock -->
+      <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-.overlay1 {
-      z-index: 500;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #fff;
-}
+      <title>Start | JueK3y</title>
+</head>
+<body>
+      <div class="overlay1">
+            <div class="data"><h1>Live your life</h1></div>
+      </div>
+      <div class="bg">
+             <div class="delay_out"></div>
+             <!--<div class="settings_title"><span>Settings</span></div>-->
+      <div class="ovl-settings">
+            <a title="Zurück" href="#" onclick="settings_out()">
+                  <i></i>
+                  <i></i>
+            </a>
+            <br>
+            <br>
+            	<a class="clk" id="one" href="javascript:delay('settings.html#story')">Story</a>
+            <br>
+            	<a class="clk" id="two" href="javascript:delay('settings.html#bugs')">Report Bugs</a>
+            <br>
+            	<a class="clk" id="three" href="javascript:delay('settings.html#FAQ')">FAQ</a>
+            <br>
+                  <a class="clk" id="four" href="javascript:delay('settings.html#Impressum')">Impressum</a>
+            <br>
+                  <a class="clk" id="five" href="javascript:delay('settings.html#Datenschutz')">Datenschutz</a>
+      </div>
+      <div class="wrapper">
+            <div class="logo"><a href="index.html">JueK3y</a></div>
+            <div class="nav">
+                        <input type="checkbox" id="nav" class="hidden">
+                        <label for="nav" class="nav-btn">         <!-- Hamburger -->
+                              <i></i>
+                              <i></i>
+                              <i></i>
+                        </label>
+                  <div class="nav-wrapper">
+                  <ul>
+                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
+                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
+                        <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        
+                  </ul>
+                  </div>
+            </div>
+            <div class="social-media">
+                  <ul>
+                        <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+            </div>
+            <div class="side-strip">
+                  <span>THE ART OF VISUALIZATION</span>
+            </div>
+            
+            
+            <!--<div class="arrow">
+            	  <a title="Vorheriges Bild" onclick="previous()" id="blur"><div class="fa fa-" id="previous"></div></a>
+            	  
+            	  	<a title="Nächstes Bild" onclick="next()" id="blur"><div class="fa fa-" id="next"></div></a>
+            </div>-->
+            
+            
+      <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+      </div>
+</div>
+      <div class="overlay-2"></div>
 
-.overlay1 h1 {
-      z-index: 9;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Ailerons';
-      font-size: 30px;
-      font-weight: 400;
-      letter-spacing: 10px;
-}
+      <div class="bio_fg">
+      <div id="bio">
+            <h1>Psscht!</h1>   
+            <p>
+             Hier entsteht noch was!<br>Komm später wieder.</p>
+             <a href="code.html" title="Code & Stuff">See more</a>
+      </div>
+      </div>
 
-.settings_title {
-      z-index: 9999;
-      position: absolute;
-      right: -33.5%;
-      text-align: left; vertical-align: top;
-}
+<!-- Smooth fade out -->
 
-.settings_title span {
-      font-size: 50px;
-      color: #F51834;
-      text-align: left; vertical-align: top;
-}
-
-.ovl-settings {
-      z-index: 999;
-      position: absolute;
-      width: 33.5%;
-      right: -33.5%;
-      height: 100%;
-      background: #fff;
-}
-
-.ovl-settings i {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: rgb(0, 0, 0);
-      border-radius: 2px;
-      margin-left: 86%;
-}
-
-.ovl-settings i:nth-child(1) {
-      margin-top: 16px;
-      width: 20px;
-      transform: rotate(45deg);
-}
-
-.ovl-settings i:nth-child(2) {
-      margin-top: -2px;
-      width: 20px;
-      transform: rotate(135deg);
-}
-
-.ovl-settings a {
-      text-align: center;
-      margin-left: 50%;
-      font-family: 'Ubuntu';
-      font-size: 18px;
-      line-height: 2.5em;
-      color: #000;
-      text-transform: uppercase;
-      transition: .3s;
-}
-
-.ovl-settings a:hover {
-      transform: rotate(90deg);
-}
-
-#one {
-      margin-left: 48%;      
-}
-#two {
-      margin-left: 43.5%;
-}
-#three {
-      margin-left: 50%;
-}
-#four {
-	margin-left: 45%;
-}
-#five {
-	margin-left: 43%;
-}
-
-.delay_out {
-	z-index: 9999;
-	position: absolute;
-	margin-left: 100%;
-      width: 100%;
-      height: 100%;
-      background: rgb(153, 156, 117);
- }
-
-.settings_resp a {
-	display: none;
-}
-
-.bg {
-      z-index: 1;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      background: url(../img/title2.jpg) no-repeat 50% 50%;
-      background-size: cover;
- }
-
-.logo {
-      font-family: 'Dreamlight', Georgia, Times, serif;
-      font-size: 32px;
-      line-height: 30px;
-      float: left;
-      margin: 1.5em 0 0 2.2em;
-    }
-    
-
-    .nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      /*min-height: 8vh;*/
-      background-color: transparent;
-      line-height: 40px;
-      margin: 2.1em;
-      font-size: 18px;
-      position: absolute;
-      right: -2%;
-      font-family: "serif";
-  }
-
-.nav ul li {
-      list-style: none;
-      display: inline-block;
-      color: #fff;
-      padding-right: 36px;
-}
-
-.social-media {
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 2.1%;
-      transform: translateY(-50%);
-}
-
-.social-media ul li {
-      list-style: none;
-      color: #fff;
-      padding-top: 20px;
-}
-
-.side-strip {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: -4.3em;
-      transform: rotate(90deg);
-      color: #fff;
-      letter-spacing: 4px;
-      font-family: "serif";
-}
+<script>
+$(document).ready(function(){
+  $(".clk").click(function(){
+    $("*").fadeOut();
+  });
+});
+</script>
 
 
-.arrow {          /*Positon & Blur*/
-	position: relative;
-	margin-right: 100%;
-	margin-bottom: 100%;
-	width: 300px;
-	height: 100px;
-	background: inherit;
- border-radius: 2px;
- overflow: hidden;
-}
-
-.arrow:after{
-	position: absolute;
-	right: 0;
- bottom: 0;
- width: 300px;
- height: 100px;
- background: inherit;
- content: '';
- box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
- filter: blur(10px);
-}
-
-a #blur {
-	text-decoration: none;
-}
-
-a:hover #blur {
-	text-decoration: none;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-
-.myBtn {
-      position: absolute;
-      bottom: 3%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-}
-
-.myBtn a{
-      font-family: 'Ailerons';
-      text-decoration: none;
-      color: #fff;
-}
-
-.myBtn a:hover{
-      text-decoration: none;
-      color: #000;
-}
-
- button {
-      display: block;
-      padding: 18px 40px;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 6px;
-      color: #fff;
-      border: 1.5px solid #fff;
-      text-transform: uppercase;
-      outline: none;
-      overflow: hidden;
-      background: none;
-      z-index: 1;
-      cursor: crosshair;
-      transition: 0.8s ease-out;
- }
- 
- .myBtn:hover {
-      color: #101010;
-      cursor: crosshair;
- }
- 
- .myBtn:before {
-      content: "";
-      position: absolute;
-      background: #fff;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 100%;
-      z-index: -1;
-      transition: top 0.8s ease-out;
- }
- 
- .myBtn:hover:before {
-      top: 0;
- }
-
-
- 
-#bio {
-      width: 100%;
-      margin: 0 auto;
-      z-index: -1;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      text-align: center;
-      letter-spacing: 7px;
- }
- 
- #bio h1 {
-      font-family: Poppins;
-      font-size: 45px;
-      color: #000;
-      font-weight: 700;
-      margin-bottom: 10px;
-      text-align: center;
- }
- 
- #bio p {
-      font-size: 36px;
-      margin-top: 0;
-      text-align: center;
-      color: #000;
-      font-weight: 400;
- } 
-
-.overlay-2 {
-      z-index: 0;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      background: rgb(153, 156, 117);
- }
-
-.nav a, .social-media a, .logo a, .settings a, .contact_icon a {
-      color: white;
-      text-decoration: none;
-      transition: .3s;
-}
-
-.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover, .contact_icon a:hover {
-      color: #C2C5A2;
-      text-decoration: none;
-      transition: .3s;
-}
-
-#bio a {
-      text-decoration: none;
-      color: #333;
-      transition: .3s;
-}
-
-#bio a:hover {
-      text-decoration: none;
-      color: #777;
-}
-
-#active {
-      color: #C2C5A2;
-}
-
-.underline::after{
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #C2C5A2;
-      transition: width .3s;
-}
-
-.underline:hover::after{
-      width: 100%;
-      transition: width .3s;
-}
-
-/* select {
-      border: none;
-      background: transparent;
-      color: #fff;
-      transition: .3s;
-}
-
-select:hover {
-      color: rgb(184, 184, 184);
-}
-
-option {
-      border: none;
-      background: rgb(200, 200, 200);
-      color: rgb(0, 0, 0);
-} */
-
-@media screen and (max-height: 640px) {
-      .side-strip {
-            display: none;
+      <script>
+      function settings_in() {
+            TweenMax.to(".ovl-settings", 2, {
+                  delay: 0.2,
+                  left: "66.6%",
+                  ease: Expo.easeInOut
+            })
+            TweenMax.to(".settings_title", 2, {
+                  delay: 0.2,
+                  left: "66.6%",
+                  opacity: 100,
+                  ease: Expo.easeInOut
+            })
       }
-      button {
-            padding: 12px 26.64px;
-            right: 50%;
-      }
-}
       
-@media screen and (max-width: 768px) {
-      .social-media {
-            display: none;
+      function delay_out() {	
+      TweenMax.to(".delay_out", 2, {
+                  delay: 0,
+                  right: "0%",
+                  ease: Expo.easeInOut
+            })
       }
-      .logo {
-            font-size: 24px;
-            margin: 1em 0 0 1.5em;
-      }
-      .overlay1 {
-            text-align: center;
-      }
-      .side-strip {
-            display: none;
-      }
-      .settings a {
-      	display: none;
-      }
-      .settings_resp a{
-      	display: inline-block;
-      }
-      button {
-            padding: 12px 26.64px;
-            right: 50%;
-      }
-      #bio {
-            top: 50%;
-      }
-      .nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.2s ease;
-      }
+      </script>
+      <script>
+      function settings_out() {
+            TweenMax.to(".ovl-settings", 2, {
+                delay: 0.1,
+                x: 645,
+                ease: Expo.easeInOut
+              })
+            }
+      </script>
 
-      .nav-wrapper ul {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
+      <!--Shuffle-->
+      <script type="text/javascript">
+            const text = baffle(".overlay1 h1");
+            text.set({
+                  characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+                  speed: 95
+            });
+            text.start();
+            text.reveal(3700);
+      </script>
+
+      <!--Fade In-->
+      <script>
+      TweenMax.to(".overlay1 h1", 2, {
+    delay: 1.5,
+    opacity: 0,
+    y: -60,
+    ease: Expo.easeInOut
+})
+
+TweenMax.to(".overlay1", 2, {
+    delay: 2.1,
+    top: "-100%",
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".logo", 1, {
+    delay: 3.1,
+    opacity: 0,
+    y: 20,
+    ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom(".nav ul li", 1, {
+    delay: 3.3, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.staggerFrom(".language", 1, {
+    delay: 3.8, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.staggerFrom(".social-media ul li", 1, {
+    delay: 3.3, 
+    opacity: 0, 
+    y: 20, 
+    ease: Expo.easeInOut
+}, 0.2)
+
+TweenMax.from(".side-strip", 2, {
+    delay: 3.4,
+    opacity: 0,
+    y: 40,
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".myBtn", 2, {
+    delay: 3.6,
+    opacity: 0,
+    y: -40,     //y: 40
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".nav-btn", 1, {
+    delay: 3.8,
+    opacity: 0,
+    x: 20,
+    ease: Expo.easeInOut
+})
+      </script>
+
+      <script>
+      function la(src) {
+            window.location=src;
       }
-
-      .nav-wrapper ul li {
-            display: block;
-            float: none;
-            width: 100%;
-            text-align: right;
-            margin-bottom: 10px;
-      }
-
-      .nav-wrapper ul li:nth-child(1) a {
-            transition-delay: 0.2s;
-      }
-
-      .nav-wrapper ul li:nth-child(2) a {
-            transition-delay: 0.3s;
-      }
-
-      .nav-wrapper ul li:nth-child(3) a {
-            transition-delay: 0.4s;
-      }
-
-      .nav-wrapper ul li:nth-child(4) a {
-            transition-delay: 0.5s;
-      }
-
-      .nav-wrapper ul li:not(:first-child) {
-            margin-left: 0;
-      }
-
-      .nav-wrapper ul li a {
-            opacity: 0;
-            color: #000;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            transform: translateX(-20px);
-            transition: all 0.2s ease;
-      }
-
-      .nav-btn {
-            position: fixed;
-            right: 10px;
-            top: 10px;
-            display: block;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            z-index: 9999;
-            border-radius: 50%;
-      }
-
-      .nav-btn i { /* Hamburger*/
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            margin-left: 14px;
-      }
-
-      .nav-btn i:nth-child(1) {
-            margin-top: 16px;
-            width: 17px;
-      }
-
-      .nav-btn i:nth-child(2) {
-            margin-top: 4px;
-            width: 20px;
-            opacity: 1;
-      }
-
-      .nav-btn i:nth-child(3) {
-            margin-top: 4px;
-            width: 12px;
-      }
-      .Line {
-            display: none;
-      }
-      .underline::after {
-      display: none;
-}
-}
-
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
-}
-
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
-}
-
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-      width: 20px;
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-      width: 20px;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(135deg);
-      width: 20px;
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-.hidden {
-      display: none;
-}
-
-/* .Line li {                       //Bedarfserweiterung
-      margin-left: 8.5%;
-      display: block;
-      height: 100vh;
-      width: 0px;
-      border: 0.5px solid rgba(230, 230, 230, 0.2);
-      background: none;
-} */
+      </script>
+      
+      <!--Delay-->
+      <script>
+      	function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
+      	//1500
+      	</script>
+</body>
+</html>

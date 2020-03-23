@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+  
+    <meta property = "og:url" content="https://juek3y.netlify.com/de/contact.html">
+    <meta property = "og:title" content="Kontakt | JueK3y">
+    <meta property = "og:site_name" content="JueK3y">
+    <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett "self-coded"">
+    <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett "self-coded"">
+    <meta property = "og:type" content="website">
+    <meta property = "og:locale" content="de_DE">
+    <meta name = "title-tag" content="Coding, Fotografie und Design mit Julian Kennedy">
+    <meta name = "content-language" content="de">
+    <meta name = "author"           content="Julian Kennedy">
+    <meta name = "publisher"        content="Julian Kennedy">
+    <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography, ">
+    <meta name = "page-topic"       content="Kontakt">
+    <meta name = "language"         content="Deutsch">
+    <meta name = "revisit"          content="After 15 days">
+    <meta name = "robots"           content="INDEX,FOLLOW">
+
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
+    <!--icon-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
     <!--stylesheet-->
     <link rel="stylesheet" href="../CSS/contact.css">
-    
+
     <!--scrollbar-->
     <link rel="stylesheet" href="../CSS/scrollbar.css">
 
-    <!--icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
     
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    
+
     <title>Kontakt | JueK3y</title>
 </head>
+
 <body>
-        <div class="logo"><a href="index.html">JueK3y</a></div>
+    <div class="all">
+        <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
                     <label for="nav" class="nav-btn">
@@ -34,71 +53,115 @@
                         <i></i>
                         <i></i>
                     </label>
-                 <div class="nav-wrapper">
-                  <ul>
-                        <li><a href="bio.html" title="Biographie" class="underline">Biographie</a></li>
-                        <li><a href="galerie.html" title="Galerie" class="underline">Galerie</a></li>
-                        <li><a href="contact.html" title="Kontakt" class="active_nav">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/contact.html" title="EN"> | EN</a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="fading"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
+                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a></li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
+                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
+                </div>
+            </div>
+            <div class="inhalt">
+            <div class="container">
+                <div class="card">
+                    <div class="imgBx">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="64" height="64"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#1e73ed"><path d="M77.9375,0.15747c-1.49072,0 -2.6875,1.19678 -2.6875,2.677v18.66553h-40.3125c-4.44067,0 -8.0625,3.62183 -8.0625,8.0625c0,3.49585 2.25708,6.4563 5.375,7.56909v124.11841h-8.0625c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h123.625c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875h-8.0625v-124.11841c3.11792,-1.11279 5.375,-4.07324 5.375,-7.56909c0,-4.44067 -3.62183,-8.0625 -8.0625,-8.0625h-45.6875v-10.60303c0,-1.48023 -1.19678,-2.6875 -2.6875,-2.6875c-1.49072,0 -2.6875,1.20727 -2.6875,2.6875v10.60303h-5.375v-18.66553c0,-1.48023 -1.19678,-2.677 -2.6875,-2.677zM34.9375,26.875h102.125c1.48022,0 2.6875,1.20728 2.6875,2.6875c0,1.48022 -1.20728,2.6875 -2.6875,2.6875h-102.125c-1.48022,0 -2.6875,-1.20728 -2.6875,-2.6875c0,-1.48022 1.20728,-2.6875 2.6875,-2.6875zM37.625,37.625h96.75v107.5h-37.625v-0.13647c0,-2.96045 -2.41455,-5.375 -5.375,-5.375h-10.75c-2.96045,0 -5.375,2.41455 -5.375,5.375v0.13647h-37.625v-96.75h69.875c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875h-69.875zM115.5625,43c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h10.75c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,53.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,53.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,53.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,53.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,64.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,64.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,64.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,64.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,75.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,75.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,75.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,75.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,86c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,86c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,86c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,86c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,96.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,96.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,96.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,96.75c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,107.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,107.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,107.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,107.5c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,118.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,118.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,118.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,118.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM51.0625,129c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM72.5625,129c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM94.0625,129c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM115.5625,129c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h5.375c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM80.625,144.98853h10.75v16.125h-10.75zM37.625,150.5h37.625v10.75h-37.625zM96.75,150.5h37.625v10.75h-37.625z"></path></g></g></svg>
                     </div>
+                    <div class="contentBx">
+                        <h2 id="business-h">Geschäftlich</h2>
+                        <div id="business-t">
+                            <p>Du bist hier richtig, wenn du:</p>
+                            <span>- geschäftliche Absichten hast
+                                <br>- Vertreter einer Firma bist
+                                <br>- ein konkretes Jobangebot hast
+                                <br>- Interesse auf Zusammenarbeit hast
+                            </span>
+                            <div class="link">
+                                <a href="contact/business.html">Kontaktanfrage</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="64" height="64"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#008c90"><path d="M86,10.75c-20.7475,0 -37.625,16.8775 -37.625,37.625c0,11.53971 3.57429,23.91865 9.49023,33.90344l-36.15002,18.07764c-10.08081,5.04175 -16.34021,15.17064 -16.34021,26.43933v26.39209c0,4.44513 3.61738,8.0625 8.0625,8.0625h145.125c4.44513,0 8.0625,-3.61737 8.0625,-8.0625v-26.41833c0,-11.24988 -6.24697,-21.3739 -16.29822,-26.41833l-36.14478,-18.15112c5.88778,-9.97116 9.44299,-22.31551 9.44299,-33.82471c0,-20.7475 -16.8775,-37.625 -37.625,-37.625zM86,16.125c17.78319,0 32.25,14.46681 32.25,32.25c0,21.91119 -14.38619,48.375 -32.25,48.375c-17.86381,0 -32.25,-26.46381 -32.25,-48.375c0,-17.78319 14.46681,-32.25 32.25,-32.25zM111.22156,86.72961l36.69592,18.42407c8.22375,4.128 13.33252,12.41079 13.33252,21.61548v26.41833c0,1.48081 -1.20669,2.6875 -2.6875,2.6875h-145.125c-1.48081,0 -2.6875,-1.20669 -2.6875,-2.6875v-26.39209c0,-9.21812 5.12133,-17.50592 13.36926,-21.63123l36.71692,-18.35583c6.61052,9.10144 15.36535,15.31665 25.16382,15.31665c9.82675,0 18.60454,-6.25079 25.22156,-15.39539zM18.8125,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM32.25,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM45.6875,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM59.125,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM72.5625,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM86,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM99.4375,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM112.875,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM126.3125,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM139.75,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875zM153.1875,139.75c-1.4835,0 -2.6875,1.204 -2.6875,2.6875v5.375c0,1.4835 1.204,2.6875 2.6875,2.6875c1.4835,0 2.6875,-1.204 2.6875,-2.6875v-5.375c0,-1.4835 -1.204,-2.6875 -2.6875,-2.6875z"></path></g></g></svg>
+                    </div>
+                    <div class="contentBx">
+                        <h2 id="private-h">Privat</h2>
+                        <div id="private-t">
+                            <p>Du bist hier richtig, wenn du:</p>
+                            <span>- Fragen zu meiner Person hast
+                                <br>- Tipps & Ratschläge brauchst
+                                <br>- Lob/Anerkennung weitergeben willst
+                                <br>- Fragen zum Code hast
+                            </span>
+                            <div class="link">
+                                <a href="contact/privat.html">Kontaktanfrage</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="64" height="64"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#eb7154"><path d="M48.375,16.125c-8.89294,0 -16.125,7.23206 -16.125,16.125v32.25c0,2.96431 2.41069,5.375 5.375,5.375h26.875c2.96431,0 5.375,-2.41069 5.375,-5.375v-10.75h26.875v21.5h-16.125c-8.89294,0 -16.125,7.23206 -16.125,16.125v26.875c0,2.96431 2.41069,5.375 5.375,5.375h26.875c2.96431,0 5.375,-2.41069 5.375,-5.375v-10.75h21.5c8.89294,0 16.125,-7.23206 16.125,-16.125v-59.125c0,-8.89294 -7.23206,-16.125 -16.125,-16.125zM48.375,21.5h75.25c5.92863,0 10.75,4.82138 10.75,10.75v59.125c0,5.92863 -4.82137,10.75 -10.75,10.75h-21.5c-2.96431,0 -5.375,2.41069 -5.375,5.375l0.00525,10.75h-26.88025v-26.875c0,-5.92862 4.82138,-10.75 10.75,-10.75h16.125c2.96431,0 5.375,-2.41069 5.375,-5.375v-21.5c0,-2.96431 -2.41069,-5.375 -5.375,-5.375h-26.875c-2.96431,0 -5.375,2.41069 -5.375,5.375v10.75h-26.875v-32.25c0,-5.92862 4.82138,-10.75 10.75,-10.75zM120.9375,32.25c-1.48619,0 -2.6875,1.204 -2.6875,2.6875c0,1.4835 1.20131,2.6875 2.6875,2.6875h5.375c1.48619,0 2.6875,-1.204 2.6875,-2.6875c0,-1.4835 -1.20131,-2.6875 -2.6875,-2.6875zM120.9375,45.6875c-1.48619,0 -2.6875,1.204 -2.6875,2.6875c0,1.4835 1.20131,2.6875 2.6875,2.6875h5.375c1.48619,0 2.6875,-1.204 2.6875,-2.6875c0,-1.4835 -1.20131,-2.6875 -2.6875,-2.6875zM120.9375,59.125c-1.48619,0 -2.6875,1.204 -2.6875,2.6875c0,1.4835 1.20131,2.6875 2.6875,2.6875h5.375c1.48619,0 2.6875,-1.204 2.6875,-2.6875c0,-1.4835 -1.20131,-2.6875 -2.6875,-2.6875zM120.9375,72.5625c-1.48619,0 -2.6875,1.204 -2.6875,2.6875c0,1.4835 1.20131,2.6875 2.6875,2.6875h5.375c1.48619,0 2.6875,-1.204 2.6875,-2.6875c0,-1.4835 -1.20131,-2.6875 -2.6875,-2.6875zM120.9375,86c-1.48619,0 -2.6875,1.204 -2.6875,2.6875c0,1.4835 1.20131,2.6875 2.6875,2.6875h5.375c1.48619,0 2.6875,-1.204 2.6875,-2.6875c0,-1.4835 -1.20131,-2.6875 -2.6875,-2.6875zM69.875,129c-2.96431,0 -5.375,2.41069 -5.375,5.375v21.5c0,2.96431 2.41069,5.375 5.375,5.375h26.875c2.96431,0 5.375,-2.41069 5.375,-5.375v-21.5c0,-2.96431 -2.41069,-5.375 -5.375,-5.375zM69.875,134.375h26.875v21.5h-26.875z"></path></g></g></svg>
+                    </div>
+                    <div class="contentBx">
+                        <h2 id="help-h">Technische Fragen</h2>
+                        <div id="help-t">
+                            <p>Du bist hier richtig, wenn du:</p>
+                            <span>- Hilfe bezüglich der Website brauchst
+                                <br>- einen Fehler gefunden hast
+                                <br>- Verbesserungsvorschläge hast
+                                <br>- Fragen zu den Credits hast
+                            </span>
+                            <div class="link">
+                                <a href="settings.html#FAQ">FAQ & Help</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    <div class="bottom">
-  <div id="content" class="wrapper">
-   <div class="container">
-       <p class="text1">
-         Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
-       <p class="text">Noch Fragen?<br>Kontaktiere mich!</p>
-      </div>
-      <form name="contact" method="POST" data-netlify="true">
-            <div class="fields">
-                <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
-                </div>
-                <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
-                </div>
-                <div class="field">
-                    <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
-                </div>
-                <!--Hochladen einer Datei-->
-                <!--<div class="field">
-                    <input type="file" name="myfile" id="myfile" placeholder="Datei hochladen" rows="7" />
-                </div>-->
-                <!--Spam-Filter-->
-                <div class="field">
-                    <div data-netlify-recaptcha="true" id="captcha"></div>
-                    <!--<div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
-                    <?php $json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf0wsUUAAAAAFmq7XCoNIXxOQ_2BCCNrJtvmA1e&response='.$_POST['g-recaptcha-response']);
-$data = json_decode($json);
-var_dump($data); ?>-->
-                </div>
-            </div>
-            <ul class="actions">
-                <li><input type="submit" value="Verschicken" class="button_primary" /></li>
-            </ul>
-        </form>
-        <div class="share-button">
-          <span><i class="fas fa-share-alt"></i></span>
-          <a href="https://github.com/JueK3y" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/juek3y/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/juek3y" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
+  <hr id="down">
+   <div id="footer">
+    <div class="das">
+     <div class="column">
+      <h4>Meine Links</h4>
+      <div class="social-media">
+              <a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+     </div>
+     <div class="column" id="text">   
+      <h4>Meine Geschichte</h4>
+         <p>Hei. Mein Name ist Julian und ich bin 17 Jahre alt. Diese Website ist noch im Aufbau!</p>
+     </div>
     </div>
-    </div>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!--Delay-->
+   </div>
+  </div>
+<!--Delay-->
 <script>
     function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
     //1500
 </script>
 <script>
     $(document).ready(function(){
-      $(".fading").click(function(){
+      $(".clk").click(function(){
         $("*").fadeOut();
       });
     });
     </script>
-</body>
+ </body>
 </html>

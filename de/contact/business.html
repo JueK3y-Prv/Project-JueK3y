@@ -9,16 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
     <!--stylesheet-->
-    <link rel="stylesheet" href="../../CSS/contact_privat.css">
+    <link rel="stylesheet" href="../../CSS/contact_business.css">
     
     <!--scrollbar-->
-    <link rel="stylesheet" href="../CSS/scrollbar.css">
+    <link rel="stylesheet" href="../../CSS/scrollbar.css">
 
     <!--icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   
     <!--logo-->
-    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+    <link rel="shortcut icon" href="../../img/LOGO_tran.png" type="image/png">
     
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -26,7 +26,7 @@
     <title>Kontakt | JueK3y</title>
 </head>
 <body>
-        <div class="logo"><a href="index.html">JueK3y</a></div>
+        <div class="logo" class="clk"><a href="javascript:delay('../index.html')">JueK3y</a></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
                     <label for="nav" class="nav-btn">
@@ -36,60 +36,105 @@
                     </label>
                  <div class="nav-wrapper">
                     <ul>
-                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                        <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
-                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li class="clk"><a href="javascript:delay('../experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
+                        <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Geschäftlich</a></li>
+                                <li><a href="#">Privat</a></li>
+                                <li><a href="#">Fragen</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../../en/index.html')" title="English"> | EN</a></li>
+                        <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
                     </div>
             </div>
-    <div class="bottom">
   <div id="content" class="wrapper">
    <div class="container">
-       <p class="text1">
-         Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
-       <p class="text">Noch Fragen?<br>Kontaktiere mich!</p>
-      </div>
       <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
             <div class="fields">
-                <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Firmenname" minlength="3" required="required"/>
+
+                <!-- Firma -->
+                <label class="title_company" for="company">Firma</label>
+                <div class="field half" class="wrap-input100">
+                    <input type="text" name="company" id="company" placeholder="Firmenname" minlength="5"/>
+					<span class="focus-input100"></span>
                 </div>
-                <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required"/>
+
+                <!-- Name -->
+                <label class="title_name" for="first-name">Name</label>
+                <!-- Geschlecht -->
+                <div class="wrap-input100 input100-select">
+                    <select class="selection-2" name="gender" id="gender" required>
+                        <option value="">Anrede</option>
+                        <option value="woman1">Frau</option>
+                        <option value="woman2">Frau Dr.</option>
+                        <option value="woman3">Frau Prof.</option>
+                        <option value="woman4">Frau Prof. Dr.</option>
+                        <option value="men1">Herr</option>
+                        <option value="men2">Herr Dr.</option>
+                        <option value="men3">Herr Prof.</option>
+                        <option value="men4">Herr Prof. Dr.</option>
+                    </select>
+                    <span class="focus-input100"></span>
                 </div>
-                <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required"/>
+                <!-- Vorname -->
+                <div class="field half" data-validate="First name is required">
+                    <input type="text" name="first-name" id="first-name" placeholder="Vorname" minlength="2" required="required"/>
+					<span class="focus-input100"></span>
+                </div> 
+                <!-- Nachname -->         
+				<div data-validate="Last name is required">
+					<input type="text" name="last-name" id="last-name" placeholder="Nachname" minlength="2" required="required">
+					<span class="focus-input100"></span>
                 </div>
-                <div class="field">
-                    <textarea name="message" id="message" placeholder="Schreibe eine Nachricht..." rows="7 required="required"></textarea>
+            
+                <!-- E-Mail -->
+                <label class="title_email" for="email">E-Mail</label>
+                <div class="field half" data-validate = "Valid email is required: a@d.xy">          <!--class="inputWithIcon"-->
+                    <input type="email" name="email" id="email" placeholder="E-Mail-Adresse" minlength="6" required="required"/>
+					<span class="focus-input100"></span>                                            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
                 </div>
-                <!--Hochladen einer Datei-->
-                <!--<div class="field">
-                    <input type="file" name="myfile" id="myfile" placeholder="Datei hochladen" rows="7" />
-                </div>-->
+
+                <!-- Telefonnummer -->
+                <label class="title_phone" for="phone">Telefonnummer</label>
+                <div class="field half" data-validate = "Phone number is required">
+                    <input type="text" name="number" id="phone" placeholder="Gib deine Telefonnummer ein" minlength="7" required="required"/>
+					<span class="focus-input100"></span>
+                </div>
+
+                <!-- Benötigter Dienst -->
+                <label class="title_service" for="service">Benötigter Service</label>
+                <div class="wrap-input100 input100-select">
+                    <select name="service" id="service" required>
+                        <option value="">Bitte auswählen</option>
+                        <option value="code">Coding</option>
+                        <option value="photo">Fotografie</option>
+                        <option value="design">Design</option>
+                        <option value="unknown">Sonstiges</option>
+                    </select>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <!--- Nachricht -->
+                <label class="title_msg" for="msg">Nachricht</label>            <!--label-input100-->
+                <div class="field" data-validate = "Message is required">
+                    <textarea name="message" id="msg" placeholder="Deine Nachricht..." rows="7" minlength="15" required="required"></textarea>
+					<span class="focus-input100"></span>
+                </div>
+
                 <!--Spam-Filter-->
                 <div class="field">
                     <div data-netlify-recaptcha="true" id="captcha"></div>
-                    <!--<div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
-                    <?php $json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf0wsUUAAAAAFmq7XCoNIXxOQ_2BCCNrJtvmA1e&response='.$_POST['g-recaptcha-response']);
-$data = json_decode($json);
-var_dump($data); ?>-->
                 </div>
             </div>
             <ul class="actions">
                 <li><input type="submit" value="Verschicken" class="button_primary" /></li>
             </ul>
         </form>
-        <div class="share-button">
-          <span><i class="fas fa-share-alt"></i></span>
-          <a href="https://github.com/JueK3y" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/juek3y/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/juek3y" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
     </div>
-    </div>
+</div>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <!--Delay-->
 <script>
@@ -98,7 +143,7 @@ var_dump($data); ?>-->
 </script>
 <script>
     $(document).ready(function(){
-      $(".fading").click(function(){
+      $(".clk").click(function(){
         $("*").fadeOut();
       });
     });

@@ -25,7 +25,7 @@
     
     <title>Kontakt | JueK3y</title>
 </head>
-<body>
+<body>  
         <div class="logo" class="clk"><a href="javascript:delay('../index.html')">JueK3y</a></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
@@ -52,7 +52,7 @@
             </div>
   <div id="content" class="wrapper">
    <div class="container">
-      <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
+      <form name="Geschäftliche Anfrage" method="POST" data-netlify="true" class="form">
             <div class="fields">
 
                 <!-- Firma -->
@@ -66,7 +66,7 @@
                 <label class="title_name" for="first-name">Name</label>
                 <!-- Geschlecht -->
                 <div class="wrap-input100 input100-select">
-                    <select class="selection-2" name="gender" id="gender" required>
+                    <select class="selection-2" name="Geschlecht" id="gender" required>
                         <option value="">Anrede</option>
                         <option value="woman1">Frau</option>
                         <option value="woman2">Frau Dr.</option>
@@ -81,12 +81,12 @@
                 </div>
                 <!-- Vorname -->
                 <div class="field half" data-validate="First name is required">
-                    <input type="text" name="first-name" id="first-name" placeholder="Vorname" minlength="2" required="required"/>
+                    <input type="text" name="Vorname" id="first-name" placeholder="Vorname" minlength="2" required="required"/>
 					<span class="focus-input100"></span>
                 </div> 
                 <!-- Nachname -->         
 				<div data-validate="Last name is required">
-					<input type="text" name="last-name" id="last-name" placeholder="Nachname" minlength="2" required="required">
+					<input type="text" name="Nachname" id="last-name" placeholder="Nachname" minlength="2" required="required">
 					<span class="focus-input100"></span>
                 </div>
             
@@ -104,15 +104,33 @@
 					<span class="focus-input100"></span>
                 </div>
 
+                <!-- Adresse -->
+                <!--   <div class="form-group">
+                      <label for="form-address">Address</label>
+                      <input type="search" class="form-control" id="form-address" placeholder="Where do you live?" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-address2">Address 2</label>
+                      <input type="text" class="form-control" id="form-address2" placeholder="Street number and name" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-city">City*</label>
+                      <input type="text" class="form-control" id="form-city" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                      <label for="form-zip">ZIP code*</label>
+                      <input type="text" class="form-control" id="form-zip" placeholder="ZIP code">
+                    </div> -->
+                  
                 <!-- Benötigter Dienst -->
                 <label class="title_service" for="service">Benötigter Service</label>
                 <div class="wrap-input100 input100-select">
                     <select name="service" id="service" required>
                         <option value="">Bitte auswählen</option>
-                        <option value="code">Coding</option>
-                        <option value="photo">Fotografie</option>
-                        <option value="design">Design</option>
-                        <option value="unknown">Sonstiges</option>
+                        <option value="Programmierung">Coding</option>
+                        <option value="Fotografie">Fotografie</option>
+                        <option value="Design">Design</option>
+                        <option value="Sonstiges">Sonstiges</option>
                     </select>
                     <span class="focus-input100"></span>
                 </div>
@@ -135,18 +153,45 @@
         </form>
     </div>
 </div>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
     <!--Delay-->
+
 <script>
     function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
     //1500
 </script>
+
 <script>
     $(document).ready(function(){
       $(".clk").click(function(){
         $("*").fadeOut();
       });
     });
-    </script>
+</script>
+
+<!-- Algolia -->          
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
+<script>
+    (function() {
+      var placesAutocomplete = places({
+        appId: '<YOUR_PLACES_APP_ID>',
+        apiKey: '<YOUR_PLACES_API_KEY>',
+        container: document.querySelector('#form-address'),
+        templates: {
+          value: function(suggestion) {
+            return suggestion.name;
+          }
+        }
+      }).configure({
+        type: 'address'
+      });
+      placesAutocomplete.on('change', function resultSelected(e) {
+        document.querySelector('#form-address2').value = e.suggestion.administrative || '';
+        document.querySelector('#form-city').value = e.suggestion.city || '';
+        document.querySelector('#form-zip').value = e.suggestion.postcode || '';
+      });
+    })();
+</script>
 </body>
 </html>

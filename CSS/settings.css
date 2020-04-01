@@ -215,10 +215,11 @@ p {
     font-size: 18px;
     line-height: 1.5em;
 }
+
 #faq-t span {
   font-style: italic;
 }
-#impressum-t p, #datenschutz-t p{
+#impressum-t p, #datenschutz-t p {
   color: #656565;
 }
 #impressum-t a {
@@ -243,17 +244,17 @@ a:hover, #impressum-t a:hover {
   text-decoration: none;
 } 
 
-    @media screen and (max-width: 768px) {
-      .logo {
+@media screen and (max-width: 768px) {
+  .logo {
         font-size: 24px;
         margin: 1em 0 0 1.5em;
-      }
-      .text {
+  }
+  .text {
     padding-top: 35%;
     padding-left: 10%;
     max-width: 90%;
-}
-      .nav-wrapper {
+  }
+  .nav-wrapper {
             position: fixed;
             top: 0;
             left: 0;
@@ -263,44 +264,44 @@ a:hover, #impressum-t a:hover {
             background: #fff;
             opacity: 0;
             transition: all 0.2s ease;
-      }
+  }
     
-      .nav-wrapper ul {
+  .nav-wrapper ul {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             width: 100%;
-      }
+  }
     
-      .nav-wrapper ul li {
+  .nav-wrapper ul li {
             display: block;
             float: none;
             width: 100%;
             text-align: right;
             margin-bottom: 10px;
-      }
+  }
     
-      .nav-wrapper ul li:nth-child(1) a {
+  .nav-wrapper ul li:nth-child(1) a {
             transition-delay: 0.2s;
-      }
+  }
     
-      .nav-wrapper ul li:nth-child(2) a {
+  .nav-wrapper ul li:nth-child(2) a {
             transition-delay: 0.3s;
-      }
+  }
     
-      .nav-wrapper ul li:nth-child(3) a {
+  .nav-wrapper ul li:nth-child(3) a {
             transition-delay: 0.4s;
-      }
+  }
     
-      .nav-wrapper ul li:nth-child(4) a {
+  .nav-wrapper ul li:nth-child(4) a {
             transition-delay: 0.5s;
-      }
+  }
     
-      .nav-wrapper ul li:not(:first-child) {
+  .nav-wrapper ul li:not(:first-child) {
             margin-left: 0;
-      }
+  }
     
-      .nav-wrapper ul li a {
+  .nav-wrapper ul li a {
             opacity: 0;
             color: #000;
             font-size: 14px;
@@ -308,9 +309,9 @@ a:hover, #impressum-t a:hover {
             letter-spacing: 1.2px;
             transform: translateX(-20px);
             transition: all 0.2s ease;
-      }
+  }
     
-      .nav-btn {
+  .nav-btn {
             position: fixed;
             right: 10px;
             top: 10px;
@@ -319,37 +320,50 @@ a:hover, #impressum-t a:hover {
             height: 48px;
             z-index: 9999;
             border-radius: 50%;
-      }
+  }
     
-      .nav-btn i {
+  .nav-btn i {
             display: block;
             width: 20px;
             height: 2px;
             background: #000;
             border-radius: 2px;
             margin-left: 14px;
-      }
+  }
     
-      .nav-btn i:nth-child(1) {
+  .nav-btn i:nth-child(1) {
             margin-top: 16px;
             width: 17px;
-      }
+  }
     
-      .nav-btn i:nth-child(2) {
+  .nav-btn i:nth-child(2) {
             margin-top: 4px;
             opacity: 1;
             width: 20px;
-      }
+  }
     
-      .nav-btn i:nth-child(3) {
+  .nav-btn i:nth-child(3) {
             margin-top: 4px;
             width: 12px;
-      }
-      
-      .underline::after {
-      display: none;
-}
-    .active_nav::after {
-      display: none;
-    }
   }
+      
+  .underline::after {
+      display: none;
+  }
+  .active_nav::after {
+      display: none;
+  }
+    
+  .header {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 2em;
+  }
+  
+  p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5em;
+  }
+
+}

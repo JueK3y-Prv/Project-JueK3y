@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
     <!--stylesheet-->
-    <link rel="stylesheet" href="../../CSS/contact_business.css">
+    <link rel="stylesheet" href="../../CSS/contact-b.css">
     
     <!--scrollbar-->
     <link rel="stylesheet" href="../../CSS/scrollbar.css">
@@ -26,172 +26,153 @@
     <title>Kontakt | JueK3y</title>
 </head>
 <body>  
-        <div class="logo" class="clk"><a href="javascript:delay('../index.html')">JueK3y</a></div>
-            <div class="nav">
-                <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </label>
-                 <div class="nav-wrapper">
-                    <ul>
-                        <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                        <li class="clk"><a href="javascript:delay('../experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
-                        <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Geschäftlich</a></li>
-                                <li><a href="#">Privat</a></li>
-                                <li><a href="#">Fragen</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../../en/index.html')" title="English"> | EN</a></li>
-                        <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
-                    </div>
+    <div class="logo" class="clk"><a href="javascript:delay('../index.html')">JueK3y</a></div>
+        <div class="nav">
+            <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+             <div class="nav-wrapper">
+                <ul>
+                    <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                    <li class="clk"><a href="javascript:delay('../experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
+                    <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
+                        <ul class="dropdown">
+                            <li><a href="">Geschäftlich</a></li>
+                            <li><a href="privat.html">Privat</a></li>
+                            <li><a href="../settings.html">Fragen</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../../en/index.html')" title="English"> | EN</a></li>
+                    <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
+                </div>
+        </div>
+<div class="content"></div>
+<div class="left"></div>
+    <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
+
+            <!-- Firma -->
+            <label class="firma-h" for="firma">Firma</label>
+            <label class="firma-h-o" for="firma">Optional</label>
+            <div class="firma-t">
+                <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
             </div>
-  <div id="content" class="wrapper">
-   <div class="container">
-      <form name="Geschäftliche Anfrage" method="POST" data-netlify="true" class="form">
-            <div class="fields">
 
-                <!-- Firma -->
-                <label class="title_company" for="company">Firma</label>
-                <div class="field half" class="wrap-input100">
-                    <input type="text" name="company" id="company" placeholder="Firmenname" minlength="5"/>
-					<span class="focus-input100"></span>
-                </div>
-
-                <!-- Name -->
-                <label class="title_name" for="first-name">Name</label>
-                <!-- Geschlecht -->
-                <div class="wrap-input100 input100-select">
-                    <select class="selection-2" name="Geschlecht" id="gender" required>
-                        <option value="">Anrede</option>
-                        <option value="woman1">Frau</option>
-                        <option value="woman2">Frau Dr.</option>
-                        <option value="woman3">Frau Prof.</option>
-                        <option value="woman4">Frau Prof. Dr.</option>
-                        <option value="men1">Herr</option>
-                        <option value="men2">Herr Dr.</option>
-                        <option value="men3">Herr Prof.</option>
-                        <option value="men4">Herr Prof. Dr.</option>
-                    </select>
-                    <span class="focus-input100"></span>
-                </div>
-                <!-- Vorname -->
-                <div class="field half" data-validate="First name is required">
-                    <input type="text" name="Vorname" id="first-name" placeholder="Vorname" minlength="2" required="required"/>
-					<span class="focus-input100"></span>
-                </div> 
-                <!-- Nachname -->         
-				<div data-validate="Last name is required">
-					<input type="text" name="Nachname" id="last-name" placeholder="Nachname" minlength="2" required="required">
-					<span class="focus-input100"></span>
-                </div>
-            
-                <!-- E-Mail -->
-                <label class="title_email" for="email">E-Mail</label>
-                <div class="field half" data-validate = "Valid email is required: a@d.xy">          <!--class="inputWithIcon"-->
-                    <input type="email" name="email" id="email" placeholder="E-Mail-Adresse" minlength="6" required="required"/>
-					<span class="focus-input100"></span>                                            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
-                </div>
-
-                <!-- Telefonnummer -->
-                <label class="title_phone" for="phone">Telefonnummer</label>
-                <div class="field half" data-validate = "Phone number is required">
-                    <input type="text" name="number" id="phone" placeholder="Gib deine Telefonnummer ein" minlength="7" required="required"/>
-					<span class="focus-input100"></span>
-                </div>
-
-                <!-- Adresse -->
-                <!--   <div class="form-group">
-                      <label for="form-address">Address</label>
-                      <input type="search" class="form-control" id="form-address" placeholder="Where do you live?" />
-                    </div>
-                    <div class="form-group">
-                      <label for="form-address2">Address 2</label>
-                      <input type="text" class="form-control" id="form-address2" placeholder="Street number and name" />
-                    </div>
-                    <div class="form-group">
-                      <label for="form-city">City*</label>
-                      <input type="text" class="form-control" id="form-city" placeholder="City">
-                    </div>
-                    <div class="form-group">
-                      <label for="form-zip">ZIP code*</label>
-                      <input type="text" class="form-control" id="form-zip" placeholder="ZIP code">
-                    </div> -->
-                  
-                <!-- Benötigter Dienst -->
-                <label class="title_service" for="service">Benötigter Service</label>
-                <div class="wrap-input100 input100-select">
-                    <select name="service" id="service" required>
-                        <option value="">Bitte auswählen</option>
-                        <option value="Programmierung">Coding</option>
-                        <option value="Fotografie">Fotografie</option>
-                        <option value="Design">Design</option>
-                        <option value="Sonstiges">Sonstiges</option>
-                    </select>
-                    <span class="focus-input100"></span>
-                </div>
-
-                <!--- Nachricht -->
-                <label class="title_msg" for="msg">Nachricht</label>            <!--label-input100-->
-                <div class="field" data-validate = "Message is required">
-                    <textarea name="message" id="msg" placeholder="Deine Nachricht..." rows="7" minlength="15" required="required"></textarea>
-					<span class="focus-input100"></span>
-                </div>
-
-                <!--Spam-Filter-->
-                <div class="field">
-                    <div data-netlify-recaptcha="true" id="captcha"></div>
-                </div>
+            <!-- Geschlecht -->
+            <label class="gender-h" for="gender">Geschlecht</label>
+            <div class="gender-t-m" id="gender" data-validate="Gender is required">
+                <input type="radio" name="gender" id="male" value="male" onclick="check()" required>
+                <label class="male-h" for="male">Mann</label>
             </div>
-            <ul class="actions">
-                <li><input type="submit" value="Verschicken" class="button_primary" /></li>
-            </ul>
-        </form>
-    </div>
-</div>
+            <div class="gender-t-f">
+                <input type="radio" name="gender" id="female" value="female">
+                <label class="female-h" for="female">Frau</label>
+            </div>
+
+            <script>
+                function check() {
+                    document.getElementById("male").checked = true;
+                }
+
+                function uncheck() {
+                    document.getElementById("male").checked = false;
+                }
+
+            </script>
+
+
+            <!-- Geschlecht -->
+            <!--<label class="gender-h" for="gender">Gender</label>
+            <div class="gender-t" data-validate="Gender is required">
+                <select name="Geschlecht" id="gender" required>
+                    <option value="">Anrede</option>
+                    <option value="woman1">Frau</option>
+                    <option value="woman2">Frau Dr.</option>
+                    <option value="woman3">Frau Prof.</option>
+                    <option value="woman4">Frau Prof. Dr.</option>
+                    <option value="men1">Herr</option>
+                    <option value="men2">Herr Dr.</option>
+                    <option value="men3">Herr Prof.</option>
+                    <option value="men4">Herr Prof. Dr.</option>
+                </select>
+            </div>-->
+
+            <!-- Name -->
+            <label class="name-h" for="name">Name</label>
+            <div class="name-t" data-validate="Name is required">
+                <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" required="required"/>
+            </div>
+        
+            <!-- E-Mail -->
+            <label class="email-h" for="email">E-Mail</label>
+            <div class="email-t" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
+                <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
+            </div>
+              
+            <!-- Benötigter Dienst -->
+            <label class="service-h" for="service">Service</label>
+            <div class="service-t" data-validate="Service is required">
+                <select name="service" id="service" required="required">
+                    <option selected value="1">- Auswählen -</option>
+                    <option value="Programmierung">Coding</option>
+                    <option value="Fotografie">Fotografie</option>
+                    <option value="Design">Design</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                </select>
+            </div>
+
+            <!--- Nachricht -->
+            <label class="msg-h" for="msg">Nachricht</label>            <!--label-input100-->
+            <div class="msg-t" data-validate = "Message is required">
+                <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
+            </div>
+
+        <ul class="actions">
+            <li><input type="submit" value="Send message" class="button_primary"/></li>
+        </ul>
+    </form> 
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!--Delay-->
+<!--Delay-->
 
 <script>
-    function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
-    //1500
+function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
+//1500
 </script>
 
 <script>
-    $(document).ready(function(){
-      $(".clk").click(function(){
-        $("*").fadeOut();
-      });
-    });
+$(document).ready(function(){
+  $(".clk").click(function(){
+    $("*").fadeOut();
+  });
+});
 </script>
 
-<!-- Algolia -->          
-<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
+<!-- Algolia - Für Adresse  -->          
+<!--<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
 <script>
-    (function() {
-      var placesAutocomplete = places({
-        appId: '<YOUR_PLACES_APP_ID>',
-        apiKey: '<YOUR_PLACES_API_KEY>',
-        container: document.querySelector('#form-address'),
-        templates: {
-          value: function(suggestion) {
-            return suggestion.name;
-          }
-        }
-      }).configure({
-        type: 'address'
-      });
-      placesAutocomplete.on('change', function resultSelected(e) {
-        document.querySelector('#form-address2').value = e.suggestion.administrative || '';
-        document.querySelector('#form-city').value = e.suggestion.city || '';
-        document.querySelector('#form-zip').value = e.suggestion.postcode || '';
-      });
-    })();
-</script>
+(function() {
+  var placesAutocomplete = places({
+    appId: '<YOUR_PLACES_APP_ID>',
+    apiKey: '<YOUR_PLACES_API_KEY>',
+    container: document.querySelector('#form-address'),
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  }).configure({
+    type: 'address'
+  });
+  placesAutocomplete.on('change', function resultSelected(e) {
+    document.querySelector('#form-address2').value = e.suggestion.administrative || '';
+    document.querySelector('#form-city').value = e.suggestion.city || '';
+    document.querySelector('#form-zip').value = e.suggestion.postcode || '';
+  });
+})();
+</script>-->
 </body>
 </html>

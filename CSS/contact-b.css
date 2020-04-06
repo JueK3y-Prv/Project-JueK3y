@@ -156,7 +156,7 @@
 }
 
 ul .dropdown {
-  z-index: 1;
+  z-index: 9999;
 
   background: #FFFFFF;
   border: 2px solid #C2C5A2;
@@ -247,6 +247,7 @@ box-sizing: border-box;
 
     /* Basic Position */
     .resp {
+      z-index: 999;
       position: absolute;
       width: 538px;
       height: 620px;
@@ -652,99 +653,76 @@ box-sizing: border-box;
     } 
 
     /* Responsive */
-    @media screen and (max-width: 1550px) {
-      .header {
-        margin-top: -19.7%;
+    @media screen and (max-width: 1660px) {
+      .resp {
+        position: absolute;
+        left: 1000px;
       }
-      #down {
-        width: 50%;    /*53,2194%*/
-      }
-      #footer {
-        margin-left: 0;
-        text-align: center;
-      }
-    }
-    
-    @media screen and (max-width: 1500px) {
-      .header {
-        margin-top: -20.5%;
-      }
-    }
-    
-    @media screen and (max-width: 1420px) {
-      .header {
-        margin-top: -21.5%;
-      }
-    }
-    
-    @media screen and (max-width: 1290px) {
-      .header {
-        margin-top: -23.4%;
-      }
-    }
-    
-    @media screen and (max-width: 1160px) {
-      .header {
-        margin-top: -25.7%;
-      }
-      .header_rotated::after {
-        width: 70px;
-      }
-    }
-    
-    @media screen and (max-width: 1030px) {
-      .header {
-        margin-top: -28.7%;
-      }
-      .header_rotated::after {
-        top: 9px;
-        width: 35px;
-      }
-    }
-    
-    @media screen and (max-width: 965px) {
-      .header {
-        margin-top: -30.5%;
-      }
-      .header_rotated::after {
-        top: 9px;
-        width: 26px;
-      }
-    }
-    
-    @media screen and (max-width: 900px) {
-      .header {
-        margin-top: -35.5%;
-      }
-      .header_rotated::after {
-        width: 50px;
-      }
-      .biographie {
-        max-width: 400px;
-        margin-top: -21.5%;
-      }
-      .logo {
-        margin-left: 3em;
-      }
-      .nav {
-        margin-right: 3em;
-      }
-    }
-    
-    @media screen and (max-width: 810px) {
-      .header {
-        margin-top: -37.8%;
-      }
-      .header_rotated {
+      .content {
         display: none;
       }
-      .header_rotated::after {
+    }
+
+    @media screen and (max-width: 1640px) {
+      .resp {
+        position: absolute;
+        left: 900px;
+      }
+      .content {
         display: none;
       }
-      .biographie {
-        max-width: 400px;
-        margin-top: -24%;
-        margin-left: 45.5%;
+    }
+
+    
+    @media screen and (max-width: 1540px) {
+      .resp {
+        position: absolute;
+        left: 800px;
+      }
+    }
+    
+    @media screen and (max-width: 1440px) {
+      .resp {
+        position: absolute;
+        left: 700px;
+      }
+    }
+    
+    @media screen and (max-width: 1340px) {
+      .resp {
+        position: absolute;
+        left: 600px;
+      }
+    }
+    
+    @media screen and (max-width: 1240px) {
+      .resp {
+        position: absolute;
+        left: 350px;
+      }
+      .left {
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: 1140px) {
+      .resp {
+        position: absolute;
+        left: 320px;
+      }
+    }
+    
+    @media screen and (max-width: 1040px) {
+      .resp {
+        position: absolute;
+        left: 260px;
+      }
+    }
+
+    @media screen and (max-width: 940px) {
+      .resp {
+        position: absolute;
+        left: 200px;
       }
     }
 
@@ -832,7 +810,7 @@ box-sizing: border-box;
             height: 2px;
             background: #000;
             border-radius: 2px;
-            margin-left: 14px;
+            margin-left: 670px;
       }
     
       .nav-btn i:nth-child(1) {
@@ -853,17 +831,204 @@ box-sizing: border-box;
       
       .underline::after {
       display: none;
-}
-
-      .content, .left {
-        display: none;
-      }
-
-      .resp {
-        margin-left: 60em;
       }
 
     .active_nav::after {
       display: none;
+    }
+
+    ul .dropdown {
+      z-index: -5;
+      border: 0px;
+    }
+
+    ul li ul li a { 
+      display: none;
+    }
+
+    .resp {
+      position: absolute;
+      left: 200px;
+    }
+
+    @media screen and (max-width: 840px) {
+      .resp {
+        position: absolute;
+        left: 150px;
+      }
+      .nav-btn i {
+        margin-left: 640px;
+      }
+    }
+
+    @media screen and (max-width: 790px) {
+      .resp {
+        position: absolute;
+        left: 120px;
+      }
+      .nav-btn i {
+        margin-left: 590px;
+      }
+    }
+
+    @media screen and (max-width: 760px) {
+      .resp {
+        position: absolute;
+        left: 100px;
+      }
+      .nav-btn i {
+        margin-left: 560px;
+      }
+    }
+
+    @media screen and (max-width: 740px) {
+      .resp {
+        position: absolute;
+        left: 85px;
+      }
+      .nav-btn i {
+        margin-left: 540px; 
+      }
+    }
+
+    @media screen and (max-width: 722px) {
+      .resp {
+        position: absolute;
+        left: 70px;
+      }
+      .nav-btn i {
+        margin-left: 522px;
+      }
+    }
+
+    @media screen and (max-width: 705px) {
+      .resp {
+        position: absolute;
+        left: 60px;
+      }
+      .nav-btn i {
+        margin-left: 505px;
+      }
+    }
+
+    @media screen and (max-width: 696px) {
+      .resp {
+        position: absolute;
+        left: 50px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 496px;
+      }
+    } 
+    @media screen and (max-width: 660px) {
+      .resp {
+        position: absolute;
+        left: 50px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 460px;
+      }
+    } 
+    @media screen and (max-width: 625px) {
+      .resp {
+        position: absolute;
+        left: 60px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 425px;
+      }
+    }
+    @media screen and (max-width: 590px) {
+      .resp {
+        position: absolute;
+        left: 50px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 390px;
+      }
+    } 
+    @media screen and (max-width: 555px) {
+      .resp {
+        position: absolute;
+        left: 20px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 355px;
+      }
+    } 
+    @media screen and (max-width: 520px) {
+      .resp {
+        position: absolute;
+        left: -5px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 320px;
+      }
+    }
+    @media screen and (max-width: 490px) {
+      .resp {
+        position: absolute;
+        left: -10px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 290px;
+      }
+    }
+    @media screen and (max-width: 455px) {
+      .resp {
+        position: absolute;
+        left: -30px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 255px;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      .resp {
+        position: absolute;
+        left: -50px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 220px;
+      }
+    } 
+    @media screen and (max-width: 390px) {
+      .resp {
+        position: absolute;
+        left: -70px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 190px;
+      }
+    }
+    @media screen and (max-width: 355px) {
+      .resp {
+        position: absolute;
+        left: -80px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 155px;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      .resp {
+        position: absolute;
+        left: -107px;
+        border: 0;
+      }
+      .nav-btn i {
+        margin-left: 120px;
+      }
     }
   }

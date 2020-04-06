@@ -14,6 +14,9 @@
     <!--scrollbar-->
     <link rel="stylesheet" href="../../CSS/scrollbar.css">
 
+    <!--hint.css-->
+    <link rel="stylesheet" href="../../CSS/hint.css">
+
     <!--icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   
@@ -22,6 +25,8 @@
     
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="../../js/form.js"></script>
     
     <title>Kontakt | JueK3y</title>
 </head>
@@ -40,7 +45,7 @@
                     <li class="clk"><a href="javascript:delay('../experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
                     <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
                         <ul class="dropdown">
-                            <li><a href="">Geschäftlich</a></li>
+                            <li><a href="" id="active">Geschäftlich</a></li>
                             <li><a href="privat.html">Privat</a></li>
                             <li><a href="../settings.html">Fragen</a></li>
                         </ul>
@@ -51,12 +56,13 @@
                 </div>
         </div>
 <div class="content"></div>
-<div class="left"></div>
     <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
+        <div class="resp">
+        <ul class="errorMessages"></ul>
 
             <!-- Firma -->
             <label class="firma-h" for="firma">Firma</label>
-            <label class="firma-h-o" for="firma">Optional</label>
+            <label class="firma-h-o" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
             <div class="firma-t">
                 <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
             </div>
@@ -71,6 +77,8 @@
                 <input type="radio" name="gender" id="female" value="female">
                 <label class="female-h" for="female">Frau</label>
             </div>
+            <div id="gender-inv"></div>
+            <div id="gender-val"></div>
 
             <script>
                 function check() {
@@ -105,13 +113,13 @@
             <div class="name-t" data-validate="Name is required">
                 <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" required="required"/>
             </div>
-        
+
             <!-- E-Mail -->
             <label class="email-h" for="email">E-Mail</label>
-            <div class="email-t" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
+            <div class="email-t" class="validate-input" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
                 <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
             </div>
-              
+
             <!-- Benötigter Dienst -->
             <label class="service-h" for="service">Service</label>
             <div class="service-t" data-validate="Service is required">
@@ -133,7 +141,14 @@
         <ul class="actions">
             <li><input type="submit" value="Send message" class="button_primary"/></li>
         </ul>
+        </div>
     </form> 
+    <div class="left"></div>
+
+    <!-- Adresse -->
+    <!--<div class="postfach">
+        <p>Oder kontaktiere mich per Post</p>
+    </div>-->
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <!--Delay-->

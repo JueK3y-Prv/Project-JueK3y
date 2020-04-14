@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!--font-->
+    <!--font--->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
     <!--stylesheet-->
@@ -13,6 +13,9 @@
     
     <!--scrollbar-->
     <link rel="stylesheet" href="../CSS/scrollbar.css">
+    
+    <!--hint.css-->
+    <link rel="stylesheet" href="../CSS/hint.css">
 
     <!--icon-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -23,7 +26,9 @@
     <title>Einstellungen | JueK3y</title>
 </head>
 <body>
-        <div class="logo"><a href="index.html">JueK3y</a></div>
+    <div class="sticky-nav">
+        <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
+        <div class="box"></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
                     <label for="nav" class="nav-btn">
@@ -31,82 +36,141 @@
                         <i></i>
                         <i></i>
                     </label>
-                 <div class="nav-wrapper">
-                  <ul>
-                        <li><a href="bio.html" title="Biographie" class="underline">Biographie</a></li>
-                        <li><a href="galerie.html" title="Galerie" class="underline">Galerie</a></li>
-                        <li><a href="contact.html" title="Kontakt" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a href="../en/settings.html" title="EN"> | EN</a></li>
-                        <li class="settings"><a href="settings.html" id="active" title="Einstellungen"><i class="fa fa-cog fa-spin-hover" aria-hidden="true"></i></a></li>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person">Biographie</a></li>
+                        <li class="clk"><a href="#" title="Momentan noch nicht zugänglich" class="underline">Experience</a></li>
+                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                        <li class="settings_resp" id="active"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="text">
-            	<details><summary class="header" id="story">Der Grund für diese Website</summary>
-            	<p>Diese Website entstand aufgrund einer Challenge, welche ich mir selber gestellt habe. 
-                    Mit den Grundlagen der Webentwicklung habe ich mich ab Sommer 2019 beschäftigt, meine erste Homepage habe ich am 25. August 2019 auf <a href="https://github.com/JueK3y" title="Mein GitHub Profil" target="_blank">GitHub</a> veröffentlicht. 
-                    Seitdem beschäftige ich mich durchgehend mit der Webentwicklung und dem Webdesign, weshalb ich mich auch dazu entschieden habe, die Website so umfangreich zu gestalten, wie es für mich möglich ist. 
-                    Das Wissen & die Anwendung habe ich mir weitesgehend selber beigebracht, weshalb ich stetig Änderungen und Verbesserungen vornehmen werde.</p>
-                </details>
-                <br>
-                <br>
-            	<details id="faq-t"><summary class="header" id="FAQ">FAQ</summary>
-            	<p>
-                    <br><span>"Wurde die Website mit einem Homepage-Baukasten erstellt?"</span>
+    </div>
+    <div class="outer-box">
+        <div class="select-outer-box">
+            <a class="select-inner-box settings" href="settings.html#settings">
+                <div class="line"></div>
+                <span class="select-text">Einstellungen</span>
+            </a>
+            <a class="select-inner-box story" href="settings.html#story">
+                <div class="line"></div>
+                <span class="select-text">Geschichte</span>
+            </a>
+            <a class="select-inner-box faq" href="settings.html#faq">
+                <div class="line"></div>
+                <span class="select-text">Häufige Fragen</span>
+            </a>
+            <a class="select-inner-box contact" href="settings.html#contact">
+                <div class="line"></div>
+                <span class="select-text">Tech. Kontaktaufnahme</span>
+            </a>
+            <a class="select-inner-box impressum" href="settings.html#impressum">
+                <div class="line"></div>
+                <span class="select-text">Impressum</span>
+            </a>
+            <!--<div class="select-hover-outer-box">
+                <a class="select-hover-inner-box" href="settings.html#website-betreiber">
+                    <span class="select-text">Website-Betreiber</span>
+                </a>
+                <a class="select-hover-inner-box" href="settings.html#links">
+                    <span class="select-text">Haftung für Links</span>
+                </a>
+                <a class="select-hover-inner-box" href="settings.html#urheberrecht">
+                    <span class="select-text">Urheberrecht</span>
+                </a>
+                <a class="select-hover-inner-box" href="settings.html#links-dritter">
+                    <span class="select-text">Inhalte Dritter</span>
+                </a>
+            </div>-->
+            <a class="select-inner-box datenschutz" href="settings.html#datenschutz">
+                <div class="line"></div>
+                <span class="select-text">Datenschutz</span>
+            </a>
+        </div>
+        
+        <div class="content-box">
+            <div id="settings">
+                <p class="content-title">Einstellungen</p>
+                <p class="content-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            </div>
+            <div id="story">
+                <p class="content-title">Geschichte</p>
+                <p class="content-text">
+                    Mit den Grundlagen der Webentwicklung habe ich mich ab Sommer 2019 beschäftigt, 
+                    meine erste Homepage habe ich am 25. August 2019 auf GitHub veröffentlicht. 
+                    Seitdem beschäftige ich mich durchgehend mit der Webentwicklung und dem Webdesign, 
+                    weshalb ich mich auch dazu entschieden habe, die Website so umfangreich zu gestalten, 
+                    wie es für mich möglich ist. Das Wissen & die Anwendung habe ich mir weitesgehend selber beigebracht, 
+                    weshalb ich stetig Änderungen und Verbesserungen vornehmen werde.</p>
+            </div>
+            <div id="faq">
+                <p class="content-title">Häufige Fragen</p>
+                <div class="content-text">
+                    <span id="content-text-title-bold">"Wurde die Website mit einem Homepage-Baukasten erstellt?"</span>
                     <br>Nein, die Website wurde von Grund auf selbst programmiert.
                     <br>
-                    <br><span>"Seit wann gibt es diese Website schon?"</span>
+                    <br><span id="content-text-title-bold">"Seit wann gibt es diese Website schon?"</span>
                     <br>Am <span id="color">25. August 2019</span> habe ich das erste Mal etwas unter dieser Domain veröffentlicht.
                     <br>
-                    <br><span>"Über welchen Anbieter hast du deine Website gehostet?"</span>
-                    <br><a href="https://www.netlify.com/" title="Website von Netlify" target="_blank">Netlify</a> greift auf den Code in GitHub zu und hostet für mich die Website [Stand 01.04.2020].
+                    <br><span id="content-text-title-bold">"Über welchen Anbieter hast du deine Website gehostet?"</span>
+                    <br><span class="underline--magical"><a href="https://www.netlify.com/" title="Website von Netlify" target="_blank">Netlify</a></span> greift auf den Code in GitHub zu und hostet für mich die Website [Stand 01.04.2020].
                     <br>
-                    <br><span>"Kann ich auch so eine Website programmieren?"</span>
+                    <br><span id="content-text-title-bold">"Kann ich auch so eine Website programmieren?"</span>
                     <br>Ja, natürlich. Wenn du konstant und motiviert am Projekt arbeitest, kann nur etwas gutes dabei rauskommen :)
                     <br>
-                    <br><span>"Ich komme mit der Navigation nicht zurecht."</span>
+                    <br><span id="content-text-title-bold">"Ich komme mit der Navigation nicht zurecht."</span>
                     <br>[Desktop-Version] In der obersten Leiste findest du 7 Wörter/Symbole.
                         <br>Bei Wörtern/Symbolen mit <span id="color">folgender Farbe</span> hast du diese bereits ausgewählt bzw. befindest dich bereits bei dem jeweiligen Punkt.
-                        <br>Bei einem Links-Klick auf das jeweilige Wort/Symbol gelangst du zu den folgenden Punkten (von Links nach Rechts):
-                        <br><a href="index.html">Start</a>, <a href="bio.html">Biographie</a>, <a href="experience.html">Experience</a>, <a href="contact.html">Kontakt</a>, <a href="../de/settings.html">Websitesprache auf Deutsch umstellen</a>, <a href="../en/settings.html">Websitesprache auf Englisch umstellen</a>, <a href="settings.html">Einstellungen</a>
+                        <br>Bei einem Links-Klick auf das jeweilige Wort/Symbol gelangst du zu den folgenden Punkten (von Links nach Rechts - Liste ist interaktiv):
+                        <br><a href="index.html" id="color-hover">Start</a>, <a href="bio.html" id="color-hover">Biographie</a>, <a href="experience.html" id="color-hover">Experience</a>, <a href="contact.html" id="color-hover">Kontakt</a>, <a href="../de/settings.html" id="color-hover"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">Websitesprache auf Deutsch umstellen</span></a>, <a href="../en/settings.html" id="color-hover">Websitesprache auf Englisch umstellen</a>, <a href="settings.html" id="color-hover"><span class="hint--bottom" aria-label="Du befindest dich bereits bei den Einstellungen">Einstellungen</span></a>
                     <br>
-                    <br><span>"Ich habe einen Fehler gefunden (Webpage nicht zugänglich, falsche Umleitung, Inhalte werden nicht angezeigt...)."</span>
-                    <br>Bitte schildere mir den Fehler im Kontaktformular im Punkt 'Technische Kontaktaufnahme'. Danke für deine Unterstützung!
+                    <br><span id="content-text-title-bold">"Ich habe einen Fehler gefunden (Webpage nicht zugänglich, falsche Umleitung, Inhalte werden nicht angezeigt...)."</span>
+                    <br>Bitte schildere mir den Fehler im Kontaktformular <span class="underline--magical"><a href="settings.html#contact">'Technische Kontaktaufnahme'</a></span>. Danke für deine Unterstützung!
                     <br>
-                    <br><span>"Ich würde Folgendes anders machen: ..."</span>
-                    <br>Fülle für Verbesserungsvorschläge bitte das Konttaktformular im Punkt 'Technische Kontaktaufnahme' aus.
+                    <br><span id="content-text-title-bold">"Ich würde Folgendes anders machen: ..."</span>
+                    <br>Fülle für Verbesserungsvorschläge bitte das Konttaktformular im Punkt <span class="underline--magical"><a href="settings.html#contact">'Technische Kontaktaufnahme'</a></span> aus.
                     <br>
-                    <br><span>"Ich habe Fragen zum Urheberrecht."</span>
-                    <br>1. Navigiere zum Punkt 'Impressum' und dort zu 'Urheberrecht'.
+                    <br><span id="content-text-title-bold">"Ich habe Fragen zum Urheberrecht."</span>
+                    <br>1. Navigiere zum Punkt <span class="underline--magical"><a href="settings.html#urheberrecht">'Urheberrecht'</a></span>.
                     <br>2. Bei weiteren Fragen kannst du das Kontaktformular im Punkt 'Technische Kontaktaufnahme' ausfüllen.
-                </details>
-                <br>
-                <br>
-            	<details><summary class="header" id="help">Technische Kontaktaufnahme</summary>
-            	<p>Da sich diese Website noch im BETA-Zustand befindet, kann es durchaus zu unerwünschten Problemem kommen.
-                   <br>Bitte nutzen Sie das untenstehende Kontaktformular bei folgenden Situationen:
-                   <br>- Hinweis auf mögliche Fehlfunktionen der Website
-                   <br>- Verbesserungsvorschlag für die Website
-                   <br>- Fragen zum Urheberrecht (Beachten Sie den Punkt 'Urheberrecht' im Impressum)
-                   <br>- Fragen zu Codeabschnitten
-                   <br>- Weiterverwendung von Bildern oder Programmabschnitten
+                    <br>
+                    <br><span id="content-text-title-bold">"Ich habe Fragen zu sonstigen rechtlichen Dingen."</span>
+                    <br>1. Lies dir das <span class="underline--magical"><a href="settings.html#impressum">Impressum</a></span> durch.
+                    <br>2. Bei weiteren Fragen kannst du das Kontaktformular 'Technische Kontaktaufnahme' ausfüllen.</p>
+            </div>
+            <div id="contact">
+                <p class="content-title">Tech. Kontaktaufnahme</p>
+                <p class="content-text">
+                    Da sich diese Website noch im BETA-Zustand befindet, kann es durchaus zu unerwünschten Problemem kommen.
+                    <br>Bitte nutze das untenstehende Kontaktformular bei folgenden Situationen:
+                    <br>- Hinweis auf mögliche Fehlfunktionen der Website
+                    <br>- Verbesserungsvorschlag für die Website
+                    <br>- Fragen zum Urheberrecht (Punkt <span class="underline--magical"><a href="settings.html#urheberrecht">'Urheberrecht'</a></span> beachten)
+                    <br>- Fragen zu sonstigen rechtlichen Dingen
+                    <br>- Fragen zu Codeabschnitten
+                    <br>- Weiterverwendung von Bildern, Inhalten oder Programmabschnitten<br>
+                    <br>Wenn dein Punkt nicht mit aufgelistet ist, nutze bitte das <a href="contact.html">geschäftliche/private Kontaktformular</a>.
                 </p>
-                </details>
-                <br>
-                <br>
-            	<details id="impressum-t"><summary class="header" id="Impressum">Impressum</summary>
-            	<p><span><br>Verantwortlich für Inhalte i. S. v § 5 TMG</span>
+            </div>
+            <span id="impressum">
+                <p class="content-title">Impressum</p>
+                <p class="content-text">
+                    <span id="website-betreiber">Verantwortlich für Inhalte i. S. v § 5 TMG</span>
                     <br>Julian Kennedy
-                    <br>Egelseestraße 10
-                    <br>86949 Windach
+                    <br>Musterstraße 8
+                    <br>87878 Ort
+                    <!--<br>Egelseestraße 10
+                    <br>86949 Windach-->
                     <br>Deutschland
                     <br>
                     <br>Kontakt:
-                    <br>E-Mail: juek3y@gmail.com
-                    <br><a href="contact/privat.html" title="Kontaktformular für private Anfragen">Privates</a> oder <a href="contact/business.html" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a> Kontaktformular
+                    <br>E-Mail: <span class="underline--magical"><a href="mailto:juek3y@gmail.com">juek3y@gmail.com</a></span>
+                    <br><span class="underline--magical"><a href="contact/privat.html" title="Kontaktformular für private Anfragen">Privates</a></span> oder <span class="underline--magical"><a href="contact/business.html" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a></span> Kontaktformular
                     <br>
                     <br>
-                    <!-- Nur nötig für Unternehmen <br><span>Streitschlichtung</span>
+                    <!-- Nur nötig für Unternehmen 
+                    <br><span>Streitschlichtung</span>
                     <br>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren (nach VSBG) vor einer Verbraucherschlichtungsstelle teilzunehmen.
                     <br>Verantwortlich für zentrale journalistisch-redaktionell gestaltete Inhalte i.S.v. § 55 Abs. 2 RStV
                     <br>
@@ -124,11 +188,11 @@
                     <br>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht generell verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch regelmäßig erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
                     <br>
                     <br>-->
-                    <br><span>Haftung für Links</span>
+                    <br><span id="links">Haftung für Links</span>
                     <br>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
                     <br>
                     <br>
-                    <br><span>Urheberrecht</span>
+                    <br><span id="urheberrecht">Urheberrecht</span>
                     <br>Die von uns oder in unserem Auftrag erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
                     Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
                     Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
@@ -138,20 +202,23 @@
                     Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
                     <br>
                     <br>
-                    <br><span>Von Dritte bereitgestellte Inhalte</span>
-                    <br>- <a href="https://fontawesome.com/v4.7.0/icon/cog">Settings icon by fontawesome</a>
-                    <br>- <a href="https://icons8.com/icon/48545/organization">Organization icon by Icons8</a>
-                    <br>- <a href="https://icons8.com/icon/103851/account">Account icon by Icons8</a>   
-                    <br>- <a href="https://icons8.com/icon/103873/fragezeichen">Fragezeichen icon by Icons8</a>
+                    <br><span id="links-dritter">Von Dritte bereitgestellte Inhalte</span>
+                    <br>- <span class="underline--magical"><a href="https://fontawesome.com/v4.7.0/icon/cog">Settings icon by fontawesome</a></span>
+                    <br>- <span class="underline--magical"><a href="https://icons8.com/icon/48545/organization">Organization icon by Icons8</a></span>
+                    <br>- <span class="underline--magical"><a href="https://icons8.com/icon/103851/account">Account icon by Icons8</a></span>
+                    <br>- <span class="underline--magical"><a href="https://icons8.com/icon/103873/fragezeichen">Question icon by Icons8</a></span>
                 </p>
-            	</details>
-                <br>
-                <br>
-                <details id="datenschutz-t">
-                	<summary class="header" id="Datenschutz">Datenschutz</summary>
-            	    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                    </p>
-                </details>
             </div>
+            <div id="datenschutz">
+                <p class="content-title">Datenschutz</p>
+                <p class="content-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

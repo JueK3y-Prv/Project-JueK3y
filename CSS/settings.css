@@ -317,22 +317,22 @@ html {
   color: #222222;
 }
 
-#faq #color-hover:hover {
+.c-faq #color-hover:hover {
   transition: .2s;
   color: #C2C5A2;
   text-decoration: none;
 } 
 
-#content-text-title-bold {
+#content-text-title-it {
   font-style: italic;
 }
 
-#impressum .content-text, #impressum a, #datenschutz .content-text {
+.c-impressum .content-text, .c-impressum a, #datenschutz .content-text {
   color: rgb(88, 94, 98);
   font-weight: normal;
 }
 
-#impressum span {
+.c-impressum span {
   font-weight: bold;
 }
 

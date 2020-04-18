@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-------   META  ------->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!--font--->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    
+    <!-------   JS  ------->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!-------   CSS  ------->
     <!--stylesheet-->
     <link rel="stylesheet" href="../CSS/settings.css">
     
@@ -17,9 +20,10 @@
     <!--hint.css-->
     <link rel="stylesheet" href="../CSS/hint.css">
 
-    <!--icon-->
+    <!--font-awesome-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+    <!-------   IMG  ------->
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
 
@@ -38,7 +42,7 @@
                     </label>
                 <div class="nav-wrapper">
                     <ul>
-                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person">Biographie</a></li>
+                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
                         <li class="clk"><a href="#" title="Momentan noch nicht zugänglich" class="underline">Experience</a></li>
                         <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
                         <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
@@ -225,7 +229,18 @@
                 <br>
             </div>
         </div>
-
     </div>
+<!--Delay-->
+<script>
+    function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
+    //1500
+</script>
+<script>
+    $(document).ready(function(){
+      $(".clk").click(function(){
+        $("*").fadeOut();
+      });
+    });
+    </script>
 </body>
 </html>

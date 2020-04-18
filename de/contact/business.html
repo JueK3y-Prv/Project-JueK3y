@@ -50,7 +50,7 @@
                             <li><a href="../settings.html">Fragen</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../../en/index.html')" title="English"> | EN</a></li>
+                    <li><a href="#" title="Deutsch" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
                     <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                 </ul>
                 </div>
@@ -59,10 +59,10 @@
     <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
         <div class="resp">
         <ul class="errorMessages"></ul>
-
+        
             <!-- Firma -->
             <label class="firma-h" for="firma">Firma</label>
-            <label class="firma-h-o" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
+            <label class="firma-h-o" for="firma"><span class="hint--right resp2" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
             <div class="firma-t">
                 <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
             </div>
@@ -70,7 +70,7 @@
             <!-- Geschlecht -->
             <label class="gender-h" for="gender">Geschlecht</label>
             <div class="gender-t-m" id="gender" data-validate="Gender is required">
-                <input type="radio" name="gender" id="male" value="male" onclick="check()" required>
+                <input type="radio" name="gender" id="male" value="male" required>
                 <label class="male-h" for="male">Mann</label>
             </div>
             <div class="gender-t-f">
@@ -81,32 +81,56 @@
             <div id="gender-val"></div>
 
             <script>
-                function check() {
-                    document.getElementById("male").checked = true;
-                }
-
-                function uncheck() {
-                    document.getElementById("male").checked = false;
-                }
-
+            $(document).ready(function() {
+                $('input[type="radio"]').click(function() {
+                    //Männlich
+                    if($(this).attr('id') == 'male') {
+                         $('.gender-t-m').show();
+                         $('.gender-t-m-a').show();      
+                         $('.gender-t-f').hide(); 
+                         $('.gender-t-f-a').hide();       
+                    }
+                    //Weiblich
+                    else if($(this).attr('id') == 'female') {
+                         $('.gender-t-m').hide();  
+                         $('.gender-t-m-a').hide();      
+                         $('.gender-t-f').show(); 
+                         $('.gender-t-f-a').show();   
+                    }
+                    //None
+                    else {
+                         $('.gender-t-m').hide();
+                         $('.gender-t-f-a').hide();     
+                         $('.gender-t-f').hide();
+                         $('.gender-t-f-a').hide();    
+                    }
+                });
+             });
             </script>
 
-
-            <!-- Geschlecht -->
-            <!--<label class="gender-h" for="gender">Gender</label>
-            <div class="gender-t" data-validate="Gender is required">
-                <select name="Geschlecht" id="gender" required>
-                    <option value="">Anrede</option>
-                    <option value="woman1">Frau</option>
-                    <option value="woman2">Frau Dr.</option>
-                    <option value="woman3">Frau Prof.</option>
-                    <option value="woman4">Frau Prof. Dr.</option>
+            <!-- Anrede männlich -->
+            <div class="gender-t-m-a" data-validate="Gender is required">
+                <select name="Geschlecht" id="anrede" required>
+                    <option selected value="">Anrede</option>
                     <option value="men1">Herr</option>
                     <option value="men2">Herr Dr.</option>
                     <option value="men3">Herr Prof.</option>
-                    <option value="men4">Herr Prof. Dr.</option>
+                    <option value="men4">Hr. Prof. Dr.</option>
                 </select>
-            </div>-->
+            </div>
+
+            <!-- Anrede weiblich -->
+            <div class="gender-t-f-a" data-validate="Gender is required">
+                <select name="Geschlecht" id="anrede" required>
+                    <option selected value="">Anrede</option>
+                    <option value="woman1">Frau</option>
+                    <option value="woman2">Frau Dr.</option>
+                    <option value="woman3">Frau Prof.</option>
+                    <option value="woman4">Fr. Prof. Dr.</option>
+                </select>
+            </div>
+
+
 
             <!-- Name -->
             <label class="name-h" for="name">Name</label>

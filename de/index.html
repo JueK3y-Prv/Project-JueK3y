@@ -9,6 +9,10 @@
       <link rel="stylesheet" href="../CSS/index.css">
       <!--logo-->
       <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+
+      <!--hint.css-->
+      <link rel="stylesheet" href="../CSS/hint.css">
+
       <!-- bootstrap -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
       <!-- font-awesome -->
@@ -16,6 +20,7 @@
 
       <!-- Fade Out -->
       <script src="../js/index_fadeout.js"></script>
+      
       <!-- bootstrap -->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
       <!-- jquery -->
@@ -38,17 +43,19 @@
                   <i></i>
                   <i></i>
             </a>
-            <br>
-            <br>
-            	<a class="clk" id="one" href="javascript:delay('settings.html#story')">Story</a>
-            <br>
-            	<a class="clk" id="two" href="javascript:delay('settings.html#bugs')">Report Bugs</a>
-            <br>
-            	<a class="clk" id="three" href="javascript:delay('settings.html#FAQ')">FAQ</a>
-            <br>
-                  <a class="clk" id="four" href="javascript:delay('settings.html#Impressum')">Impressum</a>
-            <br>
-                  <a class="clk" id="five" href="javascript:delay('settings.html#Datenschutz')">Datenschutz</a>
+            <div class="ovl-settings-box"><p>
+            	      <a class="clk" id="one" href="javascript:delay('settings.html#settings')">Einstellungen</a>
+                  <br>
+            	      <a class="clk" id="two" href="javascript:delay('settings.html#story')">Geschichte</a>
+                  <br>
+            	      <a class="clk" id="three" href="javascript:delay('settings.html#faq')">Häufige Fragen</a>
+                  <br>
+                        <a class="clk" id="four" href="javascript:delay('settings.html#contact')">Technische Kontaktaufnahme</a>
+                  <br>
+                        <a class="clk" id="five" href="javascript:delay('settings.html#impressum')">Impressum</a>
+                  <br>
+                        <a class="clk" id="six" href="javascript:delay('settings.html#datenschutz')">Datenschutz</a>
+            </p></div>
       </div>
       <div class="wrapper">
             <div class="logo"><a href="index.html">JueK3y</a></div>
@@ -62,9 +69,11 @@
                   <div class="nav-wrapper">
                   <ul>
                         <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                        <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
+                        <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                        <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
+                        <style>#na a { cursor:not-allowed; } </style>
                         <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
+                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
                         <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                         <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                         

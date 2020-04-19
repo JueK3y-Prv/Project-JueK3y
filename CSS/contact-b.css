@@ -294,6 +294,27 @@ box-sizing: border-box;
         top: 105px;
     }
 
+    .gender-h-w button {
+      position: absolute;
+      width: 67px;
+      left: 316px;
+      top: 105px;
+
+      color: #979797;
+      background-color: #fff;
+      border: none;
+
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+
+      transition: .2s;
+    }
+
+    .gender-h-w button:hover {
+      color: #C2C5A2;
+      transition: .2s;
+    }
+
     .male-h, .female-h {
       position: absolute;
       width: 86px;

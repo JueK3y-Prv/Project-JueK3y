@@ -11,6 +11,12 @@
       font-weight: normal;
       font-style: normal;
     }
+@font-face {
+      font-family: 'Cosi';
+      src: url('../fonts/CosiAzure-Bold.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     
 html, body {
       margin: 0;
@@ -69,56 +75,46 @@ body {
       background: #fff;
 }
 
+.ovl-settings a i {
+      margin-top: 76px;
+      margin-left: 545.5px;
+}
+
 .ovl-settings i {
       display: block;
       width: 20px;
       height: 2px;
       background: rgb(0, 0, 0);
       border-radius: 2px;
-      margin-left: 86%;
 }
 
 .ovl-settings i:nth-child(1) {
-      margin-top: 16px;
-      width: 20px;
+      width: 23px;
       transform: rotate(45deg);
 }
 
 .ovl-settings i:nth-child(2) {
       margin-top: -2px;
-      width: 20px;
+      width: 23px;
       transform: rotate(135deg);
 }
 
-.ovl-settings a {
+.ovl-settings-box {
       text-align: center;
-      margin-left: 50%;
+      position: absolute;
+      width: 400px;
+      height: 25px;
+      left: 119.5px;
+      top: 156px;
+}
+
+.ovl-settings-box a {
       font-family: 'Ubuntu';
-      font-size: 18px;
-      line-height: 2.5em;
+      font-size: 21px;
+      line-height: 2.3em;
       color: #000;
       text-transform: uppercase;
       transition: .3s;
-}
-
-.ovl-settings a:hover {
-      transform: rotate(90deg);
-}
-
-#one {
-      margin-left: 48%;      
-}
-#two {
-      margin-left: 43.5%;
-}
-#three {
-      margin-left: 50%;
-}
-#four {
-	margin-left: 45%;
-}
-#five {
-	margin-left: 43%;
 }
 
 .delay_out {

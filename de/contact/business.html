@@ -77,41 +77,16 @@
                 <input type="radio" name="gender" id="female" value="female">
                 <label class="female-h" for="female">Frau</label>
             </div>
+
+            <label class="gender-h-w" for="gender"><button type="button" class="gender-wrong" id="wrong">Verklickt?</button></label>
+            <style>.gender-wrong { display: none; }</style>
             <div id="gender-inv"></div>
             <div id="gender-val"></div>
-
-            <script>
-            $(document).ready(function() {
-                $('input[type="radio"]').click(function() {
-                    //Männlich
-                    if($(this).attr('id') == 'male') {
-                         $('.gender-t-m').show();
-                         $('.gender-t-m-a').show();      
-                         $('.gender-t-f').hide(); 
-                         $('.gender-t-f-a').hide();       
-                    }
-                    //Weiblich
-                    else if($(this).attr('id') == 'female') {
-                         $('.gender-t-m').hide();  
-                         $('.gender-t-m-a').hide();      
-                         $('.gender-t-f').show(); 
-                         $('.gender-t-f-a').show();   
-                    }
-                    //None
-                    else {
-                         $('.gender-t-m').hide();
-                         $('.gender-t-f-a').hide();     
-                         $('.gender-t-f').hide();
-                         $('.gender-t-f-a').hide();    
-                    }
-                });
-             });
-            </script>
 
             <!-- Anrede männlich -->
             <div class="gender-t-m-a" data-validate="Gender is required">
                 <select name="Geschlecht" id="anrede" required>
-                    <option selected value="">Anrede</option>
+                    <option selected value="1">Anrede</option>
                     <option value="men1">Herr</option>
                     <option value="men2">Herr Dr.</option>
                     <option value="men3">Herr Prof.</option>
@@ -122,15 +97,13 @@
             <!-- Anrede weiblich -->
             <div class="gender-t-f-a" data-validate="Gender is required">
                 <select name="Geschlecht" id="anrede" required>
-                    <option selected value="">Anrede</option>
+                    <option selected value="1">Anrede</option>
                     <option value="woman1">Frau</option>
                     <option value="woman2">Frau Dr.</option>
                     <option value="woman3">Frau Prof.</option>
                     <option value="woman4">Fr. Prof. Dr.</option>
                 </select>
             </div>
-
-
 
             <!-- Name -->
             <label class="name-h" for="name">Name</label>
@@ -175,8 +148,8 @@
     </div>-->
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<!--Delay-->
 
+<!--Delay-->
 <script>
 function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
 //1500
@@ -190,28 +163,44 @@ $(document).ready(function(){
 });
 </script>
 
-<!-- Algolia - Für Adresse  -->          
-<!--<script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script>
+<!--Gender-->
 <script>
-(function() {
-  var placesAutocomplete = places({
-    appId: '<YOUR_PLACES_APP_ID>',
-    apiKey: '<YOUR_PLACES_API_KEY>',
-    container: document.querySelector('#form-address'),
-    templates: {
-      value: function(suggestion) {
-        return suggestion.name;
-      }
-    }
-  }).configure({
-    type: 'address'
-  });
-  placesAutocomplete.on('change', function resultSelected(e) {
-    document.querySelector('#form-address2').value = e.suggestion.administrative || '';
-    document.querySelector('#form-city').value = e.suggestion.city || '';
-    document.querySelector('#form-zip').value = e.suggestion.postcode || '';
-  });
-})();
-</script>-->
+    $(document).ready(function() {
+        $(".gender-wrong").click(function(){
+            $('.gender-t-m').show();
+            $('.gender-t-m-a').hide();      
+            $('.gender-t-f').show(); 
+            $('.gender-t-f-a').hide();  
+            $('.gender-wrong').hide();  
+            $('input[type="radio"]').attr('checked', false);
+        });
+        $('input[type="radio"]').click(function() {
+            //Männlich
+            if($(this).attr('id') == 'male') {
+                 $('.gender-t-m').show();
+                 $('.gender-t-m-a').show();      
+                 $('.gender-t-f').hide(); 
+                 $('.gender-t-f-a').hide(); 
+                 $('.gender-wrong').show();       
+            }
+            //Weiblich
+            else if($(this).attr('id') == 'female') {
+                 $('.gender-t-m').hide();  
+                 $('.gender-t-m-a').hide();      
+                 $('.gender-t-f').show(); 
+                 $('.gender-t-f-a').show();  
+                 $('.gender-wrong').show();  
+            }
+            //None
+            else {
+                 $('.gender-t-m').hide();
+                 $('.gender-t-f-a').hide();     
+                 $('.gender-t-f').hide();
+                 $('.gender-t-f-a').hide();   
+                 $('.gender-wrong').hide();  
+            }
+        });
+     });
+    </script>
 </body>
 </html>

@@ -1,39 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin);
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://use.typekit.net/mfh5xwg.css);
-
-@font-face {
-  font-family: 'Garamond';
-  src: url(https://use.typekit.net/mfh5xwg.css);
+/*          Spezifisch        */
+@font-face {      /* (Serif) */
+  font-family: 'Selected';
+  src: url('../fonts/Everyday/Contact/Lora-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'Audrey';
-  src: url('../fonts/Audrey/Audrey-Normal.otf') format('opentype');
+/*          Allgemein         */
+@font-face {      /* Logo-Font */
+  font-family: 'Logo';
+  src: url('../fonts/Everyday/Dreamlight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Exodus Stencil';
-  src: url('../fonts/Exodus/ExodusDemo-Stencil.otf') format('opentype');
+@font-face {      /* Navigation & stuff (Serif)*/
+  font-family: 'Hauptfont';
+  src: url('../fonts/Everyday/Ogg-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Salvalyn';
-  src: url('../fonts/Salvalyn Demo.ttf') format('truetype');
+@font-face {      /* Titel-f für längere Texte (Sans Serif)*/
+  font-family: 'Title';
+  src: url('../fonts/Everyday/apercu-title.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Dreamlight';
-  src: url('../fonts/Dreamlight.ttf') format('truetype');
+@font-face {      /* Text-f für längere Texte (Sans Serif)*/
+  font-family: 'Text';
+  src: url('../fonts/Everyday/apercu-text.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 * {
     margin: 0px;
@@ -44,6 +42,7 @@
     /* Navigation */
 
 .nav {
+  font-family: 'Hauptfont';
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,7 +58,7 @@
 }
 
 .logo {
-  font-family: 'Dreamlight', Georgia, Times, serif;
+  font-family: 'Logo', Georgia, Times, serif;
   font-size: 32px;
   line-height: 29px;
   float: left;
@@ -218,9 +217,9 @@ a:hover {
   text-decoration: none;
 }
 
-#k { position: absolute;
-  width: 109px;
-  height: 80px;
+#k {
+  margin: 0;
+  position: absolute;
   left: 196px;
   top: -415px;
   
@@ -234,7 +233,7 @@ a:hover {
 
     /* Content */
 
-.content {  
+.content {
 position: absolute;
 width: 1401px;
 height: 620px;
@@ -275,10 +274,10 @@ box-sizing: border-box;
 
     /* Label - Title */
     label {
-    font-family: Times New Roman;
+    font-family: 'Selected';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 21px;
 
     left: 146px;
@@ -295,7 +294,7 @@ box-sizing: border-box;
     .firma-h-o {
         position: absolute;
         width: 67px;
-        left: 326px;
+        left: 320px;
         top: 17px;
         
         font-style: italic;
@@ -310,15 +309,15 @@ box-sizing: border-box;
     .gender-h-w button {
       position: absolute;
       width: 67px;
-      left: 316px;
+      left: 312px;
       top: 105px;
 
       color: #979797;
       background-color: #fff;
       border: none;
 
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 18px;
+      font-family: 'Selected';
+      font-size: 17px;
 
       transition: .2s;
     }
@@ -334,10 +333,10 @@ box-sizing: border-box;
       top: 12px;
       left: 36px;
       
-      font-family: Times New Roman;
+      font-family: 'Selected';
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 24px;
       
       color: #242424;
@@ -376,14 +375,12 @@ box-sizing: border-box;
         border: 2px solid #E3E3E3;
         box-sizing: border-box;
         border-radius: 3px;
-        
-        font-family: Times New Roman;
+
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 21px;
-        
-        
+
         color: black;
 
         transition: .2s;
@@ -495,10 +492,10 @@ box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 3px;
         
-    font-family: Times New Roman;
+    font-family: 'Selected';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 21px;
     
     color: black;
@@ -528,10 +525,10 @@ box-sizing: border-box;
 
     /*Input Text*/
     #firma, #gender, #name, #email, #service, #msg {        
-        font-family: Times New Roman;
+        font-family: 'Selected';
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 21px;
     }
 
@@ -579,7 +576,7 @@ box-sizing: border-box;
         padding-left: 8px;
     }
 
-    select option[value="1"] {
+    select option[value=""] {
         color: #C3C3C3;
     }
     
@@ -608,10 +605,10 @@ box-sizing: border-box;
 
         transition: .2s;
         
-        font-family: Times New Roman;
+        font-family: 'Selected';
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 17px;
         line-height: 21px;
         
         color: #FFFFFF;
@@ -658,23 +655,6 @@ box-sizing: border-box;
     #captcha {
       margin-right: 50%;
     }
-
-    /* Adresse */
-    /*.postfach {
-      position: absolute;
-      width: 226px;
-      height: 17px;
-      left: 847px;
-      top: 871px;
-      
-      font-family: Times New Roman;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      
-      color: #C3C3C3;
-    }*/
 
     .share-button{
       top: 5vh;

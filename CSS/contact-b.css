@@ -218,6 +218,20 @@ a:hover {
   text-decoration: none;
 }
 
+#k { position: absolute;
+  width: 109px;
+  height: 80px;
+  left: 196px;
+  top: -415px;
+  
+  font-family: Times New Roman;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1550px;
+  
+  color: rgba(0, 48, 66, 0.1); 
+  }
+
     /* Content */
 
 .content {  
@@ -242,7 +256,6 @@ box-sizing: border-box;
     top: 210px;
     background: url(../img/Blue-Water_cropped.jpg);
 }
-
 
     /* Form */
 
@@ -776,6 +789,9 @@ box-sizing: border-box;
       .resp {
         position: absolute;
         left: 350px;
+      }
+      #k {
+        display: none;
       }
       .left {
         display: none;

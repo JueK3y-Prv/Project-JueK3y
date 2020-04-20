@@ -1,28 +1,33 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin);
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://use.typekit.net/mfh5xwg.css);
-
-@font-face {
-  font-family: 'Dreamlight';
-  src: url('../fonts/Dreamlight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Title';
-  src: url('../fonts/apercu-title.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Subtitle';
+/*          Spezifisch        */
+@font-face {      /* (Serif) */
+  font-family: 'Selected';
   src: url('../fonts/a-trocchi-mittle.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
+
+/*          Allgemein         */
+@font-face {      /* Logo-Font */
+  font-family: 'Logo';
+  src: url('../fonts/Everyday/Dreamlight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {      /* Navigation & stuff (Serif) */
+  font-family: 'Hauptfont';
+  src: url('../fonts/Everyday/Ogg-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {      /* Titel-f für längere Texte (Sans Serif) */
+  font-family: 'Title';
+  src: url('../fonts/Everyday/apercu-title.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {      /* Text-f für längere Texte (Sans Serif) */
   font-family: 'Text';
-  src: url('../fonts/apercu-text.ttf') format('truetype');
+  src: url('../fonts/Everyday/apercu-text.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +53,7 @@ html {
 
 .logo {
   z-index: 1;
-  font-family: 'Dreamlight', Georgia, Times, serif;
+  font-family: 'Logo', Georgia, Times, serif;
   font-size: 32px;
   line-height: 30px;
   float: left;
@@ -58,6 +63,7 @@ html {
 }
 
 .nav {
+  font-family: 'Hauptfont';
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -258,7 +264,7 @@ html {
   padding-left: 25px;
   padding-top: 27px;
   
-  font-family: Subtitle;
+  font-family: 'Selected';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -286,7 +292,7 @@ html {
   line-height: 51px;
 
   letter-spacing: 1px;
-  font-family: Title;
+  font-family: 'Title';
   font-weight: 800;
   
   color: #000000;
@@ -312,7 +318,7 @@ html {
   font-size: 24px;
   line-height: 31px;
 
-  font-family: Text;
+  font-family: 'Text';
   
   color: #222222;
 }

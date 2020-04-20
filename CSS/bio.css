@@ -1,19 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@font-face {
-  font-family: 'Dreamlight';
-  src: url('../fonts/Dreamlight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
+/*          Spezifisch        */
+@font-face {  /* Titel-Font (Name) */
   font-family: 'Exodus';
-  src: url('../fonts/Exodus/ExodusDemo-Regular.otf') format('opentype');
+  src: url('../fonts/Everyday/Bio/ExodusDemo-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Baskvill';
-  src: url('../fonts/Baskvill.TTF') format('truetype');
+
+/*          Allgemein         */
+@font-face {      /* Logo-Font */
+  font-family: 'Logo';
+  src: url('../fonts/Everyday/Dreamlight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {      /* Navigation & stuff (Serif)*/
+  font-family: 'Hauptfont';
+  src: url('../fonts/Everyday/Ogg-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {      /* Text-f für längere Texte (Sans Serif)*/
+  font-family: 'Text';
+  src: url('../fonts/Everyday/apercu-text.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +34,7 @@
 }
 
 .nav {
+  font-family: 'Hauptfont';
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -40,7 +49,7 @@
 }
 
 .logo {
-  font-family: 'Dreamlight', Georgia, Times, serif;
+  font-family: 'Logo', Georgia, Times, serif;
   font-size: 32px;
   line-height: 30px;
   float: left;
@@ -114,7 +123,7 @@ transform: translateY(6px) rotate(90deg);
   display: none;
 }
 
-.site-1 {
+.site-1, #site-2 {
   height: 100vh;
   margin: 0 auto;
 }
@@ -131,7 +140,7 @@ img {
   margin-top: -18.2%;
   margin-left: 45%;
   font-family: 'Exodus';
-  font-size: 36px;
+  font-size: 41px;
   line-height: 1.5em;
 }
 
@@ -139,9 +148,10 @@ img {
   max-width: 450px;
   margin-top: -17%;
   margin-left: 50%;
-  font-family: 'Ubuntu';
-  font-size: 16px;
+  font-family: 'Text';
+  font-size: 20px;
   line-height: 1.7em;
+  font-weight: normal;
 }
 
 #bio_resp {
@@ -152,7 +162,7 @@ img {
   transform: rotate(90deg);
   margin-top: 56.7%;
   margin-left: -9%;
-  font-family: 'Baskvill';
+  font-family: 'Hauptfont';
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }
@@ -207,7 +217,7 @@ a:hover {
 }
 
 #footer {
-  font-family: 'Baskvill';
+  font-family: 'Text';
   background-color: #fff;
   padding: 50px;
   bottom: 50%;

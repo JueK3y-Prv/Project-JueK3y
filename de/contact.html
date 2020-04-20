@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-------   META  ------->
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
   
-    <meta property = "og:url" content="https://juek3y.netlify.com/de/contact.html">
-    <meta property = "og:title" content="Kontakt | JueK3y">
+    <meta property = "og:url"       content="https://juek3y.netlify.com/de/contact.html">
+    <meta property = "og:title"     content="Kontakt | JueK3y">
     <meta property = "og:site_name" content="JueK3y">
-    <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett "self-coded"">
-    <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett "self-coded"">
-    <meta property = "og:type" content="website">
-    <meta property = "og:locale" content="de_DE">
-    <meta name = "title-tag" content="Coding, Fotografie und Design mit Julian Kennedy">
+    <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
+    <meta property = "og:type"      content="website">
+    <meta property = "og:locale"    content="de_DE">
+    <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
+    <meta name = "title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
     <meta name = "content-language" content="de">
     <meta name = "author"           content="Julian Kennedy">
     <meta name = "publisher"        content="Julian Kennedy">
-    <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography, ">
+    <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography">
     <meta name = "page-topic"       content="Kontakt">
     <meta name = "language"         content="Deutsch">
     <meta name = "revisit"          content="After 15 days">
     <meta name = "robots"           content="INDEX,FOLLOW">
-
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
-    <!--icon-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+    <!-------   JS  ------->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!-------   CSS  ------->
     <!--stylesheet-->
     <link rel="stylesheet" href="../CSS/contact-o.css">
 
     <!--scrollbar-->
     <link rel="stylesheet" href="../CSS/scrollbar.css">
 
+    <!--hint.css-->
+    <link rel="stylesheet" href="../CSS/hint.css">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-------   IMG  ------->
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
-    
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <title>Kontakt | JueK3y</title>
 </head>
@@ -58,7 +62,7 @@
                         <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
                         <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
                         <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
+                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
                         <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
@@ -75,11 +79,11 @@
                     <div class="contentBx">
                         <h2 id="business-h">Geschäftlich</h2>
                         <div id="business-t">
-                            <p>Du bist hier richtig, wenn du:</p>
-                            <span>- geschäftliche Absichten hast
-                                <br>- Vertreter einer Firma bist
-                                <br>- ein konkretes Jobangebot hast
-                                <br>- Interesse auf Zusammenarbeit hast
+                            <p>Du bist hier richtig, bei:</p>
+                            <span>- geschäftlichen Absichten
+                                <br>- Vertretung einer Firma
+                                <br>- einem konkreten Jobangebot
+                                <br>- Interesse auf Zusammenarbeit
                             </span>
                             <div class="link">
                                 <a href="contact/business.html">Kontaktanfrage</a>
@@ -97,11 +101,11 @@
                     <div class="contentBx">
                         <h2 id="private-h">Privat</h2>
                         <div id="private-t">
-                            <p>Du bist hier richtig, wenn du:</p>
-                            <span>- Fragen zu meiner Person hast
-                                <br>- Tipps & Ratschläge brauchst
-                                <br>- Lob/Anerkennung weitergeben willst
-                                <br>- Fragen zum Code hast
+                            <p>Du bist hier richtig, bei:</p>
+                            <span>- Fragen zu meiner Person
+                                <br>- Tipps & Ratschläge für dich
+                                <br>- Lob/Anerkennung
+                                <br>- Fragen zum Code 
                             </span>
                             <div class="link">
                                 <a href="contact/privat.html">Kontaktanfrage</a>
@@ -133,23 +137,6 @@
                 </div>
             </div>
         </div>
-  <hr id="down">
-   <div id="footer">
-    <div class="das">
-     <div class="column">
-      <h4>Meine Links</h4>
-      <div class="social-media">
-              <a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              <a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </div>
-     </div>
-     <div class="column" id="text">   
-      <h4>Meine Geschichte</h4>
-         <p>Hei. Mein Name ist Julian und ich bin 17 Jahre alt. Diese Website ist noch im Aufbau!</p>
-     </div>
-    </div>
-   </div>
   </div>
 <!--Delay-->
 <script>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-------   META  ------->
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
@@ -22,6 +23,11 @@
     <meta name = "revisit"          content="After 15 days">
     <meta name = "robots"           content="INDEX,FOLLOW">
 
+    <!-------   JS  ------->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+	<!-------   CSS  ------->
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     
@@ -40,73 +46,59 @@
     <!--scrollbar-->
     <link rel="stylesheet" href="../CSS/scrollbar.css">
 
+    <!-------   IMG  ------->
     <!--logo-->
     <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
-    
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <title>Bio | JueK3y</title>
 </head>
 
 <body>
-    <div class="all">
+    <!-- Navigation -->
+    <div class="sticky-nav">
         <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
-            <div class="nav">
-                <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </label>
-                <div class="nav-wrapper">
-                    <ul>
-                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="active_nav">Biographie</a></li>
-                        <li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
-                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+        <div class="nav">
+            <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+            <div class="nav-wrapper">
+                <ul>
+                    <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="active_nav">Biographie</a></li>
+                    <li class="clk"><a href="bio.html#site-2" title="Meine Erfahrung" class="underline">Experience</a></li>
+                    <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                    <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../en/index.html')" title="English"> | EN</a></li>
+                    <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-        <div class="site-1">
-            <div class="container">
-                <div class="column">
-                    <img src="../img/Police.JPG" alt="Police Officer">
-                    <div class="biographie">
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span>
-                    </div>
-                    <div class="header">
-                        <span>Julian Kennedy</span>
-                    </div>
-                    <div id="bio_resp">
-                        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span>
-                    </div>
-                    <div class="header_rotated">
-                        <span>Biographie</span>
-                    </div>
+        </div>
+    </div>
+    <!-- Content - Site 1 -->
+    <div class="site-1">
+        <div class="box">
+            <img src="../img/Police.JPG" alt="Police Officer in San Francisco">
+            <div class="content">
+                <div id="title">
+                    <p>Julian Kennedy</p>
+                </div>
+                <div id="block"></div>
+                <div id="subtitle">
+                    <p>Biographie</p>
+                </div>
+                <div id="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Tincidunt viverra laoreet eget aenean risus faucibus sem adipiscing gravida. 
+                    Consequat sed molestie lorem leo risus, lectus neque. Enim scelerisque eu dictum libero dignissim ac at. 
+                    A, et ut commodo risus elit dolor arcu. Risus, tincidunt donec ac laoreet tellus. 
+                    Dictum sit pellentesque nibh est quis viverra id faucibus. Elit, euismod diam viverra egestas magnis nullam pharetra. 
+                    Mi sed vel orci eros massa eu mollis scelerisque.
+                    </p>
                 </div>
             </div>
         </div>
-  <hr id="down">
-   <div id="footer">
-    <div class="container">
-     <div class="column">
-      <h4>Meine Links</h4>
-      <div class="social-media">
-              <a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              <a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </div>
-     </div>
-     <div class="column" id="text">   
-      <h4>Meine Geschichte</h4>
-         <p>Hei. Mein Name ist Julian und ich bin 17 Jahre alt. Diese Website ist noch im Aufbau!</p>
-     </div>
     </div>
-   </div>
-  </div>
-</div>
 <!--Delay-->
 <script>
     function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }

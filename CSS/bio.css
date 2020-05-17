@@ -384,6 +384,40 @@ img {
   }
 }
 
+@media screen and (max-width: 375px) {  /* Phone sized */
+  img {
+    width: 525px;
+    height: auto;
+    top: 22%;
+    left: -19.87%;
+  }
+  .content {
+    width: 537px;
+    height: 366px;
+    top: 77%;
+    left: -173%;
+  }
+  #subtitle {
+    display: none;
+  }
+  #title p {
+    font-size: 35px;
+    left: 126.7%;
+  }
+  #text p {
+    top: 73px;
+    left: 665px;
+    text-align: center;
+    width: 350px;
+  }
+  #block {  
+    width: 124px;
+    height: 27px;
+    left: 883px;
+    top: 36px;
+  }
+}
+
 @media screen and (max-width: 360px) {  /* Phone sized */
   img {
     width: 550px;

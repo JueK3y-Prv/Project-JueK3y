@@ -384,7 +384,7 @@ img {
   }
 }
 
-@media screen and (max-width: 411px) {  /* Phone sized */
+@media screen and (max-width: 411px) {  /* Pixel2/XL sized */
   img {
     width: 525px;
     height: auto;
@@ -415,6 +415,37 @@ img {
     height: 27px;
     left: 883px;
     top: 36px;
+  }
+}
+
+@media screen and (max-width: 396px) {  /* Pocophone sized */
+  img {
+    width: 525px;
+    height: auto;
+    top: 168px;
+    left: -16%;
+  }
+  .content {
+    width: 537px;
+    height: 366px;
+    top: 604px;
+    left: -161.5%;
+  }
+  #title p {
+    font-size: 35px;
+    left: 126.7%;
+  }
+  #text p {
+    top: 73px;
+    left: 665px;
+    text-align: center;
+    width: 350px;
+  }
+  #block {  
+    width: 124px;
+    height: 28px;
+    left: 883px;
+    top: 34px;
   }
 }
 

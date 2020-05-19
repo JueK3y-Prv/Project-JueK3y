@@ -163,8 +163,8 @@ a:hover {
 
 /* Content - Site 1 */
 .site-1 {
-  min-height: 100%;
-  display: inline-block;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 img {

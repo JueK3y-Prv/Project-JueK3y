@@ -262,6 +262,10 @@ img {
     color: #000000;
   }
 
+@media screen and (max-width: 14400px) {
+	
+}
+
   @media screen and (max-width: 915px) {
     .logo {
             font-size: 24px;
@@ -487,6 +491,37 @@ img {
     width: 124px;
     height: 27px;
     left: 883px;
+    top: 36px;
+  }
+}
+
+@media screen and (max-width:360px and max-height 780px) { /* iPhone X sized */
+	img {
+    width: 500px;
+    height: auto;
+    top: 24%;
+    left: -19.3%;
+  }
+  .content {
+    width: 537px;
+    height: 366px;
+    top: 88%;
+    left: -179%;
+  }
+  #title p {
+    font-size: 35px;
+    left: 124%;
+  }
+  #text p {
+    top: 73px;
+    left: 665px;
+    text-align: center;
+    width: 330px;
+  }
+  #block {  
+    width: 124px;
+    height: 29px;
+    left: 868px;
     top: 36px;
   }
 }

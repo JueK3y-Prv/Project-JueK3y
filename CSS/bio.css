@@ -30,7 +30,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    cursor: crosshair;
 }
 
 .logo {
@@ -474,7 +473,7 @@ img {
   .content {
     width: 537px;
     height: 366px;
-    top: 88%;
+    top: 88.5%;
     left: -173%;
   }
   #title p {
@@ -495,18 +494,18 @@ img {
   }
 }
 
-@media screen and (max-width:360px and max-height 780px) { /* iPhone X sized */
+@media screen and (max-width: 375px) and (height: 812px) { /* iPhone X sized */
 	img {
     width: 500px;
     height: auto;
-    top: 24%;
-    left: -19.3%;
+    top: 23%;
+    left: -16.5%;
   }
   .content {
     width: 537px;
     height: 366px;
-    top: 88%;
-    left: -179%;
+    top: 75%;
+    left: -170%;
   }
   #title p {
     font-size: 35px;
@@ -514,7 +513,7 @@ img {
   }
   #text p {
     top: 73px;
-    left: 665px;
+    left: 660px;
     text-align: center;
     width: 330px;
   }

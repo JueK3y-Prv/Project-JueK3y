@@ -483,7 +483,7 @@ option {
       .nav-wrapper ul li a {
             opacity: 0;
             color: #000;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             letter-spacing: 1.2px;
             transform: translateX(-20px);

@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../../CSS/contact-b.css">
 
     <!--scrollbar-->
-    <link rel="stylesheet" href="../../CSS/scrollbar.css">
+    <link rel="stylesheet" href="../CSS/scrollbar.css">
 
     <!--hint.css-->
     <link rel="stylesheet" href="../../CSS/hint.css">
@@ -45,7 +45,7 @@
 
     <!-------   IMG  ------->
     <!--logo-->
-    <link rel="shortcut icon" href="../../img/LOGO_tran.png" type="image/png">
+    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
 
     <title>Business | JueK3y</title>
 </head>
@@ -209,17 +209,24 @@
     </script>
 
     <script>
-        $(document).ready(function(){
-            $(".clk").click(function(){
-                $("*").fadeOut();
-            });
+    // Fade In
+    $(document).ready(function() {
+        $('body').css('display', 'none');
+        $('body').fadeIn(350);
+    });
+
+    // Fade Out
+    $(document).ready(function() {
+        $(".clk").click(function() {
+            $("*").fadeOut();
         });
+    });
     </script>
 
-    <!--Delay-->
     <script>
-        function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
-      	//1500
+    // Delay
+    function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
     </script>
+
 </body>
 </html>

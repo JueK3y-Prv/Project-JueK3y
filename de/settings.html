@@ -54,23 +54,23 @@
     <div class="outer-box">
         <div class="select-outer-box">
             <a class="select-inner-box settings" href="settings.html#settings">
-                <div class="line"></div>
+                <div class="line1"></div>
                 <span class="select-text">Einstellungen</span>
             </a>
             <a class="select-inner-box story" href="settings.html#story">
-                <div class="line"></div>
+                <div class="line2"></div>
                 <span class="select-text">Geschichte</span>
             </a>
             <a class="select-inner-box faq" href="settings.html#faq">
-                <div class="line"></div>
+                <div class="line3"></div>
                 <span class="select-text">Häufige Fragen</span>
             </a>
             <a class="select-inner-box contact" href="settings.html#contact">
-                <div class="line"></div>
+                <div class="line4"></div>
                 <span class="select-text">Tech. Kontaktaufnahme</span>
             </a>
             <a class="select-inner-box impressum" href="settings.html#impressum">
-                <div class="line"></div>
+                <div class="line5"></div>
                 <span class="select-text">Impressum</span>
             </a>
             <!--<div class="select-hover-outer-box">
@@ -88,7 +88,7 @@
                 </a>
             </div>-->
             <a class="select-inner-box datenschutz" href="settings.html#datenschutz">
-                <div class="line"></div>
+                <div class="line6"></div>
                 <span class="select-text">Datenschutz</span>
             </a>
         </div>
@@ -249,6 +249,60 @@
     <script>
     // Delay
     function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
+    </script>
+
+    <script>
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 0 && y < 480) {
+            $('.line1').fadeIn();
+            $('.line2').fadeOut();
+            $('.line3').fadeOut();
+            $('.line4').fadeOut();
+            $('.line5').fadeOut();
+            $('.line6').fadeOut();
+        }
+        if (y > 480 && y < 870) {
+            $('.line1').fadeOut();
+            $('.line2').fadeIn();
+            $('.line3').fadeOut();
+            $('.line4').fadeOut();
+            $('.line5').fadeOut();
+            $('.line6').fadeOut();
+        }
+        if (y > 870 && y < 2230) {
+            $('.line1').fadeOut();
+            $('.line2').fadeOut();
+            $('.line3').fadeIn();
+            $('.line4').fadeOut();
+            $('.line5').fadeOut();
+            $('.line6').fadeOut();
+        }
+        if (y > 2230 && y < 2730) {
+            $('.line1').fadeOut();
+            $('.line2').fadeOut();
+            $('.line3').fadeOut();
+            $('.line4').fadeIn();
+            $('.line5').fadeOut();
+            $('.line6').fadeOut();
+        }
+        if (y > 2730 && y < 3780) {
+            $('.line1').fadeOut();
+            $('.line2').fadeOut();
+            $('.line3').fadeOut();
+            $('.line4').fadeOut();
+            $('.line5').fadeIn();
+            $('.line6').fadeOut();
+        }
+        if (y > 3780) {
+            $('.line1').fadeOut();
+            $('.line2').fadeOut();
+            $('.line3').fadeOut();
+            $('.line4').fadeOut();
+            $('.line5').fadeOut();
+            $('.line6').fadeIn();
+        }
+    });
     </script>
 
 </body>

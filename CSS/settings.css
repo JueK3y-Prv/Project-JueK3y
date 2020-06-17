@@ -526,55 +526,11 @@ a {
   .outer-box {
     width: 396px;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 610px;
-    left: -161.5%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
-  #block {  
-    width: 124px;
-    height: 30px;
-    left: 883px;
-    top: 34px;
-  }
 }
 
 @media screen and (max-width: 375px) {  /* iPhone 6/7/8 sized */
   .outer-box {
     width: 375px;
-  }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 88.5%;
-    left: -173%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
-  #block {  
-    width: 124px;
-    height: 27px;
-    left: 883px;
-    top: 36px;
   }
 }
 
@@ -582,82 +538,16 @@ a {
   .outer-box {
     width: 375px;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 75%;
-    left: -170%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
-  }
-  #block {  
-    width: 124px;
-    height: 29px;
-    left: 868px;
-    top: 36px;
-  }
 }
 
 @media screen and (max-width: 360px) {  /* Galaxy S5 sized */
   .outer-box {
     width: 360px;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 90.5%;
-    left: -179%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
-  }
-  #block {  
-    width: 124px;
-    height: 29px;
-    left: 868px;
-    top: 36px;
-  }
 }
 
 @media screen and (max-width: 320px) {  /* iPhone 5 sized */
   .outer-box {
     width: 320px;
-  }
-  .content {
-    width: 535px;
-    height: 366px;
-    top: 95.5%;
-    left: -197%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 122%;
-  }
-  #text p {
-    top: 73px;
-    left: 655px;
-    text-align: center;
-    width: 315px;
-  }
-  #block {  
-    width: 124px;
-    height: 29px;
-    left: 854px;
-    top: 35px;
   }
 }

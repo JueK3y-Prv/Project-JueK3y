@@ -336,6 +336,7 @@ img {
             width: 48px;
             height: 48px;
             cursor: pointer;
+            background: #fff;
             z-index: 9999;
             border-radius: 50%;
       }

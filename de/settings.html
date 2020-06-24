@@ -305,5 +305,18 @@
     });
     </script>
 
+    <script>
+    //Responsive
+    $(document).ready(function() {  
+        $('input[type="checkbox"]').val(this.checked);
+
+        $('input[type="checkbox"]').change(function() {
+            if(this.checked) {
+                $('.nav-wrapper').css("display", "block");
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>

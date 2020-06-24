@@ -387,6 +387,7 @@ a {
   }
 
   .nav-wrapper {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -412,6 +413,9 @@ a {
     width: 100%;
     text-align: right;
     margin-bottom: 10px;
+  }
+
+  .nav-wrapper ul li a {
   }
 
   .nav-wrapper ul li:nth-child(1) a {

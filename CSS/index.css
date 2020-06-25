@@ -443,7 +443,8 @@ option {
             width: 112%;
       }
       .myBtn {
-            left: 38%;
+            left: 41%;
+            bottom: 4%;
       }
 }
 
@@ -590,7 +591,8 @@ option {
             width: 122%;
       }
       .myBtn {
-            left: 38%;
+            left: 41%;
+            bottom: 5%;
       }
 }
 

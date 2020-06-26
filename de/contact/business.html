@@ -233,5 +233,18 @@
     function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
     </script>
 
+        <script>
+    //Responsive
+    $(document).ready(function() {  
+        $('input[type="checkbox"]').val(this.checked);
+
+        $('input[type="checkbox"]').change(function() {
+            if(this.checked) {
+                $('.nav-wrapper').css("display", "block");
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>

@@ -227,6 +227,36 @@ ul li ul li a {
   background: url(../img/Blue-Water_cropped.jpg);
 }
 
+/* Resp Contact */
+.contact {
+  top: 0;
+  left: 0;
+
+  font-family: 'Hauptfont';
+  font-style: normal;
+  font-weight: normal;
+
+  color: #252525;
+}
+
+.contact-h {
+  position: absolute;
+  top: 10.5%;
+  left: 40.9%;
+  
+  font-size: 37px;
+  line-height: 57px;
+}
+
+.contact-h-u {
+  position: absolute;
+  top: 13%;
+  left: 40.9%;
+
+  font-size: 26px;
+  line-height: 57px;
+  letter-spacing: 2.8px;
+}
 /* Form */
 
 /* Basic Position */
@@ -271,6 +301,13 @@ form label {
   top: 17px;
   
   font-style: italic;
+}
+
+.resp2 {
+  display: block;
+}
+.resp3 {
+  display: none;
 }
 
 .gender-h {
@@ -813,13 +850,21 @@ ul {
   .resp {
     width: 538px;
     height: 665px;
-    left: 16%;
-    top: 15%;
+    left: 15%;
+    top: 24%;
     
     border: 1.5px solid #E3E3E3;
     border-radius: 5px;
   }
 
+  .resp2 {
+    display: none;
+  }
+
+  .resp3 {
+    display: block;
+  }
+  
   /* Label - Title */
   form label {
     font-size: 15px;
@@ -881,6 +926,20 @@ ul {
 }
 
 @media screen and (max-width: 411px) {  /* Pixel2/XL sized */
+  .contact-h {
+    top: 8.7%;
+    left: 32.9%;
+  }
+  .contact-h-u {
+    top: 11.7%;
+    left: 32.9%;
+  }
+  .resp {
+    width: 100%;
+    left: -15%;  
+    top: 17%;
+    border: none;
+  }
   .content {
     width: 537px;
     height: 366px;
@@ -900,7 +959,10 @@ ul {
   }
 }
 
-@media screen and (max-width: 396px) {  /* Pocophone sized */
+@media screen and (max-width: 396px) {  /* Pocophone sized */ 
+  .resp {
+    left: -17.9%;
+  }
   .content {
     width: 537px;
     height: 366px;
@@ -920,6 +982,20 @@ ul {
 }
 
 @media screen and (max-width: 375px) {  /* iPhone 6/7/8 sized */
+  .contact-h {
+    top: 9.6%;
+    left: 34%;
+    font-size: 32px;
+  }
+  .contact-h-u {
+    top: 13.1%;
+    left: 34%;
+    font-size: 21px;
+  }
+  .resp {
+    left: -21.5%;
+    top: 18.5%;
+  }
   .content {
     width: 537px;
     height: 366px;
@@ -958,6 +1034,20 @@ ul {
 }
 
 @media screen and (max-width: 360px) {  /* Galaxy S5 sized */
+  .contact-h {
+    top: 10.1%;
+    left: 33.7%;
+    font-size: 32px;
+  }
+  .contact-h-u {
+    top: 13.6%;
+    left: 33.7%;
+    font-size: 21px;
+  }
+  .resp {
+    left: -24.3%;
+    top: 19.7%;
+  }
   .content {
     width: 537px;
     height: 366px;
@@ -977,6 +1067,20 @@ ul {
 }
 
 @media screen and (max-width: 320px) {  /* iPhone 5 sized */
+  .contact-h {
+    top: 11.2%;
+    left: 31.5%;
+    font-size: 32px;
+  }
+  .contact-h-u {
+    top: 14.7%;
+    left: 31.5%;
+    font-size: 21px;
+  }
+  .resp {
+    left: -33.2%;
+    top: 20.95%;
+  }
   .content {
     width: 535px;
     height: 366px;

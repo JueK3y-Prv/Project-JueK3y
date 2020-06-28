@@ -1,104 +1,237 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    
-    <!--stylesheet-->
-    <link rel="stylesheet" href="../../CSS/contact_privat.css">
-    
-    <!--scrollbar-->
-    <link rel="stylesheet" href="../CSS/scrollbar.css">
+    <!-------   META  ------->
+    <meta charset = "UTF-8">
+    <meta name="viewport"           content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+    <meta property = "og:url"       content="https://juek3y.netlify.com/de/contact/privat.html">
+    <meta property = "og:title"     content="Privat | JueK3y">
+    <meta property = "og:site_name" content="JueK3y">
+    <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
+    <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
+    <meta property = "og:type"      content="website">
+    <meta property = "og:locale"    content="de_DE">
+    <meta name = "title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
+    <meta name = "content-language" content="de">
+    <meta name = "author"           content="Julian Kennedy">
+    <meta name = "publisher"        content="Julian Kennedy">
+    <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography, ">
+    <meta name = "page-topic"       content="Privat">
+    <meta name = "language"         content="Deutsch">
+    <meta name = "revisit"          content="After 15 days">
+    <meta name = "robots"           content="index, follow">
+    <meta name = "googlebot"        content="index, follow">
 
-    <!--icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  
-    <!--logo-->
-    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
-    
+
+    <!-------   JS  ------->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     
-    <title>Kontakt | JueK3y</title>
+
+    <!-------   CSS  ------->  
+    <!--stylesheet-->
+    <link rel="stylesheet" href="../../CSS/contact-p.css">
+
+    <!--scrollbar-->
+    <link rel="stylesheet" href="../CSS/scrollbar.css">
+
+    <!--hint.css-->
+    <link rel="stylesheet" href="../../CSS/hint.css">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-------   IMG  ------->
+    <!--logo-->
+    <link rel="shortcut icon" href="../img/LOGO_tran.png" type="image/png">
+
+    <title>Privat | JueK3y</title>
 </head>
+
 <body>
-        <div class="logo"><a href="index.html">JueK3y</a></div>
-            <div class="nav">
-                <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </label>
-                 <div class="nav-wrapper">
-                    <ul>
-                        <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                        <li class="clk"><a href="javascript:delay('../experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>
-                        <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a></li>
-                        <li><a href="#" title="Deutsch" id="active">DE</a><a class="clk" href="javascript:delay('../../en/index.html')" title="English"> | EN</a></li>
-                        <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
-                    </div>
-            </div>
-    <div class="bottom">
-  <div id="content" class="wrapper">
-   <div class="container">
-       <p class="text1">
-         Fragen, Anmerkungen oder Ideen? <br>Wenn ja, bist du hier genau richtig!</p>
-       <p class="text">Noch Fragen?<br>Kontaktiere mich!</p>
-      </div>
-      <form name="Private Anfrage" method="POST" data-netlify="true">
-            <div class="fields">
-                <div class="field half">
-                    <input type="text" name="name" id="name" placeholder="Vorname, Nachname" minlength="5" required="required" />
-                </div>
-                <div class="field half">
-                    <input type="email" name="email" cid="email" placeholder="E-Mail" minlength="6" required="required" />
-                </div>
-                <div class="field">
-                    <textarea name="message" id="message" placeholder="Nachricht" rows="7"></textarea>
-                </div>
-                <!--Hochladen einer Datei-->
-                <!--<div class="field">
-                    <input type="file" name="myfile" id="myfile" placeholder="Datei hochladen" rows="7" />
-                </div>-->
-                <!--Spam-Filter-->
-                <div class="field">
-                    <div data-netlify-recaptcha="true" id="captcha"></div>
-                    <!--<div class="g-recaptcha" data-sitekey="6Lf0wsUUAAAAAIYiVTR7GGxkK1hJyiUXi2ZlnOEb"></div>
-                    <?php $json = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf0wsUUAAAAAFmq7XCoNIXxOQ_2BCCNrJtvmA1e&response='.$_POST['g-recaptcha-response']);
-$data = json_decode($json);
-var_dump($data); ?>-->
-                </div>
-            </div>
-            <ul class="actions">
-                <li><input type="submit" value="Verschicken" class="button_primary" /></li>
-            </ul>
-        </form>
-        <div class="share-button">
-          <span><i class="fas fa-share-alt"></i></span>
-          <a href="https://github.com/JueK3y" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/juek3y/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/juek3y" target="_blank"><i class="fab fa-twitter"></i></a>
+    <!-- Navigation -->
+    <div class="sticky-nav">
+        <div class="logo"><a class="clk" href="javascript:delay('../index.html')" title="Zum Startbildschirm">JueK3y</a></div>
+        <div class="nav">
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+            <div class="nav-wrapper">
+               <ul>
+                       <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                       <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                       <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
+                       <style>#na a { cursor:not-allowed; } </style>
+                       <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
+                       <ul class="dropdown">
+                           <li><a href="business.html">Geschäftlich</a></li>
+                           <li><a href="" id="active">Privat</a></li>
+                           <li><a href="../settings.html">Fragen</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#" title="Deutsch" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                   <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+               </ul>
+           </div>
         </div>
     </div>
-    </div>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!--Delay-->
-<script>
-    function delay (URL) { setTimeout( function() { window.location = URL }, 400 ); }
-    //1500
-</script>
-<script>
-    $(document).ready(function(){
-      $(".fading").click(function(){
-        $("*").fadeOut();
-      });
+    <!-- Content - Site 1 -->
+        <div class="contact">
+            <span class="contact-h resp3">Contact.</span>
+            <span class="contact-h-u resp3">- Persönlich</span>
+        </div>
+        <form name="Private Anfrage" method="POST" data-netlify="true">
+            <div class="resp">
+            <ul class="errorMessages"></ul>
+            
+                <!-- Firma -->
+                <label class="firma-h" for="firma">Firma</label>
+                <label class="firma-h-o resp2" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
+                <label class="firma-h-o resp3" for="firma">Optional</label>
+                <div class="firma-t">
+                    <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
+                </div>
+    
+                <!-- Geschlecht -->
+                <label class="gender-h" for="gender">Geschlecht</label>
+                <div class="gender-t-m" id="gender" data-validate="Gender is required">
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label class="male-h" for="male">Mann</label>
+                </div>
+                <div class="gender-t-f">
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label class="female-h" for="female">Frau</label>
+                </div>
+    
+                <label class="gender-h-w" for="gender"><button type="button" class="gender-wrong" id="wrong">Verklickt?</button></label>
+                <style>.gender-wrong { display: none; }</style>
+                <div id="gender-inv"></div>
+                <div id="gender-val"></div>
+    
+                <!-- Anrede männlich -->
+                <div class="gender-t-m-a" data-validate="Gender is required">
+                    <select name="Geschlecht" id="anrede" required>
+                        <option selected value="">Anrede</option>
+                        <option value="men1">Herr</option>
+                        <option value="men2">Herr Dr.</option>
+                        <option value="men3">Herr Prof.</option>
+                        <option value="men4">Hr. Prof. Dr.</option>
+                    </select>
+                </div>
+    
+                <!-- Anrede weiblich -->
+                <div class="gender-t-f-a" data-validate="Gender is required">
+                    <select name="Geschlecht" id="anrede" required>
+                        <option selected value="">Anrede</option>
+                        <option value="woman1">Frau</option>
+                        <option value="woman2">Frau Dr.</option>
+                        <option value="woman3">Frau Prof.</option>
+                        <option value="woman4">Fr. Prof. Dr.</option>
+                    </select>
+                </div>
+    
+                <!-- Name -->
+                <label class="name-h" for="name">Name</label>
+                <div class="name-t" data-validate="Name is required">
+                    <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" required="required"/>
+                </div>
+    
+                <!-- E-Mail -->
+                <label class="email-h" for="email">E-Mail</label>
+                <div class="email-t" class="validate-input" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
+                    <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
+                </div>
+    
+                <!-- Benötigter Dienst -->
+                <label class="service-h" for="service">Service</label>
+                <div class="service-t" data-validate="Service is required">
+                    <select name="service" id="service" required>
+                        <option selected value="">- Auswählen -</option>
+                        <option value="Programmierung">Coding</option>
+                        <option value="Fotografie">Fotografie</option>
+                        <option value="Design">Design</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+    
+                <!--- Nachricht -->
+                <label class="msg-h" for="msg">Nachricht</label>            <!--label-input100-->
+                <div class="msg-t" data-validate = "Message is required">
+                    <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
+                </div>
+    
+            <ul class="actions">
+                <li><input type="submit" value="Send message" class="button_primary"/></li>
+            </ul>
+            </div>
+        </form>
+
+        <div class="left"></div>
+
+    <!--Gender-->
+    <script>
+    $(document).ready(function() {
+        $(".gender-wrong").click(function(){
+            $('.gender-t-m').show();
+            $('.gender-t-m-a').hide();      
+            $('.gender-t-f').show(); 
+            $('.gender-t-f-a').hide();  
+            $('.gender-wrong').hide();  
+            $('input[type="radio"]').prop('checked', false);
+        });
+        $('input[type="radio"]').click(function() {
+            //Männlich
+            if($(this).attr('id') == 'male') {
+                $('.gender-t-m').show();
+                $('.gender-t-m-a').show();      
+                $('.gender-t-f').hide(); 
+                $('.gender-t-f-a').hide(); 
+                $('.gender-wrong').show();       
+            }
+            //Weiblich
+            else if($(this).attr('id') == 'female') {
+                $('.gender-t-m').hide();  
+                $('.gender-t-m-a').hide();      
+                $('.gender-t-f').show(); 
+                $('.gender-t-f-a').show();  
+                $('.gender-wrong').show();  
+            }
+            //None
+            else {
+                $('.gender-t-m').hide();
+                $('.gender-t-f-a').hide();     
+                $('.gender-t-f').hide();
+                $('.gender-t-f-a').hide();   
+                $('.gender-wrong').hide();  
+            }
+        });
     });
     </script>
+
+    <script>
+    // Fade In
+    $(document).ready(function() {
+        $('body').css('display', 'none');
+        $('body').fadeIn(350);
+    });
+
+    // Fade Out
+    $(document).ready(function() {
+        $(".clk").click(function() {
+            $("*").fadeOut();
+        });
+    });
+    </script>
+
+    <script>
+    // Delay
+    function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
+    </script>
+
 </body>
 </html>

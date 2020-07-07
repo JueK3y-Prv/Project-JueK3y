@@ -665,73 +665,6 @@ ul {
   margin-right: 50%;
 }
 
-/* Social Media */
-.share-button{
-  top: 5vh;
-  left: 48%;
-  width: 75px;
-  height: 75px;
-  background: #dfe6e9;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: .3s linear;
-}
-    
-.share-button:hover {
-  width: 220px;
-  left: 44.3%;
-}
-
-.share-button span{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #2d3436;
-  color: #f1f1f1;
-  text-align: center;
-  line-height: 80px;
-  z-index: 999;
-  transition: .6s linear;
-  border-radius: 40px;
-}
-
-.share-button:hover span {
-  transform: translateX(-100%);
-  transition-delay: 0.3s;
-}
-
-.share-button a {
-  flex: 1;
-  font-size: 26px;
-  color: #2d3436;
-  text-align: center;
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: 0.3s linear;
-}
-    
-.share-button:hover a {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.share-button a:nth-of-type(1) {
-  transition-delay: 1s;
-}
-
-.share-button a:nth-of-type(2) {
-  transition-delay: 0.8s;
-}
-
-.share-button a:nth-of-type(3) {
-  transition-delay: 0.6s;
-}
-
 @media screen and (max-width: 915px) {
   .logo {
     font-size: 24px;
@@ -834,12 +767,15 @@ ul {
     margin-top: 4px;
     width: 12px;
   }
+  
   .active_nav::after {
     display: none;
   }
+
   .underline::after {
     display: none;
   }
+
 }
 
 @media screen and (max-width: 768px) {  /* iPad sized */
@@ -925,13 +861,13 @@ ul {
   }
 }
 
-@media screen and (max-width: 411px) {  /* Pixel2/XL sized */
+@media screen and (max-width: 414px) { /*iPhone 6/7/8 + sized */  
   .contact-h {
     top: 8.7%;
     left: 32.9%;
   }
   .contact-h-u {
-    top: 11.7%;
+    top: 11.9%;
     left: 32.9%;
   }
   .resp {

@@ -396,7 +396,7 @@ img {
   }
 }
 
-@media screen and (max-width: 411px) {  /* Pixel2/XL sized */
+@media screen and (max-width: 414px) {  /* iPhone 6/7/8+ sized */
   img {
     width: 525px;
     height: auto;

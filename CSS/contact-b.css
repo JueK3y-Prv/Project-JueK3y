@@ -732,6 +732,47 @@ ul {
   transition-delay: 0.6s;
 }
 
+@media screen and (max-width: 1024px) { 
+  .logo {
+    margin: 2.2em;
+    margin-left: 2.7em;
+  }
+
+  .nav {
+    margin: 3.5em;
+    margin-right: 1.2em;
+  }
+
+  .resp2 {
+    display: none;
+  }
+
+  .resp3 {
+    display: block;
+  } 
+  
+  .contact-h {
+    top: 12.2%;
+    left: 45%;
+  }
+
+  .contact-h-u {
+    top: 14.5%;
+    left: 45%;
+  }
+
+  .left {
+    left: 5%;
+    top: 24%;
+  }
+
+  .resp {
+    width: 534px;
+    left: 43%;
+    top: 24%;
+  }
+}
+
 @media screen and (max-width: 915px) {
   .logo {
     font-size: 24px;
@@ -926,7 +967,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 411px) {  /* Pixel2/XL sized */
+@media screen and (max-width: 414px) {  /* iPhone 6/7/8+ sized */
   .contact-h {
     top: 8.7%;
     left: 32.9%;
@@ -947,17 +988,6 @@ ul {
     top: 604px;
     left: -153.5%;
   }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-    width: 60%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
 }
 
 @media screen and (max-width: 396px) {  /* Pocophone sized */ 
@@ -969,16 +999,6 @@ ul {
     height: 366px;
     top: 610px;
     left: -161.5%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
   }
 }
 
@@ -1003,16 +1023,6 @@ ul {
     top: 88.5%;
     left: -173%;
   }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
 }
 
 @media screen and (max-width: 375px) and (height: 812px) { /* iPhone X sized */
@@ -1021,16 +1031,6 @@ ul {
     height: 366px;
     top: 75%;
     left: -170%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
   }
 }
 
@@ -1055,16 +1055,6 @@ ul {
     top: 90.5%;
     left: -179%;
   }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
-  }
 }
 
 @media screen and (max-width: 320px) {  /* iPhone 5 sized */
@@ -1087,15 +1077,5 @@ ul {
     height: 366px;
     top: 95.5%;
     left: -197%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 122%;
-  }
-  #text p {
-    top: 73px;
-    left: 655px;
-    text-align: center;
-    width: 315px;
   }
 }

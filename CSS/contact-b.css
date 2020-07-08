@@ -790,6 +790,7 @@ ul {
     background: #fff;
     opacity: 0;
     transition: all 0.2s ease;
+    line-height: 55px;
   }
 
   .nav-wrapper ul {
@@ -831,7 +832,7 @@ ul {
   .nav-wrapper ul li a {
     opacity: 0;
     color: #000;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 1.2px;
     transform: translateX(-20px);
@@ -968,6 +969,14 @@ ul {
 }
 
 @media screen and (max-width: 414px) {  /* iPhone 6/7/8+ sized */
+  .nav-wrapper {
+    line-height: 45px;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 17px;
+  }
+
   .contact-h {
     top: 8.7%;
     left: 32.9%;

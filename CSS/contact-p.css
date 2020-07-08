@@ -222,7 +222,7 @@ ul li ul li a {
   background-repeat: no-repeat;
   width: 866px;
   height: 620px;
-  left: 13.4895833%;
+  left: 41.4%;
   top: 21.6%;
   background: url(../img/Blue-Water_cropped.jpg);
 }
@@ -265,7 +265,7 @@ ul li ul li a {
   position: absolute;
   width: 538px;
   height: 620px;
-  left: 58.4895833%;
+  left: 13.4895833%;
   top: 21.6%;
 
   
@@ -665,6 +665,47 @@ ul {
   margin-right: 50%;
 }
 
+@media screen and (max-width: 1024px) { 
+  .logo {
+    margin: 2.2em;
+    margin-left: 2.7em;
+  }
+
+  .nav {
+    margin: 3.5em;
+    margin-right: 1.2em;
+  }
+
+  .resp2 {
+    display: none;
+  }
+
+  .resp3 {
+    display: block;
+  } 
+  
+  .contact-h {
+    top: 12.2%;
+    left: 45%;
+  }
+
+  .contact-h-u {
+    top: 14.4%;
+    left: 45%;
+  }
+
+  .left {
+    left: 10.4%;
+    top: 24%;
+  }
+
+  .resp {
+    width: 534px;
+    left: 5%;
+    top: 24%;
+  }
+}
+
 @media screen and (max-width: 915px) {
   .logo {
     font-size: 24px;
@@ -722,7 +763,7 @@ ul {
   .nav-wrapper ul li a {
     opacity: 0;
     color: #000;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 1.2px;
     transform: translateX(-20px);
@@ -779,6 +820,9 @@ ul {
 }
 
 @media screen and (max-width: 768px) {  /* iPad sized */
+  .nav {
+    line-height: 2.99;
+  }
   .left {
     display: none;
   }
@@ -862,6 +906,14 @@ ul {
 }
 
 @media screen and (max-width: 414px) { /*iPhone 6/7/8 + sized */  
+  .nav-wrapper {
+    line-height: 45px;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 17px;
+  }
+
   .contact-h {
     top: 8.7%;
     left: 32.9%;

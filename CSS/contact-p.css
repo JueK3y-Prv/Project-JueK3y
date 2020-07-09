@@ -1001,15 +1001,9 @@ ul {
     top: 610px;
     left: -161.5%;
   }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
+  .so-me-resp ul li {
+    display: inline;
+    margin: 2em;
   }
 }
 

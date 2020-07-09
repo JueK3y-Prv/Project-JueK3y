@@ -665,7 +665,7 @@ ul {
   margin-right: 50%;
 }
 
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px) { /*iPad Pro sized*/
   .logo {
     margin: 2.2em;
     margin-left: 2.7em;
@@ -823,6 +823,17 @@ ul {
   .nav {
     line-height: 2.99;
   }
+  
+  .contact-h {
+    top: 12.2%;
+    left: 40.7%;
+  }
+
+  .contact-h-u {
+    top: 14.6%;
+    left: 40.7%;
+  }
+  
   .left {
     display: none;
   }

@@ -19,7 +19,7 @@
     <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography, ">
     <meta name = "page-topic"       content="Privat">
     <meta name = "language"         content="Deutsch">
-    <meta name = "revisit"          content="After 15 days">
+    <meta name = "revisit"          content="After 10 days">
     <meta name = "robots"           content="index, follow">
     <meta name = "googlebot"        content="index, follow">
 
@@ -62,7 +62,7 @@
                 <i></i>
             </label>
             <div class="nav-wrapper">
-               <ul>
+               <ul>       
                        <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
                        <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
                        <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
@@ -169,6 +169,13 @@
         </form>
 
         <div class="left"></div>
+        <div class="so-me-resp">
+            <ul>
+                <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
 
     <!--Gender-->
     <script>
@@ -210,7 +217,7 @@
     });
     </script>
 
-    <script>
+<script>
     // Fade In
     $(document).ready(function() {
         $('body').css('display', 'none');
@@ -228,6 +235,24 @@
     <script>
     // Delay
     function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
+    </script>
+
+    <script>
+    //Responsive
+    $(document).ready(function() {  
+        $('input[type="checkbox"]').val(this.checked);
+
+        $('input[type="checkbox"]').change(function() {
+            if(this.checked) {
+                $('.nav-wrapper').css("display", "block");
+                $('.so-me-resp').css("display", "flex");
+            }
+            else {
+                $('.nav-wrapper').css("display", "none");
+                $('.so-me-resp').css("display", "none");
+            }
+        });
+    });
     </script>
 
 </body>

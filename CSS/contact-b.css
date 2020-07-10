@@ -38,9 +38,20 @@
   box-sizing: border-box;
 }
 
+.box {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 75px;
+  top: 0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
 .logo {
   z-index: 9991;
-  position: absolute;
+  position: fixed;
   font-family: 'Logo', Georgia, Times, serif;
   font-size: 32px;
   line-height: 30px;
@@ -170,6 +181,7 @@ a:hover {
   width: 100%;
   transition: width .3s;
 }
+
 
 /* Dropdown */
 ul .dropdown {
@@ -686,6 +698,7 @@ ul {
 
 .so-me-resp ul {
   z-index: 9991;
+  position: fixed;
 }
 
 .so-me-resp ul li {
@@ -713,28 +726,37 @@ ul {
   } 
   
   .contact-h {
-    top: 12.2%;
+    top: 14.2%;
     left: 45%;
   }
 
   .contact-h-u {
-    top: 14.5%;
+    top: 16.5%;
     left: 45%;
   }
 
   .left {
     left: 5%;
-    top: 24%;
+    top: 28%;
   }
 
   .resp {
     width: 534px;
     left: 43%;
-    top: 24%;
+    top: 28%;
+  }
+  
+  .so-me-resp  {
+    padding-top: 87.7vh;
+    font-size: 28px;
   }
 }
 
 @media screen and (max-width: 915px) { /* Burger */
+  .box {
+    display: block;
+  }
+
   .logo {
     font-size: 32px;
     margin: 48px 0 0 60px;
@@ -763,9 +785,11 @@ ul {
   .nav-wrapper ul {
     position: absolute;
     top: 50%;
+    left: 2.3%;
     transform: translateY(-50%);
     width: 100%;
   }
+
 
   /* Resp. Nav. Textausrichtung */
   .nav-wrapper ul li {
@@ -853,7 +877,9 @@ ul {
     display: none;
   }
   
-  .so-me-resp {
+  .so-me-resp  {
+    padding-top: 92.4vh;
+    font-size: 22px;
     display: none;
   }
 }

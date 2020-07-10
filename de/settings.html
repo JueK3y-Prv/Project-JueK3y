@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+
     <!-------   JS  ------->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 
     <!-------   CSS  ------->
     <!--stylesheet-->
@@ -21,7 +23,8 @@
     <link rel="stylesheet" href="../CSS/hint.css">
 
     <!--font-awesome-->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-------   IMG  ------->
     <!--logo-->
@@ -29,27 +32,38 @@
 
     <title>Einstellungen | JueK3y</title>
 </head>
+
 <body>
+    <!-- Navigation -->
     <div class="sticky-nav">
         <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
         <div class="box"></div>
-            <div class="nav">
-                <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </label>
-                <div class="nav-wrapper">
-                    <ul>
-                        <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                        <li class="clk"><a href="#" title="Momentan noch nicht zugänglich" class="underline">Experience</a></li>
-                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk" id="active"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+        <div class="nav">
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul>
+                    <li class="clk"><a href="javascript:delay('bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                    <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                    <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
+                    <style>#na a { cursor:not-allowed; } </style>
+                    <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                    <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                    <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk" id="active"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div class="so-me-resp">
+        <ul>
+            <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
     </div>
     <div class="outer-box">
         <div class="select-outer-box">
@@ -313,6 +327,11 @@
         $('input[type="checkbox"]').change(function() {
             if(this.checked) {
                 $('.nav-wrapper').css("display", "block");
+                $('.so-me-resp').css("display", "flex");
+            }
+            else {
+                $('.nav-wrapper').css("display", "none");
+                $('.so-me-resp').css("display", "none");
             }
         });
     });

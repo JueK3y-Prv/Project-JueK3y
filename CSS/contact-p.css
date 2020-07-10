@@ -307,7 +307,12 @@ form label {
 .resp2 {
   display: block;
 }
+
 .resp3 {
+  display: none;
+}
+
+.resp4 a {
   display: none;
 }
 
@@ -733,6 +738,14 @@ ul {
   .logo {
     font-size: 32px;
     margin: 48px 0 0 60px;
+  }
+
+  .resp2 a {
+    display: none;
+  }
+
+  .resp4 a {
+    display: block;
   }
 
   .nav-wrapper {

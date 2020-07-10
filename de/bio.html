@@ -3,25 +3,25 @@
 <head>
     <!-------   META  ------->
     <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"           content="width=device-width, initial-scale=1.0">
     <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
-    <meta property = "og:url" content="https://juek3y.netlify.com/de/bio.html">
-    <meta property = "og:title" content="Biographie | JueK3y">
+    <meta property = "og:url"       content="https://juek3y.netlify.com/de/bio.html">
+    <meta property = "og:title"     content="Biographie | JueK3y">
     <meta property = "og:site_name" content="JueK3y">
     <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
     <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'">
-    <meta property = "og:type" content="website">
-    <meta property = "og:locale" content="de_DE">
-    <meta name = "title-tag" content="Coding, Fotografie und Design mit Julian Kennedy">
+    <meta property = "og:type"      content="website">
+    <meta property = "og:locale"    content="de_DE">
+    <meta name = "title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
     <meta name = "content-language" content="de">
     <meta name = "author"           content="Julian Kennedy">
     <meta name = "publisher"        content="Julian Kennedy">
     <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography, ">
     <meta name = "page-topic"       content="Biographie">
     <meta name = "language"         content="Deutsch">
-    <meta name = "revisit"          content="After 15 days">
+    <meta name = "revisit"          content="After 10 days">
     <meta name = "robots"           content="index, follow">
-    <meta name = "googlebot" content = "index, follow">
+    <meta name = "googlebot"        content="index, follow">
 
 
     <!-------   JS  ------->
@@ -35,9 +35,6 @@
     <!-------   CSS  ------->  
     <!--stylesheet-->
     <link rel="stylesheet" href="../CSS/bio.css">
-
-    <!--button-->
-    <link rel="stylesheet" href="../CSS/button.css">
 
     <!--scrollbar-->
     <link rel="stylesheet" href="../CSS/scrollbar.css">
@@ -58,8 +55,8 @@
 
 <body>
     <!-- Navigation -->
-    <div class="sticky-nav">
         <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
+        <div class="box"></div>
         <div class="nav">
             <input type="checkbox" id="nav" class="hidden">
             <label for="nav" class="nav-btn">
@@ -74,14 +71,19 @@
                     <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
                     <style>#na a { cursor:not-allowed; } </style>
                     <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                    <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                    <li><a href="#" title="Deutsch" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
                     <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
-    </div>
     <!-- Content - Site 1 -->
-    <div class="site-1">
+    <div class="so-me-resp">
+        <ul>
+            <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
             <img src="../img/Police.JPG" alt="Police Officer in San Francisco">
             <div class="content">
                 <div id="title">
@@ -122,7 +124,6 @@
                 <br>
                 <br>
             </div>
-    </div>
 
     <script>
     // Fade In
@@ -142,6 +143,24 @@
     <script>
     // Delay
     function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
+    </script>
+
+    <script>
+    //Responsive
+    $(document).ready(function() {  
+        $('input[type="checkbox"]').val(this.checked);
+
+        $('input[type="checkbox"]').change(function() {
+            if(this.checked) {
+                $('.nav-wrapper').css("display", "block");
+                $('.so-me-resp').css("display", "flex");
+            }
+            else {
+                $('.nav-wrapper').css("display", "none");
+                $('.so-me-resp').css("display", "none");
+            }
+        });
+    });
     </script>
 
  </body>

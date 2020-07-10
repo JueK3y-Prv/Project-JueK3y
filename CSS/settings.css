@@ -516,7 +516,7 @@ a {
   }
 }
 
-@media screen and (max-width: 411px) {  /* Pixel2/XL sized */
+@media screen and (max-width: 414px) {  /* iPhone 6/7/8+ */
   .outer-box {
     width: 411px;
   }

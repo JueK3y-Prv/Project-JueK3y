@@ -951,6 +951,10 @@ ul {
     line-height: 45px;
   }
 
+  .nav-wrapper ul {
+    left: 4.2%;
+  }
+
   .nav-wrapper ul li a {
     font-size: 17px;
   }
@@ -969,41 +973,28 @@ ul {
     top: 17%;
     border: none;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 604px;
-    left: -153.5%;
+  
+  .so-me-resp  {
+    padding-top: 91vh;
   }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-    width: 60%;
+  
+  .so-me-resp ul li {
+    margin: 1.8em;
   }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
+
 }
 
 @media screen and (max-width: 396px) {  /* Pocophone sized */ 
+  .nav-wrapper ul {
+    left: 4.6%;
+  }
+
   .contact-h-u {
     top: 12%;
   }
+
   .resp {
     left: -17.9%;
-  }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 610px;
-    left: -161.5%;
-  }
-  .so-me-resp ul li {
-    display: inline;
-    margin: 2em;
   }
 }
 
@@ -1022,107 +1013,55 @@ ul {
     left: -21.5%;
     top: 18.5%;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 88.5%;
-    left: -173%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 126.7%;
-  }
-  #text p {
-    top: 73px;
-    left: 665px;
-    text-align: center;
-    width: 350px;
-  }
 }
 
 @media screen and (max-width: 375px) and (height: 812px) { /* iPhone X sized */
   .contact-h {
     top: 9.65%;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 75%;
-    left: -170%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
-  }
 }
 
 @media screen and (max-width: 360px) {  /* Galaxy S5 sized */
+  .nav-wrapper ul {
+    left: 4.9%;
+  }
+
   .contact-h {
     top: 10.1%;
     left: 33.7%;
     font-size: 32px;
   }
+
   .contact-h-u {
     top: 13.6%;
     left: 33.7%;
     font-size: 20px;
     letter-spacing: 1.7px;
   }
+
   .resp {
     left: -24.3%;
     top: 19.7%;
   }
-  .content {
-    width: 537px;
-    height: 366px;
-    top: 90.5%;
-    left: -179%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 124%;
-  }
-  #text p {
-    top: 73px;
-    left: 660px;
-    text-align: center;
-    width: 330px;
-  }
 }
 
 @media screen and (max-width: 320px) {  /* iPhone 5 sized */
+  .nav-wrapper ul {
+    left: 5.6%;
+  }
+
   .contact-h {
     top: 11.1%;
     left: 31.5%;
   }
+
   .contact-h-u {
     top: 14.9%;
     left: 31.5%;
   }
+
   .resp {
     left: -33.2%;
-    top: 20.95%;
-  }
-  .content {
-    width: 535px;
-    height: 366px;
-    top: 95.5%;
-    left: -197%;
-  }
-  #title p {
-    font-size: 35px;
-    left: 122%;
-  }
-  #text p {
-    top: 73px;
-    left: 655px;
-    text-align: center;
-    width: 315px;
+    top: 21.04%;
   }
 }

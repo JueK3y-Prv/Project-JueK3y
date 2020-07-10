@@ -27,7 +27,7 @@
     <!-------   JS  ------->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    
+
 
     <!-------   CSS  ------->  
     <!--stylesheet-->
@@ -63,19 +63,20 @@
             </label>
             <div class="nav-wrapper">
                <ul>
-                       <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
-                       <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
-                       <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
-                       <style>#na a { cursor:not-allowed; } </style>
-                       <li class="clk"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
-                       <ul class="dropdown">
-                           <li><a href="" id="active">Geschäftlich</a></li>
-                           <li><a href="privat.html">Privat</a></li>
-                           <li><a href="../settings.html">Fragen & Hilfe</a></li>
-                       </ul>
-                   </li>
-                   <li><a href="#" title="Deutsch" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                   <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                    <li class="clk"><a href="javascript:delay('../bio.html')" title="Über meine Person" class="underline">Biographie</a></li>
+                    <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                    <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
+                    <style>#na a { cursor:not-allowed; } </style>
+                    <li class="clk resp2"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a>
+                        <ul class="dropdown">
+                            <li><a href="" id="active">Geschäftlich</a></li>
+                            <li><a href="privat.html">Privat</a></li>
+                            <li><a href="../settings.html">Fragen & Hilfe</a></li>
+                        </ul>
+                    </li>
+                    <li class="clk resp4"><a href="javascript:delay('../contact.html')" title="Kontaktmöglichkeit" class="active_nav">Kontakt</a></li>
+                    <li><a href="#" title="Deutsch" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                    <li class="settings_resp"><a href="javascript:delay('../settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                </ul>
            </div>
         </div>
@@ -85,7 +86,8 @@
             <span class="contact-h resp3">Contact.</span>
             <span class="contact-h-u resp3">- Business</span>
         </div>
-        <form name="Geschäftliche Anfrage" method="POST" data-netlify="true">
+        <div id="error"></div>
+        <form id="form" name="Geschäftliche Anfrage" method="POST" data-netlify="true">
             <div class="resp">
             <ul class="errorMessages"></ul>
             
@@ -137,7 +139,7 @@
     
                 <!-- Name -->
                 <label class="name-h" for="name">Name</label>
-                <div class="name-t" data-validate="Name is required">
+                <div class="name-t" data-error="Name is required">
                     <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" required="required"/>
                 </div>
     
@@ -172,6 +174,13 @@
         </form>
 
         <div class="left"></div>
+        <div class="so-me-resp">
+            <ul>
+                <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
 
     <!--Gender-->
     <script>
@@ -233,7 +242,7 @@
     function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
     </script>
 
-        <script>
+    <script>
     //Responsive
     $(document).ready(function() {  
         $('input[type="checkbox"]').val(this.checked);
@@ -241,9 +250,22 @@
         $('input[type="checkbox"]').change(function() {
             if(this.checked) {
                 $('.nav-wrapper').css("display", "block");
+                $('.so-me-resp').css("display", "flex");
+            }
+            else {
+                $('.nav-wrapper').css("display", "none");
+                $('.so-me-resp').css("display", "none");
             }
         });
     });
+    </script>
+
+    <script>
+    $(document).ready(function() { 
+        if ($(window).width() > 915) {
+            $('.resp4').remove();
+        }
+    })
     </script>
 
 </body>

@@ -198,14 +198,16 @@ body {
 }
 
 .logo {
+      z-index: 9991;
+      position: fixed;
       font-family: 'Logo', Georgia, Times, serif;
       font-size: 32px;
       float: left;
       margin: 1.5em 0 0 2.2em;
-    }
+}
     
 
-    .nav {
+.nav {
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -218,7 +220,7 @@ body {
       position: absolute;
       right: -2%;
       font-family: 'Hauptfont';
-  }
+}
 
 .nav ul li {
       list-style: none;
@@ -227,7 +229,45 @@ body {
       padding-right: 36px;
 }
 
-.social-media {
+#nav:checked + .nav-btn {
+      transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+      background: #000;
+      transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+      width: 20px;
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+      opacity: 0;
+      width: 20px;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+      transform: translateY(-6px) rotate(135deg);
+      width: 20px;
+}
+
+#nav:checked ~ .nav-wrapper {
+      z-index: 9990;
+      opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+      opacity: 1;
+      transform: translateX(0);
+}
+
+.hidden {
+      display: none;
+}
+
+.so-me-resp {
       font-size: 20px;
       position: absolute;
       top: 50%;
@@ -235,10 +275,10 @@ body {
       transform: translateY(-50%);
 }
 
-.social-media ul li {
+.so-me-resp ul li {
       list-style: none;
-      color: #fff;
-      padding-top: 20px;
+      color: #000;
+      padding-top: 23px;
 }
 
 .side-strip {
@@ -251,40 +291,6 @@ body {
       letter-spacing: 4px;
       font-family: 'Hauptfont';
 }
-
-
-.arrow {          /*Positon & Blur*/
-	position: relative;
-	margin-right: 100%;
-	margin-bottom: 100%;
-	width: 300px;
-	height: 100px;
-	background: inherit;
- border-radius: 2px;
- overflow: hidden;
-}
-
-.arrow:after{
-	position: absolute;
-	right: 0;
- bottom: 0;
- width: 300px;
- height: 100px;
- background: inherit;
- content: '';
- box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
- filter: blur(10px);
-}
-
-a #blur {
-	text-decoration: none;
-}
-
-a:hover #blur {
-	text-decoration: none;
-	background: rgba(0, 0, 0, 0.5);
-}
-
 
 .myBtn {
       position: absolute;
@@ -380,13 +386,13 @@ a:hover #blur {
       background: rgb(153, 156, 117);
  }
 
-.nav a, .social-media a, .logo a, .settings a, .contact_icon a {
+.nav a, .so-me-resp a, .so-me-resp ul li a, .logo a, .settings a, .contact_icon a {
       color: white;
       text-decoration: none;
       transition: .3s;
 }
 
-.nav a:hover, .social-media a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover, .contact_icon a:hover {
+.nav a:hover, .so-me-resp a:hover, .so-me-resp ul li a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .ovl-settings a:hover, .contact_icon a:hover {
       color: #C2C5A2;
       text-decoration: none;
       transition: .3s;
@@ -421,72 +427,62 @@ a:hover #blur {
       transition: width .3s;
 }
 
-/* select {
-      border: none;
-      background: transparent;
-      color: #fff;
-      transition: .3s;
-}
+@media screen and (max-width: 1024px) { /* iPad Pro sized */
+      .logo {
+        margin: 2.2em;
+        margin-left: 2.7em;
+      }
+    
+      .nav {
+        margin: 3.5em;
+        margin-right: 1.2em;
+      }
 
-select:hover {
-      color: rgb(184, 184, 184);
-}
-
-option {
-      border: none;
-      background: rgb(200, 200, 200);
-      color: rgb(0, 0, 0);
-} */
-
-@media screen and (max-width: 1024px) {
       .bg {
             width: 112%;
       }
+
       .myBtn {
             left: 41%;
             bottom: 4%;
       }
 }
-
-@media screen and (max-height: 640px) {
-      .side-strip {
-            display: none;
-      }
-      button {
-            padding: 12px 26.64px;
-            right: 50%;
-      }
-}
-      
-@media screen and (max-width: 768px) {
-      .social-media {
-            display: none;
-      }
+@media screen and (max-width: 915px) { /* Burger */
       .logo {
-            font-size: 24px;
-            margin: 1em 0 0 1.5em;
+        font-size: 32px;
+        margin: 40px 0 0 61px;
       }
+
       .overlay1 {
             text-align: center;
       }
+
       .side-strip {
             display: none;
       }
+
       .settings a {
       	display: none;
       }
+
       .settings_resp a{
       	display: inline-block;
       }
+
       button {
             padding: 12px 26.64px;
             right: 50%;
       }
+
       #bio {
             top: 50%;
       }
+
+      .nav {
+            line-height: 2.99;
+      }
+
       .nav-wrapper {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -500,16 +496,18 @@ option {
 
       .nav-wrapper ul {
             position: absolute;
-            top: 50%;
+            top: 50.5%;
+            left: 0.2%;
             transform: translateY(-50%);
             width: 100%;
       }
 
-      .nav-wrapper ul li {
+      /* Resp. Nav. Textausrichtung */
+            .nav-wrapper ul li {
             display: block;
             float: none;
             width: 100%;
-            text-align: right;
+            text-align: center;
             margin-bottom: 10px;
       }
 
@@ -536,17 +534,18 @@ option {
       .nav-wrapper ul li a {
             opacity: 0;
             color: #000;
-            font-size: 15px;
+            font-size: 24px;
             font-weight: 600;
             letter-spacing: 1.2px;
             transform: translateX(-20px);
             transition: all 0.2s ease;
       }
-
+        
+      /* Burger-Position */
       .nav-btn {
             position: fixed;
-            right: 10px;
-            top: 10px;
+            top: 39px;
+            right: 37px;
             display: block;
             width: 48px;
             height: 48px;
@@ -554,8 +553,9 @@ option {
             z-index: 9999;
             border-radius: 50%;
       }
-
-      .nav-btn i { /* Hamburger*/
+        
+      /* Hamburger*/
+      .nav-btn i {
             display: block;
             width: 20px;
             height: 2px;
@@ -579,58 +579,106 @@ option {
             margin-top: 4px;
             width: 12px;
       }
-      .Line {
+
+      .active_nav::after {
             display: none;
       }
+        
       .underline::after {
             display: none;
+      } 
+      
+      
+      .so-me-resp  {
+            padding-top: 92.4vh;
+            font-size: 22px;
+          
+            justify-content: space-around;
+            align-items: center;
+      }
+          
+      .so-me-resp {
+            display: flex;
+      }
+      
+      .so-me-resp ul {
+            display: none;
+            z-index: 9991;
+            position: fixed;
+      }
+      
+      .so-me-resp ul li {
+            color: #000;
+            display: inline;
+            margin: 4.3em;
+      }
+}
+@media screen and (max-height: 640px) {
+      .side-strip {
+            display: none;
+      }
+      button {
+            padding: 12px 26.64px;
+            right: 50%;
       }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 414px) { /* iPhone 6/7/8+ sized */
+      .logo {
+            font-size: 24px;
+            margin: 1em 0 0 1.5em;
+      }
+
+      /* Burger-Position */
+      .nav-btn {
+            right: 10px;
+            top: 17px;
+      }
+
+      .nav-wrapper {
+            line-height: 45px;
+      }
+
+      .nav-wrapper ul {
+            left: 4.2%;
+      }
+
+      .nav-wrapper ul li a {
+            font-size: 17px;
+      }
+
       .bg {
             width: 122%;
       }
+
       .myBtn {
             left: 41%;
             bottom: 5%;
+      } 
+
+      .so-me-resp  {
+            padding-top: 91vh;
+      }
+          
+      .so-me-resp ul li {
+            margin: 1.8em;
       }
 }
 
-#nav:checked + .nav-btn {
-      transform: rotate(45deg);
+@media screen and (max-width: 396px) { /* Pocophone sized */ 
+      .nav-wrapper ul {
+        left: 4.6%;
+      }
 }
 
-#nav:checked + .nav-btn i {
-      background: #000;
-      transition: transform 0.2s ease;
+@media screen and (max-width: 360px) {  /* Galaxy S5 sized */
+      .nav-wrapper ul {
+        left: 4.9%;
+      }
 }
 
-#nav:checked + .nav-btn i:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-      width: 20px;
-}
-
-#nav:checked + .nav-btn i:nth-child(2) {
-      opacity: 0;
-      width: 20px;
-}
-
-#nav:checked + .nav-btn i:nth-child(3) {
-      transform: translateY(-6px) rotate(135deg);
-      width: 20px;
-}
-
-#nav:checked ~ .nav-wrapper {
-      z-index: 9990;
-      opacity: 1;
-}
-
-#nav:checked ~ .nav-wrapper ul li a {
-      opacity: 1;
-      transform: translateX(0);
-}
-
-.hidden {
-      display: none;
+@media screen and (max-width: 320px) {  /* iPhone 5 sized */
+      .nav-wrapper ul {
+        left: 5.6%;
+      }
 }

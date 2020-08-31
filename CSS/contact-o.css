@@ -27,14 +27,26 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background: #f0f0f0;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #f0f0f0;
+}
+
+.box {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 115px;
+  top: 0;
+  background: #f0f0f0;
+  box-sizing: border-box;
 }
 
 .logo {
-  position: absolute;
+  z-index: 9991;
+  position: fixed;
   font-family: 'Logo', Georgia, Times, serif;
   font-size: 32px;
   line-height: 30px;
@@ -104,16 +116,16 @@
   display: none;
 }
 
-.nav a, .logo a, .settings a, .settings_resp a {
-      color: black;
-      text-decoration: none;
-      transition: .3s;
+.nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
+  color: black;
+  text-decoration: none;
+  transition: .3s;
 }
 
-.nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover {
-      color: #C2C5A2;
-      text-decoration: none;
-      transition: .3s;
+.nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
+  color: #C2C5A2;
+  text-decoration: none;
+  transition: .3s;
 }
 
 .active_nav::after {
@@ -147,18 +159,18 @@ a:hover {
       color: #C2C5A2;
 }
 
-.underline::after{
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #C2C5A2;
-      transition: width .3s;
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #C2C5A2;
+  transition: width .3s;
 }
 
 .underline:hover::after{
-      width: 100%;
-      transition: width .3s;
+  width: 100%;
+  transition: width .3s;
 }
 
 /* Content - Site 1 */
@@ -322,15 +334,66 @@ a:hover {
   vertical-align: top;
 }
 
-@media screen and (max-width: 915px) {
+.so-me-resp  {
+  padding-top: 94.6vh;
+  font-size: 22px;
+
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.so-me-resp {
+  display: flex;
+}
+
+.so-me-resp ul {
+  z-index: 9991;
+  position: fixed;
+}
+
+.so-me-resp ul li {
+  display: inline;
+  margin: 4.3em;
+}
+
+@media screen and (max-width: 1024px) { /* iPad Pro sized */  
+  .logo {
+    position: absolute;
+    margin: 2.2em;
+    margin-left: 2.7em;
+  }
+
+  .nav {
+    margin: 3.5em;
+    margin-right: 1.2em;
+  }
+
+  .so-me-resp  {
+    padding-top: 110vh;
+    font-size: 28px;
+  }
+
+  .so-me-resp ul {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 915px) { /* Burger */
+  .box {
+    display: block;
+  }
+
   .site-1 {
     padding-top: 14vh;
   }
   
   .logo {
-    font-size: 24px;
-    margin: 1em 0 0 1.5em;
+    position: fixed;
+    font-size: 32px;
+    margin: 48px 0 0 60px;
   }
+
   .nav-wrapper {
     position: fixed;
     top: 0;
@@ -341,9 +404,11 @@ a:hover {
     opacity: 0;
     transition: all 0.2s ease;
   }
+
   .nav-wrapper ul {
     position: absolute;
     top: 50%;
+    left: 2.3%;
     transform: translateY(-50%);
     width: 100%;
   }
@@ -353,7 +418,7 @@ a:hover {
     display: block;
     float: none;
     width: 100%;
-    text-align: right;
+    text-align: center;
     margin-bottom: 10px;
   }
 
@@ -380,7 +445,7 @@ a:hover {
   .nav-wrapper ul li a {
     opacity: 0;
     color: #000;
-    font-size: 15px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
     transform: translateX(-20px);
@@ -390,8 +455,8 @@ a:hover {
   /* Burger-Position */
   .nav-btn {
     position: fixed;
-    right: 10px;
-    top: 17px;
+    top: 38px;
+    right: 40px;
     display: block;
     width: 48px;
     height: 48px;
@@ -430,6 +495,65 @@ a:hover {
   }
   .underline::after {
   display: none;
+  }  
+  
+  .so-me-resp  {
+    padding-top: 92.4vh;
+    font-size: 22px;
+    display: none;
+  }
+
+  .so-me-resp ul {
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 768px) {  /* iPad sized */
+  .nav {
+    line-height: 2.99;
+  }
+}
+
+@media screen and (max-width: 414px) { /* iPhone 6/7/8+ sized */   
+  .box {
+    height: 80px;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin: 1em 0 0 1.5em;
+  }
+
+  /* Burger-Position */
+  .nav-btn {
+    right: 10px;
+    top: 17px;
+  }
+
+  .nav-wrapper {
+    line-height: 45px;
+  }
+
+  .nav-wrapper ul {
+    left: 4.2%;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 17px;
+  }
+
+  .so-me-resp  {
+    padding-top: 90.1vh;
+  }
+
+  .so-me-resp ul li {
+    margin: 1.8em;
+  }
+}
+
+@media screen and (max-width: 396px) {  /* Pocophone sized */
+  .nav-wrapper ul {
+    left: 4.6%;
   }
 }
 

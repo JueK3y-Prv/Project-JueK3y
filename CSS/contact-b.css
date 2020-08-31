@@ -236,7 +236,7 @@ ul li ul li a {
   width: 866px;
   height: 620px;
   left: 13.4895833%;
-  top: 21.6%;
+  top: 22.4%;
   background: url(../img/Blue-Water_cropped.jpg);
 }
 
@@ -279,7 +279,7 @@ ul li ul li a {
   width: 538px;
   height: 620px;
   left: 58.4895833%;
-  top: 21.6%;
+  top: 22.4%;
 
   
   background: #FFFFFF;
@@ -684,7 +684,7 @@ ul {
 }
 
 .so-me-resp  {
-  padding-top: 92.4vh;
+  padding-top: 93.9vh;
   font-size: 22px;
 
   display: none;
@@ -704,6 +704,12 @@ ul {
 .so-me-resp ul li {
   display: inline;
   margin: 4.3em;
+}
+
+@media screen and (max-width: 1568px) {
+  .resp, .left {
+    top: 22.8%;
+  }
 }
 
 @media screen and (max-width: 1024px) { /* iPad Pro */

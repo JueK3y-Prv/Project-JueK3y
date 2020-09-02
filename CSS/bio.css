@@ -19,7 +19,7 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {      /* Text-f für längere Texte (Sans Serif)*/
+@font-face {      /* Text-f für längere Texte (Sans Serif) */
   font-family: 'Text';
   src: url('../fonts/Everyday/apercu-text.ttf') format('truetype');
   font-weight: normal;

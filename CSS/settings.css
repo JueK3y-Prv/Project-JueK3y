@@ -330,12 +330,12 @@ html {
   font-style: italic;
 }
 
-.c-impressum .content-text, .c-impressum a, #datenschutz .content-text, #datenschutz a {
+.c-impressum .content-text, .c-impressum a, #datenschutz .content-text, #datenschutz a, .c-datenschutz #bold {
   color: rgb(88, 94, 98);
   font-weight: normal;
 }
 
-.c-impressum span {
+.c-impressum span, .c-datenschutz #bold {
   font-weight: bold;
 }
 
@@ -371,7 +371,7 @@ a {
 
 .so-me-resp ul li {
   display: inline;
-  margin: 4.3em;
+  margin: 4.31em;
 }
 
 @media screen and (max-width: 915px) { /* Burger */
@@ -516,7 +516,7 @@ a {
   }
   
   .so-me-resp  {
-    padding-top: 92.4vh;
+    padding-top: 91.7vh;
     font-size: 22px;
     display: none;
   }
@@ -529,6 +529,10 @@ a {
 
   .outer-box {
     width: 768px;
+  }
+
+  .so-me-resp {
+    padding-top: 91.845vh;
   }
 }
 
@@ -550,7 +554,7 @@ a {
 
 @media screen and (max-width: 414px) {  /* iPhone 6/7/8+ sized */
   .logo {
-    font-size: 24px;
+    font-size: 25px;
     margin: 1em 0 0 1.5em;
   }
 
@@ -561,15 +565,15 @@ a {
   }
 
   .nav-wrapper {
-    line-height: 45px;
+    line-height: 48px;
   }
 
   .nav-wrapper ul {
-    left: 4.2%;
+    left: 4%;
   }
 
   .nav-wrapper ul li a {
-    font-size: 17px;
+    font-size: 18.3px;
   }
 
   .outer-box {
@@ -581,7 +585,8 @@ a {
   }
 
   .so-me-resp  {
-    padding-top: 91vh;
+    left: 50%;
+    padding-top: 94.9vh;
   }
   
   .so-me-resp ul li {

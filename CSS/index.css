@@ -429,13 +429,13 @@ body {
 
 @media screen and (max-width: 1024px) { /* iPad Pro sized */
       .logo {
-        margin: 2.2em;
-        margin-left: 2.7em;
+        margin: 1.5em;
+        margin-left: 2.2em;
       }
     
       .nav {
         margin: 3.5em;
-        margin-right: 1.2em;
+        margin-right: 6.4em;
       }
 
       .bg {
@@ -446,11 +446,16 @@ body {
             left: 41%;
             bottom: 4%;
       }
+
+      .so-me-resp  {
+            padding-top: 87.7vh;
+            font-size: 28px;
+      }
 }
 @media screen and (max-width: 915px) { /* Burger */
       .logo {
         font-size: 32px;
-        margin: 40px 0 0 61px;
+        margin: 38px 0 0 60px;
       }
 
       .overlay1 {
@@ -465,7 +470,7 @@ body {
       	display: none;
       }
 
-      .settings_resp a{
+      .settings_resp a {
       	display: inline-block;
       }
 
@@ -496,8 +501,8 @@ body {
 
       .nav-wrapper ul {
             position: absolute;
-            top: 50.5%;
-            left: 0.2%;
+            top: 50%;
+            left: -0.25%;
             transform: translateY(-50%);
             width: 100%;
       }
@@ -544,8 +549,8 @@ body {
       /* Burger-Position */
       .nav-btn {
             position: fixed;
-            top: 39px;
-            right: 37px;
+            top: 38px;
+            right: 40px;
             display: block;
             width: 48px;
             height: 48px;
@@ -590,29 +595,22 @@ body {
       
       
       .so-me-resp  {
-            padding-top: 92.4vh;
+            z-index: 9999;
+            padding-top: 86vh;
             font-size: 22px;
           
+            display: flex;
             justify-content: space-around;
             align-items: center;
       }
-          
-      .so-me-resp {
-            display: flex;
-      }
-      
-      .so-me-resp ul {
-            display: none;
-            z-index: 9991;
-            position: fixed;
-      }
       
       .so-me-resp ul li {
-            color: #000;
             display: inline;
-            margin: 4.3em;
+            margin: 4.4em;
       }
+
 }
+
 @media screen and (max-height: 640px) {
       .side-strip {
             display: none;
@@ -626,7 +624,7 @@ body {
 @media screen and (max-width: 414px) { /* iPhone 6/7/8+ sized */
       .logo {
             font-size: 24px;
-            margin: 1em 0 0 1.5em;
+            margin: 0.89em 0 0 1.5em;
       }
 
       /* Burger-Position */
@@ -640,7 +638,7 @@ body {
       }
 
       .nav-wrapper ul {
-            left: 4.2%;
+            left: -0.7%;
       }
 
       .nav-wrapper ul li a {
@@ -657,7 +655,8 @@ body {
       } 
 
       .so-me-resp  {
-            padding-top: 91vh;
+            padding-top: 80.1vh;
+            left: 2.6%;
       }
           
       .so-me-resp ul li {
@@ -671,14 +670,39 @@ body {
       }
 }
 
-@media screen and (max-width: 360px) {  /* Galaxy S5 sized */
+@media screen and (max-width: 375px) { /* iPhone 6/7/8 sized */
       .nav-wrapper ul {
-        left: 4.9%;
+            left: -0.7%;
+      }
+
+      .so-me-resp  {
+            padding-top: 80.8vh;
+            left: -1.4%;
+      }
+          
+      .so-me-resp ul li {
+            margin: 1.8em;
       }
 }
 
-@media screen and (max-width: 320px) {  /* iPhone 5 sized */
-      .nav-wrapper ul {
-        left: 5.6%;
+@media screen and (max-width: 360px) {  /* Galaxy S5 sized */      
+      .so-me-resp  {
+            left: -3%;
       }
+    
+      .so-me-resp ul li {
+            margin: 1.78em;
+      }
+
+}
+
+@media screen and (max-width: 320px) {  /* iPhone 5 sized */      
+      .so-me-resp  {
+            left: -8.7%;
+      }
+    
+      .so-me-resp ul li {
+            margin: 1.8em;
+      }
+
 }

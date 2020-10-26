@@ -446,11 +446,6 @@ body {
             left: 41%;
             bottom: 4%;
       }
-
-      .so-me-resp  {
-            padding-top: 87.7vh;
-            font-size: 28px;
-      }
 }
 @media screen and (max-width: 915px) { /* Burger */
       .logo {
@@ -595,11 +590,11 @@ body {
       
       
       .so-me-resp  {
-            z-index: 9999;
+            z-index: 9991;
             padding-top: 86vh;
             font-size: 22px;
           
-            display: flex;
+            display: none;
             justify-content: space-around;
             align-items: center;
       }

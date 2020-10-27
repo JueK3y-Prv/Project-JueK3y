@@ -121,12 +121,12 @@
     
                 <!-- Geschlecht -->
                 <label class="gender-h" for="gender">Geschlecht</label>
-                <div class="gender-t-m" id="gender" data-validate="Gender is required">
-                    <input type="radio" name="gender" id="male" value="male" title="Ich bin männlich." required>
+                <div class="gender-t-m" id="gender" data-validate="Gender is required" title="Ich bin männlich." >
+                    <input type="radio" name="gender" id="male" value="male" required>
                     <label class="male-h" for="male">Mann</label>
                 </div>
-                <div class="gender-t-f">
-                    <input type="radio" name="gender" id="female" value="female" title="Ich bin weiblich.">
+                <div class="gender-t-f"  title="Ich bin weiblich.">
+                    <input type="radio" name="gender" id="female" value="female">
                     <label class="female-h" for="female">Frau</label>
                 </div>
     
@@ -184,7 +184,7 @@
                 <!--- Nachricht -->
                 <label class="msg-h" for="msg">Nachricht</label>            <!--label-input100-->
                 <div class="msg-t" data-validate = "Message is required">
-                    <textarea name="message" id="msg" placeholder="Ausführliche Beschreibung..." rows="7" minlength="15" required="required"></textarea>
+                    <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
                 </div>
     
             <ul class="actions">

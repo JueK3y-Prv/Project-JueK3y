@@ -753,8 +753,10 @@ ul {
   }
   
   .so-me-resp  {
-    padding-top: 87.7vh;
+    padding-top: 98vh;
     font-size: 28px;
+
+    display: none;
   }
 }
 

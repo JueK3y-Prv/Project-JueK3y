@@ -720,11 +720,44 @@ a {
 }
 
 @media screen and (max-width: 320px) {  /* iPhone 5 sized */
+  .logo {
+    font-size: 38px;
+    margin: 1.2em 0 0 1.47em;
+  }
+
+  /* Burger-Position */
+  .nav-btn {
+    right: 30px;
+    top: 38px;
+  }
+
+  .nav-wrapper {
+    line-height: 74px;
+  }
+
   .nav-wrapper ul {
-    left: 5.6%;
+    left: 3.5%;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 28px;
+  }
+
+  .so-me-resp  {
+    font-size: 34px;
+    padding-left: 57%;
+    padding-top: 140vh;
+  }
+
+  .so-me-resp ul li {
+    margin: 1.85em;
   }
 
   .outer-box {
     width: 320px;
+  }
+
+  .box {
+    height: 100px;
   }
 }

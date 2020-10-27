@@ -380,7 +380,7 @@ a {
   }
 
   .box {
-    height: 75px;
+    height: 100px;
     top: 0;
   }
 
@@ -591,6 +591,10 @@ a {
   
   .so-me-resp ul li {
     margin: 1.8em;
+  }
+
+  .box {
+    height: 73px;
   }
 }
 

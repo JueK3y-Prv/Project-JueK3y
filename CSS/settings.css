@@ -374,18 +374,25 @@ a {
   margin: 4.31em;
 }
 
-@media screen and (max-width: 915px) { /* Burger */
+@media screen and (max-width: 1024px) { /* iPad Pro sized */
+
   body {
     overflow-x: hidden;
   }
 
-  .box {
-    height: 100px;
-    top: 0;
+  .logo {
+    font-size: 32px;
+    margin: 70px 0 0 87px;
   }
 
-  .select-inner-box {
-    display: none;
+  .nav {
+    margin-top: 3.8em;
+    margin-right: 1.2em;
+  }
+
+  .box {
+    height: 120px;
+    top: 0;
   }
 
   .content-box {
@@ -395,21 +402,33 @@ a {
     text-align: center;
   }
 
-  .desk br {
-    display: none;
-  }
-
   .outer-box {
     width: 915px;
   }
+  
+  .select-inner-box {
+    display: none;
+  }
+
+  .desk br {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 915px) { /* Burger */
 
   .logo {
     font-size: 32px;
     margin: 48px 0 0 60px;
   }
 
+  .box {
+    height: 100px;
+    top: 0;
+  }
+
   .nav-wrapper {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -532,11 +551,16 @@ a {
   }
 
   .so-me-resp {
-    padding-top: 91.845vh;
+    padding-top: 92.4vh;
   }
 }
 
 @media screen and (max-width: 603px) {
+
+  .logo {
+    font-size: 27px;
+  }
+
   .content-title {
     padding-top: 75px;
     font-size: 34px;
@@ -554,43 +578,44 @@ a {
 
 @media screen and (max-width: 414px) {  /* iPhone 6/7/8+ sized */
   .logo {
-    font-size: 25px;
-    margin: 1em 0 0 1.5em;
+    font-size: 30px;
+    margin: 1.15em 0 0 1.5em;
   }
 
   /* Burger-Position */
   .nav-btn {
-    right: 10px;
-    top: 17px;
+    right: 20px;
+    top: 24px;
   }
 
   .nav-wrapper {
-    line-height: 48px;
+    line-height: 58px;
   }
 
   .nav-wrapper ul {
-    left: 4%;
+    left: 3.3%;
   }
 
   .nav-wrapper ul li a {
-    font-size: 18.3px;
+    font-size: 22px;
   }
 
   .outer-box {
     width: 411px;
   }
   .content-box {
-    left: 11%;
-    width: 80%;
+    left: 21%;
+    width: 85%;
   }
 
   .so-me-resp  {
-    left: 50%;
-    padding-top: 94.9vh;
+    font-size: 28px;
+    padding-left: 25.4%;
+    padding-top: 112vh;
   }
   
   .so-me-resp ul li {
-    margin: 1.8em;
+    margin: 1.75em;
   }
 
   .box {
@@ -609,14 +634,15 @@ a {
 }
 
 @media screen and (max-width: 375px) {  /* iPhone 6/7/8 sized */
-  .outer-box {
-    width: 375px;
+  .content-box {
+    left: 22%;
+    width: 360px;
   }
 }
 
 @media screen and (max-width: 375px) and (height: 812px) { /* iPhone X sized */
   .outer-box {
-    width: 375px;
+    width: 90%;
   }
 }
 

@@ -34,12 +34,14 @@
 
 html {
   scroll-behavior: smooth;
+  zoom: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  zoom: 100%;
 }
 
 .box {
@@ -634,8 +636,45 @@ a {
 }
 
 @media screen and (max-width: 375px) {  /* iPhone 6/7/8 sized */
+  .logo {
+    font-size: 33px;
+    margin: 1.17em 0 0 1.5em;
+  }
+
+  /* Burger-Position */
+  .nav-btn {
+    right: 26px;
+    top: 34px;
+  }
+
+  .nav-wrapper {
+    line-height: 64px;
+  }
+
+  .nav-wrapper ul {
+    left: 3.3%;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 24px;
+  }
+
+  .so-me-resp  {
+    font-size: 30px;
+    padding-left: 36%;
+    padding-top: 122vh;
+  }
+  
+  .so-me-resp ul li {
+    margin: 1.78em;
+  }
+
+  .box {
+    height: 90px;
+  }
+
   .content-box {
-    left: 22%;
+    left: 21.5%;
     width: 360px;
   }
 }
@@ -647,8 +686,32 @@ a {
 }
 
 @media screen and (max-width: 360px) {  /* Galaxy S5 sized */
+
+  .logo {
+    font-size: 34px;
+    margin: 1.17em 0 0 1.5em;
+  }
+
+  .nav-wrapper {
+    line-height: 66px;
+  }
+
   .nav-wrapper ul {
-    left: 4.9%;
+    left: 3.4%;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 25px;
+  }
+
+  .so-me-resp  {
+    font-size: 31px;
+    padding-left: 41.4%;
+    padding-top: 126.5vh;
+  }
+
+  .so-me-resp ul li {
+    margin: 1.8em;
   }
 
   .outer-box {

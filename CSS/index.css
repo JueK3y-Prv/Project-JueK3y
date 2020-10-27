@@ -589,9 +589,10 @@ body {
       } 
       
       
-      .so-me-resp  {
+      .so-me-resp {
+            left: 3%;
             z-index: 9991;
-            padding-top: 86vh;
+            top: 92.4vh;
             font-size: 22px;
           
             display: none;
@@ -601,7 +602,7 @@ body {
       
       .so-me-resp ul li {
             display: inline;
-            margin: 4.4em;
+            margin: 4.3em;
       }
 
 }
@@ -650,7 +651,7 @@ body {
       } 
 
       .so-me-resp  {
-            padding-top: 80.1vh;
+            top: 90vh;
             left: 2.6%;
       }
           
@@ -671,7 +672,7 @@ body {
       }
 
       .so-me-resp  {
-            padding-top: 80.8vh;
+            top: 90.3vh;
             left: -1.4%;
       }
           

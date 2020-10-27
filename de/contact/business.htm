@@ -116,17 +116,17 @@
                 <label class="firma-h-o resp2" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
                 <label class="firma-h-o resp3" for="firma">Optional</label>
                 <div class="firma-t">
-                    <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
+                    <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5" title="Hier wird der Firmenname eingetragen."/>
                 </div>
     
                 <!-- Geschlecht -->
                 <label class="gender-h" for="gender">Geschlecht</label>
                 <div class="gender-t-m" id="gender" data-validate="Gender is required">
-                    <input type="radio" name="gender" id="male" value="male" required>
+                    <input type="radio" name="gender" id="male" value="male" title="Ich bin männlich." required>
                     <label class="male-h" for="male">Mann</label>
                 </div>
                 <div class="gender-t-f">
-                    <input type="radio" name="gender" id="female" value="female">
+                    <input type="radio" name="gender" id="female" value="female" title="Ich bin weiblich.">
                     <label class="female-h" for="female">Frau</label>
                 </div>
     
@@ -137,7 +137,7 @@
     
                 <!-- Anrede männlich -->
                 <div class="gender-t-m-a" data-validate="Gender is required">
-                    <select name="Geschlecht" id="anrede" required>
+                    <select name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten" required>
                         <option selected value="">Anrede</option>
                         <option value="men1">Herr</option>
                         <option value="men2">Herr Dr.</option>
@@ -160,19 +160,19 @@
                 <!-- Name -->
                 <label class="name-h" for="name">Name</label>
                 <div class="name-t" data-error="Name is required">
-                    <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" required="required"/>
+                    <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" title="Ihr Name wird benötigt." required="required"/>
                 </div>
     
                 <!-- E-Mail -->
                 <label class="email-h" for="email">E-Mail</label>
                 <div class="email-t" class="validate-input" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
-                    <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
+                    <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" title="Ihre E-Mail-Adresse wird benötigt." required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
                 </div>
     
                 <!-- Benötigter Dienst -->
                 <label class="service-h" for="service">Service</label>
                 <div class="service-t" data-validate="Service is required">
-                    <select name="service" id="service" required>
+                    <select name="service" id="service" title="Welcher Service wird benötigt?" required>
                         <option selected value="">- Auswählen -</option>
                         <option value="Programmierung">Coding</option>
                         <option value="Fotografie">Fotografie</option>
@@ -184,7 +184,7 @@
                 <!--- Nachricht -->
                 <label class="msg-h" for="msg">Nachricht</label>            <!--label-input100-->
                 <div class="msg-t" data-validate = "Message is required">
-                    <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
+                    <textarea name="message" id="msg" placeholder="Ausführliche Beschreibung..." rows="7" minlength="15" required="required"></textarea>
                 </div>
     
             <ul class="actions">

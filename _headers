@@ -6,6 +6,6 @@
     Strict-Transport-Security: max-age=17280000; includeSubdomains          # Prevents MITM Attacks
     Referrer-Policy: same-origin                                            # Prevents back tracking
     Feature-Policy: camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'self'; speaker 'none'; usb 'none'; vr 'none' # Deactivates usage of Camera, Mic usw.
-   Content-Security-Policy: default-src 'self'
+#   Content-Security-Policy: default-src 'self'
 #   Content-Security-Policy: frame-ancestors 'none'
    X-Permitted-Cross-Domain-Policies: none

@@ -1,5 +1,6 @@
 # juek3y.github.io
 # juek3y.netlify.com
+# juek3y.com
 
 Here I create a website with my own knowledge of HTML, CSS and JS. 
 All pictures were taken by me, as well as the code. 

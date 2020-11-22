@@ -1,0 +1,8 @@
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "DENY"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Strict-Transport-Security "max-age=17280000; includeSubDomains"
+  Header set Referrer-Policy "same-origin"
+  Header set Feature-Policy "camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'self'; speaker 'none'; usb 'none'; vr 'none'"
+</IfModule>

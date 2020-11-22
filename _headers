@@ -1,10 +1,13 @@
 # This is the .htaccess file for netlify.
 /*
-    X-Content-Type-Options: nosniff                                     # Prevent browser sniffing
-    Content-Security-Policy: frame-ancestors 'none'
-    X-Frame-Options: DENY                                               # Prevents the use of iframe
-    x-XSS-Protection: 1; mode=block                                     # Prevents XSS-Attacks
-    Strict-Transport-Security: max-age=17280000                         # Prevents MITM Attacks
-    Referrer-Policy: same-origin                                        # Prevents back tracking
-    Feature-Policy: camera 'none' ; microphone 'none' ; payment 'none'; # Deactivates usage of Camera, Mic usw.
-    Content-Security-Policy: default-src https:                         #
+    X-Content-Type-Options: nosniff                                         # Prevent browser sniffing
+    X-Frame-Options: DENY                                                   # Prevents the use of iframe (Same-origin)
+    X-XSS-Protection: 1; mode=block                                         # Prevents XSS-Attacks
+    Strict-Transport-Security: max-age=17280000; includeSubdomains          # Prevents MITM Attacks
+    Referrer-Policy: same-origin                                            # Prevents back tracking
+    Feature-Policy: camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'self'; speaker 'none'; usb 'none'; vr 'none' # Deactivates usage of Camera, Mic usw.
+#   Content-Security-Policy: default-src 'self'; script 'src';                        
+#   Content-Security-Policy: frame-ancestors 'none'
+
+#   Public Key Pins
+#   Expect-CT

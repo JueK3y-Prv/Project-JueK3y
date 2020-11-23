@@ -6,14 +6,6 @@ function fade_in() {
     });
 }
 
-function fade_out() {
-    // Fade Out
-    $(document).ready(function() {
-        $(".clk").click(function() {
-                $("*").fadeOut();
-        });
-    });
-}
 // Delay
 function delay (URL) {
     setTimeout( function() {

@@ -29,6 +29,9 @@
     
 
     <!-------   JS  ------->
+      <!-- Page fade out -->
+      <script src="../js/fading.js"></script>
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
@@ -398,26 +401,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-    // Fade In
-    $(document).ready(function() {
-        $('body').css('display', 'none');
-        $('body').fadeIn(350);
-    });
-
-    // Fade Out
-    $(document).ready(function() {
-        $(".clk").click(function() {
-            $("*").fadeOut();
-        });
-    });
-    </script>
-
-    <script>
-    // Delay
-    function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
-    </script>
 
     <script>
     $(document).scroll(function() {

@@ -53,6 +53,9 @@
       <!-------   JS  ------->
       <!-- Fade Out -->
       <script src="../js/index_fadeout.js"></script>
+      
+      <!-- Page fade out -->
+      <script src="../js/fading.js"></script>
 
       <!-- Index -->
       <script src="../js/index.js"></script>
@@ -238,27 +241,6 @@
             x: 20,
             ease: Expo.easeInOut
       })
-      </script>
-
-
-      <script>
-            // Fade In
-            $(document).ready(function() {
-                  $('body').css('display', 'none');
-                  $('body').fadeIn(350);
-            });
-
-            // Fade Out
-            $(document).ready(function() {
-                  $(".clk").click(function() {
-                        $("*").fadeOut();
-                  });
-            });
-            </script>
-
-            <script>
-            // Delay
-            function delay (URL) { setTimeout( function() { window.location = URL }, 350 ); }
       </script>
 
       <script>

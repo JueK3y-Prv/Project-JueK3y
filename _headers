@@ -5,7 +5,7 @@
     X-XSS-Protection: 1; mode=block
     Strict-Transport-Security: max-age=17280000; includeSubdomains
     Referrer-Policy: same-origin
-    Feature-Policy: accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none';
-#   Missing Feature-Policy var: battery, display-capture, vr, wake-lock,
+    Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none';
+#   Missing Feature-Policy var: ambient-light-sensor, battery, display-capture, vr, wake-lock
 #   Content-Security-Policy: frame-ancestors 'none'
    X-Permitted-Cross-Domain-Policies: none

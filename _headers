@@ -5,7 +5,6 @@
     X-XSS-Protection: 1; mode=block
     Strict-Transport-Security: max-age=17280000; includeSubdomains
     Referrer-Policy: same-origin
-    Feature-Policy: camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'self'; speaker 'none'; usb 'none'; vr 'none' # Deactivates usage of Camera, Mic usw.
-#   Content-Security-Policy: default-src 'self'
+    Feature-Policy: accelerometer 'none'; ambient-light-senser 'none'; battery 'none'; camera 'none'; display-capture 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none'; wake-lock 'none';
 #   Content-Security-Policy: frame-ancestors 'none'
    X-Permitted-Cross-Domain-Policies: none

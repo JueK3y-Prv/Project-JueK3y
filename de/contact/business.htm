@@ -109,10 +109,17 @@
             <span class="contact-h-u resp3">- Business</span>
         </div>
         <div id="error"></div>
-        <form id="form" name="Geschäftliche Anfrage" method="POST" data-netlify="true">
+        <form id="form" name="Geschäftliche Anfrage" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <div class="resp">
             <ul class="errorMessages"></ul>
             
+            
+                <p class="hidden">
+                  <style>.hidden { opacity: 0;}</style>
+                  <label id="contact-form-bot-label"> Don't fill this out if you're human: <input name="bot-field" aria-labelledby="contact-form-bot-label"/>
+                  </label>
+                </p>
+    
                 <!-- Firma -->
                 <label class="firma-h" for="firma">Firma</label>
                 <label class="firma-h-o resp2" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>

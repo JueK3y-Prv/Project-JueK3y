@@ -4,5 +4,5 @@
   Header set X-Content-Type-Options "nosniff"
   Header set Strict-Transport-Security "max-age=17280000; includeSubDomains"
   Header set Referrer-Policy "same-origin"
-  Header set Feature-Policy "accelerometer 'none'; ambient-light-senser 'none'; battery 'none'; camera 'none'; display-capture 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none'; wake-lock 'none';"
+  Header set Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
 </IfModule>

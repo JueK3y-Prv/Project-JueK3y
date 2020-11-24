@@ -45,7 +45,7 @@ html {
 }
 
 body { 
-      animation: fadeInAnimation ease 1s; 
+      animation: fadeInAnimation ease 500ms; 
 
       animation-iteration-count: 1; 
       animation-fill-mode: forwards; 

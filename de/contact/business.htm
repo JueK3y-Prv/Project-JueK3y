@@ -265,6 +265,12 @@
             $('.gender-s-f').attr('required', true); 
         });
     });
+    $(document).ready(function(){
+        $(".gender-wrong").click(function() {
+            $('.gender-s-f').attr('required', false); 
+            $('.gender-s-m').attr('required', false); 
+        });
+    });
     </script>
 
     <script async type="text/JavaScript">

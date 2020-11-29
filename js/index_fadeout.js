@@ -61,5 +61,5 @@ function fadeOut() {
    delay: 2.5,
    ease: Power2.easeInOut
     });
-
-    }
+    
+}

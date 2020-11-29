@@ -436,10 +436,15 @@ input[type=text]:hover, input[type=email]:hover, select:hover, textarea:hover, .
   transition: .2s;
 }
 
-input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus+label {
+input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus + label {
     border-color: dodgerBlue;
     box-shadow: 0 0 5px 0 dodgerBlue;
     transition: .2s;
+}
+
+input:focus + label, select:focus + label, textarea:focus + label {
+  font-weight: bold;
+  color: dodgerblue;
 }
 
 /* Invalid-Icon */

@@ -134,7 +134,7 @@
                 <!-- Geschlecht -->
                 <label class="gender-h" for="gender">Geschlecht</label>
                 <div class="gender-t-m" id="gender" data-validate="Gender is required" title="Ich bin männlich." >
-                    <input type="radio" name="gender" id="male" value="male">
+                    <input type="radio" name="gender" id="male" value="male" required>
                     <label class="male-h" for="male">Mann</label>
                 </div>
                 <div class="gender-t-f"  title="Ich bin weiblich.">
@@ -149,7 +149,7 @@
     
                 <!-- Anrede männlich -->
                 <div class="gender-t-m-a" data-validate="Gender is required">
-                    <select name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten">
+                    <select name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten" required>
                         <option selected value="">Anrede</option>
                         <option value="men1">Herr</option>
                         <option value="men2">Herr Dr.</option>

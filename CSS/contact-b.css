@@ -442,7 +442,7 @@ input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus + 
     transition: .2s;
 }
 
-input[type=text]:focus + .name-h, input[type=email]:focus + .email-h, select:focus + label, textarea:focus + label {
+input[type=text]:focus + label, input[type=email]:focus + label, select:focus + label, textarea:focus + label {
   font-weight: bold;
   color: dodgerblue;
 }
@@ -818,7 +818,6 @@ ul {
     transform: translateY(-50%);
     width: 100%;
   }
-
 
   /* Resp. Nav. Textausrichtung */
   .nav-wrapper ul li {

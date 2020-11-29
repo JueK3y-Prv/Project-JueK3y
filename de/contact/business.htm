@@ -255,9 +255,14 @@
     </script>
 
     <script> 
-    $(document).ready(function(){
-        $(".gender-t-m").click(function(){
+    $(document).ready(function() {
+        $(".gender-t-m").click(function() {
             $('.gender-s-m').attr('required', true); 
+        });
+    }); 
+    $(document).ready(function(){
+        $(".gender-t-f").click(function() {
+            $('.gender-s-f').attr('required', true); 
         });
     });
     </script>

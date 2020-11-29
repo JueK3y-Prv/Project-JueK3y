@@ -1,6 +1,6 @@
 // Fade In
 $(document).ready(function() {
-      $('*'.css('display', 'none');
+      $('*').css('display', 'none');
       $('*').fadeIn(350);
 });
 

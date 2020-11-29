@@ -149,7 +149,7 @@
     
                 <!-- Anrede männlich -->
                 <div class="gender-t-m-a" data-validate="Gender is required">
-                    <select name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten" required>
+                    <select class="gender-s-m" name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten">
                         <option selected value="">Anrede</option>
                         <option value="men1">Herr</option>
                         <option value="men2">Herr Dr.</option>
@@ -160,7 +160,7 @@
     
                 <!-- Anrede weiblich -->
                 <div class="gender-t-f-a" data-validate="Gender is required">
-                    <select name="Geschlecht" id="anrede">
+                    <select class="gender-s-f" name="Geschlecht" id="anrede" title="Auswahl der Anredemöglichkeiten">
                         <option selected value="">Anrede</option>
                         <option value="woman1">Frau</option>
                         <option value="woman2">Frau Dr.</option>
@@ -250,6 +250,14 @@
                 $('.gender-t-f-a').hide();   
                 $('.gender-wrong').hide();  
             }
+        });
+    });
+    </script>
+
+    <script> 
+    $(document).ready(function(){
+        $(".gender-t-m").click(function(){
+            $('.gender-s-m').attr('required', true); 
         });
     });
     </script>

@@ -132,7 +132,7 @@
                 <!-- Geschlecht -->
                 <label class="gender-h" for="gender">Geschlecht</label>
                 <div class="gender-t-m" id="gender" data-validate="Gender is required" title="Ich bin männlich." >
-                    <input type="radio" name="männlich" id="male" value="männlich">
+                    <input class="gender-i-m-r" type="radio" name="männlich" id="male" value="männlich" required>
                     <label class="male-h" for="männlich">Mann</label>
                 </div>
                 <div class="gender-t-f"  title="Ich bin weiblich.">
@@ -214,6 +214,7 @@
 
     <!--Gender-->
     <script defer type="text/JavaScript">
+    // Wrong gender selected
     $(document).ready(function() {
         $(".gender-wrong").click(function(){
             $('.gender-t-m').show();
@@ -253,6 +254,7 @@
     </script>
 
     <script> 
+    // Required attribute
     $(document).ready(function() {
         $(".gender-t-m").click(function() {
             $('.gender-s-m').attr('required', true); 
@@ -261,6 +263,7 @@
     $(document).ready(function(){
         $(".gender-t-f").click(function() {
             $('.gender-s-f').attr('required', true); 
+            $('.gender-i-m-r').attr('required', false); 
         });
     });
     $(document).ready(function(){

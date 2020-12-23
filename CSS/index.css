@@ -180,10 +180,10 @@ body {
 
 @keyframes slide {
       0% {
-        background-image: url(../img/title2-webp.webp);
+        background-image: url(../img/title2.jpg);
       }
       20% {
-        background-image: url(../img/title2-webp.webp);
+        background-image: url(../img/title2.jpg);
       }
       20.1% {
         background-image: url(../img/picture2.jpg);

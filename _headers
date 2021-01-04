@@ -3,7 +3,7 @@
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
     X-XSS-Protection: 1; mode=block
-    Strict-Transport-Security: max-age=17280000; includeSubdomains
+    Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
     Referrer-Policy: same-origin
     Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none';
 #   Missing Feature-Policy var: ambient-light-sensor, battery, display-capture, vr, wake-lock

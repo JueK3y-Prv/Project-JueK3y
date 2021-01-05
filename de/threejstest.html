@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-------   META  ------->
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+
+        <!-------   JS  ------->
+        <script type="module">
+            import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+
+            function main() {
+                const canvas = document.querySelector('#c');
+                const renderer = new THREE.WebGLRenderer({canvas});
+                
+                // basic modules
+                const fov = 75;
+                const aspect = 2;
+                const near = 0.1;       // see everything between 0.1
+                const far = 5;          // and 5
+                const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+                camera.position.z = 2;  // set the camera to (0|-2)
+
+                // Creating a new scene
+                const scene = new THREE.Scene();
+
+            
+            }
+
+        </script>
+        <title>This is a test for three.js</title>
+    </head>
+    <body>
+        <canvas id ="c"></canvas>
+    </body>
+</html>

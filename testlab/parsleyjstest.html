@@ -1,5 +1,6 @@
 <script src="/js/jquery-3.3.1.js"></script>
 <script src="/js/parsley.js"></script>
+<script src="/js/parsley.de.js"></script>
 
 <div class="bs-callout bs-callout-warning hidden">
   <h4>Oh snap!</h4>
@@ -11,7 +12,12 @@
   <p>Everything seems to be ok :)</p>
 </div>
 
-<form id="demo-form" data-parsley-validate="">
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+<form id="demo-form" data-parsley-validate>
   <label for="fullname">Full Name * :</label>
   <input type="text" class="form-control" name="fullname" required="">
 

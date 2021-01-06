@@ -62,6 +62,10 @@
         <!-- jquery -->
         <script src="/js/jquery-3.3.1.js"></script>
 
+        <!-- parsley with language file -->
+        <script src="/js/parsley.js"></script>
+        <script src="/js/parsley.de.js"></script>
+
 
         <!-------   CSS  ------->  
         <!--stylesheet-->
@@ -123,10 +127,8 @@
                 <span class="contact-h resp3">Contact.</span>
                 <span class="contact-h-u resp3">- Business</span>
             </div>
-            <div id="error"></div>
-            <form id="form" name="Geschäftliche Anfrage" method="POST" action="/de/contact/submission.htm" data-netlify="true" netlify-honeypot="bot-field">
+            <form id="form" name="Geschäftliche Anfrage" method="POST" action="/de/contact/submission.htm" data-netlify="true" netlify-honeypot="bot-field" data-parsley-validate>
                 <div class="resp">
-                <ul class="errorMessages"></ul>
                     
                     <p class="hidden">
                     <style>.hidden{ display: none;}</style>
@@ -140,7 +142,7 @@
                     <label class="firma-h-o resp2" for="firma"><span class="hint--right" aria-label="Dieses Feld muss nicht ausgefüllt werden!">Optional</span></label>
                     <label class="firma-h-o resp3" for="firma">Optional</label>
                     <div class="firma-t">
-                        <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5" title="Hier wird der Firmenname eingetragen."/>
+                        <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5" title="Hier wird der Firmenname eingetragen." data-parsley-minlength="2"/>
                     </div>
         
                     <!-- Geschlecht -->

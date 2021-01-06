@@ -13,10 +13,9 @@
             function main() {
                 const canvas = document.querySelector('#c');
                 const renderer = new THREE.WebGLRenderer({canvas});
-                
-                // basic modules
+
                 const fov = 75;
-                const aspect = 2;
+                const aspect = 2;       // the canvas default
                 const near = 0.1;       // see everything between 0.1
                 const far = 5;          // and 5
                 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
@@ -25,13 +24,28 @@
                 // Creating a new scene
                 const scene = new THREE.Scene();
 
-            
+                // Create geometry
+                const boxWidth = 1;
+                const boxHeight = 1;
+                const boxDepth = 1;
+                const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+                const material = new THREE.MeshBasicMaterial({color: 0x44aa88});  // greenish blue
+
+                const cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+
+                renderer.render(scene, camera);
             }
 
+            main();
         </script>
         <title>This is a test for three.js</title>
     </head>
     <body>
+        <p>You... You're not supposed to be here.
+        <br><a href="index.html">Please go back to Start.</a>
+        </p>
         <canvas id ="c"></canvas>
     </body>
 </html>

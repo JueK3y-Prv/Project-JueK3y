@@ -470,9 +470,18 @@ input[type=text]:focus + label, input[type=email]:focus + label, select:focus + 
 }
 
 /* Invalid-Message */
-.parsley-required, #parsley-id-19 .parsley-required, #parsley-id-21 .parsley-required {
+.parsley-required, #parsley-id-19 .parsley-required, #parsley-id-21 .parsley-required, #parsley-id-25 .parsley-required {
+  color: #FFFFFF;
+  background-color: #f8716e;
   font-size: 1.4em;
   margin-left: 12em;
+}
+
+#parsley-id-7 li, #parsley-id-19 li, #parsley-id-21 .parsley-type, #parsley-id-25 .parsley-minlength {
+  color: #FFFFFF;
+  background-color: #f8716e;
+  font-size: 1em;
+  margin-left: 16.8em;
 }
 
 #parsley-id-multiple-männlich li {
@@ -484,16 +493,6 @@ input[type=text]:focus + label, input[type=email]:focus + label, select:focus + 
   font-size: 1.4em;
   margin-left: 6em;
 }
-
-#parsley-id-17 li {
-
-}
-
-#parsley-id-7 li, #parsley-id-19 li, #parsley-id-21 li, #parsley-id-25 li {
-  font-size: 1em;
-  margin-left: 17em;
-}
-
 
 /* Input Box */
 .firma-t, .gender-t-m, .gender-t-f-a, .name-t, .email-t, .service-t, .msg-t {

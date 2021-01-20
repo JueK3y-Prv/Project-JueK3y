@@ -484,15 +484,18 @@ input[type=text]:focus + label, input[type=email]:focus + label, select:focus + 
   margin-left: 16.8em;
 }
 
+/* Für Anrede bei weiblich */
 #parsley-id-multiple-männlich li {
   margin-top: 5.8em;
   margin-left: 18.5em;
 }
 
+/* Für Anrede bei männlich */
 #parsley-id-15 li {
   font-size: 1.4em;
   margin-left: 6em;
 }
+
 
 /* Input Box */
 .firma-t, .gender-t-m, .gender-t-f-a, .name-t, .email-t, .service-t, .msg-t {
@@ -547,7 +550,6 @@ input[type=text]:focus + label, input[type=email]:focus + label, select:focus + 
 
 .gender-t-f-a {
   display: none;
-  z-index: -88;
 
   top: 130px;
 

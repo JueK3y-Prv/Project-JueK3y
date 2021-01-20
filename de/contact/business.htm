@@ -284,6 +284,7 @@
         });
         $(document).ready(function(){
             $(".gender-wrong").click(function() {
+                $('.gender-i-m-r').attr('required', true);
                 $('.gender-s-f').attr('required', false); 
                 $('.gender-s-m').attr('required', false); 
             });

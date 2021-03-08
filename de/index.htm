@@ -105,6 +105,9 @@
             <!-- Contextmenu -->
             <script async src="/src/js/preventContext.js"></script>
 
+            <!-- Hyperlink -->
+            <script async src="/src/js/hyperlink.js"></script>
+
             <!-- jquery -->
             <script src="/src/js/jquery-3.3.1.js"></script>
 
@@ -135,9 +138,9 @@
                         <i></i>
                   </a>
                   <div class="ovl-settings-box"><p>
-                              <a class="clk" id="one" href="javascript:delay('settings#settings')">Einstellungen</a>
+                              <a class="clk" id="one">Einstellungen</a>
                         <br>
-                              <a class="clk" id="two" href="javascript:delay('settings#story')">Geschichte</a>
+                              <a class="clk" id="two">Geschichte</a>
                         <br>
                               <a class="clk" id="three" href="javascript:delay('settings#faq')">Häufige Fragen</a>
                         <br>
@@ -159,12 +162,12 @@
                               </label>
                         <div class="nav-wrapper">
                         <ul>
-                              <li class="clk"><a href="javascript:delay('bio')" title="Über meine Person" class="underline">Biographie</a></li>
+                              <li class="clk"><a id="biographie" title="Über meine Person" class="underline">Biographie</a></li>
                               <!--<li class="clk"><a href="javascript:delay('experience')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
                               <li><a href="#" title="Im Moment noch nicht zugänglich" id="na" class="underline">Experience</a></li>
-                              <li class="clk"><a href="javascript:delay('contact')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                              <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('/en/index')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                              <li class="settings"><a href="#" id="settings_in" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                              <li class="clk"><a id="contact" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                              <li><a href="#" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('/en/index')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                              <li class="settings"><a id="settings_in" href="#" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               <li class="settings_resp"><a href="settings" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               
                         </ul>

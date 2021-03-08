@@ -546,7 +546,7 @@
   
     var typeTesters = {
       email: /^((([a-zA-Z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-zA-Z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))$/,
-      // Follow https://www.w3.org/TR/html5/infrastructure.html#floating-point-numbers
+      // Follow https://www.w3.org/TR/html5/infrastructure#floating-point-numbers
       number: /^-?(\d*\.)?\d+(e[-+]?\d+)?$/i,
       integer: /^-?\d+$/,
       digits: /^\d+$/,
@@ -1049,7 +1049,7 @@
   
             this._ui.$errorClassHandler.attr('aria-describedby', this._ui.errorsWrapperId);
   
-            return this._ui.$errorsWrapper.addClass('filled').attr('aria-hidden', 'false').find('.parsley-custom-error-message').html(this.options.errorMessage);
+            return this._ui.$errorsWrapper.addClass('filled').attr('aria-hidden', 'false').find('.parsley-custom-error-message')(this.options.errorMessage);
           }
   
           this._ui.$errorClassHandler.removeAttr('aria-describedby');
@@ -1084,13 +1084,13 @@
   
         this._ui.$errorClassHandler.attr('aria-describedby', this._ui.errorsWrapperId);
   
-        this._ui.$errorsWrapper.addClass('filled').attr('aria-hidden', 'false').append($(this.options.errorTemplate).addClass('parsley-' + name).html(message || this._getErrorMessage(assert)));
+        this._ui.$errorsWrapper.addClass('filled').attr('aria-hidden', 'false').append($(this.options.errorTemplate).addClass('parsley-' + name)(message || this._getErrorMessage(assert)));
       },
       _updateError: function _updateError(name, _ref5) {
         var message = _ref5.message,
             assert = _ref5.assert;
   
-        this._ui.$errorsWrapper.addClass('filled').find('.parsley-' + name).html(message || this._getErrorMessage(assert));
+        this._ui.$errorsWrapper.addClass('filled').find('.parsley-' + name)(message || this._getErrorMessage(assert));
       },
       _removeError: function _removeError(name) {
         this._ui.$errorClassHandler.removeAttr('aria-describedby');

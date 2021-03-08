@@ -72,12 +72,12 @@
 
 [[redirects]]
   from = "/de/*"
-  to = "/de/page-not-found.htm"
+  to = "/de/page-not-found"
   status = 404
 
 [[redirects]]
   from = "/en/*"
-  to = "/en/page-not-found.htm"
+  to = "/en/page-not-found"
   status = 404  
 
 [[redirects]]
@@ -88,11 +88,11 @@
 
 [[redirects]]
   from = "/*"
-  to = "/de/under-construction.htm"
+  to = "/de/under-construction"
   status = 302
   conditions = {Country = ["de"]}
 
 [[redirects]]
   from = "/*"
-  to = "/en/under-construction.htm"
+  to = "/en/under-construction"
   status = 302

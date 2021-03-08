@@ -1,7 +1,7 @@
 [[headers]]
   for ="*"
     [headers.values]
-      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; script-src-elem 'self'; style-src 'self'; font-src 'self'"
+      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; script-src-elem 'self' 'sha256-gzjI9LeoG8CwZ3FfOR7QlbFTnAmBUvBobuA/4tT+7Rw='; style-src 'self'; font-src 'self'"
       Feature-Policy = "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
       Referrer-Policy = "same-origin"
       Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"

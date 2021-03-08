@@ -8,44 +8,47 @@
             <meta name="viewport" content="width=device-width,initial-scale=1">
             <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-            <meta name="og:url"           content="https://juek3y.com/de/">
-            <meta name="og:title"         content="JueK3y | Startseite - Persönliches Portfolio">
             <meta name="og:site_name"     content="JueK3y">
+            <meta name="og:url"           content="https://juek3y.com/de/">
+            <meta name="og:title"         content="JueK3y | Startseite">
+            <meta name="og:type"          content="portfolio">
             <meta name="og:description"   content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-            <meta name="description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-            <meta name="og:type"          content="website">
             <meta name="og:locale"        content="de_DE">
-            
+
+            <meta name="author"           content="Julian Kennedy (alias JueK3y)">
+            <meta name="publisher"        content="Julian Kennedy (alias JueK3y)">
             <meta name="title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
-            <meta name="content-language" content="de">
-            <meta name="author"           content="Julian Kennedy">
-            <meta name="publisher"        content="Julian Kennedy">
+            <meta name="description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
             <meta name="keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, JueK3y, Webdesign, Design">
             <meta name="page-topic"       content="Start">
+            <meta name="content-language" content="de">
             <meta name="language"         content="Deutsch">
             
             <meta name="robots"           content="index, follow, archive">
             <meta name="googlebot"        content="index, follow, archive">
             <meta name="revisit"          content="After 10 days">
             
-            <meta name="wot-verification" content="f3cc8d79e3876917e1d7"/>
+            <meta name="color-scheme" content="dark light">
+
+            <meta name="wot-verification" content="f3cc8d79e3876917e1d7">
 
             
             <!-------   Link  ------->
             <link rel="alternate" href="https://juek3y.com/en/" hreflang="en"> 
             <link rel="alternate" href="https://juek3y.com/de/" hreflang="x-default">
-            <link rel="canonical" href="https://www.juek3y.com/de/">
+            <link rel="canonical" href="https://juek3y.com/de/">
 
-            <link rel="preload" href="/src/stylesheet/index/index.css" as="style" />
-            <link rel="preload" href="/src/css/foaw/font-awesome.min.css" as="style" />
+            <link rel="preload" href="/src/stylesheet/index/index.css" as="style" type="text/css" />
+            <link rel="preload" href="/src/css/foaw/font-awesome.min.css" as="style" type="text/css" />
 
-            <link rel="preload" href="/src/fonts/Everyday/Index/Ailerons.otf" as="font" crossorigin="anonymous" />
-            <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" crossorigin="anonymous" />
-            <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" crossorigin="anonymous" />
+            <link rel="preload" href="/src/fonts/Everyday/Index/Ailerons.otf" as="font" type="font/otf" crossorigin="" />
+            <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
+            <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" type="font/ttf" crossorigin="" />
 
 
+            <!-- Analytics -->
             <!-- Statcounter Analyse -->
-            <script async type="text/javascript">
+            <!-- <script async type="text/javascript">
             var sc_project=12386052; 
             var sc_invisible=1; 
             var sc_security="6ab04559"; 
@@ -55,17 +58,15 @@
             <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12386052/0/6ab04559/1/" alt="Web analytics"></a></div></noscript>
             <!-- End of Statcounter Code -->
             
-            
             <!-- Mixpanel Analytics -->
-            <script>(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+            <!-- <script>(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
             0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
             for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
             MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
             mixpanel.init("b880999dde02982640fc6e782c0bdc45", {"api_host": "https://api-eu.mixpanel.com", batch_requests: true})</script>
             
-            
             <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYV2S9R77"></script>
+            <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMYV2S9R77"></script>
             <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){
@@ -74,7 +75,7 @@
             gtag('js', new Date());
 
             gtag('config', 'G-ZMYV2S9R77');
-            </script>
+            </script> -->
             
             
             <!-------   JS  ------->
@@ -115,16 +116,15 @@
       
       
             <!-------   IMG  ------->
-            <!--logo-->
-            <link rel="shortcut icon" href="/src/img/LOGO_tran.png" type="image/png">
-
-            <!-- apple touch icon -->
-            <link rel="apple-touch-icon" href="/src/img/ati.png" type="image/png">
+            <!--Fav Icon-->
+            <link id="fav-app" rel="apple-touch-icon" href="/src/img/ati.png" type="image/png" />
+            <link id="fav-png" rel="icon" href=/src/img/LOGO_tran.png" type="image/png" />
+            <!-- <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/ico" /> -->
 
 
             <title>Start | JueK3y</title>
       </head>
-      <body>
+      <body class="light">
             <div class="overlay1">
                   <div class="data"><h1>Live your life</h1></div>
             </div>

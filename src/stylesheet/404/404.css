@@ -272,6 +272,8 @@ body {
   top: 45%;
   height: 12px;
   width: 70px;
+  -webkit-transform: translate(-12.0833%, -38.7354%);
+          transform: translate(-12.0833%, -38.7354%);
 }
 .box .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-left {
   width: 12px;

@@ -4,47 +4,49 @@
 <html lang="de">
     <head>
         <!-------   META  ------->
-        <meta charset = "UTF-8">
-        <meta name="viewport"           content="width=device-width, initial-scale=1.0">
-        <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-        <meta property = "og:url"       content="https://juek3y.com/de/bio.htm">
-        <meta property = "og:title"     content="Biographie | JueK3y">
-        <meta property = "og:site_name" content="JueK3y">
-        <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-        <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-        <meta property = "og:type"      content="website">
-        <meta property = "og:locale"    content="de_DE">
-        <meta name = "title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
-        <meta name = "content-language" content="de">
-        <meta name = "author"           content="Julian Kennedy">
-        <meta name = "publisher"        content="Julian Kennedy">
-        <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography">
-        <meta name = "page-topic"       content="Biographie">
-        <meta name = "language"         content="Deutsch">
-        <meta name = "revisit"          content="After 10 days">
-        <meta name = "robots"           content="index, follow">
-        <meta name = "googlebot"        content="index, follow">
+        <meta name="og:site_name"     content="JueK3y">
+        <meta name="og:url"           content="https://juek3y.com/de/bio">
+        <meta name="og:title"         content="Bio | JueK3y">
+        <meta name="og:type"          content="portfolio">
+        <meta name="og:description"   content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
+        <meta name="og:locale"        content="de_DE">
 
-        <link rel="alternate" href="https://juek3y.com/de/bio.html" hreflang="x-default">
+        <meta name="author"           content="Julian Kennedy (alias JueK3y)">
+        <meta name="publisher"        content="Julian Kennedy (alias JueK3y)">
+        <meta name="title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
+        <meta name="description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
+        <meta name="keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, JueK3y, Webdesign, Design">
+        <meta name="page-topic"       content="Biographie">
+        <meta name="content-language" content="de">
+        <meta name="language"         content="Deutsch">
+        
+        <meta name="robots"           content="index, follow, archive">
+        <meta name="googlebot"        content="index, follow, archive">
+        <meta name="revisit"          content="After 10 days">
 
-        <link rel="alternate" href="https://juek3y.com/en/bio.html" hreflang="en">
 
-        <link rel="canonical" href="https://www.juek3y.com/de/bio.html">
+        <!-------   Link  ------->
+        <link rel="alternate" href="https://juek3y.com/en/bio" hreflang="en">
+        <link rel="alternate" href="https://juek3y.com/de/bio" hreflang="x-default">
+        <link rel="canonical" href="https://www.juek3y.com/de/bio">
 
         <!-------   Pre-laod  ------->
-        <link rel="preload" href="/CSS/bio.css" as="style" />
-        <link rel="preload" href="/img/Police.JPG" as="image" />
-        <link rel="preload" href="/src/css/font-awesome.min.css" as="style" />
+        <link rel="preload" href="/src/stylesheet/bio/bio.min.css" as="style" type="text/css" />
+        <link rel="preload" href="/src/stylesheet/foaw/font-awesome.min.css" as="style" type="text/css" />
+        <link rel="preload" href="/src/img/Police.JPG" as="image" type="img/jpg" />
         
-        <link rel="preload" href="/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/Dreamlight.ttf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/Ogg-Regular.ttf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/apercu-text.ttf" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="/src/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" type="font/otf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" type="font/ttf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/Everyday/apercu-text.ttf" as="font" type="font/ttf" crossorigin="" />
 
-
+        <!-- Analytics -->
         <!-- Statcounter code for Analyse -->
-        <script async type="text/javascript">
+        <!--<script async type="text/javascript">
         var sc_project=12386052; 
         var sc_invisible=1; 
         var sc_security="6ab04559"; 
@@ -59,43 +61,48 @@
         <!-- Page fade out -->
         <script defer src="/src/js/fadeOut.js"></script>
 
+        <!-- Responsive -->
+        <script async src="/src/js/respBio.js"></script>
+
+        <!-- Contextmenu -->
+        <script async src="/src/js/preventContext.js"></script>
+
         <!-- bootstrap -->
-        <script src="/src/js/bootstrap.min.js"></script>
+        <script async src="/src/js/bootstrap.min.js"></script>
 
         <!-- jquery -->
-        <script src="/src/js/jquery-3.3.1.js"></script>
+        <script async src="/src/js/jquery-3.3.1.js"></script>
         
 
         <!-------   CSS  ------->  
         <!--stylesheet-->
-        <link rel="stylesheet" href="/CSS/bio.css">
+        <link rel="stylesheet" href="/src/stylesheet/bio/bio.min.css">
 
         <!-- hint.css -->
-        <link rel="stylesheet" href="/CSS/hint.css">
+        <link rel="stylesheet" href="/src/stylesheet/hint.css">
 
         <!--scrollbar-->
-        <link rel="stylesheet" media="all" href="/CSS/scrollbar.css">
+        <link rel="stylesheet" media="all" href="/src/stylesheet/scrollbar.css">
 
         <!-- bootstrap -->
-        <link rel="stylesheet" media="all" href="/src/css/bootstrap.min.css">
+        <link rel="stylesheet" media="all" href="/src/stylesheet/bootstrap/bootstrap.min.css">
         
         <!--font-awesome-->
-        <link rel="stylesheet" media="all" href="/src/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
 
 
         <!-------   IMG  ------->
-        <!--logo-->
-        <link rel="shortcut icon" href="/img/LOGO_tran.png" type="image/png">
-
-        <!-- apple touch icon -->
-        <link rel="apple-touch-icon" href="/img/ati.png" type="image/png">
+        <!--Fav Icon-->
+        <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/favicon.png" type="image/png" />
+        <link id="fav-png" rel="icon" href="/src/img/favicon/favicon.png" type="image/png" />
+        <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/ico" />
 
         <title>Bio | JueK3y</title>
     </head>
 
     <body>
         <!-- Navigation -->
-            <div class="logo"><a class="clk" href="javascript:delay('index.html')" title="Zum Startbildschirm">JueK3y</a></div>
+            <div class="logo"><a class="clk" href="javascript:delay('index')" title="Zum Startbildschirm">JueK3y</a></div>
             <div class="box"></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
@@ -107,12 +114,12 @@
                 <div class="nav-wrapper">
                     <ul>
                         <li class="clk"><a href="" title="Über meine Person" class="active_nav" id="active">Biographie</a></li>
-                        <!--<li class="clk"><a href="javascript:delay('experience.html')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                        <!--<li class="clk"><a href="javascript:delay('experience')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
                         <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
                         <style>#na a { cursor:not-allowed; } </style>
-                        <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings.html')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                        <li class="clk"><a href="javascript:delay('contact')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                        <li class="settings_resp"><a href="javascript:delay('settings')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -124,64 +131,45 @@
                 <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-                <img src="/img/Police.JPG" alt="Police Officer in San Francisco">
-                <div class="content">
-                    <div id="title">
-                        <h1><p>Julian Kennedy</p></h1>
-                    </div>
-                    <div id="block"></div>
-                    <div id="subtitle">
-                        <p>Biographie</p>
-                    </div>
-                    <div id="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Tincidunt viverra laoreet eget aenean risus faucibus sem adipiscing gravida. 
-                        Consequat sed molestie lorem leo risus, lectus neque. Enim scelerisque eu dictum libero dignissim ac at. 
-                        A, et ut commodo risus elit dolor arcu. Risus, tincidunt donec ac laoreet tellus. 
-                        Dictum sit pellentesque nibh est quis viverra id faucibus. Elit, euismod diam viverra egestas magnis nullam pharetra. 
-                        Mi sed vel orci eros massa eu mollis scelerisque.
-                        </p>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-
-        <script async type="text/JavaScript">
-        //Responsive
-        $(document).ready(function() {  
-            $('input[type="checkbox"]').val(this.checked);
-
-            $('input[type="checkbox"]').change(function() {
-                if(this.checked) {
-                    $('.nav-wrapper').css("display", "block");
-                    $('.so-me-resp').css("display", "flex");
-                }
-                else {
-                    $('.nav-wrapper').css("display", "none");
-                    $('.so-me-resp').css("display", "none");
-                }
-            });
-        });
-        </script>
-
+        <img src="/src/img/Police.JPG" alt="Police Officer in San Francisco">
+        <div class="content">
+            <div id="title">
+                <h1><p>Julian Kennedy</p></h1>
+            </div>
+            <div id="block"></div>
+            <div id="subtitle">
+                <p>Biographie</p>
+            </div>
+            <div id="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Tincidunt viverra laoreet eget aenean risus faucibus sem adipiscing gravida. 
+                Consequat sed molestie lorem leo risus, lectus neque. Enim scelerisque eu dictum libero dignissim ac at. 
+                A, et ut commodo risus elit dolor arcu. Risus, tincidunt donec ac laoreet tellus. 
+                Dictum sit pellentesque nibh est quis viverra id faucibus. Elit, euismod diam viverra egestas magnis nullam pharetra. 
+                Mi sed vel orci eros massa eu mollis scelerisque.
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
     </body>
 </html>

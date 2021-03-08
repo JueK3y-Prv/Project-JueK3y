@@ -88,11 +88,11 @@
 
 [[redirects]]
   from = "/*"
-  to = "/de/"
-  status = 301
+  to = "/de/under-construction.htm"
+  status = 302
   conditions = {Country = ["de"]}
 
 [[redirects]]
   from = "/*"
-  to = "/en/"
-  status = 301
+  to = "/en/under-construction.htm"
+  status = 302

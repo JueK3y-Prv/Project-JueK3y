@@ -4,9 +4,9 @@
 <html lang="de">
       <head>
             <!-------   META  ------->
-            <meta charset = "utf-8">
-            <meta name="viewport"         content="width=device-width, initial-scale=1.0">
-            <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
             <meta name="og:url"           content="https://juek3y.com/de/">
             <meta name="og:title"         content="JueK3y | Startseite - Persönliches Portfolio">
@@ -15,6 +15,7 @@
             <meta name="description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
             <meta name="og:type"          content="website">
             <meta name="og:locale"        content="de_DE">
+            
             <meta name="title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
             <meta name="content-language" content="de">
             <meta name="author"           content="Julian Kennedy">
@@ -22,25 +23,25 @@
             <meta name="keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, JueK3y, Webdesign, Design">
             <meta name="page-topic"       content="Start">
             <meta name="language"         content="Deutsch">
-            <meta name="revisit"          content="After 10 days">
+            
             <meta name="robots"           content="index, follow, archive">
             <meta name="googlebot"        content="index, follow, archive">
+            <meta name="revisit"          content="After 10 days">
             
             <meta name="wot-verification" content="f3cc8d79e3876917e1d7"/>
+
             
-            <link rel="alternate" href="https://juek3y.com/de/index.html" hreflang="x-default">
+            <!-------   Link  ------->
+            <link rel="alternate" href="https://juek3y.com/en/" hreflang="en"> 
+            <link rel="alternate" href="https://juek3y.com/de/" hreflang="x-default">
+            <link rel="canonical" href="https://www.juek3y.com/de/">
 
-            <link rel="alternate" href="https://juek3y.com/en/index.html" hreflang="en"> 
+            <link rel="preload" href="/src/stylesheet/index/index.css" as="style" />
+            <link rel="preload" href="/src/css/foaw/font-awesome.min.css" as="style" />
 
-            <link rel="canonical" href="https://www.juek3y.com/de/index.html">
-
-            <!-------   Pre-laod  ------->
-            <link rel="preload" href="/CSS/index.css" as="style" />
-            <link rel="preload" href="/src/css/font-awesome.min.css" as="style" />
-
-            <link rel="preload" href="/fonts/Everyday/Index/Ailerons.otf" as="font" crossorigin="anonymous" />
-            <link rel="preload" href="/fonts/Everyday/Dreamlight.ttf" as="font" crossorigin="anonymous" />
-            <link rel="preload" href="/fonts/Everyday/Ogg-Regular.ttf" as="font" crossorigin="anonymous" />
+            <link rel="preload" href="/src/fonts/Everyday/Index/Ailerons.otf" as="font" crossorigin="anonymous" />
+            <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" crossorigin="anonymous" />
+            <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" crossorigin="anonymous" />
 
 
             <!-- Statcounter Analyse -->
@@ -93,38 +94,36 @@
             <script src="/src/js/baffle.min.js"></script>
             <script src="/src/js/TweenMax.min.js"></script>
 
+            <script defer src="/src/js/index-reval.js"></script>
+
 
             <!-------   CSS  ------->   
             <!-- stylesheet -->
-            <link rel="stylesheet" href="/CSS/index.css">
+            <link rel="stylesheet" href="/src/stylesheet/index/index.css">
         
             <!-- hint.css -->
-            <link rel="stylesheet" href="/CSS/hint.css">
+            <link rel="stylesheet" href="/src/stylesheet/hint.css">
 
             <!--scrollbar-->
-            <link rel="stylesheet" media="all" href="/CSS/scrollbar.css">  
-
-            <!--hint.css-->
-            <link rel="stylesheet" media="all" href="/CSS/hint.css">
+            <link rel="stylesheet" href="/src/stylesheet/scrollbar.css">
 
             <!-- bootstrap -->
-            <link rel="stylesheet" media="all" href="/src/css/bootstrap.min.css">
+            <link rel="stylesheet" media="all" href="/src/stylesheet/bootstrap/bootstrap.min.css">
 
             <!-- font-awesome -->
-            <link rel="stylesheet" media="all" href="/src/css/font-awesome.min.css">
+            <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
       
       
             <!-------   IMG  ------->
             <!--logo-->
-            <link rel="shortcut icon" href="/img/LOGO_tran.png" type="image/png">
+            <link rel="shortcut icon" href="/src/img/LOGO_tran.png" type="image/png">
 
             <!-- apple touch icon -->
-            <link rel="apple-touch-icon" href="/img/ati.png" type="image/png">
+            <link rel="apple-touch-icon" href="/src/img/ati.png" type="image/png">
 
 
             <title>Start | JueK3y</title>
       </head>
-
       <body>
             <div class="overlay1">
                   <div class="data"><h1>Live your life</h1></div>
@@ -167,7 +166,7 @@
                               <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
                               <style>#na a { cursor:not-allowed; } </style>
                               <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                              <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                              <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('/en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
                               <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               
@@ -201,104 +200,5 @@
                   <a href="bio.html" title="Biographie">Go to: Biographie</a>
             </div>
             </div>
-
-            <!--Shuffle-->
-            <script type="text/javascript">
-            const text = baffle(".overlay1 h1");
-            text.set({
-                  characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
-                  speed: 95
-            });
-            text.start();
-            text.reveal(3700);
-            </script>
-
-            <!--Fade In-->
-            <script async type="text/JavaScript">
-            TweenMax.to(".overlay1 h1", 2, {
-                  delay: 1.5,
-                  opacity: 0,
-                  y: -60,
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.to(".overlay1", 2, {
-                  delay: 2.1,
-                  top: "-100%",
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.from(".logo", 1, {
-                  delay: 3.1,
-                  opacity: 0,
-                  y: 20,
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.staggerFrom(".nav ul li", 1, {
-                  delay: 3.3, 
-                  opacity: 0, 
-                  y: 20, 
-                  ease: Expo.easeInOut
-            }, 0.2)
-
-            TweenMax.staggerFrom(".language", 1, {
-                  delay: 3.8, 
-                  opacity: 0, 
-                  y: 20, 
-                  ease: Expo.easeInOut
-            }, 0.2)
-
-            TweenMax.staggerFrom(".social-media ul li", 1, {
-                  delay: 3.3, 
-                  opacity: 0, 
-                  y: 20, 
-                  ease: Expo.easeInOut
-            }, 0.2)
-
-            TweenMax.from(".side-strip", 2, {
-                  delay: 3.4,
-                  opacity: 0,
-                  y: 40,
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.from(".myBtn", 2, {
-                  delay: 3.6,
-                  opacity: 0,
-                  y: -40,     //y: 40
-                  ease: Expo.easeInOut
-            })
-
-            TweenMax.from(".nav-btn", 1, {
-                  delay: 3.8,
-                  opacity: 0,
-                  x: 20,
-                  ease: Expo.easeInOut
-            })
-            </script>
-
-            <script type="text/JavaScript">
-            //Responsive
-            $(document).ready(function() {  
-            $('input[type="checkbox"]').val(this.checked);
-      
-            $('input[type="checkbox"]').change(function() {
-                  if(this.checked) {
-                        $('.logo, a').css('color', 'black');
-                        $('#active').css('color', '#C2C5A2');
-                        $('.nav-wrapper').css("display", "block");
-                        $('.nav-wrapper').css("left", "0");
-                        $('.so-me-resp').css("display", "flex");
-                  }
-                  else {
-                        $('.logo, a').css('color', 'white');
-                        $('.nav-wrapper').css("display", "none");
-                        $('.so-me-resp').css("display", "none");
-                  }
-            });
-            });
-            </script>
-      
       </body>
 </html>

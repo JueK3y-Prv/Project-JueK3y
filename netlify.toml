@@ -1,0 +1,98 @@
+[[headers]]
+  for ="*"
+    [headers.values]
+      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'"
+      Feature-Policy = "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
+      Referrer-Policy = "same-origin"
+      Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"
+      
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      X-Permitted-Cross-Domain-Policies = "none"
+
+
+
+# [[redirects]]
+#   from = "/src/font/Dreamlight.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Language = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/Dreamlight.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Country = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/Dreamlight.tff"
+#   to = "/en/page-not-found.htm"
+#   status = 404
+#   
+# 
+# 
+# [[redirects]]
+#   from = "/src/font/ExodusDemo-Regular.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Language = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/ExodusDemo-Regular.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Country = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/ExodusDemo-Regular.tff"
+#   to = "/en/page-not-found.htm"
+#   status = 404
+# 
+# 
+# 
+# [[redirects]]
+#   from = "/src/font/Ogg-Regular.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Language = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/Ogg-Regular.tff"
+#   to = "/de/page-not-found.htm"
+#   status = 404
+#   conditions = {Country = ["de"]}
+# 
+# [[redirects]]
+#   from = "/src/font/Ogg-Regular.tff"
+#   to = "/en/page-not-found.htm"
+#   status = 404
+
+
+
+[[redirects]]
+  from = "/de/*"
+  to = "/de/page-not-found.htm"
+  status = 404
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/page-not-found.htm"
+  status = 404  
+
+[[redirects]]
+  from = "/*"
+  to = "/de/"
+  status = 301
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/de/"
+  status = 301
+  conditions = {Country = ["de"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/en/"
+  status = 301

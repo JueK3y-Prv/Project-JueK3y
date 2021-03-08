@@ -1,5 +1,4 @@
 function fadeOut() {
-
     TweenMax.to(".myBtn", 1, {
    y: -100,
    opacity: 0
@@ -60,6 +59,5 @@ function fadeOut() {
    y: -300,
    delay: 2.5,
    ease: Power2.easeInOut
-    });
-    
+    });  
 }

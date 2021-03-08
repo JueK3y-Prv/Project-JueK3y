@@ -1,5 +1,5 @@
-
 const text = baffle(".overlay1 h1");
+
 text.set({
         characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
         speed: 95

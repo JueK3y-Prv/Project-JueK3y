@@ -38,10 +38,10 @@
             <link rel="alternate" href="https://juek3y.com/de/" hreflang="x-default">
             <link rel="canonical" href="https://juek3y.com/de/">
 
-            <link rel="preload" href="/src/stylesheet/index/index.css" as="style" type="text/css" />
+            <link rel="preload" href="/src/stylesheet/index/index.min.css" as="style" type="text/css" />
             <link rel="preload" href="/src/css/foaw/font-awesome.min.css" as="style" type="text/css" />
 
-            <link rel="preload" href="/src/fonts/Everyday/Index/Ailerons.otf" as="font" type="font/otf" crossorigin="" />
+            <link rel="preload" href="/src/fonts/Everyday/index/Ailerons.otf" as="font" type="font/otf" crossorigin="" />
             <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
             <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" type="font/ttf" crossorigin="" />
 
@@ -76,31 +76,11 @@
 
             gtag('config', 'G-ZMYV2S9R77');
             </script> -->
-            
-            
-            <!-------   JS  ------->
-            <!-- Fade Out -->
-            <script defer src="/src/js/index_fadeout.js"></script>
-            
-            <!-- Page fade out -->
-            <script defer src="/src/js/fadeOut.js"></script>
-
-            <!-- Index -->
-            <script async src="/src/js/index.js"></script>
-
-            <!-- jquery -->
-            <script src="/src/js/jquery-3.3.1.js"></script>
-
-            <!-- greensock -->
-            <script src="/src/js/baffle.min.js"></script>
-            <script src="/src/js/TweenMax.min.js"></script>
-
-            <script defer src="/src/js/index-reval.js"></script>
 
 
             <!-------   CSS  ------->   
             <!-- stylesheet -->
-            <link rel="stylesheet" href="/src/stylesheet/index/index.css">
+            <link rel="stylesheet" href="/src/stylesheet/index/index.min.css">
         
             <!-- hint.css -->
             <link rel="stylesheet" href="/src/stylesheet/hint.css">
@@ -115,6 +95,21 @@
             <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
       
       
+            <!-------   JS  ------->
+            <!-- Index -->
+            <script async src="/src/js/index.js"></script>
+
+            <!-- Page fade out -->
+            <script defer src="/src/js/fadeOut.js"></script>
+
+            <!-- jquery -->
+            <script src="/src/js/jquery-3.3.1.js"></script>
+
+            <!-- greensock -->
+            <script src="/src/js/baffle.min.js"></script>
+            <script src="/src/js/TweenMax.min.js"></script>
+
+            
             <!-------   IMG  ------->
             <!--Fav Icon-->
             <link id="fav-app" rel="apple-touch-icon" href="/src/img/ati.png" type="image/png" />
@@ -132,7 +127,7 @@
                   <div class="load"></div>
                   <div class="delay_out"></div>
             <div class="ovl-settings">
-                  <a title="Zurück" href="#" onclick="settings_out()">
+                  <a title="Zurück" id="settings_out" href="#">
                         <i></i>
                         <i></i>
                   </a>
@@ -167,7 +162,7 @@
                               <style>#na a { cursor:not-allowed; } </style>
                               <li class="clk"><a href="javascript:delay('contact.html')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
                               <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('/en/index.html')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                              <li class="settings"><a href="#" title="Einstellungen" onclick="settings_in()"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                              <li class="settings"><a href="#" id="settings_in" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               <li class="settings_resp"><a href="settings.html" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                               
                         </ul>
@@ -189,7 +184,7 @@
                         <span>THE ART OF VISUALIZATION</span>
                   </div>
                   
-            <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+            <button id="myBtn" class="myBtn">EXPLORE</button>
             </div>
             </div>
             <div class="overlay-2"></div>

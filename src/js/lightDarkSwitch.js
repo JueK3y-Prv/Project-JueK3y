@@ -223,10 +223,10 @@ function lightCookie() {
                                 );
                             this.options.pushdown
                                 ? ((this.wrapper = r.call(this, '<div class="wpcc-pushdown-wrap">' + s + "</div>")),
-                                  (this.wrapper.style.display = ""),
-                                  (this.element = this.wrapper.firstChild),
-                                  (this.element.style.display = "none"),
-                                  e.addClass(this.element, "wpcc-invisible"))
+                                (this.wrapper.style.display = ""),
+                                (this.element = this.wrapper.firstChild),
+                                (this.element.style.display = "none"),
+                                e.addClass(this.element, "wpcc-invisible"))
                                 : ((this.wrapper = null), (this.element = r.call(this, s))),
                                 this.options.autoOpen && this.autoOpen();
                         }),
@@ -511,10 +511,10 @@ function lightCookie() {
                                 );
                             this.options.pushdown
                                 ? ((this.wrapper = r.call(this, '<div class="wpcc-pushdown-wrap">' + s + "</div>")),
-                                  (this.wrapper.style.display = ""),
-                                  (this.element = this.wrapper.firstChild),
-                                  (this.element.style.display = "none"),
-                                  e.addClass(this.element, "wpcc-invisible"))
+                                (this.wrapper.style.display = ""),
+                                (this.element = this.wrapper.firstChild),
+                                (this.element.style.display = "none"),
+                                e.addClass(this.element, "wpcc-invisible"))
                                 : ((this.wrapper = null), (this.element = r.call(this, s))),
                                 this.options.autoOpen && this.autoOpen();
                         }),
@@ -816,10 +816,10 @@ function darkCookie() {
                                 );
                             this.options.pushdown
                                 ? ((this.wrapper = r.call(this, '<div class="wpcc-pushdown-wrap">' + s + "</div>")),
-                                  (this.wrapper.style.display = ""),
-                                  (this.element = this.wrapper.firstChild),
-                                  (this.element.style.display = "none"),
-                                  e.addClass(this.element, "wpcc-invisible"))
+                                (this.wrapper.style.display = ""),
+                                (this.element = this.wrapper.firstChild),
+                                (this.element.style.display = "none"),
+                                e.addClass(this.element, "wpcc-invisible"))
                                 : ((this.wrapper = null), (this.element = r.call(this, s))),
                                 this.options.autoOpen && this.autoOpen();
                         }),
@@ -1104,10 +1104,10 @@ function darkCookie() {
                                 );
                             this.options.pushdown
                                 ? ((this.wrapper = r.call(this, '<div class="wpcc-pushdown-wrap">' + s + "</div>")),
-                                  (this.wrapper.style.display = ""),
-                                  (this.element = this.wrapper.firstChild),
-                                  (this.element.style.display = "none"),
-                                  e.addClass(this.element, "wpcc-invisible"))
+                                (this.wrapper.style.display = ""),
+                                (this.element = this.wrapper.firstChild),
+                                (this.element.style.display = "none"),
+                                e.addClass(this.element, "wpcc-invisible"))
                                 : ((this.wrapper = null), (this.element = r.call(this, s))),
                                 this.options.autoOpen && this.autoOpen();
                         }),

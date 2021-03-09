@@ -3,99 +3,105 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-        <!-------   META  ------->
-        <meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv = "X-UA-Compatible" content = "ie==edge">
+    <!-------   META  ------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-        <meta property = "og:url"       content="https://juek3y.com/de/contact.htm">
-        <meta property = "og:title"     content="Kontakt | JueK3y">
-        <meta property = "og:site_name" content="JueK3y">
-        <meta property = "og:description" content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-        <meta name = "description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
-        <meta property = "og:type"      content="website">
-        <meta property = "og:locale"    content="de_DE">
-        <meta name = "title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
-        <meta name = "content-language" content="de">
-        <meta name = "author"           content="Julian Kennedy">
-        <meta name = "publisher"        content="Julian Kennedy">
-        <meta name = "keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, Kunst, Julian, Kennedy, JueK3y, Kamera, Erfahrung, Muenchen, Photography">
-        <meta name = "page-topic"       content="Kontakt">
-        <meta name = "language"         content="Deutsch">
-        <meta name = "revisit"          content="After 10 days">
-        <meta name = "robots"           content="index, follow">
-        <meta name = "googlebot"        content="index, follow">
+    <meta name="og:site_name"     content="JueK3y">
+    <meta name="og:url"           content="https://juek3y.com/de/contact">
+    <meta name="og:title"         content="Kontakt | JueK3y">
+    <meta name="og:type"          content="portfolio">
+    <meta name="og:description"   content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
+    <meta name="og:locale"        content="de_DE">
 
-        <link rel="alternate" href="https://juek3y.com/de/contact" hreflang="x-default">
-
-        <link rel="alternate" href="https://juek3y.com/en/contact" hreflang="en"> 
-
-        <link rel="canonical" href="https://www.juek3y.com/de/contact">
-
-        <!-------   Pre-laod  ------->
-        <link rel="preload" href="/CSS/contact-o.css" as="style" />
-        <link rel="preload" href="/src/css/font-awesome.min.css" as="style" />
-
-        <link rel="preload" href="/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/Dreamlight.ttf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/Ogg-Regular.ttf" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="/fonts/Everyday/apercu-text.ttf" as="font" crossorigin="anonymous" />
+    <meta name="author"           content="Julian Kennedy (alias JueK3y)">
+    <meta name="publisher"        content="Julian Kennedy (alias JueK3y)">
+    <meta name="title-tag"        content="Coding, Fotografie und Design mit Julian Kennedy">
+    <meta name="description"      content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
+    <meta name="keywords"         content="Portfolio, Fotografie, Programmierung, Design, Persoenliche Website, JueK3y, Webdesign, Design">
+    <meta name="page-topic"       content="Kontaktanfrage">
+    <meta name="content-language" content="de">
+    <meta name="language"         content="Deutsch">
+    
+    <meta name="robots"           content="index, follow, archive">
+    <meta name="googlebot"        content="index, follow, archive">
+    <meta name="revisit"          content="After 10 days">
 
 
-        <!-- Statcounter code for Analyse -->
-        <script async type="text/javascript">
-        var sc_project=12386052; 
-        var sc_invisible=1; 
-        var sc_security="6ab04559"; 
-        var sc_https=1; 
-        </script>
-        <script async type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-        <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12386052/0/6ab04559/1/" alt="Web Analytics"></a></div></noscript>
-        <!-- End of Statcounter Code -->
+    <!-------   Link  ------->
+    <link rel="alternate" href="https://juek3y.com/en/contact" hreflang="en">
+    <link rel="alternate" href="https://juek3y.com/de/contact" hreflang="x-default">
+    <link rel="canonical" href="https://juek3y.com/de/contact">
+
+    <link rel="preload" href="/src/stylesheet/navigation/navigation.min.css" as="style" type="text/css" />
+    <link rel="preload" href="/src/stylesheet/contact/overview/overview.min.css" as="style" type="text/css" />
+    <link rel="preload" href="/src/stylesheet/foaw/font-awesome.min.css" as="style" type="text/css" />
+    
+    <link rel="preload" href="/src/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" type="font/otf" crossorigin="" />
+    <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
+    <link rel="preload" href="/src/fonts/Everyday/Ogg-Regular.ttf" as="font" type="font/ttf" crossorigin="" />
+    <link rel="preload" href="/src/fonts/Everyday/apercu-text.ttf" as="font" type="font/ttf" crossorigin="" />
+
+    <!-- Analytics -->
+    <!-- Statcounter code for Analyse -->
+    <!--<script async type="text/javascript">
+    var sc_project=12386052; 
+    var sc_invisible=1; 
+    var sc_security="6ab04559"; 
+    var sc_https=1; 
+    </script>
+    <script async type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12386052/0/6ab04559/1/" alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
 
 
-        <!-------   JS  ------->
-        <!-- Page fade out -->
-        <script defer src="/src/js/fadeOut.js"></script>
+    <!-------   CSS  ------->  
+    <!-- Navigation -->
+    <link rel="stylesheet" href="/src/stylesheet/navigation/navigation.min.css">
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/src/stylesheet/contact/overview/overview.min.css">
 
-        <!-- bootstrap -->
-        <script async src="/src/js/bootstrap.min.js"></script>
+    <!-- hint.css -->
+    <link rel="stylesheet" href="/src/stylesheet/hint.css">
 
-        <!-- jquery -->
-        <script async src="/src/js/jquery-3.3.1.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" media="all" href="/src/stylesheet/bootstrap/bootstrap.min.css">
+    
+    <!-- font-awesome -->
+    <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
+
+    
+    <!-------   JS  ------->    
+    <!-- Page fade out -->
+    <script defer src="/src/js/fadeOut.js"></script>
+
+    <!-- Contextmenu -->
+    <script async src="/src/js/preventContext.js"></script>
+
+    <!-- Hyperlink -->
+    <script async src="/src/js/hyperlink.js"></script>
+
+    <!-- Responsive -->
+    <script async src="/src/js/respBio.js"></script>
+
+    <!-- jquery -->
+    <script src="/src/js/jquery-3.3.1.js"></script>
 
 
-        <!-------   CSS  ------->  
-        <!--stylesheet-->
-        <link rel="stylesheet" media="all" href="/CSS/contact-o.css">
-        
-        <!-- hint.css -->
-        <link rel="stylesheet" href="/CSS/hint.css">
-
-        <!--scrollbar-->
-        <link rel="stylesheet" media="all" href="/CSS/scrollbar.css">
-
-        <!-- bootstrap -->
-        <link rel="stylesheet" media="all" href="/src/css/bootstrap.min.css">
-
-        <!--font-awesome-->
-        <link rel="stylesheet" media="all" href="/src/css/font-awesome.min.css">
-
-
-        <!-------   IMG  ------->
-        <!--logo-->
-        <link rel="shortcut icon" href="/img/LOGO_tran.png" type="image/png">
-
-        <!-- apple touch icon -->
-        <link rel="apple-touch-icon" href="/img/ati.png" type="image/png">
+    <!-------   IMG  ------->
+    <!--Fav Icon-->
+    <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/favicon.png" type="image/png" />
+    <link id="fav-png" rel="icon" href="/src/img/favicon/favicon.png" type="image/png" />
+    <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/ico" />
 
         <title>Kontakt | JueK3y</title>
     </head>
-
-    <body>
+    <body class="light" translate="no">
         <!-- Navigation -->
         <div class="sticky-nav">
-            <div class="logo"><a class="clk" href="javascript:delay('index')" title="Zum Startbildschirm">JueK3y</a></div>
+            <div class="logo"><a class="clk" id="logo" title="Zum Startbildschirm">JueK3y</a></div>
             <div class="box"></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
@@ -106,14 +112,13 @@
                 </label>
                 <div class="nav-wrapper">
                     <ul>
-                        <li class="clk"><a href="javascript:delay('bio')" title="Über meine Person" class="underline">Biographie</a></li>
+                        <li class="clk"><a id="biographie" title="Über meine Person" class="underline">Biographie</a></li>
                         <!--<li class="clk"><a href="javascript:delay('experience')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
-                        <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
-                        <style>#na a { cursor:not-allowed; } </style>
-                        <li class="clk"><a href="" title="Kontaktmöglichkeit" class="active_nav" id="active">Kontakt</a></li>
-                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
+                        <li><a href="#" title="Im Moment noch nicht zugänglich" id="na" class="underline">Experience</a></li>
+                        <li class="clk"><a class="active_nav" id="active" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" id="active" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a id="language" class="clk" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                        <li class="settings_resp"><a id="settings" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                  </ul>
                 </div>
             </div>
         </div>
@@ -128,7 +133,7 @@
         <div class="site-1">
             <div class="container">
                 <h1>Kontaktaufnahme und Hilfe</h1>
-                <style>h1 { display: none; } </style>
+                <h2>Actually, you shouldn't be able to read this. If you still see this after reloading the page, please <a href="https://github.com/JueK3y/juek3y.com/issues/new">report the problem here.</a></h2>
                 <div class="card">
                     <div class="imgBx">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

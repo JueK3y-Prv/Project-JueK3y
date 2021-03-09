@@ -46,6 +46,7 @@
 }
 .light {
   --background: #fff;
+  --background-contact: #f0f0f0;
   --textColor: #1B1C1E;
   --banner: #FAFAFA;
   --bannerGrey: #E0E0E0;
@@ -62,6 +63,7 @@
 
 .dark {
   --background: #2c2e33;
+  --background-contact: #2c2e33;
   --textColor: #FAFAFA;
   --banner: #1B1C1E;
   --bannerGrey: #1B1C1E;
@@ -94,6 +96,54 @@ body {
   background-color: var(--background);
 }
 
+.nav {
+  margin: 3.5em;
+  margin-right: 5.8em;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  font-family: "Hauptfont";
+  font-size: 18px;
+  line-height: 40px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  color: #000;
+  padding-right: 36px;
+}
+.nav ul li:hover {
+  color: #C2C5A2;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.nav a {
+  color: black;
+}
+.nav a:hover {
+  color: #C2C5A2;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.nav #na {
+  cursor: not-allowed;
+}
+.nav .active_nav {
+  color: #C2C5A2;
+}
+
 .logo, .nav, .so-me-resp, .br {
   user-select: none;
   -o-user-select: none;
@@ -102,7 +152,7 @@ body {
   -webkit-user-select: none;
 }
 
-h2 {
+h1, h2 {
   display: none;
 }
 /*# sourceMappingURL=navigation.css.map */

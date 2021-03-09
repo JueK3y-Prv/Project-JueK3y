@@ -46,6 +46,7 @@
   
 .light {
     --background: #fff;
+    --background-contact: #f0f0f0;
     --textColor: #1B1C1E;
     --banner: #FAFAFA;
     --bannerGrey: #E0E0E0;
@@ -62,6 +63,7 @@
 
 .dark {
     --background: #2c2e33;
+    --background-contact: #2c2e33;
     --textColor: #FAFAFA;
     --banner: #1B1C1E;
     --bannerGrey: #1B1C1E;
@@ -91,6 +93,48 @@ body {
     background-color: var(--background);
 }
 
+.nav {
+    margin: 3.5em;
+    margin-right: 5.8em;
+    right: 0;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    font-family: 'Hauptfont';
+    font-size: 18px;
+    line-height: 40px;
+    transition: .2s;
+    ul {
+        li {
+            list-style: none;
+            display: inline-block;
+            color: #000;
+            padding-right: 36px;
+            &:hover {
+                color: #C2C5A2;
+                text-decoration: none;
+                transition: .2s;
+            }
+        }
+    }
+    a {
+        color: black;
+        &:hover {
+            color: #C2C5A2;
+            text-decoration: none;
+            transition: .2s;
+        }
+    }
+    #na {
+        cursor: not-allowed;
+    }
+    .active_nav {
+        color: #C2C5A2;
+    }
+}
+
 .logo, .nav, .so-me-resp, .br {
     user-select: none;
     -o-user-select: none;
@@ -99,6 +143,6 @@ body {
     -webkit-user-select: none;
 }
 
-h2 {
+h1, h2 {
     display: none;
 }

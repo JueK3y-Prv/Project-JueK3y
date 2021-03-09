@@ -194,23 +194,20 @@ img {
     left: 17.666%;
 }
 #title {
-    h1 {
-        display: grid;
-        p {
-            position: absolute;
-            width: 426px;
-            height: 55px;
-            left: 603px;
-            top: 16px;
-            font-family: Exodus;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 42px;
-            line-height: 46px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #000000;
-        }
+    p {
+        position: absolute;
+        width: 426px;
+        height: 55px;
+        left: 603px;
+        top: 16px;
+        font-family: Exodus;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 42px;
+        line-height: 46px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #000000;
     }
 }
 #block {

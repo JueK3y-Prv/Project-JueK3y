@@ -219,10 +219,7 @@ img {
   left: 17.666%;
 }
 
-#title h1 {
-  display: grid;
-}
-#title h1 p {
+#title p {
   position: absolute;
   width: 426px;
   height: 55px;

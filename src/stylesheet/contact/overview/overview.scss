@@ -265,52 +265,57 @@ a {
     font-family: 'Text';
 }
 
-.container .card {
-    .contentBx {
-    a {
-        text-align: center;
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 30px;
-        font-size: 16px;
-        color: #fff;
-        text-decoration: none;
-        opacity: 0.86;
-        border-radius: 22px;
+.container {
+    h1, h3 {
+        display: none;
     }
+    .card {
+        .contentBx {
+            a {
+                text-align: center;
+                display: inline-block;
+                padding: 10px 20px;
+                margin-top: 30px;
+                font-size: 16px;
+                color: #fff;
+                text-decoration: none;
+                opacity: 0.86;
+                border-radius: 22px;
+            }
 
-    #business-t a {
-        color: #fff;
-        background-image: linear-gradient(to right top, #1758F1, #37DBE0);
-        opacity: 0.77;
-    }
+            #business-t a {
+                color: #fff;
+                background-image: linear-gradient(to right top, #1758F1, #37DBE0);
+                opacity: 0.77;
+            }
 
-    #private-t a {
-        color: #fff;
-        background: linear-gradient(to right top, #004d7a, #008793, #00bf72, #a8eb12);
-        opacity: 0.74;
-    }
+            #private-t a {
+                color: #fff;
+                background: linear-gradient(to right top, #004d7a, #008793, #00bf72, #a8eb12);
+                opacity: 0.74;
+            }
 
-    #help-t a {
-        color: #fff;
-        background-image: linear-gradient(to right top, #E1516A, #FEAD2A);
-    }
+            #help-t a {
+                color: #fff;
+                background-image: linear-gradient(to right top, #E1516A, #FEAD2A);
+            }
 
-    a:hover {
-        transform: scale(0.975);
-    }
-    }
+            a:hover {
+                    transform: scale(0.975);
+                }
+        }
 
-    a:hover span {
-    display: block;
-    transform: scale(0.98);
-    }
+        a:hover span {
+            display: block;
+            transform: scale(0.98);
+        }
 
-    &:hover {
-    .imgBx, .contentBx {
-        transition: .2s;
-        transform: scale(0.98);
-    }
+        &:hover {
+            .imgBx, .contentBx {
+                transition: .2s;
+                transform: scale(0.98);
+            }
+        }
     }
 }
 

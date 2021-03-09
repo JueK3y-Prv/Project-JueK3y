@@ -5,11 +5,11 @@
 The website is a portfolio about me (JueK3y). 
 <br>There are the three main topics coding, photography and design. In addition,
 <br>the website contains the following items:
-- Landing Page (Index)
-- Biographie
+- [Landing Page (Index)](https://www.juek3y.com/de/)
+- [Biographie](https://www.juek3y.com/de/bio)
 - Experience (Coding | Photography | Design)
-- Contact (Business | Personal)
-- Settings (FAQ | Issue Tracker | Legal)
+- [Contact](https://www.juek3y.com/de/contact) (Business | Personal)
+- [Settings](https://www.juek3y.com/de/settings) (FAQ | Issue Tracker | Legal)
 - It also includes:
   - Automatic detection for Light / Dark mode
   - Switch between those two modes

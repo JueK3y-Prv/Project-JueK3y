@@ -53,12 +53,8 @@ body {
   float: left;
   margin: 2.2em;
   margin-left: 5.2em;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 .logo:hover {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
   color: #C2C5A2;
   text-decoration: none;
 }

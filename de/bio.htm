@@ -34,10 +34,9 @@
         <link rel="alternate" href="https://juek3y.com/de/bio" hreflang="x-default">
         <link rel="canonical" href="https://www.juek3y.com/de/bio">
 
-        <!-------   Pre-laod  ------->
+        <link rel="preload" href="/src/img/Police.JPG" as="image" />
         <link rel="preload" href="/src/stylesheet/bio/bio.min.css" as="style" type="text/css" />
         <link rel="preload" href="/src/stylesheet/foaw/font-awesome.min.css" as="style" type="text/css" />
-        <link rel="preload" href="/src/img/Police.JPG" as="image" type="img/jpg" />
         
         <link rel="preload" href="/src/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" type="font/otf" crossorigin="" />
         <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
@@ -56,25 +55,11 @@
         <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12386052/0/6ab04559/1/" alt="Web Analytics"></a></div></noscript>
         <!-- End of Statcounter Code -->
 
-        
-        <!-------   JS  ------->    
-        <!-- Page fade out -->
-        <script defer src="/src/js/fadeOut.js"></script>
-
-        <!-- Responsive -->
-        <script async src="/src/js/respBio.js"></script>
-
-        <!-- Contextmenu -->
-        <script async src="/src/js/preventContext.js"></script>
-
-        <!-- bootstrap -->
-        <script async src="/src/js/bootstrap.min.js"></script>
-
-        <!-- jquery -->
-        <script async src="/src/js/jquery-3.3.1.js"></script>
-        
 
         <!-------   CSS  ------->  
+        <!-- Navigation -->
+        <link rel="stylesheet" href="/src/stylesheet/navigation/navigation.min.css">
+        
         <!--stylesheet-->
         <link rel="stylesheet" href="/src/stylesheet/bio/bio.min.css">
 
@@ -83,12 +68,26 @@
 
         <!--scrollbar-->
         <link rel="stylesheet" media="all" href="/src/stylesheet/scrollbar.css">
-
-        <!-- bootstrap -->
-        <link rel="stylesheet" media="all" href="/src/stylesheet/bootstrap/bootstrap.min.css">
         
         <!--font-awesome-->
         <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
+
+        
+        <!-------   JS  ------->    
+        <!-- Page fade out -->
+        <script defer src="/src/js/fadeOut.js"></script>
+
+        <!-- Contextmenu -->
+        <script async src="/src/js/preventContext.js"></script>
+
+        <!-- Hyperlink -->
+        <script async src="/src/js/hyperlink.js"></script>
+
+        <!-- Responsive -->
+        <script async src="/src/js/respBio.js"></script>
+
+        <!-- jquery -->
+        <script src="/src/js/jquery-3.3.1.js"></script>
 
 
         <!-------   IMG  ------->
@@ -99,10 +98,9 @@
 
         <title>Bio | JueK3y</title>
     </head>
-
-    <body>
+    <body class="light" translate="no">
         <!-- Navigation -->
-            <div class="logo"><a class="clk" href="javascript:delay('index')" title="Zum Startbildschirm">JueK3y</a></div>
+            <div class="logo"><a class="clk" id="logo" title="Zum Startbildschirm">JueK3y</a></div>
             <div class="box"></div>
             <div class="nav">
                 <input type="checkbox" id="nav" class="hidden">
@@ -113,14 +111,13 @@
                 </label>
                 <div class="nav-wrapper">
                     <ul>
-                        <li class="clk"><a href="" title="Über meine Person" class="active_nav" id="active">Biographie</a></li>
+                        <li class="clk"><a class="active_nav" id="active" id="biographie" title="Über meine Person" class="underline">Biographie</a></li>
                         <!--<li class="clk"><a href="javascript:delay('experience')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
-                        <li id="na"><a href="#" title="Im Moment noch nicht zugänglich" class="underline">Experience</a></li>
-                        <style>#na a { cursor:not-allowed; } </style>
-                        <li class="clk"><a href="javascript:delay('contact')" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
-                        <li><a href="#" title="" id="active"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a class="clk" href="javascript:delay('../en/index')" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                        <li class="settings_resp"><a href="javascript:delay('settings')" title="Einstellungen" class="clk"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                    </ul>
+                        <li><a href="#" title="Im Moment noch nicht zugänglich" id="na" class="underline">Experience</a></li>
+                        <li class="clk"><a id="contact" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" id="active" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a id="language" class="clk" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                        <li class="settings_resp"><a id="settings" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                  </ul>
                 </div>
             </div>
         <!-- Content - Site 1 -->
@@ -149,27 +146,29 @@
                 Mi sed vel orci eros massa eu mollis scelerisque.
                 </p>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <div class="br">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
     </body>
 </html>

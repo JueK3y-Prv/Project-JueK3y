@@ -1,36 +1,72 @@
-document.getElementById('one').onclick = () => {
-    delay('settings#settings')
+try {
+    document.getElementById('logo').onclick = () => {
+        delay('/de/')
+    }
+}
+catch(err) {
+
+}
+try {
+    document.getElementById('biographie').onclick = () => {
+        delay('/de/bio')
+    }
+}
+catch(err) {
+
 }
 
-document.getElementById('two').onclick = () => {
-    delay('settings#story')
+try {
+    document.getElementById('contact').onclick = () => {
+        delay('/de/contact')
+    }
+}
+catch(err) {
+
 }
 
-document.getElementById('three').onclick = () => {
-    delay('settings#faq')
+try {
+    document.getElementById('settings').onclick = () => {
+        delay('/de/settings')
+    }
+}
+catch(err) {
+
 }
 
-document.getElementById('four').onclick = () => {
-    delay('settings#contact')
+try {
+    document.getElementById('language').onclick = () => {
+        delay('/en/index')
+    }
+}
+catch(err) {
+
 }
 
-document.getElementById('five').onclick = () => {
-    delay('settings#impressum')
+try {
+    document.getElementById('one').onclick = () => {
+        delay('settings#settings')
+    }
+
+    document.getElementById('two').onclick = () => {
+        delay('settings#story')
+    }
+
+    document.getElementById('three').onclick = () => {
+        delay('settings#faq')
+    }
+
+    document.getElementById('four').onclick = () => {
+        delay('settings#contact')
+    }
+
+    document.getElementById('five').onclick = () => {
+        delay('settings#impressum')
+    }
+
+    document.getElementById('six').onclick = () => {
+        delay('settings#datenschutz')
+    }
 }
+catch(err) {
 
-document.getElementById('six').onclick = () => {
-    delay('settings#datenschutz')
-}
-
-
-document.getElementById('biographie').onclick = () => {
-    delay('bio')
-}
-
-document.getElementById('contact').onclick = () => {
-    delay('contact')
-}
-
-document.getElementById('language').onclick = () => {
-    delay('/en/index')
 }

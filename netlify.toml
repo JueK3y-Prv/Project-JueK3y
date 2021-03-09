@@ -1,7 +1,8 @@
 [[headers]]
   for ="*"
     [headers.values]
-      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; script-src-elem 'self' 'sha256-9OIxH9XozngUDpNSTFHRrGpxr9zL97s9OYEg7wTvAlY=' 'sha256-CJuPSTdQcjrdZpc5Z43+85itEk8Biz+FwT1nUOpohss='; style-src 'self' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; font-src 'self'"
+      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; style-src 'self' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; font-src 'self'"
+      # script-src 'self'; script-src-elem 'self' 'sha256-9OIxH9XozngUDpNSTFHRrGpxr9zL97s9OYEg7wTvAlY=' 'sha256-CJuPSTdQcjrdZpc5Z43+85itEk8Biz+FwT1nUOpohss='; 
       Feature-Policy = "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
       Referrer-Policy = "same-origin"
       Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"

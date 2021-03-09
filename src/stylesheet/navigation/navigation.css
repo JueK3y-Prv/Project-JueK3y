@@ -101,4 +101,8 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
+
+h2 {
+  display: none;
+}
 /*# sourceMappingURL=navigation.css.map */

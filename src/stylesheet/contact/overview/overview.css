@@ -53,6 +53,14 @@ body {
   float: left;
   margin: 2.2em;
   margin-left: 5.2em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.logo:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #C2C5A2;
+  text-decoration: none;
 }
 
 #nav:checked + .nav-btn {
@@ -97,15 +105,15 @@ body {
 .nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
   color: black;
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
   color: #C2C5A2;
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .active_nav::after {

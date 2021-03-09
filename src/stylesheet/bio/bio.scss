@@ -36,12 +36,6 @@ body {
     float: left;
     margin: 2.2em;
     margin-left: 5.2em;
-    transition: .2s;
-    &:hover {
-        color: #C2C5A2;
-        text-decoration: none;
-        transition: .3s;
-    }
 }
 #nav {
     &:checked {
@@ -149,10 +143,12 @@ body {
     }
 }
 a {
+    transition: .2s;
     color: #151522;
     text-decoration: none;
     cursor: pointer;
     &:hover {
+        transition: .2s;
         color: #C2C5A2;
         text-decoration: none;
     }

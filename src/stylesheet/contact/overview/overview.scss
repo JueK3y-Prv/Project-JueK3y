@@ -41,6 +41,12 @@ body {
     float: left;
     margin: 2.2em;
     margin-left: 5.2em;
+    transition: .2s;
+    &:hover {
+        transition: .2s;
+        color: #C2C5A2;
+        text-decoration: none;
+    }
 }
 
 #nav:checked {
@@ -86,13 +92,13 @@ body {
 .nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
     color: black;
     text-decoration: none;
-    transition: .3s;
+    transition: .2s;
 }
 
 .nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
     color: #C2C5A2;
     text-decoration: none;
-    transition: .3s;
+    transition: .2s;
 }
 
 .active_nav::after {

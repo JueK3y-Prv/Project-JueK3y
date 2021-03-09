@@ -75,17 +75,7 @@
         background-image: url('/src/img/Galerie_Bg_Dark.png');
     }
 }
-/* iPad Pro sized */
-/* Burger */
-/* Resp. Nav. Textausrichtung */
-/* Burger-Position */
-/* Hamburger*/
-/* iPhone 6/7/8+ sized */
-/* Burger-Position */
-/* Pocophone sized */
-/* iPhone 6/7/8 sized */
-/* Galaxy S5 sized */
-/* iPhone 5 sized */
+
 body {
     animation: fadeInAnimation ease 500ms;
     animation-iteration-count: 1;
@@ -252,25 +242,31 @@ html {
     position: absolute;
     right: -2%;
     font-family: 'Hauptfont';
+    transition: .2s;
     ul {
         li {
             list-style: none;
             display: inline-block;
             color: #fff;
             padding-right: 36px;
+            a {
+                cursor: pointer;
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: #C2C5A2;
+                    text-decoration: none;
+                    transition: .2s;
+                }
+            }
+            &:hover {
+                color: #C2C5A2;
+                text-decoration: none;
+                transition: .2s;
+            }
             #na {
                 cursor: not-allowed;
             }
-        }
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        transition: .3s;
-        &:hover {
-            color: #C2C5A2;
-            text-decoration: none;
-            transition: .3s;
         }
     }
 }

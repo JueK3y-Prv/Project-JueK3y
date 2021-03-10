@@ -1,7 +1,3 @@
-<?php
-$price = 20
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -67,10 +63,15 @@ $price = 20
             </div>
             <div class="container">
                 <div style="text-align: center;">
+                    <?php
+                        $price = 20;
+                        $param = "test";
+                    ?>
                     <h1 class="headheader">Classic Logo Beanie</h1>
                     <p class="headtext">
                         High quality Beanie in Jet Black. The Design is stiched into the Front Panel in Arctic White.<br />
-                        30€ + 3€ Shipping, Fees etc.
+                        30 + 3€ Shipping, Fees etc.
+                        <a href="http://www.whatever.com/<?php echo $param; ?>">Click Here</a>
                     </p>
                     <form class="paypal-button" method="post" action="https://www.paypal.com/cgi-bin/webscr" target="_top">
                         <div id="errorBox" class="hide"></div>

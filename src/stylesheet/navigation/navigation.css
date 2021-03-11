@@ -81,8 +81,8 @@
   --selectionBackground: #737d8d;
   --slider: brightness(85%);
   --bioGradBlock: linear-gradient(90deg, rgba(235, 139, 150, 0.877) 0%, rgba(191, 233, 255, 0.856) 100%);
-  --conCol: #202125;
-  --conHovCol: #27292e;
+  --conCol: #16171a;
+  --conHovCol: #17181b;
   --conBusBackFocus: #25272A;
   --conBusBor: 1.5px solid #3b3e41;
   --conBusSub: #49aa70;

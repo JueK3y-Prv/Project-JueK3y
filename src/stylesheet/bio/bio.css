@@ -93,7 +93,7 @@ body {
 }
 
 .settings a {
-  color: black;
+  color: var(--textColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -106,7 +106,7 @@ body {
 }
 
 .settings_resp a {
-  color: black;
+  color: var(--textColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -144,7 +144,7 @@ body {
   margin: 4.3em;
 }
 .so-me-resp ul li a {
-  color: black;
+  color: var(--textColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -228,7 +228,7 @@ img {
   line-height: 46px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #000000;
+  color: var(--textColor);
 }
 
 #block {
@@ -254,14 +254,14 @@ img {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2em;
-  color: #000000;
+  color: var(--textColor);
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 #subtitle p::after {
   position: absolute;
   content: "";
-  background: black;
+  background: var(--textColor);
   top: 12px;
   left: 140px;
   width: 98px;
@@ -279,7 +279,7 @@ img {
   font-weight: normal;
   font-size: 20px;
   line-height: 1.4em;
-  color: #000000;
+  color: var(--textColor);
 }
 
 @media screen and (max-width: 1420px) {
@@ -443,7 +443,7 @@ img {
   }
   .nav-wrapper ul li a {
     opacity: 0;
-    color: #000;
+    color: var(--textColor);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -468,7 +468,7 @@ img {
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background: var(--textColor);
     border-radius: 2px;
     margin-left: 14px;
   }

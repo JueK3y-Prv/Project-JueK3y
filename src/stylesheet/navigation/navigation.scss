@@ -47,12 +47,12 @@
 .light {
     --background: #fff;
     --background-contact: #f0f0f0;
-    --textColor: #1B1C1E;
+    --textColor: #111213;
     --banner: #FAFAFA;
     --bannerGrey: #E0E0E0;
     --hoverColor: #0203048a;
-    --selectionColor: #CEDBF0;
-    --selectionBackground: #737d8d;
+    --selectionColor: var(--textColor);
+    --selectionBackground: #CEDBF0;
     #resp-dark, #light, #light-globe {
         display: none;
     }
@@ -65,10 +65,10 @@
     --background: #2c2e33;
     --background-contact: #2c2e33;
     --textColor: #FAFAFA;
-    --banner: #1B1C1E;
-    --bannerGrey: #1B1C1E;
+    --banner: #111213;
+    --bannerGrey: #111213;
     --hoverColor: #BBC6C6;
-    --selectionColor: #CEDBF0;
+    --selectionColor: var(--textColor);
     --selectionBackground: #737d8d;
     #resp-dark, #light, #light-globe {
         display: contents;
@@ -110,7 +110,7 @@ body {
         li {
             list-style: none;
             display: inline-block;
-            color: #000;
+            color: var(--textColor);
             padding-right: 36px;
             &:hover {
                 color: #C2C5A2;
@@ -120,7 +120,7 @@ body {
         }
     }
     a {
-        color: black;
+        color: var(--textColor);
         &:hover {
             color: #C2C5A2;
             text-decoration: none;

@@ -191,7 +191,7 @@ a:hover {
 /* Dropdown */
 ul .dropdown {
   z-index: 9999;
-  background: #FFFFFF;
+  background: var(--background);
   border: 2px solid var(--hoverColor);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -278,8 +278,8 @@ ul li ul li a {
   height: 620px;
   left: 58.4895833%;
   top: 22.4%;
-  background: #FFFFFF;
-  border: 1.5px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBor);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -292,7 +292,7 @@ form label {
   font-size: 17px;
   line-height: 21px;
   left: 146px;
-  color: #979797;
+  color: var(--conBusInpText);
 }
 
 /* Label - Header */
@@ -329,8 +329,8 @@ form label {
   width: 67px;
   left: 312px;
   top: 105px;
-  color: #979797;
-  background-color: #fff;
+  color: var(--conBusInpText);
+  background-color: var(--background);
   border: none;
   font-family: "Selected";
   font-size: 17px;
@@ -353,7 +353,11 @@ form label {
   font-weight: normal;
   font-size: 17px;
   line-height: 24px;
-  color: #242424;
+  color: var(--conBusInpText);
+}
+
+#male:checked + label, #female:checked + label {
+  color: var(--inputColor);
 }
 
 .name-h {
@@ -385,8 +389,8 @@ input[type=text], input[type=email] {
   /* Danach */
   width: 244px;
   height: 53px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBorder);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -394,7 +398,7 @@ input[type=text], input[type=email] {
   font-weight: normal;
   font-size: 17px;
   line-height: 21px;
-  color: black;
+  color: var(--inputColor);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -403,8 +407,8 @@ input[type=text], input[type=email] {
   /* Danach */
   width: 244px;
   height: 53px;
-  background: #fff;
-  border: 2px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBorder);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -412,7 +416,7 @@ input[type=text], input[type=email] {
   font-weight: normal;
   font-size: 17px;
   line-height: 21px;
-  color: black;
+  color: var(--inputColor);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -435,14 +439,16 @@ select:hover, textarea:hover, .gender-t-m:hover, .gender-t-f:hover {
 
 input[type=text]:focus, input[type=email]:focus {
   border-color: dodgerBlue;
+  background-color: var(--conBusBackFocus);
   -webkit-box-shadow: 0 0 5px 0 dodgerBlue;
           box-shadow: 0 0 5px 0 dodgerBlue;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-select:focus, textarea:focus + label {
+select:focus, textarea:focus {
   border-color: dodgerBlue;
+  background-color: var(--conBusBackFocus);
   -webkit-box-shadow: 0 0 5px 0 dodgerBlue;
           box-shadow: 0 0 5px 0 dodgerBlue;
   -webkit-transition: 0.2s;
@@ -452,11 +458,13 @@ select:focus, textarea:focus + label {
 input[type=text]:focus + label, input[type=email]:focus + label {
   font-weight: bold;
   color: dodgerblue;
+  background-color: var(--conBusBackFocus);
 }
 
 select:focus + label, textarea:focus + label {
   font-weight: bold;
   color: dodgerblue;
+  background-color: var(--conBusBackFocus);
 }
 
 /* Invalid-Icon */
@@ -522,8 +530,8 @@ select:focus + label, textarea:focus + label {
   width: 112px;
   height: 53px;
   top: 130px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBorder);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -547,8 +555,8 @@ select:focus + label, textarea:focus + label {
   height: 53px;
   left: 278px;
   top: 130px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBorder);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -566,8 +574,8 @@ select:focus + label, textarea:focus + label {
 .gender-t-m-a select, .gender-t-f-a select {
   width: 112px;
   height: 53px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--background);
+  border: var(--conBusBorder);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -576,7 +584,7 @@ select:focus + label, textarea:focus + label {
   font-weight: normal;
   font-size: 17px;
   line-height: 21px;
-  color: black;
+  color: var(--inputColor);
 }
 
 .gender-t-m-a select:hover, .gender-t-f-a select:hover {
@@ -613,27 +621,23 @@ select:focus + label, textarea:focus + label {
 }
 
 ::-webkit-input-placeholder {
-  color: #C3C3C3;
+  color: var(--conBusInpText);
 }
 
 ::-moz-placeholder {
-  color: #C3C3C3;
+  color: var(--conBusInpText);
 }
 
 :-ms-input-placeholder {
-  color: #C3C3C3;
+  color: var(--conBusInpText);
 }
 
 ::-ms-input-placeholder {
-  color: #C3C3C3;
+  color: var(--conBusInpText);
 }
 
 #firma::before, #gender::before, #name::before, #email::before, #msg::before, ::placeholder {
-  color: #C3C3C3;
-}
-
-#firma::after, #gender::after, #name::after, #email::after, #msg::after {
-  color: black;
+  color: var(--conBusInpText);
 }
 
 #firma {
@@ -667,10 +671,10 @@ select:focus + label, textarea:focus + label {
 }
 
 select option {
-  color: black;
+  color: var(--conBusInpTexAfter);
 }
 select option[value=""] {
-  color: #C3C3C3;
+  color: var(--conBusInpText);
 }
 
 #msg {
@@ -686,8 +690,8 @@ input[type=submit] {
   height: 44px;
   left: 203px;
   top: 553px;
-  background: #5ADA8D;
-  border: 3px solid #5ADA8D;
+  background: var(--conBusSub);
+  border: 3px solid var(--conBusSub);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 1px;
@@ -701,8 +705,8 @@ input[type=submit] {
   color: #FFFFFF;
 }
 input[type=submit]:hover {
-  background: #47a56c;
-  border: #47a56c;
+  background: #3f9260;
+  border: #3f9260;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -840,7 +844,7 @@ ul {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #fff;
+    background: var(--background);
     opacity: 0;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;

@@ -57,7 +57,12 @@
     --bioGradBlock: linear-gradient(90deg, rgba(255, 110, 127, 0.5) 0%, rgba(191, 233, 255, 0.5) 100%);
     --conCol: #d1d1d1;
     --conHovCol: #cecece;
-    --conBusBor: 1.5px solid #E3E3E3;
+
+    --conBusBor: 1.5px solid #e3e3e3;
+    --conBusSub: #5ADA8D;
+    --conBusInpText: #a8a8a8;
+    --conBusBorder: 2px solid #e3e3e3;
+    --inputColor: #000;
     #resp-dark, #light, #light-globe {
         display: none;
     }
@@ -67,7 +72,7 @@
 }
 
 .dark {
-    --background: #2c2e33;
+    --background: #1C1E21;
     --background-contact: var(--background);
     --textColor: #FAFAFA;
     --banner: var(--background);
@@ -79,8 +84,14 @@
     --bioGradBlock: linear-gradient(90deg, rgba(235, 139, 150, 0.877) 0%, rgba(191, 233, 255, 0.856) 100%);
     --conCol: #202125;
     --conHovCol: #27292e;
-    --conBusBor: none;
-    // --bioGradBlock: linear-gradient(90deg, rgba(190, 135, 142, 0.925) 0%, rgba(191, 233, 255, 0.76) 100%);
+    
+    --conBusBackFocus: #25272A;
+    --conBusBor: 1.5px solid #3b3e41;
+    --conBusSub: #49aa70;
+    --conBusInpText: #616264;
+    --conBusBorder: 2px solid #2E3135;
+    --inputColor: #C3C3C3;
+    --conBusInpTexAfter: #E4E4E4;
     #resp-dark, #light, #light-globe {
         display: contents;
     }

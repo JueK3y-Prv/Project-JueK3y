@@ -137,7 +137,7 @@
   }
   
   .nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
-    color: #C2C5A2;
+    color: var(--hoverColor);
     text-decoration: none;
     transition: .3s;
   }
@@ -147,11 +147,11 @@
     display: block;
     width: 100%;
     height: 2px;
-    background: #C2C5A2;
+    background: var(--hoverColor);
   }
   
   .nav .active_nav {
-    color: #C2C5A2;
+    color: var(--hoverColor);
   }
   
   .settings_resp i {
@@ -169,12 +169,12 @@
   }
   
   a:hover {
-    color: #C2C5A2;
+    color: var(--hoverColor);
     text-decoration: none;
   }
   
   #active {
-    color: #C2C5A2;
+    color: var(--hoverColor);
   }
   
   .underline::after{
@@ -182,7 +182,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #C2C5A2;
+    background: var(--hoverColor);
     transition: width .3s;
   }
   

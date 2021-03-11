@@ -55,7 +55,7 @@ body {
   margin-left: 5.2em;
 }
 .logo:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ body {
           transform: rotate(45deg);
 }
 #nav:checked + .nav-btn i {
-  background: #151522;
+  background: var(--textColor);
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -99,14 +99,14 @@ body {
 }
 
 .nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
-  color: black;
+  color: var(--textColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -117,7 +117,7 @@ body {
   display: block;
   width: 100%;
   height: 2px;
-  background: #C2C5A2;
+  background: var(--hoverColor);
 }
 
 .settings_resp i {
@@ -128,17 +128,17 @@ body {
 }
 
 a {
-  color: #151522;
+  color: var(--textColor);
   text-decoration: none;
   cursor: pointer;
 }
 a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
 }
 
 #active {
-  color: #C2C5A2;
+  color: var(--hoverColor);
 }
 
 .underline::after {
@@ -146,7 +146,7 @@ a:hover {
   display: block;
   width: 0;
   height: 2px;
-  background: #C2C5A2;
+  background: var(--hoverColor);
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
@@ -184,12 +184,12 @@ a:hover {
   padding: 40px 30px;
   border-radius: 40px;
   background: var(--background-contact);
-  -webkit-box-shadow: 20px 20px 40px #d1d1d1, -20px -20px 40px #ffffff;
-          box-shadow: 20px 20px 40px #d1d1d1, -20px -20px 40px #ffffff;
+  -webkit-box-shadow: 20px 20px 40px var(--conCol), -20px -20px 40px var(--background);
+          box-shadow: 20px 20px 40px var(--conCol), -20px -20px 40px var(--background);
 }
 .container .card:hover {
-  -webkit-box-shadow: inset 11px 11px 25px #cecece, inset -11px -11px 25px #ffffff;
-          box-shadow: inset 11px 11px 25px #cecece, inset -11px -11px 25px #ffffff;
+  -webkit-box-shadow: inset 11px 11px 25px var(--conHovCol), inset -11px -11px 25px var(--background);
+          box-shadow: inset 11px 11px 25px var(--conHovCol), inset -11px -11px 25px var(--background);
 }
 .container .card .imgBx {
   position: relative;
@@ -281,25 +281,25 @@ a:hover {
   padding: 10px 20px;
   margin-top: 30px;
   font-size: 16px;
-  color: #fff;
+  color: var(--background);
   text-decoration: none;
   opacity: 0.86;
   border-radius: 22px;
 }
 .container .card .contentBx #business-t a {
-  color: #fff;
+  color: white;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#1758F1), to(#37DBE0));
   background-image: linear-gradient(to right top, #1758F1, #37DBE0);
   opacity: 0.77;
 }
 .container .card .contentBx #private-t a {
-  color: #fff;
+  color: white;
   background: -webkit-gradient(linear, left bottom, right top, from(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
   background: linear-gradient(to right top, #004d7a, #008793, #00bf72, #a8eb12);
   opacity: 0.74;
 }
 .container .card .contentBx #help-t a {
-  color: #fff;
+  color: white;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#E1516A), to(#FEAD2A));
   background-image: linear-gradient(to right top, #E1516A, #FEAD2A);
 }
@@ -428,7 +428,7 @@ a:hover {
   }
   .nav-wrapper ul li a {
     opacity: 0;
-    color: #000;
+    color: var(--textColor);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -455,7 +455,7 @@ a:hover {
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background: var(--textColor);
     border-radius: 2px;
     margin-left: 14px;
   }

@@ -1209,7 +1209,7 @@ function darkCookie() {
     });
 }
 
-/*if (theme) {
+if (theme) {
     body.classList.add(theme);
     if (body.classList.contains("dark")) {
         darkCookie();
@@ -1225,10 +1225,10 @@ else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").
     darkCookie();
     darkFavicon();
 }
-else { */
+else {
     lightCookie();
-    //lightFavicon();
-//}
+    lightFavicon();
+}
 
 // Button Event Handlers
 // Desktop

@@ -5,6 +5,8 @@
     background: var(--background-contact);
 }
 
+
+
 body {
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
@@ -42,7 +44,7 @@ body {
     margin: 2.2em;
     margin-left: 5.2em;
     &:hover {
-        color: #C2C5A2;
+        color: var(--hoverColor);
         text-decoration: none;
     }
 }
@@ -52,7 +54,7 @@ body {
     transform: rotate(45deg);
 
     i {
-        background: #151522;
+        background: var(--textColor);
         transition: transform 0.2s ease;
 
         &:nth-child(1) {
@@ -88,13 +90,13 @@ body {
 }
 
 .nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
-    color: black;
+    color: var(--textColor);
     text-decoration: none;
     transition: .2s;
 }
 
 .nav a:hover, .logo a:hover, .settings a:hover, .settings_resp a:hover, .so-me-resp ul li a:hover {
-    color: #C2C5A2;
+    color: var(--hoverColor);
     text-decoration: none;
     transition: .2s;
 }
@@ -104,7 +106,7 @@ body {
     display: block;
     width: 100%;
     height: 2px;
-    background: #C2C5A2;
+    background: var(--hoverColor);
 }
 
 .settings_resp {
@@ -118,18 +120,18 @@ body {
 }
 
 a {
-    color: #151522;
+    color: var(--textColor);
     text-decoration: none;
     cursor: pointer;
 
     &:hover {
-    color: #C2C5A2;
+    color: var(--hoverColor);
     text-decoration: none;
     }
 }
 
 #active {
-    color: #C2C5A2;
+    color: var(--hoverColor);
 }
 
 .underline {
@@ -138,7 +140,7 @@ a {
     display: block;
     width: 0;
     height: 2px;
-    background: #C2C5A2;
+    background: var(--hoverColor);
     transition: width .3s;
     }
 
@@ -171,10 +173,10 @@ a {
     padding: 40px 30px;
     border-radius: 40px;
     background: var(--background-contact);
-    box-shadow: 20px 20px 40px #d1d1d1, -20px -20px 40px #ffffff;
+    box-shadow: 20px 20px 40px var(--conCol), -20px -20px 40px var(--background);
 
     &:hover {
-        box-shadow: inset 11px 11px 25px #cecece, inset -11px -11px 25px #ffffff;
+        box-shadow: inset 11px 11px 25px var(--conHovCol), inset -11px -11px 25px var(--background);
     }
 
     .imgBx {
@@ -281,26 +283,26 @@ a {
                 padding: 10px 20px;
                 margin-top: 30px;
                 font-size: 16px;
-                color: #fff;
+                color: var(--background);
                 text-decoration: none;
                 opacity: 0.86;
                 border-radius: 22px;
             }
 
             #business-t a {
-                color: #fff;
+                color: white;
                 background-image: linear-gradient(to right top, #1758F1, #37DBE0);
                 opacity: 0.77;
             }
 
             #private-t a {
-                color: #fff;
+                color: white;
                 background: linear-gradient(to right top, #004d7a, #008793, #00bf72, #a8eb12);
                 opacity: 0.74;
             }
 
             #help-t a {
-                color: #fff;
+                color: white;
                 background-image: linear-gradient(to right top, #E1516A, #FEAD2A);
             }
 
@@ -434,7 +436,7 @@ a {
 
         a {
             opacity: 0;
-            color: #000;
+            color: var(--textColor);
             font-size: 24px;
             font-weight: 600;
             letter-spacing: 1.2px;
@@ -464,7 +466,7 @@ a {
         display: block;
         width: 20px;
         height: 2px;
-        background: #000;
+        background: var(--textColor);
         border-radius: 2px;
         margin-left: 14px;
 

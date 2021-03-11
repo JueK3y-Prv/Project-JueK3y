@@ -37,7 +37,7 @@ body {
   display: none;
   height: 115px;
   top: 0;
-  background: #FFFFFF;
+  background: var(--banner);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -58,7 +58,7 @@ body {
           transform: rotate(45deg);
 }
 #nav:checked + .nav-btn i {
-  background: #151522;
+  background: var(--textColor);
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -99,7 +99,7 @@ body {
   transition: 0.3s;
 }
 .settings a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -113,7 +113,7 @@ body {
   display: inline-block;
 }
 .settings_resp a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -150,7 +150,7 @@ body {
   transition: 0.3s;
 }
 .so-me-resp ul li a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -161,25 +161,25 @@ body {
   display: block;
   width: 100%;
   height: 2px;
-  background: #C2C5A2;
+  background: var(--hoverColor);
 }
 
 a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: #151522;
+  color: var(--textColor);
   text-decoration: none;
   cursor: pointer;
 }
 a:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
 }
 
 #active {
-  color: #C2C5A2;
+  color: var(--hoverColor);
 }
 
 .underline::after {
@@ -187,7 +187,7 @@ a:hover {
   display: block;
   width: 0;
   height: 2px;
-  background: #C2C5A2;
+  background: var(--hoverColor);
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
@@ -238,8 +238,7 @@ img {
   height: 32px;
   left: 843px;
   top: 37px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 110, 127, 0.5)), to(rgba(191, 233, 255, 0.5)));
-  background: linear-gradient(90deg, rgba(255, 110, 127, 0.5) 0%, rgba(191, 233, 255, 0.5) 100%);
+  background: var(--bioGradBlock);
 }
 
 #subtitle p {
@@ -402,7 +401,7 @@ img {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #fff;
+    background: var(--background);
     opacity: 0;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;

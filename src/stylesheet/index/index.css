@@ -108,7 +108,7 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: var(--background);
 }
 .overlay1 h1 {
   z-index: 9;
@@ -118,23 +118,10 @@ html {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: "Overlay";
+  color: var(--textColor);
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 10px;
-}
-
-.settings_title {
-  z-index: 9999;
-  position: absolute;
-  right: -33.5%;
-  text-align: left;
-  vertical-align: top;
-}
-.settings_title span {
-  font-size: 50px;
-  color: #F51834;
-  text-align: left;
-  vertical-align: top;
 }
 
 .ovl-settings {
@@ -143,14 +130,15 @@ html {
   width: 33.5%;
   right: -33.5%;
   height: 100%;
-  background: #fff;
+  background: var(--background);
 }
 .ovl-settings a i {
+  background-color: var(--textColor);
   margin-top: 76px;
   margin-left: 545.5px;
 }
 .ovl-settings a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -187,7 +175,7 @@ html {
   font-size: 21px;
   font-weight: normal;
   line-height: 2.3em;
-  color: #000;
+  color: var(--textColor);
   text-transform: uppercase;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -206,7 +194,7 @@ html {
   display: none;
 }
 .settings_resp a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -247,7 +235,7 @@ html {
   transition: 0.3s;
 }
 .logo a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -276,7 +264,7 @@ html {
 .nav ul li {
   list-style: none;
   display: inline-block;
-  color: #fff;
+  color: white;
   padding-right: 36px;
 }
 .nav ul li a {
@@ -285,13 +273,13 @@ html {
   text-decoration: none;
 }
 .nav ul li a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .nav ul li:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -305,7 +293,7 @@ html {
           transform: rotate(45deg);
 }
 #nav:checked + .nav-btn i {
-  background: #000;
+  background: var(--textColor);
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -349,7 +337,7 @@ html {
 }
 .so-me-resp ul li {
   list-style: none;
-  color: #000;
+  color: var(--textColor);
   padding-top: 23px;
 }
 .so-me-resp ul li a {
@@ -359,7 +347,7 @@ html {
   transition: 0.3s;
 }
 .so-me-resp ul li a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -371,7 +359,7 @@ html {
   transition: 0.3s;
 }
 .so-me-resp a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -385,7 +373,7 @@ html {
   right: -4.3em;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  color: #fff;
+  color: white;
   letter-spacing: 4px;
   font-family: "Hauptfont";
 }
@@ -400,11 +388,11 @@ html {
 .myBtn a {
   font-family: "Overlay";
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 .myBtn a:hover {
   text-decoration: none;
-  color: #000;
+  color: var(--textColor);
 }
 .myBtn:hover {
   color: #101010;
@@ -416,7 +404,7 @@ html {
 .myBtn:before {
   content: "";
   position: absolute;
-  background: #fff;
+  background: white;
   bottom: 0;
   left: 0;
   right: 0;
@@ -432,8 +420,8 @@ button {
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 6px;
-  color: #fff;
-  border: 1.5px solid #fff;
+  color: white;
+  border: 1.5px solid white;
   text-transform: uppercase;
   outline: none;
   overflow: hidden;
@@ -458,7 +446,7 @@ button {
 #bio h1 {
   font-family: "Hauptfont";
   font-size: 45px;
-  color: #000;
+  color: var(--textColor);
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
@@ -467,7 +455,7 @@ button {
   font-size: 36px;
   margin-top: 0;
   text-align: center;
-  color: #000;
+  color: var(--textColor);
   font-weight: 400;
 }
 #bio a {
@@ -496,7 +484,7 @@ button {
   transition: 0.3s;
 }
 .settings a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -509,14 +497,14 @@ button {
   transition: 0.3s;
 }
 .contact_icon a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 #active {
-  color: #C2C5A2;
+  color: var(--hoverColor);
 }
 
 .underline::after {
@@ -524,7 +512,7 @@ button {
   display: block;
   width: 0;
   height: 2px;
-  background: #C2C5A2;
+  background: var(--hoverColor);
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
@@ -596,7 +584,7 @@ button {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #fff;
+    background: var(--background);
     opacity: 0;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -637,7 +625,7 @@ button {
   }
   .nav-wrapper ul li a {
     opacity: 0;
-    color: #000;
+    color: var(--textColor);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -662,7 +650,7 @@ button {
     display: block;
     width: 20px;
     height: 2px;
-    background: #fff;
+    background: white;
     border-radius: 2px;
     margin-left: 14px;
   }

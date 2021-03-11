@@ -48,11 +48,15 @@
   --background: #fff;
   --background-contact: #f0f0f0;
   --textColor: #111213;
-  --banner: #FAFAFA;
+  --banner: #fff;
   --bannerGrey: #E0E0E0;
-  --hoverColor: #0203048a;
+  --hoverColor: #C2C5A2;
   --selectionColor: var(--textColor);
   --selectionBackground: #CEDBF0;
+  --slider: brightness(100%);
+  --bioGradBlock: linear-gradient(90deg, rgba(255, 110, 127, 0.5) 0%, rgba(191, 233, 255, 0.5) 100%);
+  --conCol: #d1d1d1;
+  --conHovCol: #cecece;
 }
 .light #resp-dark, .light #light, .light #light-globe {
   display: none;
@@ -63,13 +67,17 @@
 
 .dark {
   --background: #2c2e33;
-  --background-contact: #2c2e33;
+  --background-contact: var(--background);
   --textColor: #FAFAFA;
-  --banner: #111213;
+  --banner: var(--background);
   --bannerGrey: #111213;
-  --hoverColor: #BBC6C6;
+  --hoverColor: #cfd1b5;
   --selectionColor: var(--textColor);
   --selectionBackground: #737d8d;
+  --slider: brightness(85%);
+  --bioGradBlock: linear-gradient(90deg, rgba(235, 139, 150, 0.877) 0%, rgba(191, 233, 255, 0.856) 100%);
+  --conCol: #202125;
+  --conHovCol: #27292e;
 }
 .dark #resp-dark, .dark #light, .dark #light-globe {
   display: contents;
@@ -123,7 +131,7 @@ body {
   padding-right: 36px;
 }
 .nav ul li:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -132,7 +140,7 @@ body {
   color: var(--textColor);
 }
 .nav a:hover {
-  color: #C2C5A2;
+  color: var(--hoverColor);
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -141,10 +149,10 @@ body {
   cursor: not-allowed;
 }
 .nav .active_nav {
-  color: #C2C5A2;
+  color: var(--hoverColor);
 }
 
-.logo, .nav, .so-me-resp, .br {
+.logo, .nav, .so-me-resp, .br, .link {
   user-select: none;
   -o-user-select: none;
   -ms-user-select: none;
@@ -154,5 +162,9 @@ body {
 
 h2 {
   display: none;
+}
+
+.wpcc-message {
+  background: inherit;
 }
 /*# sourceMappingURL=navigation.css.map */

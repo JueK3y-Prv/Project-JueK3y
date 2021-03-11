@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     $('input[type="checkbox"]').change(function() {
           if(this.checked) {
-                $('.logo, a').css('color', 'black');
+                $('.logo, a').css('color', 'var(--textColor)');
                 $('#active').css('color', '#C2C5A2');
                 $('.nav-wrapper').css("display", "block");
                 $('.nav-wrapper').css("left", "0");

@@ -64,7 +64,7 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: var(--background);
     h1 {
         z-index: 9;
         position: absolute;
@@ -72,22 +72,10 @@ html {
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: 'Overlay';
+        color: var(--textColor);
         font-size: 30px;
         font-weight: 400;
         letter-spacing: 10px;
-    }
-}
-.settings_title {
-    z-index: 9999;
-    position: absolute;
-    right: -33.5%;
-    text-align: left;
-    vertical-align: top;
-    span {
-        font-size: 50px;
-        color: #F51834;
-        text-align: left;
-        vertical-align: top;
     }
 }
 .ovl-settings {
@@ -96,14 +84,15 @@ html {
     width: 33.5%;
     right: -33.5%;
     height: 100%;
-    background: #fff;
+    background: var(--background);
     a {
         i {
+            background-color: var(--textColor);
             margin-top: 76px;
             margin-left: 545.5px;
         }
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
@@ -137,7 +126,7 @@ html {
         font-size: 21px;
         font-weight: normal;
         line-height: 2.3em;
-        color: #000;
+        color: var(--textColor);
         text-transform: uppercase;
         transition: .3s;
     }
@@ -154,7 +143,7 @@ html {
     a {
         display: none;
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
@@ -165,6 +154,7 @@ html {
     position: absolute;
 }
 .slider {
+    // filter: var(--slider);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -187,7 +177,7 @@ html {
         text-decoration: none;
         transition: .3s;
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
@@ -210,20 +200,20 @@ html {
         li {
             list-style: none;
             display: inline-block;
-            color: #fff;
+            color: white;
             padding-right: 36px;
             a {
                 cursor: pointer;
                 color: white;
                 text-decoration: none;
                 &:hover {
-                    color: #C2C5A2;
+                    color: var(--hoverColor);
                     text-decoration: none;
                     transition: .2s;
                 }
             }
             &:hover {
-                color: #C2C5A2;
+                color: var(--hoverColor);
                 text-decoration: none;
                 transition: .2s;
             }
@@ -239,7 +229,7 @@ html {
             .nav-btn {
                 transform: rotate(45deg);
                 i {
-                    background: #000;
+                    background: var(--textColor);
                     transition: transform 0.2s ease;
                     &:nth-child(1) {
                         transform: translateY(6px) rotate(45deg);
@@ -284,14 +274,14 @@ html {
     ul {
         li {
             list-style: none;
-            color: #000;
+            color: var(--textColor);
             padding-top: 23px;
             a {
                 color: white;
                 text-decoration: none;
                 transition: .3s;
                 &:hover {
-                    color: #C2C5A2;
+                    color: var(--hoverColor);
                     text-decoration: none;
                     transition: .3s;
                 }
@@ -303,7 +293,7 @@ html {
         text-decoration: none;
         transition: .3s;
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
@@ -315,7 +305,7 @@ html {
     transform: translateY(-50%);
     right: -4.3em;
     transform: rotate(90deg);
-    color: #fff;
+    color: white;
     letter-spacing: 4px;
     font-family: 'Hauptfont';
 }
@@ -327,10 +317,10 @@ html {
     a {
         font-family: 'Overlay';
         text-decoration: none;
-        color: #fff;
+        color: white;
         &:hover {
             text-decoration: none;
-            color: #000;
+            color: var(--textColor);
         }
     }
     &:hover {
@@ -343,7 +333,7 @@ html {
     &:before {
         content: "";
         position: absolute;
-        background: #fff;
+        background: white;
         bottom: 0;
         left: 0;
         right: 0;
@@ -358,8 +348,8 @@ button {
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 6px;
-    color: #fff;
-    border: 1.5px solid #fff;
+    color: white;
+    border: 1.5px solid white;
     text-transform: uppercase;
     outline: none;
     overflow: hidden;
@@ -380,7 +370,7 @@ button {
     h1 {
         font-family: 'Hauptfont';
         font-size: 45px;
-        color: #000;
+        color: var(--textColor);
         font-weight: 700;
         margin-bottom: 10px;
         text-align: center;
@@ -389,7 +379,7 @@ button {
         font-size: 36px;
         margin-top: 0;
         text-align: center;
-        color: #000;
+        color: var(--textColor);
         font-weight: 400;
     }
     a {
@@ -415,7 +405,7 @@ button {
         text-decoration: none;
         transition: .3s;
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
@@ -427,14 +417,14 @@ button {
         text-decoration: none;
         transition: .3s;
         &:hover {
-            color: #C2C5A2;
+            color: var(--hoverColor);
             text-decoration: none;
             transition: .3s;
         }
     }
 }
 #active {
-    color: #C2C5A2;
+    color: var(--hoverColor);
 }
 .underline {
     &::after {
@@ -442,7 +432,7 @@ button {
         display: block;
         width: 0;
         height: 2px;
-        background: #C2C5A2;
+        background: var(--hoverColor);
         transition: width .3s;
     }
     &:hover {
@@ -507,7 +497,7 @@ button {
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: #fff;
+        background: var(--background);
         opacity: 0;
         transition: all 0.2s ease;
         ul {
@@ -547,7 +537,7 @@ button {
                 }
                 a {
                     opacity: 0;
-                    color: #000;
+                    color: var(--textColor);
                     font-size: 24px;
                     font-weight: 600;
                     letter-spacing: 1.2px;
@@ -571,7 +561,7 @@ button {
             display: block;
             width: 20px;
             height: 2px;
-            background: #fff;
+            background: white;
             border-radius: 2px;
             margin-left: 14px;
             &:nth-child(1) {

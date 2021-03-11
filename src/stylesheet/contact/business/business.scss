@@ -35,7 +35,7 @@ body {
     display: none;
     height: 75px;
     top: 0;
-    background: #FFFFFF;
+    background: var(--background);
     box-sizing: border-box;
 }
 
@@ -66,7 +66,7 @@ body {
     ul li {
     list-style: none;
     display: inline-block;
-    color: #fff;
+    color: var(--background);
     padding-right: 36px;
     }
 }
@@ -112,7 +112,7 @@ body {
 }
 
 .nav a, .logo a, .settings a, .settings_resp a, .so-me-resp ul li a {
-    color: black;
+    color: var(--textColor);
     text-decoration: none;
     transition: .3s;
 }
@@ -406,7 +406,7 @@ input {
     /* Danach */
     width: 244px;
     height: 53px;
-    background: #FFFFFF;
+    background: #fff;
     border: 2px solid #E3E3E3;
     box-sizing: border-box;
     border-radius: 3px;

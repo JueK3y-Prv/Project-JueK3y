@@ -57,6 +57,7 @@
   --bioGradBlock: linear-gradient(90deg, rgba(255, 110, 127, 0.5) 0%, rgba(191, 233, 255, 0.5) 100%);
   --conCol: #d1d1d1;
   --conHovCol: #cecece;
+  --conBusBor: 1.5px solid #E3E3E3;
 }
 .light #resp-dark, .light #light, .light #light-globe {
   display: none;
@@ -78,6 +79,7 @@
   --bioGradBlock: linear-gradient(90deg, rgba(235, 139, 150, 0.877) 0%, rgba(191, 233, 255, 0.856) 100%);
   --conCol: #202125;
   --conHovCol: #27292e;
+  --conBusBor: none;
 }
 .dark #resp-dark, .dark #light, .dark #light-globe {
   display: contents;

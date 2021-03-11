@@ -20,6 +20,13 @@ try {
 catch(err) {}
 
 try {
+    document.getElementById('contact-2').onclick = () => {
+        delay('/de/contact')
+    }
+}
+catch(err) {}
+
+try {
     document.getElementById('settings').onclick = () => {
         delay('/de/settings')
     }

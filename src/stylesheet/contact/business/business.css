@@ -92,7 +92,7 @@ body {
           transform: rotate(45deg);
 }
 #nav:checked + .nav-btn i {
-  background: #151522;
+  background: var(--textColor);
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -801,6 +801,10 @@ ul {
     left: 45%;
   }
 
+  .contact-h, .contact-h-u {
+    color: var(--textColor);
+  }
+
   .left {
     left: 5%;
     top: 28%;
@@ -885,7 +889,7 @@ ul {
   }
   .nav-wrapper ul li a {
     opacity: 0;
-    color: #000;
+    color: var(--textColor);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -912,7 +916,7 @@ ul {
     display: block;
     width: 20px;
     height: 2px;
-    background: #000;
+    background: var(--textColor);
     border-radius: 2px;
     margin-left: 14px;
   }

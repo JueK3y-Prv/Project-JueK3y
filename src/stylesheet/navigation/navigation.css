@@ -160,7 +160,7 @@ body {
   -webkit-user-select: none;
 }
 
-h2 {
+h2, .hidden {
   display: none;
 }
 

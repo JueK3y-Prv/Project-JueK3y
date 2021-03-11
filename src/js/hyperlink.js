@@ -3,44 +3,35 @@ try {
         delay('/de/')
     }
 }
-catch(err) {
+catch(err) {}
 
-}
 try {
     document.getElementById('biographie').onclick = () => {
         delay('/de/bio')
     }
 }
-catch(err) {
-
-}
+catch(err) {}
 
 try {
     document.getElementById('contact').onclick = () => {
         delay('/de/contact')
     }
 }
-catch(err) {
-
-}
+catch(err) {}
 
 try {
     document.getElementById('settings').onclick = () => {
         delay('/de/settings')
     }
 }
-catch(err) {
-
-}
+catch(err) {}
 
 try {
     document.getElementById('language').onclick = () => {
         delay('/en/index')
     }
 }
-catch(err) {
-
-}
+catch(err) {}
 
 try {
     document.getElementById('one').onclick = () => {
@@ -67,6 +58,18 @@ try {
         delay('settings#datenschutz')
     }
 }
-catch(err) {
+catch(err) {}
 
+try {
+    document.getElementById('privat').onclick = () => {
+        delay('/de/contact/privat')
+    }
 }
+catch(err) {}
+
+try {
+    document.getElementById('settings-two').onclick = () => {
+        delay('/de/settings')
+    }
+}
+catch(err) {}

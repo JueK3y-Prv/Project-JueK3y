@@ -17,7 +17,7 @@
 @font-face {
 /* Navigation & stuff (Serif)*/
     font-family: 'Hauptfont';
-    src: url('/src/fonts/Everyday/Butler_Regular.otf') format('opentype');
+    src: url('/src/fonts/Cormorant-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -125,7 +125,7 @@ body {
     align-items: center;
     background-color: transparent;
     font-family: 'Hauptfont';
-    font-size: 18px;
+    font-size: 20px;
     line-height: 40px;
     transition: .2s;
     ul {

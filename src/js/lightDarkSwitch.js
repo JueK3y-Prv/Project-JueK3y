@@ -1221,11 +1221,11 @@ if (theme) {
     }
 }
 else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    body.classList.replace("light", "dark");
     darkCookie();
     darkFavicon();
 }
 else {
+    body.classList.replace("dark", "light");
     lightCookie();
     lightFavicon();
 }

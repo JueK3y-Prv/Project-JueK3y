@@ -1,37 +1,3 @@
-/*          Spezifisch        */
-@font-face {      /* (Serif) */
-  font-family: 'Selected';
-  src: url('../fonts/a-trocchi-mittle.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*          Allgemein         */
-@font-face {      /* Logo-Font */
-  font-family: 'Logo';
-  src: url('../fonts/Everyday/Dreamlight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {      /* Navigation & stuff (Serif) */
-  font-family: 'Hauptfont';
-  src: url('../fonts/Everyday/Ogg-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {      /* Titel-f für längere Texte (Sans Serif) */
-  font-family: 'Title';
-  src: url('../fonts/Everyday/apercu-title.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {      /* Text-f für längere Texte (Sans Serif) */
-  font-family: 'Text';
-  src: url('../fonts/Everyday/apercu-text.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   scroll-behavior: smooth;
 }

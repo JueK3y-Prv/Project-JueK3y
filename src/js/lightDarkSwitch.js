@@ -12,15 +12,15 @@ const body = document.body;
 const theme = localStorage.getItem("theme");
 
 function lightFavicon() {
-    favApp.href = "/src/img/favicon/favicon.png";
-    favPNG.href = "/src/img/favicon/favicon.png";
-    favICO.href = "/src/img/favicon/favicon.ico";
+    favApp.href = "/src/img/favicon/simple-favicon.png";
+    favPNG.href = "/src/img/favicon/simple-favicon.png";
+    favICO.href = "/src/img/favicon/simple-favicon.ico";
 }
 
 function darkFavicon() {
-    favApp.href = "/src/img/favicon/favicon-dark.png";
-    favPNG.href = "/src/img/favicon/favicon-dark.png";
-    favICO.href = "/src/img/favicon/favicon-dark.ico";
+    favApp.href = "/src/img/favicon/simple-favicon-dark.png";
+    favPNG.href = "/src/img/favicon/simple-favicon-dark.png";
+    favICO.href = "/src/img/favicon/simple-favicon-dark.ico";
 }
 
 function lightCookie() {

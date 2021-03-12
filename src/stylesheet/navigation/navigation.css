@@ -18,7 +18,7 @@
 @font-face {
   /* Navigation & stuff (Serif)*/
   font-family: "Hauptfont";
-  src: url("/src/fonts/Everyday/Ogg-Regular.ttf") format("truetype");
+  src: url("/src/fonts/Everyday/Butler_Regular.otf");
   font-weight: normal;
   font-style: normal;
 }

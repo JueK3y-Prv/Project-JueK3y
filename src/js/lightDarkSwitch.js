@@ -1209,7 +1209,7 @@ function darkCookie() {
     });
 }
 
-if (theme) {
+/*if (theme) {
     body.classList.add(theme);
     if (body.classList.contains("dark")) {
         darkCookie();
@@ -1219,13 +1219,13 @@ if (theme) {
         lightCookie();
         lightFavicon();
     }
-}
-else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+}*/
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    body.classList.replace("light", "dark");
     darkCookie();
     darkFavicon();
 }
 else {
-    body.classList.replace("dark", "light");
     lightCookie();
     lightFavicon();
 }

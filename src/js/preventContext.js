@@ -25,3 +25,5 @@ document.onkeydown = function(e) {
         return false;
     }
 }
+
+console.log('👋 Hey there! You found a secret cookie 🍪');

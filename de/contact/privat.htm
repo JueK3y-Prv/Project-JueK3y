@@ -66,7 +66,7 @@
         <link rel="stylesheet" href="/src/stylesheet/navigation/navigation.min.css">
         
         <!-- stylesheet -->
-        <link rel="stylesheet" href="/src/stylesheet/contact/business/business.min.css">
+        <link rel="stylesheet" href="/src/stylesheet/contact/privat/privat.min.css">
 
         <!-- Cookiebanner -->
         <link rel="stylesheet" href="/src/stylesheet/cookiebanner/cookiebanner.min.css">
@@ -142,98 +142,96 @@
             </div>
         </div>
         <!-- Content - Site 1 -->
-            <div class="contact">
-                <h1>Persönliche Kontaktaufnahme</h1>
-                <style>h1 { display: none; } </style>
-                <span class="contact-h resp3">Contact.</span>
-                <span class="contact-h-u resp3">- Persönlich</span>
-            </div>
-            <form name="Private Anfrage" method="POST" action="/de/contact/submission.htm" data-netlify="true" netlify-honeypot="bot-field">
-                <div class="resp">
+        <div class="contact">
+            <h1 class="hidden">Geschäftliche Kontaktaufnahme</h1>
+            <h2>Actually, you shouldn't be able to read this. If you still see this after reloading the page, please <a href="https://github.com/JueK3y/juek3y.com/issues/new">report the problem here.</a></h2>
+            <span class="contact-h resp3">Contact.</span>
+            <span class="contact-h-u resp3">- Persönlich</span>
+        </div>
+        <form id="form" name="Private Anfrage" method="POST" action="/de/contact/submission" data-netlify="true" netlify-honeypot="bot-field" data-parsley-validate>
+            <div class="resp">
                 
-                    <p class="hidden">
-                    <style>.hidden{ display: none;}</style>
+                <p class="hidden">
                     <label>Don’t fill this out if you're human: 
                         <input name="bot-field" />
                     </label>
-                    </p>
+                </p>
                     
-                    <!-- Firma -->
-                    <label class="firma-h" for="firma">Firma</label>
-                    <div class="firma-t">
-                        <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
-                    </div>
-        
-                    <!-- Geschlecht -->
-                    <label class="gender-h" for="gender">Geschlecht</label>
-                    <div class="gender-t-m" id="gender" data-validate="Gender is required" title="Ich bin männlich." >
-                        <input class="gender-i-m-r" type="radio" name="männlich" id="male" value="männlich" required>
-                        <label class="male-h" for="männlich">Mann</label>
-                    </div>
-                    <div class="gender-t-f"  title="Ich bin weiblich.">
-                        <input type="radio" name="weiblich" id="female" value="weiblich">
-                        <label class="female-h" for="weiblich">Frau</label>
-                    </div>
-        
-                    <label class="gender-h-w" for="gender"><button type="button" class="gender-wrong" id="wrong">Verklickt?</button></label>
-                    <style>.gender-wrong { display: none; }</style>
-                    <div id="gender-inv"></div>
-                    <div id="gender-val"></div>
-        
-                    <!-- Anrede männlich -->
-                    <div class="gender-t-m-a" data-validate="Gender is required">
-                        <select class="gender-s-m" name="Anrede" id="anrede" title="Auswahl der Anredemöglichkeiten">
-                            <option selected value="">Anrede</option>
-                            <option value="Herr">Herr</option>
-                            <option value="Herr Doktor">Herr Dr.</option>
-                            <option value="Herr Professor">Herr Prof.</option>
-                            <option value="Herr Prof. Dr.">Hr. Prof. Dr.</option>
-                        </select>
-                    </div>
-        
-                    <!-- Anrede weiblich -->
-                    <div class="gender-t-f-a" data-validate="Gender is required">
-                        <select class="gender-s-f" name="Anrede" id="anrede" title="Auswahl der Anredemöglichkeiten">
-                            <option selected value="">Anrede</option>
-                            <option value="Frau">Frau</option>
-                            <option value="Frau Doktor">Frau Dr.</option>
-                            <option value="Frau Professor">Frau Prof.</option>
-                            <option value="Frau Prof. Dr.">Fr. Prof. Dr.</option>
-                        </select>
-                    </div>
-        
-                    <!-- Name -->
-                    <label class="name-h" for="name">Name</label>
-                    <div class="name-t" data-error="Name is required">
-                        <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" title="Ihr Name wird benötigt." required="required"/>
-                    </div>
-        
-                    <!-- E-Mail -->
-                    <label class="email-h" for="email">E-Mail</label>
-                    <div class="email-t" class="validate-input" data-validate = "Valid email is required: a@d.xy">                                                         <!--class="inputWithIcon"-->
-                        <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" title="Ihre E-Mail-Adresse wird benötigt." required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
-                    </div>
-        
-                    <!-- Benötigter Dienst -->
-                    <label class="service-h" for="service">Service</label>
-                    <div class="service-t" data-validate="Service is required">
-                        <select name="service" id="service" required>
-                            <option selected value="">- Auswählen -</option>
-                            <option value="Programmierung">Coding</option>
-                            <option value="Fotografie">Fotografie</option>
-                            <option value="Design">Design</option>
-                            <option value="Sonstiges">Sonstiges</option>
-                        </select>
-                    </div>
-        
-                    <!--- Nachricht -->
-                    <label class="msg-h" for="msg">Nachricht</label>            <!--label-input100-->
-                    <div class="msg-t" data-validate = "Message is required">
-                        <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
-                    </div>
+                <!-- Firma -->
+                <label class="firma-h" for="firma">Firma</label>
+                <div class="firma-t">
+                    <input type="text" name="Firma" id="firma" placeholder="XYZ GmbH" minlength="5"/>
+                </div>
+    
+                <!-- Geschlecht -->
+                <label class="gender-h" for="gender">Geschlecht</label>
+                <div class="gender-t-m" id="gender" data-validate="Gender is required" title="Ich bin männlich." >
+                    <input class="gender-i-m-r" type="radio" name="männlich" id="male" value="männlich" required>
+                    <label class="male-h" for="männlich">Mann</label>
+                </div>
+                <div class="gender-t-f"  title="Ich bin weiblich.">
+                    <input type="radio" name="weiblich" id="female" value="weiblich">
+                    <label class="female-h" for="weiblich">Frau</label>
+                </div>
+    
+                <label class="gender-h-w" for="gender"><button type="button" class="gender-wrong hidden" id="wrong">Verklickt?</button></label>
+                <div id="gender-inv"></div>
+                <div id="gender-val"></div>
+    
+                <!-- Anrede männlich -->
+                <div class="gender-t-m-a" data-validate="Gender is required">
+                    <select class="gender-s-m anrede" name="Anrede" title="Auswahl der Anredemöglichkeiten">
+                        <option selected value="">Anrede</option>
+                        <option value="Herr">Herr</option>
+                        <option value="Herr Doktor">Herr Dr.</option>
+                        <option value="Herr Professor">Herr Prof.</option>
+                        <option value="Herr Prof. Dr.">Hr. Prof. Dr.</option>
+                    </select>
+                </div>
+    
+                <!-- Anrede weiblich -->
+                <div class="gender-t-f-a" data-validate="Gender is required">
+                    <select class="gender-s-f anrede" name="Anrede" title="Auswahl der Anredemöglichkeiten">
+                        <option selected value="">Anrede</option>
+                        <option value="Frau">Frau</option>
+                        <option value="Frau Doktor">Frau Dr.</option>
+                        <option value="Frau Professor">Frau Prof.</option>
+                        <option value="Frau Prof. Dr.">Fr. Prof. Dr.</option>
+                    </select>
+                </div>
+    
+                <!-- Name -->
+                <label class="name-h" for="name">Name</label>
+                <div class="name-t" data-error="Name is required">
+                    <input type="text" name="Name" id="name" placeholder="John Doe" minlength="5" title="Ihr Name wird benötigt." required="required"/>
+                </div>
+    
+                <!-- E-Mail -->
+                <label class="email-h" for="email">E-Mail</label>
+                <div class="email-t" class="validate-input" data-validate = "Valid email is required: a@d.xy">
+                    <input type="email" name="E-Mail" id="email" placeholder="beispiel@gmail.com" minlength="6" title="Ihre E-Mail-Adresse wird benötigt." required="required"/>            <!--<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>-->
+                </div>
+    
+                <!-- Benötigter Dienst -->
+                <label class="service-h" for="service">Service</label>
+                <div class="service-t" data-validate="Service is required">
+                    <select name="service" id="service" required>
+                        <option selected value="">- Auswählen -</option>
+                        <option value="Programmierung">Coding</option>
+                        <option value="Fotografie">Fotografie</option>
+                        <option value="Design">Design</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+    
+                <!--- Nachricht -->
+                <label class="msg-h" for="msg">Nachricht</label>
+                <div class="msg-t" data-validate = "Message is required">
+                    <textarea name="message" id="msg" placeholder="Schreibe etwas..." rows="7" minlength="15" required="required"></textarea>
+                </div>
         
                 <ul class="action">
-                    <li><input type="submit"  class="button_primary" value="Send message"/></li>
+                    <li><input type="submit" class="button_primary" value="Send message"/></li>
                 </ul>
                 </div>
             </form>
@@ -246,94 +244,5 @@
                     <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-
-        <!--Gender-->
-        <script defer type="text/JavaScript">
-        // Wrong gender selected
-        $(document).ready(function() {
-            $(".gender-wrong").click(function(){
-                $('.gender-t-m').show();
-                $('.gender-t-m-a').hide();      
-                $('.gender-t-f').show(); 
-                $('.gender-t-f-a').hide();  
-                $('.gender-wrong').hide();  
-                $('input[type="radio"]').prop('checked', false);
-            });
-            $('input[type="radio"]').click(function() {
-                //Männlich
-                if($(this).attr('id') == 'male') {
-                    $('.gender-t-m').show();
-                    $('.gender-t-m-a').show();      
-                    $('.gender-t-f').hide(); 
-                    $('.gender-t-f-a').hide(); 
-                    $('.gender-wrong').show();       
-                }
-                //Weiblich
-                else if($(this).attr('id') == 'female') {
-                    $('.gender-t-m').hide();  
-                    $('.gender-t-m-a').hide();      
-                    $('.gender-t-f').show(); 
-                    $('.gender-t-f-a').show();  
-                    $('.gender-wrong').show();  
-                }
-                //None
-                else {
-                    $('.gender-t-m').hide();
-                    $('.gender-t-f-a').hide();     
-                    $('.gender-t-f').hide();
-                    $('.gender-t-f-a').hide();   
-                    $('.gender-wrong').hide();  
-                }
-            });
-        });
-        </script>
-
-        <script> 
-        // Required attribute
-        $(document).ready(function() {
-            $(".gender-t-m").click(function() {
-                $('.gender-s-m').attr('required', true); 
-            });
-        }); 
-        $(document).ready(function(){
-            $(".gender-t-f").click(function() {
-                $('.gender-s-f').attr('required', true); 
-                $('.gender-i-m-r').attr('required', false); 
-            });
-        });
-        $(document).ready(function(){
-            $(".gender-wrong").click(function() {
-                $('.gender-s-f').attr('required', false); 
-                $('.gender-s-m').attr('required', false); 
-            });
-        });
-        </script>
-
-        <script async type="text/JavaScript">
-        //Responsive
-        $(document).ready(function() {  
-            $('input[type="checkbox"]').val(this.checked);
-
-            $('input[type="checkbox"]').change(function() {
-                if(this.checked) {
-                    $('.nav-wrapper').css("display", "block");
-                    $('.so-me-resp').css("display", "flex");
-                }
-                else {
-                    $('.nav-wrapper').css("display", "none");
-                    $('.so-me-resp').css("display", "none");
-                }
-            });
-        });
-        </script>
-        
-        <script async type="text/JavaScript">
-        $(document).ready(function() { 
-            if ($(window).width() > 915) {
-                $('.resp4').remove();
-            }
-        })
-        </script>
-
     </body>
 </html>

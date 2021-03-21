@@ -68,6 +68,13 @@ try {
 catch(err) {}
 
 try {
+    document.getElementById('business').onclick = () => {
+        delay('/de/contact/business')
+    }
+}
+catch(err) {}
+
+try {
     document.getElementById('privat').onclick = () => {
         delay('/de/contact/privat')
     }
@@ -77,6 +84,13 @@ catch(err) {}
 try {
     document.getElementById('settings-two').onclick = () => {
         delay('/de/settings')
+    }
+}
+catch(err) {}
+
+try {
+    document.getElementById('settings-three').onclick = () => {
+        delay('/de/settings#FAQ')
     }
 }
 catch(err) {}

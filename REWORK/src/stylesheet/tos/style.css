@@ -1,0 +1,281 @@
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+    @import url(https://fonts.google.com/specimen/Julius+Sans+One);
+    @import url(https://fonts.google.com/specimen/Josefin+Slab);
+    @import url(https://fonts.adobe.com/fonts/sofia);
+    @import url(https://fonts.adobe.com/fonts/ltc-bodoni-175);
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body {
+     margin: 0;
+     font-family: 'ltc-bodoni-175', sans-serif;
+        }
+
+    button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1.5px solid #fff;
+  width: 120px;
+  background: linear-gradient(90deg, #888 50%, #fff 50%); /*#888 zu black*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  font-size: 16px;
+}
+
+    button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, black 50%, transparent 50%);
+  z-index: -1;
+}
+
+    button, button:after {
+  background-size: 300%;
+  background-position: 100%;
+  transition: .5s;
+}
+
+    button:hover, button:hover:after {
+  background-position: 0;
+    border: 2px solid #888;    /*#888 zu #000*/
+}
+
+
+
+
+span {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1.5px solid #000;
+    width: 120px;
+    background: linear-gradient(90deg, #777 50%, #000 50%); /*black zu #ECEDEF*/   
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    font-size: 16px;
+    color: #fff;  
+    }
+  
+  span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, black 50%, transparent 50%);
+    z-index: -1;
+  }
+  
+  span, span:after {
+    background-size: 300%;
+    background-position: 100%;
+    transition: .5s;
+  }
+  
+  span:hover, span:hover:after {
+    background-position: 0;
+    border: 2px solid #777; /*#777 zu black*/
+    color: #fff; }
+
+
+    .oben {
+        background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Wasser2Ready.jpg);
+        background-position: center;
+        background-size: cover;
+        background-color: #ccc;
+        height: 1100px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .unten {
+       background-color: #FFFFFF;
+    }
+
+
+    .oben2 {
+        background-image: url(BilderTitle.jpg);
+        background-position: center;
+        background-size: cover;
+        background-color: #ccc;
+        min-height: 1100px;
+        max-height: 1100px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .unten2 {
+       background-color: #ECEDEF;
+       font-family: 'Ubuntu', sans-serif;
+    }
+
+
+    #header {
+        height: 150px;
+        line-height: 140px;
+    }
+
+    #header a, a:after {
+        color: #fff;
+        text-decoration: none;
+
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: .5s;
+    }   
+
+    #header a:hover {
+        text-decoration: blink;
+        color: rgba(229, 229, 229, 0.7);
+        transition: .5s;
+    }
+
+    #header-title {
+        display: block;
+        float: left;
+
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #header-tagline {
+        float: left;
+        line-height: auto;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #header-nav {
+        display: block;
+        float: right;
+        margin-top: 0;
+    }
+
+    #header-nav li {
+        display: inline;
+        padding-left: 20px;
+    }
+
+    #header2 {
+	height: 150px;
+	line-height: 140px;
+    }
+
+    #header2 a, a:after {
+	color: #000;
+	text-decoration: none;
+	
+	text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: .5s;
+    }
+
+    #header2 a:hover {
+	color: #777;
+    text-decoration: blink;
+    transition: .5s;
+    }
+
+    .container{
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    #footer {
+        background-color: #222222;
+        padding: 50px 0;
+    }
+
+    #footer a {
+        color: #C5EDC6;
+        text-decoration: none;
+    }
+
+    #footer a:hover {
+        color: white;
+    }
+
+    #footer h4 {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    #footer p {
+        color: white;
+    }
+
+    .column {
+        min-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .language {
+        float: right;
+    }
+
+    a {
+        color:#000;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+
+    p {
+     line-height: 1.5;
+    }
+
+    .post {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 60px 0;
+    }
+
+    .about {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 60px 0;
+     text-align: center;
+    }
+
+    .post-author img, .about-author img{
+     width: 75px;
+     height: 75px;
+     vertical-align: middle;
+     border-radius: 50%;
+    }
+
+    .post-author span, .about-author span{
+     margin-left: 16px;
+    }
+
+    .post-date{
+     color: #828d8f;
+
+     font-size: 14px;
+     font-weight: bold;
+
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+    }
+
+    h1, h2, h3, h4 {
+     color: #333;
+    }
+
+    .post-content:nth-child(even) {
+      background-color: #E6E6E6;
+      border: 1.5px #E6E6E6 solid;
+      padding: 1.2%;
+    }

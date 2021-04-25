@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--- The source code of this file is subject to German copyright law and is protected by copyright according to § 2 UrhG. Any use other than personal use may only be made with the permission of the owner of this Website (Julian Kennedy). ©2020 by Julian Kennedy (alias JueK3y) -->
+<html lang="de">
+    <head>
+        <!-------   META  ------->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="imagetoolbar" content="no" />
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+
+        <meta name="og:site_name"     content="JueK3y">
+        <meta name="og:url"           content="https://juek3y.com/de/settings">
+        <meta name="og:title"         content="Einstellungen | JueK3y">
+        <meta name="og:type"          content="portfolio">
+        <meta name="og:description"   content="Ein persönliches Portfolio über Julian Kennedy mit den 3 Hauptthemen Programmierung, Fotografie und Design. Die Webseite ist komplett 'self-coded'.">
+        <meta name="og:locale"        content="de_DE">
+
+        <meta name="author"           content="Julian Kennedy (alias JueK3y)">
+        <meta name="publisher"        content="Julian Kennedy (alias JueK3y)">
+        <meta name="title-tag"        content="JueK3y | A personal website about coding, photography and design | Offical Website">
+        <meta name="description"      content="JueK3y | A personal website about coding, photography and design | Offical Website">
+        <meta name="keywords"         content="Julian Kennedy, JueK3y, personal, portfolio, coding, photography, design, offical, german">
+        <meta name="page-topic"       content="Biographie">
+        <meta name="content-language" content="de">
+        <meta name="language"         content="Deutsch">
+        
+        <meta name="robots"           content="index, follow, archive">
+        <meta name="googlebot"        content="index, follow, archive">
+        <meta name="revisit"          content="After 10 days">
+
+        <meta name="color-scheme" content="dark light">
+        
+        
+        <!-------   Link  ------->
+        <link rel="alternate" href="https://juek3y.com/en/settings" hreflang="en">
+        <link rel="alternate" href="https://juek3y.com/de/settings" hreflang="x-default">
+        <link rel="canonical" href="https://juek3y.com/de/settings">
+
+        <link rel="preload" href="/src/stylesheet/navigation/navigation.min.css" as="style" type="text/css" />
+        <link rel="preload" href="/src/stylesheet/settings/settings" as="style" type="text/css" />
+        <link rel="preload" href="/src/stylesheet/foaw/font-awesome.min.css" as="style" type="text/css" />
+        
+        <link rel="preload" href="/src/fonts/Everyday/Bio/ExodusDemo-Regular.otf" as="font" type="font/otf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/Everyday/apercu-text.ttf" as="font" type="font/ttf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/Everyday/Dreamlight.ttf" as="font" type="font/ttf" crossorigin="" />
+        <link rel="preload" href="/src/fonts/PS-Aelyn-Regular.otf" as="font" type="font/otf" crossorigin="" />
+
+
+        <!-- Statcounter code for Analyse -->
+        <!-- <script async type="text/javascript">
+        var sc_project=12386052; 
+        var sc_invisible=1; 
+        var sc_security="6ab04559"; 
+        var sc_https=1; 
+        </script>
+        <script async type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+        <noscript><div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12386052/0/6ab04559/1/" alt="Web Analytics"></a></div></noscript>-->
+        <!-- End of Statcounter Code -->
+            
+            
+        <!-------   JS  ------->
+        <!-- Page fade out -->
+        <script defer src="/src/js/fadeOut.js"></script>
+
+        <!-- jquery -->
+        <script src="/src/js/jquery-3.3.1.js"></script>
+
+
+        <!-------   CSS  ------->
+        <!-- Navigation -->
+        <link rel="stylesheet" href="/src/stylesheet/navigation/navigation.min.css">
+        
+        <!--stylesheet-->
+        <link rel="stylesheet" href="/src/stylesheet/settings/settings.css">
+        
+        <!-- hint.css -->
+        <link rel="stylesheet" href="/src/stylesheet/hint.css">
+        
+        <!--scrollbar-->
+        <link rel="stylesheet" href="/src/stylesheet/scrollbar.css">
+
+        <!--font-awesome-->
+        <link rel="stylesheet" media="all" href="/src/stylesheet/foaw/font-awesome.min.css">
+
+        
+        <!-------   JS  ------->    
+        <!-- jquery -->
+        <script src="/src/js/jquery-3.3.1.js"></script>
+
+        <!-- Page fade out -->
+        <script defer src="/src/js/fadeOut.js"></script>
+
+        <!-- Page fade out -->
+        <script defer src="/src/js/lightDarkSwitch.js"></script>
+
+        <!-- Contextmenu -->
+        <script async src="/src/js/preventContext.js"></script>
+
+        <!-- Hyperlink -->
+        <script async src="/src/js/hyperlink.js"></script>
+
+
+        <!-------   IMG  ------->
+        <!--Fav Icon-->
+        <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+        <link id="fav-png" rel="icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+        <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/simple-favicon-dark.ico" type="image/ico" />
+
+        <title>Einstellungen | JueK3y</title>
+    </head>
+    <body class="light" translate="no">
+        <!-- Navigation -->
+        <div class="sticky-nav">
+            <div class="logo"><a class="clk" id="logo" title="Zum Startbildschirm">JueK3y</a></div>
+            <div class="box"></div>
+            <div class="nav">
+                <input type="checkbox" id="nav" class="hidden">
+                <label for="nav" class="nav-btn">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li class="clk"><a id="biographie" title="Über meine Person" class="underline">Biographie</a></li>
+                        <!--<li class="clk"><a href="javascript:delay('experience')" title="Meine Erfahrung" class="underline">Experience</a></li>-->
+                        <li><a href="#" title="Im Moment noch nicht zugänglich" id="na" class="underline">Experience</a></li>
+                        <li class="clk"><a id="contact" title="Kontaktmöglichkeit" class="underline">Kontakt</a></li>
+                        <li><a href="#" id="active" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a id="language" class="clk" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                        <li class="settings_resp clk"><a class="active_nav" id="active" title="Einstellungen"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="so-me-resp">
+            <ul>
+                <li><a href="https://www.github.com/juek3y" title="GitHub || Coding" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/juek3y" title="Instagram || Fotografie" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.twitter.com/juek3y" title="Twitter || News" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="outer-box">
+            <div class="select-outer-box">
+                <a class="select-inner-box settings" href="#settings">
+                    <div class="line1"></div>
+                    <span class="select-text">Einstellungen</span>
+                </a>
+                <a class="select-inner-box story" href="#story">
+                    <div class="line2"></div>
+                    <span class="select-text">Geschichte</span>
+                </a>
+                <a class="select-inner-box faq" href="#faq">
+                    <div class="line3"></div>
+                    <span class="select-text">Häufige Fragen</span>
+                </a>
+                <a class="select-inner-box contact" href="#contact">
+                    <div class="line4"></div>
+                    <span class="select-text">Tech. Kontaktaufnahme</span>
+                </a>
+                <a class="select-inner-box impressum" href="#impressum">
+                    <div class="line5"></div>
+                    <span class="select-text">Impressum</span>
+                </a>
+                <!--<div class="select-hover-outer-box">
+                    <a class="select-hover-inner-box" href="settings#website-betreiber">
+                        <span class="select-text">Website-Betreiber</span>
+                    </a>
+                    <a class="select-hover-inner-box" href="settings#links">
+                        <span class="select-text">Haftung für Links</span>
+                    </a>
+                    <a class="select-hover-inner-box" href="settings#urheberrecht">
+                        <span class="select-text">Urheberrecht</span>
+                    </a>
+                    <a class="select-hover-inner-box" href="settings#links-dritter">
+                        <span class="select-text">Inhalte Dritter</span>
+                    </a>
+                </div>-->
+                <a class="select-inner-box datenschutz" href="#datenschutz">
+                    <div class="line6"></div>
+                    <span class="select-text">Datenschutz</span>
+                </a>
+            </div>
+            <h1>Einstellungen, FAQ, Issue Tracker und Rechtliches</h1>
+            <style>h1 { display: none; } </style>
+            <br id="settings">
+            <div class="content-box">
+                <div class="desk">
+                    <p class="content-title">Einstellungen</p>
+                    <p class="content-text">Daran arbeite ich noch. Vorerst gibt es hier einen Lorem Ipsum Text als Lückenfüller. Finde raus, <span class="underline--magical"><a href="https://www.loremipsum.de/ueber_lorem_ipsum">was Lorem Ipsum ist.</a></span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur<br id="story"> sadipscing elitr, 
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+                <div class="desk">
+                    <p class="content-title">Geschichte</p>
+                    <p class="content-text">
+                        Mit den Grundlagen der Webentwicklung habe ich mich ab Sommer 2019 beschäftigt, 
+                        meine erste Homepage habe ich am 25. August 2019 auf GitHub veröffentlicht. 
+                        Seitdem beschäftige ich mich durchgehend mit der Webentwicklung und dem Webdesign, 
+                        weshalb ich mich auch dazu entschieden habe, die Website so umfangreich zu gestalten, 
+                        wie<br id="faq"> es für mich möglich ist. Das Wissen &amp; die Anwendung habe ich mir weitesgehend selber beigebracht, 
+                        weshalb ich stetig Änderungen und Verbesserungen vornehmen werde.</p>
+                </div>
+                <div class="c-faq">
+                    <p class="content-title">Häufige Fragen</p>
+                    <div class="content-text">
+                        <span class="content-text-title-it">"Wurde die Website mit einem Homepage-Baukasten erstellt?"</span>
+                        <br>Nein, die Website wurde von Grund auf selbst programmiert.
+                        <br>
+                        <br><span class="content-text-title-it">"Seit wann gibt es diese Website schon?"</span>
+                        <br>Am <span id="color">25. August 2019</span> habe ich das erste Mal etwas unter dieser Domain veröffentlicht.
+                        <br>
+                        <br><span class="content-text-title-it">"Über welchen Anbieter hast du deine Website gehostet?"</span>
+                        <br><span class="underline--magical"><a href="https://www.netlify.com/" title="" target="_blank">Netlify</a></span> greift auf den Code (hinterlegt in GitHub) zu und hostet für mich die Website [Stand 01.04.2020].
+                        <br>
+                        <br><span class="content-text-title-it">"Ich komme mit der Navigation nicht zurecht."</span>
+                        <br>[Desktop-Version] In der obersten Leiste findest du 7 Wörter/Symbole.
+                            <br>Bei Wörtern/Symbolen mit <span id="color">folgender Farbe</span> hast du diese bereits ausgewählt bzw. befindest dich bereits bei dem jeweiligen Punkt.
+                            <br>Bei einem Links-Klick auf das jeweilige Wort/Symbol gelangst du zu den folgenden Punkten (von Links nach Rechts - Liste ist interaktiv):
+                            <br><a href="index" id="color-hover">Start</a>, <a href="bio" id="color-hover">Biographie</a>, <a href="experience" id="color-hover">Experience</a>, <a href="contact" id="color-hover">Kontakt</a>, <a href="" id="color"><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">Websitesprache auf Deutsch umstellen</span></a>, <a href="/en/settings" id="color-hover">Websitesprache auf Englisch umstellen</a>, <a href="" id="color"><span class="hint--bottom" aria-label="Du befindest dich bereits bei den Einstellungen">Einstellungen</span></a>
+                        <br>
+                        <br><span class="content-text-title-it">"Verschieden Inhalte brauchen lange zum Laden / werden nicht korrekt angezeigt."</span>
+                        <br>Bitte achte darauf, dass dein Gerät eine gute Internetverbindung hat (4G / LTE). Bei einer schlechteren Verbindung kann es zu längeren Ladezeiten und fehlerhafter Anzeige kommen. 
+                        <br>Wenn du der Meinung bist, dass etwas trotzdessen nicht korrekt angezeigt wird, dann schildere mir bitte den Fehler beim Punkt <span class="underline--magical"><a href="#contact">'Technische Kontaktaufnahme'</a></span>. Danke für die Hilfe!
+                        <br>
+                        <br><span class="content-text-title-it">"Ich habe einen Fehler gefunden (Webpage nicht zugänglich, falsche Umleitung, Inhalte werden nicht angezeigt...)."</span>
+                        <br>Bitte schildere mir den Fehler im Issue Tracker bei <span class="underline--magical"><a href="#contact">'Technische Kontaktaufnahme'</a></span>. Danke für deine Unterstützung!
+                        <br>
+                        <br><span class="content-text-title-it">"Ich würde Folgendes anders machen: ..."</span>
+                        <br>Fülle für Verbesserungsvorschläge bitte den Issue Tracker im Punkt <span class="underline--magical"><a href="#contact">'Technische Kontaktaufnahme'</a></span> aus.
+                        <br>
+                        <br><span class="content-text-title-it">"Ich habe Fragen zum Urheberrecht."</span>
+                        <br>1. Navigiere zum Punkt <span class="underline--magical"><a href="#urheberrecht">'Urheberrecht'</a></span>.
+                        <br>2. Bei weiteren Fragen kannst du:
+                        <br>    - den Issue Tracker im Punkt <span class="underline--magical"><a href="#contact">'Technische Kontaktaufnahme'</a></span> benutzen.
+                        <br>    - das <span class="underline--magical"><a href="/de/contact/business">'Kontaktformular für geschäftliche Dinge'</a></span> benutzen.
+                        <br>
+                        <br><span class="content-text-title-it">"Ich habe Fragen zu sonstigen rechtlichen Dingen."</span>
+                        <br>1. Lies dir das <span class="underline--magical"><a href="#impressum">Impressum</a></span> durch.
+                        <br id="contact">2. Bei weiteren Fragen kannst du das Kontaktformular 'Technische Kontaktaufnahme' ausfüllen.</p>
+                </div>
+                <div>
+                    <p class="content-title">Tech. Kontaktaufnahme</p>
+                    <p class="content-text">
+                        Da sich diese Website noch im BETA-Zustand befindet, kann es durchaus zu unerwünschten Problemem kommen.
+                        <br>Bitte nutze den Issue Tracker von GitHub bei folgenden Situationen:
+                        <br>- Hinweis auf mögliche Fehlfunktion der Website
+                        <br>- Verbesserungsvorschlag für die Website
+                        <br>- Fragen zum Urheberrecht (Punkt <span class="underline--magical"><a href="#urheberrecht">'Urheberrecht'</a></span> beachten)
+                        <br>- Fragen zu sonstigen rechtlichen Dingen
+                        <br>- Fragen zu Codeabschnitten
+                        <br>- Weiterverwendung von Bildern, Inhalten oder Programmabschnitten
+                       <br>
+                        <br>Zum Issue Tracker: <span class="underline--magical"><a href="https://github.com/JueK3y/juek3y.com/issues">GitHub Issue Tracker</a></span>
+                        <br>
+                        <br>Fortschritt von bestehenden Issues (&amp; Features): <span class="underline--magical"><a href="https://github.com/JueK3y/juek3y.com/projects">GitHub Projects</a></span>
+                        <br><br id="impressum">Wenn dein Punkt nicht mit aufgelistet ist, nutze bitte das <span class="underline--magical"><a href="contact">geschäftliche/private Kontaktformular</a></span>.
+                    </p>
+                </div>
+                <div class="c-impressum">
+                    <p class="content-title">Impressum</p>
+                    <p class="content-text">
+                        <span id="website-betreiber">Verantwortlich für Inhalte i. S. v § 5 TMG</span>
+                        <br>Julian Kennedy
+                        <br>Musterstraße 8
+                        <br>87878 Ort
+                        <br>Deutschland
+                        <br>[Da die Website noch in der Build-Phase ist, stehen hier keine echten Daten.
+                        Wenn es trotzdem Fragen gibt, kontaktiere mich bitte per Kontaktforum oder E-Mail.]
+                        <br>
+                        <br>Kontakt:
+                        <br>E-Mail: <span class="underline--magical"><a href="mailto: juek3y@gmail.com?subject=Impressum%20-%20JueK3y">impressum@juek3y.com</a></span>
+                        <br><span class="underline--magical"><a href="/de/contact/privat" title="Kontaktformular für private Anfragen">Privates</a></span> oder <span class="underline--magical"><a href="/de/contact/business" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a></span> Kontaktformular
+                        <br>
+                        <br>
+                        <!-- Nur nötig für Unternehmen 
+                        <br><span>Streitschlichtung</span>
+                        <br>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren (nach VSBG) vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                        <br>Verantwortlich für zentrale journalistisch-redaktionell gestaltete Inhalte i.S.v. § 55 Abs. 2 RStV
+                        <br>
+                        <br>Herr Julian Kennedy
+                        <br>Straße
+                        <br>Ort
+                        <br>Deutschland
+                        <br>[Da die Website noch in der Build-Phase ist, stehen hier keine echten Daten.
+                        <br>Wenn du trotzdem Fragen hast, kontaktiere mich bitte per Kontaktforum oder E-Mail.]
+                        <br>
+                        <br>Kontakt:
+                        <br>E-Mail: juek3y@gmail.com
+                        <br><a href="contact/privat" title="Kontaktformular für private Anfragen">Privates</a> oder <a href="contact/business" title="Kontaktformular für geschäftliche Anfragen">geschäftliches</a> Kontaktformular
+                        <br>
+                        <br>
+                        <br><span>Haftung für Inhalte</span>
+                        <br>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht generell verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch regelmäßig erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                        <br>
+                        <br>-->
+                        <br><span id="links">Haftung für Links</span>
+                        <br>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. 
+                        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. 
+                        Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. 
+                        Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. 
+                        Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch<br id="urheberrecht"> ohne konkrete Anhaltspunkte 
+                        einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links 
+                        umgehend entfernen.
+                        <br>
+                        <br>
+                        <br><span>Urheberrecht</span>
+                        <br>Die von uns oder in unserem Auftrag erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
+                        Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
+                        Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
+                        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. 
+                        Insbesondere werden Inhalte Dritter als solche gekennzeichnet. 
+                        Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis (Unter technische Kontaktaufnahme). 
+                        Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                        <br>
+                        <br>
+                        <br><span id="links-dritter">Von Dritte bereitgestellte Inhalte</span>
+                        <br>- <span class="underline--magical"><a href="https://fontawesome.com/v4.7.0/icon/cog">Settings icon by fontawesome</a></span>
+                        <br>- <span class="underline--magical"><a href="https://icons8.com/icon/48545/organization">Organization icon by Icons8</a></span>
+                        <br id="datenschutz">- <span class="underline--magical"><a href="https://icons8.com/icon/103851/account">Account icon by Icons8</a></span>
+                        <br>- <span class="underline--magical"><a href="https://icons8.com/icon/103873/fragezeichen">Question icon by Icons8</a></span>
+                    </p>
+                </div>
+                <div class="c-datenschutz">
+                    <p class="content-title">Datenschutz</p>
+                    <p class="content-text">Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.
+                        <br><br>
+                        Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt), gilt als „Verarbeitung“ jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.
+                        <br><br>
+                        Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir entweder allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung entscheiden. Zudem informieren wir Sie nachfolgend über die von uns zu Optimierungszwecken sowie zur Steigerung der Nutzungsqualität eingesetzten Fremdkomponenten, soweit hierdurch Dritte Daten in wiederum eigener Verantwortung verarbeiten.
+                        <br><br>
+                        Unsere Datenschutzerklärung ist wie folgt gegliedert:
+                        <br id="one"><br>
+                        <span class="underline--magical"><a href="#one">I. Informationen über uns als Verantwortliche</a></span><br>
+                        <span class="underline--magical"><a href="#two">II. Rechte der Nutzer und Betroffenen</a></span><br>
+                        <span class="underline--magical"><a href="#three">III. Informationen zur Datenverarbeitung</a></span><br>
+                        <br>
+                        <span id="bold">I. Informationen über uns als Verantwortliche</span>
+                        <br>
+                        Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:
+                        <br><br>
+                        Julian Kennedy<br>
+                        Musterstraße 8<br>
+                        87878 Ort<br>
+                        Deutschland
+                        <br id="two"><br>
+                        Kontakt:<br>
+                        E-Mail: <span class="underline--magical"><a href="mailto: juek3y@gmail.com?subject=Datenschutz%20-%20JueK3y">datenschutz@juek3y.com</a></span><br>
+                        <span class="underline--magical"><a href="/de/contact/privat">Privates</a></span> oder <span class="underline--magical"><a href="/de/contact/business">geschäftliches</a></span> Kontaktformular
+                        <br><br id="two">
+                        <span id="bold">II. Rechte der Nutzer und Betroffenen</span><br>
+                        Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung haben die Nutzer und Betroffenen das Recht
+                        <br>- auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft über die verarbeiteten Daten, auf weitere Informationen über die Datenverarbeitung sowie auf Kopien der Daten (vgl. auch Art. 15 DSGVO);
+                        <br>- auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten (vgl. auch Art. 16 DSGVO);
+                        <br>- auf unverzügliche Löschung der sie betreffenden Daten (vgl. auch Art. 17 DSGVO), oder, alternativ, soweit eine weitere Verarbeitung gemäß Art. 17 Abs. 3 DSGVO erforderlich ist, auf Einschränkung der Verarbeitung nach Maßgabe von Art. 18 DSGVO;
+                        <br>- auf Erhalt der sie betreffenden und von ihnen bereitgestellten Daten und auf Übermittlung dieser Daten an andere Anbieter/Verantwortliche (vgl. auch Art. 20 DSGVO);
+                        <br>- auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht sind, dass die sie betreffenden Daten durch den Anbieter unter Verstoß gegen datenschutzrechtliche Bestimmungen verarbeitet werden (vgl. auch Art. 77 DSGVO).
+                        <br><br>Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede Berichtigung oder Löschung von Daten oder die Einschränkung der Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese Empfänger.
+                        <br><br>
+                        Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch <span id="three"></span>gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.
+                        <br><br>
+                        <span id="bold">III. Informationen zur Datenverarbeitung</span>
+                        <br>Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen und nachfolgend keine anderslautenden Angaben zu einzelnen Verarbeitungsverfahren gemacht werden.
+                        <br>
+                        <br><span id="bold">Serverdaten</span>
+                        <br>[Genaueres im Punkt "Analytics &amp; Cookies"] Aus technischen Gründen, insbesondere zur Gewährleistung eines sicheren und stabilen Internetauftritts, werden Daten durch Ihren Internet-Browser an uns bzw. an unseren Webspace-Provider übermittelt. Mit diesen sog. Server-Logfiles werden u.a. Typ und Version Ihres Internetbrowsers, das Betriebssystem, die Website, von der aus Sie auf unseren Internetauftritt gewechselt haben (Referrer URL), die Website(s) unseres Internetauftritts, die Sie besuchen, Datum und Uhrzeit des jeweiligen Zugriffs sowie die IP-Adresse des Internetanschlusses, von dem aus die Nutzung unseres Internetauftritts erfolgt, erhoben.
+                        <br>
+                        <br>Diese so erhobenen Daten werden vorrübergehend gespeichert, dies jedoch nicht gemeinsam mit anderen Daten von Ihnen.
+                        <br>
+                        <br>Diese Speicherung erfolgt auf der Rechtsgrundlage von Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Verbesserung, Stabilität, Funktionalität und Sicherheit unseres Internetauftritts.
+                        <br>
+                        <br>Die Daten werden spätestens nach sieben Tage wieder gelöscht, soweit keine weitere Aufbewahrung zu Beweiszwecken erforderlich ist. Andernfalls sind die Daten bis zur endgültigen Klärung eines Vorfalls ganz oder teilweise von der Löschung ausgenommen.
+                        <br>
+                        <br><span id="bold">Kontaktanfragen / Kontaktmöglichkeit</span>
+                        <br>Sofern Sie per Kontaktformular oder E-Mail mit uns in Kontakt treten, werden die dabei von Ihnen angegebenen Daten zur Bearbeitung Ihrer Anfrage genutzt. Die Angabe der Daten ist zur Bearbeitung und Beantwortung Ihre Anfrage erforderlich - ohne deren Bereitstellung können wir Ihre Anfrage nicht oder allenfalls eingeschränkt beantworten.
+                        <br>
+                        <br>Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. b) DSGVO.
+                        <br>
+                        <br>Ihre Daten werden gelöscht, sofern Ihre Anfrage abschließend beantwortet worden ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen, wie bspw. bei einer sich etwaig anschließenden Vertragsabwicklung.
+                        <br>
+                        <br><span id="bold">Verlinkung Social-Media über Grafik oder Textlink</span>
+                        <br>Wir bewerben auf unserer Webseite auch Präsenzen auf den nachstehend aufgeführten sozialen Netzwerken. Die Einbindung erfolgt dabei über eine verlinkte Grafik des jeweiligen Netzwerks. Durch den Einsatz dieser verlinkten Grafik wird verhindert, dass es bei dem Aufruf einer Website, die über eine Social-Media-Bewerbung verfügt, automatisch zu einem Verbindungsaufbau zum jeweiligen Server des sozialen Netzwerks kommt, um eine Grafik des jeweiligen Netzwerkes selbst darzustellen. Erst durch einen Klick auf die entsprechende Grafik wird der Nutzer zu dem Dienst des jeweiligen sozialen Netzwerks weitergeleitet.
+                        <br>
+                        <br>Nach der Weiterleitung des Nutzers werden durch das jeweilige Netzwerk Informationen über den Nutzer erfasst. Es kann hierbei nicht ausgeschlossen werden, dass eine Verarbeitung der so erhobenen  Daten in den USA stattfindet.
+                        <br>
+                        <br>Dies sind zunächst Daten wie IP-Adresse, Datum, Uhrzeit und besuchte Seite. Ist der Nutzer währenddessen in seinem Benutzerkonto des jeweiligen Netzwerks eingeloggt, kann der Netzwerk-Betreiber ggf. die gesammelten Informationen des konkreten Besuchs des Nutzers dem persönlichen Account des Nutzers zuordnen. Interagiert der Nutzer über einen „Teilen“-Button des jeweiligen Netzwerks, können diese Informationen in dem persönlichen Benutzerkonto des Nutzers gespeichert und ggf. veröffentlicht werden. Will der Nutzer verhindern, dass die gesammelten Informationen unmittelbar seinem Benutzerkonto zugeordnet werden, muss er sich vor dem Anklicken der Grafik ausloggen. Zudem besteht die Möglichkeit, das jeweilige Benutzerkonto entsprechend zu konfigurieren.
+                        <br>
+                        <br>Folgende soziale Netzwerke werden in unsere Seite durch Verlinkung eingebunden:
+                        <br>
+                        <br><span id="bold">Twitter</span>
+                        <br>- Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA
+                        <br>- Datenschutzerklärung: <span class="underline--magical"><a href="https://twitter.com/privacy" target="_blank">Privacy by Twitter</a></span>
+                        <br>- Zertifizierung EU-US-Datenschutz („EU-US Privacy Shield“)
+                        <br>- <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&status=Active" target="_blank"hPrivacyshield for Twitter</a></span>
+                        <br>
+                        <br><span id="bold">Instagram</span>
+                        <br>Facebook Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland, ein Tochterunternehmen der Facebook Inc., 1601 S. California Ave., Palo Alto, CA 94304, USA.
+                        <br>Datenschutzerklärung: <span class="underline--magical"><a href="https://help.instagram.com/519522125107875" target="_blank">Privacy by Instagram</a></span>
+                        <br>Zertifizierung EU-US-Datenschutz („EU-US Privacy Shield“) <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active" target="_blank">Privacyshield for Instagram</a></span>
+                        <br>
+                        <br><span id="bold">Google reCAPTCHA</span>
+                        <br>In unserem Internetauftritt setzen wir Google reCAPTCHA zur Überprüfung und Vermeidung von Interaktionen auf unserer Internetseite durch automatisierte Zugriffe, bspw. durch sog. Bots, ein. Es handelt sich hierbei um einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.
+                        <br>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“) <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active" target="_blank">Privacyshield for Google reCAPTCHA</a></span> garantiert Google, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.
+                        <br>Durch diesen Dienst kann Google ermitteln, von welcher Webseite eine Anfrage gesendet wird sowie von welcher IP-Adresse aus Sie die sog. reCAPTCHA-Eingabebox verwenden. Neben Ihrer IP-Adresse werden womöglich noch weitere Informationen durch Google erfasst, die für das Angebot und die Gewährleistung dieses Dienstes notwendig sind.   
+                        <br>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Sicherheit unseres Internetauftritts sowie in der Abwehr unerwünschter, automatisierter Zugriffe in Form von Spam o.ä.. Google bietet unter <span class="underline--magical"><a href="https://policies.google.com/privacy" target="_blank">Privacy by Google reCAPTCHA</a></span> weitergehende Informationen zu dem allgemeinen Umgang mit Ihren Nutzerdaten an.
+                        <br>
+                        <br><span id="bold">Google Fonts</span>
+                        <br>In unserem Internetauftritt setzen wir Google Fonts zur Darstellung externer Schriftarten ein. Es handelt sich hierbei um einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.
+                        <br>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“) <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active" target="_blank">Privacyshield for Google Fonts</a></span> garantiert Google, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.
+                        <br>Um die Darstellung bestimmter Schriften in unserem Internetauftritt zu ermöglichen, wird bei Aufruf unseres Internetauftritts eine Verbindung zu dem Google-Server in den USA aufgebaut.
+                        <br>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Optimierung und dem wirtschaftlichen Betrieb unseres Internetauftritts.
+                        <br>Durch die bei Aufruf unseres Internetauftritts hergestellte Verbindung zu Google kann Google ermitteln, von welcher Website Ihre Anfrage gesendet worden ist und an welche IP-Adresse die Darstellung der Schrift zu übermitteln ist.
+                        <br>Google bietet unter <span class="underline--magical"><a href="https://adssettings.google.com/authenticated" target="_blank">Authenticated by Google</a></span> und <span class="underline--magical"><a href="https://policies.google.com/privacy" target="_blank">Privacy by Google</a></span> weitere Informationen an und zwar insbesondere zu den Möglichkeiten der Unterbindung der Datennutzung.
+                        <br>
+                        <br><span id="bold">FontAwesome</span>
+                        <br>Um Schriften und visuelle Elemente unseres Internetauftritts darstellen zu können, setzen wir die externen Schriftarten von FontAwesome ein. Bei FontAwesome handelt es sich um einen Dienst der
+                        <br>Fonticons Inc., 6 Porter Road, Apartment 3R, Cambridge, MA 02140, USA, nachfolgend nur „FontAwesome“ genannt.
+                        <br>Bei dem Aufruf unseres Internetauftritts wird eine Verbindung zum Server von FontAwesome in den USA aufgebaut, um so die Darstellung von Schriften und visuellen Elemente zu ermöglichen und zu aktualisieren.
+                        <br>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Optimierung und dem wirtschaftlichen Betrieb unseres Internetauftritts.
+                        <br>Durch die bei Aufruf unseres Internetauftritts hergestellte Verbindung zum Server von FontAwesome kann FontAwesome ermitteln, von welcher Website Ihre Anfrage gesendet worden ist und an welche IP-Adresse die Darstellung der Schrift zu übermitteln ist.
+                        <br>FontAwesome bietet unter <span class="underline--magical"><a href="https://fontawesome.com/privacy" target="_blank">Privacy by FontAwesome</a></span> weitere Informationen an und zwar insbesondere zu den Möglichkeiten der Unterbindung der Datennutzung.
+                        <br>
+                        <br><span id="bold">BootstrapCDN</span>
+                        <br>Zur Optimierung der Abrufgeschwindigkeit, der Gestaltung und Darstellung der Inhalte unseres Internetauftritts auf unterschiedlichen Endgeräten setzen wir in unserem Internetauftritt den Dienst BootstrapCDN, ein Content Delivery Network („CDN“), ein. Hierbei handelt es sich um einen Dienst der StackPath, LLC, 2021 McKinney Ave. Suite 1100, Dallas, TX 75201, USA, nachfolgend nur „BootstrapCDN“ genannt.
+                        <br>Um die Inhalte unseres Internetauftritts schnell ausliefern zu können, greift der Dienst auf sog. JavaScript-Bibliotheken zurück. Dabei werden entsprechende Dateien von einem Server von BootstrapCDN geladen, der Ihre IP-Adresse erfasst.
+                        <br>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“) <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt0000000CbahAAC&status=Active" target="_blank">Privacyshield for BootstrapCDN</a></span> garantiert BootstrapCDN, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.
+                        <br>Zudem bietet BootstrapCDN unter <span class="underline--magical"><a href="https://www.stackpath.com/legal/master-service-agreement/#privacy" target="_blank">Privacy by BootstrapCDN</a></span> weitergehende Datenschutzinformationen an.
+                        <br>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Beschleunigung der Ladezeiten unseres Internetauftritts sowie in dessen Optimierung.
+                        <br>Um die Ausführung des Java-Script-Codes von BootstrapCDN insgesamt zu verhindern, können Sie einen sog. Java-Script-Blocker installieren, wie bspw. noscript.net oder ghostery.com. Sollten Sie die Ausführung des Java-Script-Codes verhindern oder einschränken, kann dies aus technischen Gründen allerdings dazu führen, dass womöglich nicht sämtliche Inhalte und Funktionen unseres Internetauftritts verfügbar sind.
+                        <br>
+                        <br><span id="bold">jQuery CDN</span>
+                        <br>Zur Optimierung der Abrufgeschwindigkeit, der Gestaltung und Darstellung der Inhalte unseres Internetauftritts auf unterschiedlichen Endgeräten setzen wir in unserem Internetauftritt den Dienst
+                        <br>jQuery CDN, ein Content Delivery Network („CDN“), ein. Hierbei handelt es sich um einen Dienst der jQuery Foundation, nachfolgend nur „jQuery“ genannt. jQuery wird für die JS Foundation über das StackPath CDN verteilt.
+                        <br>Um die Inhalte unseres Internetauftritts schnell ausliefern zu können, greift der Dienst auf sog. JavaScript-Bibliotheken zurück. Dabei werden entsprechende Dateien von dem CDN-Server geladen, soweit sie nicht schon durch einen Besuch eines anderen Internetauftritts in Ihrem Browser-Cache vorhanden sind. Im Falle der Verbindung zu dem CDN-Server wird Ihre IP-Adresse erfasst. Dabei kann nicht ausgeschlossen werden, dass eine Verbindung zu einem Server außerhalb der EU erfolgt.
+                        <br>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Beschleunigung der Ladezeiten unseres Internetauftritts sowie in dessen Optimierung.
+                        <br>Um die Ausführung des Java-Script-Codes von jQuery insgesamt zu verhindern, können Sie einen sog. Java-Script-Blocker installieren, wie bspw. noscript.net oder ghostery.com. Sollten Sie die Ausführung des Java-Script-Codes verhindern oder einschränken, kann dies aus technischen Gründen allerdings dazu führen, dass womöglich nicht sämtliche Inhalte und Funktionen unseres Internetauftritts verfügbar sind. 
+                        <br>
+                        <br><span id="bold">Cloudflare</span>
+                        <br>Wir verwenden auf dieser Webseite Cloudflare der Firma Cloudflare, Inc. (101 Townsend St., San Francisco, CA 94107, USA), um unsere Webseite schneller und sicherer zu machen.
+                        <br>Dabei verwendet Cloudflare Cookies und verarbeitet User-Daten. Cloudflare, Inc. ist eine amerikanische Firma, die ein Content Delivery Network und diverse Sicherheitsdienste bereitstellt.
+                        <br>Diese Dienste befinden sich zwischen dem User und unserem Hosting-Anbieter und fungieren als Reverse Proxy für Webseiten.
+                        <br>- <span class="underline--magical"><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&tid=331608519868" target="_blank">Privacyshield for Cloudflare</a></span>
+                        <br>- <span class="underline--magical"><a href="https://www.cloudflare.com/de-de/privacypolicy/?tid=331608519868" target="_blank">Privacy policy by Cloudflare</a></span>
+                        <br>- <span class="underline--magical"><a href="https://www.cloudflare.com/de-de/gdpr/introduction/" target="_blank">Selbstverpflichtung zur Einhaltung der DSGVO by Cloudflare</a></span>
+                        <br>
+                        <br><span id="bold">Analytics & Cookies</span>
+                        <br>Diese Dienste übernimmt der Anbieter Statcounter.
+                        <br>Statcounter ist ein Online-Dienst, der uns hilft, unsere Besucher zu verstehen; z.B. wie Besucher unsere Website finden, wie lange sie sich auf unserer Website aufhalten, an welchen Webseiten sie am meisten interessiert sind usw. Wir verwenden Statcounter, weil ein besseres Verständnis, wie Besucher mit unserer Website interagieren, uns hilft, den Inhalt, das Design und die Funktionalität unserer Website zu verbessern. Auf diese Weise können wir unseren Besuchern ein besseres Online-Erlebnis bieten.
+                        <br>Statcounter verwendet Cookies und andere Technologien, um Daten über Besucher und Besucheraktivitäten auf unserer Website zu sammeln. Diese Daten umfassen:
+                        <br>- Uhrzeit und Datum des Besuchs (dies kann uns dabei helfen, Stoßzeiten auf unserer Website zu identifizieren und zu planen)
+                        <br>- IP-Adresse (dies ist eine numerische Bezeichnung, die einem Gerät von einem Internet Service Provider zugewiesen wird, um dem Gerät den Zugang zum Internet zu ermöglichen)
+                        <br>- Browser und Betriebssystem (dies kann uns helfen, sicherzustellen, dass unsere Website in den Browsern/Betriebssystemen, die für den Zugriff auf unsere Website verwendet werden, korrekt funktioniert)
+                        <br>- Geräteinformationen, z.B. Gerätetyp und Bildschirmgröße (dies kann uns helfen, sicherzustellen, dass unsere Website in den Geräten, die für den Zugriff auf unsere Website verwendet werden, korrekt funktioniert)
+                        <br>- Verweisende Daten, z.B. ein Suchmaschinen-Link (dies kann uns helfen zu verstehen, welche Suchmaschinen den Besuchern helfen, unsere Website zu finden)
+                        <br>Wenn Sie unsere Website besuchen, kann außerdem ein Statcounter-Cookie (genannt "is_unique") in Ihrem Browser platziert werden. Dieses Cookie wird nur verwendet, um festzustellen, ob Sie ein erstmaliger oder wiederkehrender Besucher sind, und um einzigartige Besuche auf der Website zu ermöglichen.
+                        <br>Hier können Sie mehr über Cookies von Statcounter erfahren und Ihren Browser so einstellen, dass er diese ablehnt:
+                        <span class="underline--magical"><a href="http://statcounter.com/about/set-refusal-cookie/" target="_blank">Refusal cookie by Statcounter</a></span>
+                        <br>Weitere Einzelheiten finden Sie in der Datenschutzerklärung des Statcounter:
+                        <span class="underline--magical"><a href="https://statcounter.com/about/legal/#privacy" target="_blank">Privacy by Statcounter</a></span>
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <script defer type="text/javascript">
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 0 && y < 480) {
+                $('.line1').fadeIn();
+                $('.line2').fadeOut();
+                $('.line3').fadeOut();
+                $('.line4').fadeOut();
+                $('.line5').fadeOut();
+                $('.line6').fadeOut();
+            }
+            if (y > 480 && y < 870) {
+                $('.line1').fadeOut();
+                $('.line2').fadeIn();
+                $('.line3').fadeOut();
+                $('.line4').fadeOut();
+                $('.line5').fadeOut();
+                $('.line6').fadeOut();
+            }
+            if (y > 870 && y < 2350) {
+                $('.line1').fadeOut();
+                $('.line2').fadeOut();
+                $('.line3').fadeIn();
+                $('.line4').fadeOut();
+                $('.line5').fadeOut();
+                $('.line6').fadeOut();
+            }
+            if (y > 2350 && y < 2990) {
+                $('.line1').fadeOut();
+                $('.line2').fadeOut();
+                $('.line3').fadeOut();
+                $('.line4').fadeIn();
+                $('.line5').fadeOut();
+                $('.line6').fadeOut();
+            }
+            if (y > 2990 && y < 4640) {
+                $('.line1').fadeOut();
+                $('.line2').fadeOut();
+                $('.line3').fadeOut();
+                $('.line4').fadeOut();
+                $('.line5').fadeIn();
+                $('.line6').fadeOut();
+            }
+            if (y > 4640) {
+                $('.line1').fadeOut();
+                $('.line2').fadeOut();
+                $('.line3').fadeOut();
+                $('.line4').fadeOut();
+                $('.line5').fadeOut();
+                $('.line6').fadeIn();
+            }
+        });
+        </script>
+
+        <script>
+        //Responsive
+        $(document).ready(function() {  
+            $('input[type="checkbox"]').val(this.checked);
+
+            $('input[type="checkbox"]').change(function() {
+                if(this.checked) {
+                    $('.nav-wrapper').css("display", "block");
+                    $('.nav-wrapper').css("left", "0");
+                    $('.so-me-resp').css("display", "flex");
+                }
+                else {
+                    $('.nav-wrapper').css("display", "none");
+                    $('.so-me-resp').css("display", "none");
+                }
+            });
+        });
+        </script>
+
+    </body>
+</html>

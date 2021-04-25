@@ -1,0 +1,256 @@
+@font-face {
+/* Overlay-Font */
+    font-family: 'Overlay';
+    src: url('/src/fonts/Everyday/index/Ailerons.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+/* Logo-Font */
+    font-family: 'Logo';
+    src: url('/src/fonts/Everyday/Dreamlight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+/* Navigation & stuff (Serif)*/
+    font-family: 'Hauptfont';
+    src: url('/src/fonts/PS-Aelyn-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+/* Titel-f für längere Texte (Sans Serif)*/
+    font-family: 'Title';
+    src: url('/src/fonts/Everyday/apercu-title.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+/* Font-f für längere Texte (Sans Serif)*/
+    font-family: 'Text';
+    src: url('/src/fonts/Everyday/apercu-text.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+/* Titel-Font (Name) */
+    font-family: 'Exodus';
+    src: url('/src/fonts/Everyday/Bio/ExodusDemo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+.light {
+    --background: #fff;
+    --background-contact: #f0f0f0;
+    --textColor: #111213;
+    --banner: #fff; // Shouldn't be pure white (FAFAFA instead)
+    --bannerGrey: #E0E0E0;
+    --hoverColor: #C2C5A2;
+    --selectionColor: var(--textColor);
+    --selectionBackground: #CEDBF0;
+    --slider: brightness(100%);
+    --bioGradBlock: linear-gradient(90deg, rgba(255, 110, 127, 0.5) 0%, rgba(191, 233, 255, 0.5) 100%);
+    --conCol: #d1d1d1;
+    --conHovCol: #cecece;
+
+    --conBusBor: 1.5px solid #e3e3e3;
+    --conBusSub: #5ADA8D;
+    --conBusInpText: #a8a8a8;
+    --conBusBorder: 2px solid #e3e3e3;
+    --inputColor: #000;
+    #resp-dark, #light, #light-globe {
+        display: none;
+    }
+    #resp-light, #dark, #dark-globe {
+        display: contents;
+    }
+}
+
+.dark {
+    --background: #1C1E21;
+    --background-contact: var(--background);
+    --textColor: #FAFAFA;
+    --banner: var(--background);
+    --bannerGrey: #111213;
+    --hoverColor: #cfd1b5;
+    --selectionColor: var(--textColor);
+    --selectionBackground: #737d8d;
+    --slider: brightness(85%);
+    --bioGradBlock: linear-gradient(90deg, rgba(218, 129, 140, 0.877) 0%, rgba(152, 206, 235, 0.856) 100%);
+    --conCol: #16171a;
+    --conHovCol: #17181b;
+    
+    --conBusBackFocus: #25272A;
+    --conBusBor: 1.5px solid #3b3e41;
+    --conBusSub: #49aa70;
+    --conBusInpText: #616264;
+    --conBusBorder: 2px solid #2E3135;
+    --inputColor: #C3C3C3;
+    --conBusInpTexAfter: #E4E4E4;
+    #resp-dark, #light, #light-globe {
+        display: contents;
+    }
+    #resp-light, #dark, #dark-globe {
+        display: none;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    ::selection {
+      color: var(--selectionColor);
+      background: var(--selectionBackground);
+    }
+    ::-moz-selection {
+        color: var(--selectionColor);
+        background: var(--selectionBackground);
+    }
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    animation: fadeInAnimation ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--textColor);
+        transition: .2s;
+        &:hover {
+            color: var(--hoverColor);
+            text-decoration: none;
+            transition: .2s;
+        }
+    }
+
+    nav, footer {
+        user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    #burger, #css-missing {
+        display: none;
+    }
+
+    .wpcc-message {
+        background: inherit;
+    }
+
+    nav #navigation {        
+        background-color: transparent;
+        overflow: hidden;
+        position: fixed;
+        #navigation-wrapper {
+            #logo-wrapper {
+                // position: fixed;
+                text-align: left;
+                font-size: 32px;
+                line-height: 30px;
+                font-family: 'Logo', Georgia, Times, serif;
+            }
+            #navigation-content {
+                text-align: right;
+                font-size: 18px;
+                line-height: 40px;
+                font-family: 'Hauptfont';
+                ul li {
+                    list-style: none;
+                    display: inline-block;
+                    color: var(--textColor);
+                    padding-right: 36px;
+                    &:hover {
+                        color: var(--hoverColor);
+                        text-decoration: none;
+                        transition: .2s;
+                    }
+                    #active, #active-lang {
+                        color: var(--hoverColor);
+                    }
+                    #active::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background: var(--hoverColor);
+                    }
+                    #no-av {
+                        cursor: not-allowed;
+                    }
+                    .underline {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 2px;
+                            background: var(--hoverColor);
+                            transition: width .3s;
+                        }
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                                transition: width .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 60px;
+    
+        font-size: 1vh;
+        font-family: 'Text', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+        color: var(--infoGrey);
+        background-color: var(--banner);
+        border-top: 1px solid var(--bannerGrey);
+    
+        ul {
+          display: flex;
+    
+          margin-top: 20px;
+    
+          justify-content: center;
+          text-align: center;
+          li {
+            margin: 0 20px;
+            vertical-align: top;
+            display: inline-block;
+            a {
+              color: var(--infoGrey);
+              transition: .2s;
+            }
+            a:hover {
+              color: var(--hoverColor);
+              transition: .2s;
+              border-bottom: 1px solid var(--hoverColor);
+            }
+          }
+        }
+    }
+}

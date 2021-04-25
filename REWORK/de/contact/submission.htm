@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    
+    <!-------   JS  ------->
+    <!-- Page fade out -->
+    <script defer src="/src/js/fadeOut.js"></script>
+    
+    <!-- jquery -->
+    <script async src="/src/js/jquery-3.3.1.js"></script>
+
+    <!-------   CSS  ------->
+    <!--font-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <!--stylesheet-->
+    <style>
+    @font-face {      /* Text-f für längere Texte (Sans Serif) */
+        font-family: 'Text';
+        src: url('../../fonts/Everyday/apercu-text.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        background: #5c6070;
+        color: white;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-family: 'Text', -apple-system, Helvetica, Arial, sans-serif, "Apple Color Emoji";
+        margin: 0;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: bolder;
+    }
+
+    p {
+        font-family: 'Text', 
+    }
+
+    p a {
+        font-family: 'Hauptfont', -apple-system, Helvetica, Arial, sans-serif, "Apple Color Emoji";
+    }
+
+    .main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        max-width: 364px;
+        padding: 24px;
+        background: white;
+        color: rgb(14, 30, 37);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+    }
+
+    a {
+        margin: 0;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 24px;
+        color: #5c6070;
+    }
+
+    a svg {
+        position: relative;
+        top: 2px;
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+        text-decoration-color: var(--hoverColor);
+    }
+
+    a:hover svg path{
+        fill: #5c6070;
+    }
+
+    p:last-of-type {
+        margin: 0;
+    }
+    </style>
+
+    <!-------   IMG  ------->
+    <!--logo-->
+    <link rel="shortcut icon" href="../../img/LOGO_tran.png" type="image/png">
+
+    <!-- apple touch icon -->
+    <link rel="apple-touch-icon" href="../../img/ati.png" type="image/png">
+
+    <title>Danke | JueK3y</title>
+  </head>
+  <body>
+
+    <div class="main">
+      <div class="card">
+        <div class="header">
+          <h1>Danke!</h1>
+        </div>
+        <div class="body">
+
+          <p>Die Kontakanfrage wurde erfolgreich abgeschickt.</p>
+
+          <p>
+            <a id="back-link" href="/">← Zurück zur Seite</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function() {
+        if (document.referrer && document.location.host && document.referrer.match(new RegExp("^https?://" + document.location.host))) {
+          document.getElementById("back-link").setAttribute("href", document.referrer);
+        }
+      })();
+    </script>
+  </body>
+</html>

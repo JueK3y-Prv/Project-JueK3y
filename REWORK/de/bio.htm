@@ -55,7 +55,7 @@
         <link rel="stylesheet" href="/src/stylesheet/navigation/navigation.min.css">
         
         <!-- stylesheet -->
-        <link rel="stylesheet" href="/src/stylesheet/bio/bio.min.css">
+        <!-- <link rel="stylesheet" href="/src/stylesheet/bio/bio.min.css"> -->
 
         <!-- Cookiebanner -->
         <link rel="stylesheet" href="/src/stylesheet/cookiebanner/cookiebanner.min.css">
@@ -75,7 +75,7 @@
         <script async src="/src/js/preventContext.js"></script>
 
         <!-- Light Dark Switch -->
-        <script defer src="/src/js/lightDarkSwitch.js"></script>
+        <!-- <script defer src="/src/js/lightDarkSwitch.js"></script> -->
 
         <!-- Hyperlink -->
         <script async src="/src/js/hyperlink.js"></script>
@@ -95,38 +95,37 @@
     <body class="light" translate="no">
         <!-- Navigation -->
         <nav>
-            <div id="navigation">
-                <input id="burger" type="checkbox"/>
-                <label for="burger" class="navigation-button-mobile">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                </label>
-                <div id="navigation-wrapper">
-                    <div id="logo-wrapper">
+            <input id="burger" type="checkbox"/>
+            <label for="burger" class="navigation-button-mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </label>
+
+            <div id="navigation-wrapper">
+                <ul id="logo-content">
+                    <li>
                         <a id="logo" title="Zurück zur Startseite">JueK3y</a>
-                    </div>
-                    <div id="navigation-content">
-                        <ul>
-                            <li>
-                                <a id="active" id="nav-bio" class="underline" title="Über meine Person">Biographie</a>
-                            </li>
-                            <li>
-                                <a id="no-av" id="nav-experience" class="underline" title="Im Moment noch nicht zugänglich">Experience</a>
-                            </li>
-                            <li>
-                                <a id="nav-contact" class="underline" title="Kontaktmöglichkeit">Kontakt</a>
-                            </li>
-                            <li>
-                                <a href="#" id="active-lang" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a id="language" class="clk" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
-                            <li>
-                                <a id="nav-settings" title="Einstellungen">
-                                    <i class="fa fa-cog" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    </li>
+                </ul>
+                <ul id="navigation-content">
+                    <li>
+                        <a id="active" id="nav-bio" title="Über meine Person">Biographie</a>
+                    </li>
+                    <li>
+                        <a id="no-av" id="nav-experience" class="underline" title="Im Moment noch nicht zugänglich">Experience</a>
+                    </li>
+                    <li>
+                        <a id="nav-contact" class="underline" title="Kontaktmöglichkeit">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="#" id="active-lang" title=""><span class="hint--bottom" aria-label="Die Sprache ist bereits auf Deutsch">DE</span> </a><a id="language" class="clk" title=""><span class="hint--bottom" aria-label="You can change the language to English">| EN</span></a></li>
+                    <li>
+                        <a id="nav-settings" title="Einstellungen">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <!-- Content -->

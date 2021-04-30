@@ -15,7 +15,7 @@
 }
 @font-face {
   /* Navigation & stuff (Serif)*/
-  font-family: "Hauptfont";
+  font-family: "Navigation";
   src: url("/src/fonts/PS-Aelyn-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -42,11 +42,11 @@
   font-style: normal;
 }
 .light {
-  --background: #fff;
-  --background-contact: #f0f0f0;
-  --textColor: #111213;
-  --banner: #fff;
+  --background: #FAFAFA;
+  --background-contact: var(--background);
+  --banner: var(--background);
   --bannerGrey: #E0E0E0;
+  --textColor: #111213;
   --hoverColor: #C2C5A2;
   --selectionColor: var(--textColor);
   --selectionBackground: #CEDBF0;
@@ -60,19 +60,13 @@
   --conBusBorder: 2px solid #e3e3e3;
   --inputColor: #000;
 }
-.light #resp-dark, .light #light, .light #light-globe {
-  display: none;
-}
-.light #resp-light, .light #dark, .light #dark-globe {
-  display: contents;
-}
 
 .dark {
   --background: #1C1E21;
   --background-contact: var(--background);
-  --textColor: #FAFAFA;
   --banner: var(--background);
   --bannerGrey: #111213;
+  --textColor: #FAFAFA;
   --hoverColor: #cfd1b5;
   --selectionColor: var(--textColor);
   --selectionBackground: #737d8d;
@@ -87,12 +81,6 @@
   --conBusBorder: 2px solid #2E3135;
   --inputColor: #C3C3C3;
   --conBusInpTexAfter: #E4E4E4;
-}
-.dark #resp-dark, .dark #light, .dark #light-globe {
-  display: contents;
-}
-.dark #resp-light, .dark #dark, .dark #dark-globe {
-  display: none;
 }
 
 @-webkit-keyframes fadeInAnimation {
@@ -118,6 +106,20 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  color: var(--textColor);
+}
+* a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--textColor);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+* a:hover {
+  color: var(--hoverColor);
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 * ::-moz-selection {
   color: var(--selectionColor);
@@ -143,19 +145,6 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-body a {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--textColor);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-body a:hover {
-  color: var(--hoverColor);
-  text-decoration: none;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
 body nav, body footer {
   user-select: none;
   -o-user-select: none;
@@ -163,103 +152,79 @@ body nav, body footer {
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-body #burger, body #css-missing {
-  display: none;
-}
-body .wpcc-message {
-  background: inherit;
-}
-body nav #navigation {
-  background-color: transparent;
-  overflow: hidden;
-  position: fixed;
-}
-body nav #navigation #navigation-wrapper #logo-wrapper {
-  text-align: left;
-  font-size: 32px;
-  line-height: 30px;
-  font-family: "Logo", Georgia, Times, serif;
-}
-body nav #navigation #navigation-wrapper #navigation-content {
-  text-align: right;
-  font-size: 18px;
-  line-height: 40px;
-  font-family: "Hauptfont";
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li {
-  list-style: none;
-  display: inline-block;
-  color: var(--textColor);
-  padding-right: 36px;
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li:hover {
-  color: var(--hoverColor);
-  text-decoration: none;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li #active, body nav #navigation #navigation-wrapper #navigation-content ul li #active-lang {
-  color: var(--hoverColor);
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li #active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--hoverColor);
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li #no-av {
-  cursor: not-allowed;
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li .underline::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: var(--hoverColor);
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-}
-body nav #navigation #navigation-wrapper #navigation-content ul li .underline:hover::after {
-  width: 100%;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-}
-body footer {
+body nav {
   left: 0;
   margin: 0;
   padding: 0;
   height: 60px;
-  font-size: 1vh;
-  font-family: "Text", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: var(--infoGrey);
-  background-color: var(--banner);
-  border-top: 1px solid var(--bannerGrey);
 }
-body footer ul {
+body nav #burger, body nav .navigation-button-mobile {
+  display: none;
+}
+body nav #navigation-wrapper #logo-content, body nav #navigation-wrapper #navigation-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
 }
-body footer ul li {
-  margin: 0 20px;
+body nav #navigation-wrapper #logo-content li, body nav #navigation-wrapper #navigation-content li {
   vertical-align: top;
   display: inline-block;
 }
-body footer ul li a {
-  color: var(--infoGrey);
+body nav #navigation-wrapper #logo-content {
+  float: left;
+  margin-top: 50px;
+  padding-left: 8.7vw;
+}
+body nav #navigation-wrapper #logo-content li {
+  font-size: 3.4vh;
+  font-family: "Logo";
+}
+body nav #navigation-wrapper #navigation-content {
+  float: right;
+  margin-top: 75px;
+  padding-right: 5vw;
+}
+body nav #navigation-wrapper #navigation-content li {
+  padding-right: 45px;
+  font-size: 1.95vh;
+  font-family: "Navigation";
+}
+body nav #navigation-wrapper #navigation-content li .underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--hoverColor);
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+body nav #navigation-wrapper #navigation-content li .underline:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+body nav #navigation-wrapper #navigation-content li #active, body nav #navigation-wrapper #navigation-content li #active-lang span {
+  color: var(--hoverColor);
+}
+body nav #navigation-wrapper #navigation-content li #active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--hoverColor);
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+body nav #navigation-wrapper #navigation-content li #language span, body nav #navigation-wrapper #navigation-content li #nav-settings i {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-body footer ul li a:hover {
+body nav #navigation-wrapper #navigation-content li #language span:hover, body nav #navigation-wrapper #navigation-content li #nav-settings i:hover {
   color: var(--hoverColor);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  border-bottom: 1px solid var(--hoverColor);
 }
 /*# sourceMappingURL=navigation.css.map */

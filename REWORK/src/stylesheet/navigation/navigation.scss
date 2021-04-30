@@ -14,7 +14,7 @@
 }
 @font-face {
 /* Navigation & stuff (Serif)*/
-    font-family: 'Hauptfont';
+    font-family: 'Navigation';
     src: url('/src/fonts/PS-Aelyn-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -42,11 +42,12 @@
 }
   
 .light {
-    --background: #fff;
-    --background-contact: #f0f0f0;
-    --textColor: #111213;
-    --banner: #fff; // Shouldn't be pure white (FAFAFA instead)
+    --background: #FAFAFA;
+    --background-contact: var(--background);
+    --banner: var(--background);
     --bannerGrey: #E0E0E0;
+
+    --textColor: #111213;
     --hoverColor: #C2C5A2;
     --selectionColor: var(--textColor);
     --selectionBackground: #CEDBF0;
@@ -60,20 +61,15 @@
     --conBusInpText: #a8a8a8;
     --conBusBorder: 2px solid #e3e3e3;
     --inputColor: #000;
-    #resp-dark, #light, #light-globe {
-        display: none;
-    }
-    #resp-light, #dark, #dark-globe {
-        display: contents;
-    }
 }
 
 .dark {
     --background: #1C1E21;
     --background-contact: var(--background);
-    --textColor: #FAFAFA;
     --banner: var(--background);
     --bannerGrey: #111213;
+
+    --textColor: #FAFAFA;
     --hoverColor: #cfd1b5;
     --selectionColor: var(--textColor);
     --selectionBackground: #737d8d;
@@ -89,12 +85,6 @@
     --conBusBorder: 2px solid #2E3135;
     --inputColor: #C3C3C3;
     --conBusInpTexAfter: #E4E4E4;
-    #resp-dark, #light, #light-globe {
-        display: contents;
-    }
-    #resp-light, #dark, #dark-globe {
-        display: none;
-    }
 }
 
 @keyframes fadeInAnimation {
@@ -111,6 +101,18 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: var(--textColor);
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--textColor);
+        transition: .2s;
+        &:hover {
+            color: var(--hoverColor);
+            text-decoration: none;
+            transition: .2s;
+        }
+    }
     ::selection {
       color: var(--selectionColor);
       background: var(--selectionBackground);
@@ -128,18 +130,6 @@ body {
     animation: fadeInAnimation ease 500ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    a {
-        text-decoration: none;
-        cursor: pointer;
-        color: var(--textColor);
-        transition: .2s;
-        &:hover {
-            color: var(--hoverColor);
-            text-decoration: none;
-            transition: .2s;
-        }
-    }
-
     nav, footer {
         user-select: none;
         -o-user-select: none;
@@ -147,61 +137,51 @@ body {
         -moz-user-select: none;
         -webkit-user-select: none;
     }
+    nav {
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 60px;
 
-    #burger, #css-missing {
-        display: none;
-    }
+        #burger, .navigation-button-mobile {
+            display: none;
+        }
 
-    .wpcc-message {
-        background: inherit;
-    }
-
-    nav #navigation {        
-        background-color: transparent;
-        overflow: hidden;
-        position: fixed;
         #navigation-wrapper {
-            #logo-wrapper {
-                // position: fixed;
-                text-align: left;
-                font-size: 32px;
-                line-height: 30px;
-                font-family: 'Logo', Georgia, Times, serif;
+            #logo-content, #navigation-content {
+                display: flex;
+                text-align: center;
+                li {
+                  vertical-align: top;
+                  display: inline-block;
+                }
             }
+
+            #logo-content {
+                float: left;
+                margin-top: 50px;
+                padding-left: 8.7vw;
+                li {
+                  font-size: 3.4vh;
+                  font-family: 'Logo';
+                }
+            }
+
             #navigation-content {
-                text-align: right;
-                font-size: 18px;
-                line-height: 40px;
-                font-family: 'Hauptfont';
-                ul li {
-                    list-style: none;
-                    display: inline-block;
-                    color: var(--textColor);
-                    padding-right: 36px;
-                    &:hover {
-                        color: var(--hoverColor);
-                        text-decoration: none;
-                        transition: .2s;
-                    }
-                    #active, #active-lang {
-                        color: var(--hoverColor);
-                    }
-                    #active::after {
-                        content: "";
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background: var(--hoverColor);
-                    }
-                    #no-av {
-                        cursor: not-allowed;
-                    }
+                float: right;
+                margin-top: 75px;
+                padding-right: 5vw;
+                li {
+                    padding-right: 45px;
+                    font-size: 1.95vh;
+                    font-family: 'Navigation';
                     .underline {
                         &::after {
                             content: "";
                             display: block;
                             width: 0;
                             height: 2px;
+                            margin-top: 10px;
                             background: var(--hoverColor);
                             transition: width .3s;
                         }
@@ -212,45 +192,27 @@ body {
                             }
                         }
                     }
+                    #active, #active-lang span {
+                        color: var(--hoverColor);
+                    }
+                    #active::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        margin-top: 10px;
+                        background: var(--hoverColor);
+                        transition: width .3s;
+                    }
+                    #language span, #nav-settings i {
+                        transition: .2s;
+                        &:hover {
+                            color: var(--hoverColor);
+                            transition: .2s;
+                        }
+                    }
                 }
             }
-        }
-    }
-
-    footer {
-        left: 0;
-        margin: 0;
-        padding: 0;
-        height: 60px;
-    
-        font-size: 1vh;
-        font-family: 'Text', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-        color: var(--infoGrey);
-        background-color: var(--banner);
-        border-top: 1px solid var(--bannerGrey);
-    
-        ul {
-          display: flex;
-    
-          margin-top: 20px;
-    
-          justify-content: center;
-          text-align: center;
-          li {
-            margin: 0 20px;
-            vertical-align: top;
-            display: inline-block;
-            a {
-              color: var(--infoGrey);
-              transition: .2s;
-            }
-            a:hover {
-              color: var(--hoverColor);
-              transition: .2s;
-              border-bottom: 1px solid var(--hoverColor);
-            }
-          }
         }
     }
 }

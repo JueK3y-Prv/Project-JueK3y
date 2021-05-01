@@ -227,6 +227,9 @@ body nav #navigation-wrapper #navigation-content li #language span:hover, body n
 body nav .desktop {
   display: contents !important;
 }
+body nav #burger, body nav .navigation-button-mobile, body nav .mobile {
+  display: none;
+}
 body nav #burger + .navigation-button-mobile {
   position: fixed;
   margin-top: 39px;

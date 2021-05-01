@@ -214,7 +214,7 @@ body {
             display: contents !important;
         }
         #burger, .navigation-button-mobile, .mobile {
-            // display: none;
+            display: none;
         }
         #burger + .navigation-button-mobile {
             position: fixed;

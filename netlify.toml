@@ -1,7 +1,7 @@
 [[headers]]
   for ="*"
     [headers.values]
-      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' ajax.cloudflare.com static.cloudflareinsights.com www.unpkg.com 'sha256-9OIxH9XozngUDpNSTFHRrGpxr9zL97s9OYEg7wTvAlY=' 'sha256-CJuPSTdQcjrdZpc5Z43+85itEk8Biz+FwT1nUOpohss='; style-src 'self' www.unpkg.com 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; font-src 'self'"
+      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; media-src 'self'; object-src 'none'; script-src 'self' ajax.cloudflare.com static.cloudflareinsights.com unpkg.com 'sha256-9OIxH9XozngUDpNSTFHRrGpxr9zL97s9OYEg7wTvAlY=' 'sha256-CJuPSTdQcjrdZpc5Z43+85itEk8Biz+FwT1nUOpohss='; style-src 'self' unpkg.com 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; font-src 'self'"
       Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
       Referrer-Policy = "same-origin"
       Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"

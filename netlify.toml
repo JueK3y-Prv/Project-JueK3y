@@ -25,5 +25,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/de/coming-soon"
+  to = "/en/coming-soon"
   status = 302

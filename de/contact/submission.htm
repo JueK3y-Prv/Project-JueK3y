@@ -13,100 +13,17 @@
     <!-- jquery -->
     <script async src="/src/js/lib/jquery-3.5.1.min.js"></script>
 
+    <script defer src="/src/js/submissions.js"></script>
+
     <!-------   CSS  ------->
-    <!--font-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    
     <!--stylesheet-->
-    <style>
-    @font-face {      /* Text-f für längere Texte (Sans Serif) */
-        font-family: 'Text';
-        src: url('../../fonts/Everyday/apercu-text.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    body {
-        background: #5c6070;
-        color: white;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    h1 {
-        font-family: 'Text', -apple-system, Helvetica, Arial, sans-serif, "Apple Color Emoji";
-        margin: 0;
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: bolder;
-    }
-
-    p {
-        font-family: 'Text', 
-    }
-
-    p a {
-        font-family: 'Hauptfont', -apple-system, Helvetica, Arial, sans-serif, "Apple Color Emoji";
-    }
-
-    .main {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    .card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 75%;
-        max-width: 364px;
-        padding: 24px;
-        background: white;
-        color: rgb(14, 30, 37);
-        border-radius: 8px;
-        box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
-    }
-
-    a {
-        margin: 0;
-        text-decoration: none;
-        font-weight: 600;
-        line-height: 24px;
-        color: #5c6070;
-    }
-
-    a svg {
-        position: relative;
-        top: 2px;
-    }
-
-    a:hover,
-    a:focus {
-        text-decoration: underline;
-        text-decoration-color: var(--hoverColor);
-    }
-
-    a:hover svg path{
-        fill: #5c6070;
-    }
-
-    p:last-of-type {
-        margin: 0;
-    }
-    </style>
+    <link href="/src/stylesheet/submissions.css" rel="stylesheet" type="text/css" />
 
     <!-------   IMG  ------->
-    <!--logo-->
-    <link rel="shortcut icon" href="../../img/LOGO_tran.png" type="image/png">
-
-    <!-- apple touch icon -->
-    <link rel="apple-touch-icon" href="../../img/ati.png" type="image/png">
+    <!--Fav Icon-->
+    <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+    <link id="fav-png" rel="icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+    <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/simple-favicon-dark.ico" type="image/ico" />
 
     <title>Danke | JueK3y</title>
   </head>
@@ -127,12 +44,5 @@
         </div>
       </div>
     </div>
-    <script>
-      (function() {
-        if (document.referrer && document.location.host && document.referrer.match(new RegExp("^https?://" + document.location.host))) {
-          document.getElementById("back-link").setAttribute("href", document.referrer);
-        }
-      })();
-    </script>
   </body>
 </html>

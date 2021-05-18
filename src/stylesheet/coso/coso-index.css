@@ -115,6 +115,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   pointer-events: none;
+  content: url("/src/img/Police-2.JPG");
 }
 
 .box {

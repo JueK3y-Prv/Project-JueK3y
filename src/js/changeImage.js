@@ -56,11 +56,21 @@ document.getElementById('next-button').onclick = function() {
 document.getElementById('prev-button').onclick = function() {
 
     prevCurrentImageID = document.querySelector('.image').id
-    prevCurrentImageNumber = prevCurrentImageID.slice(-1)
-
+    prevCurrentImageNumber = parseInt(prevCurrentImageID.slice(-1))
     // alert(prevCurrentImageNumber)
 
+    if (prevCurrentImageNumber >= 2) {
+    
+        document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber - 1)
+        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 1)    
 
-    document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 1)  
+    }
 
+    else {
+ 
+        var test = document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber + 3)
+        console.log(test)
+        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber + 3)  
+
+    }
 }

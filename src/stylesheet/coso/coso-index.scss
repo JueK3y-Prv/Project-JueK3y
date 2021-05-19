@@ -97,8 +97,20 @@ a {
 	height: 100%;
 	object-fit: cover;
 	pointer-events: none;
+}
+.header-image #image-1 img {
+	content: url('/src/img/title2.jpg');
+}
+.header-image #image-2 img {
+	content: url('/src/img/picture3.jpg');
+}
+.header-image #image-3 img {
 	content: url('/src/img/Police-2.JPG');
 }
+.header-image #image-4 img {
+	content: url('/src/img/index-bg-2.jpg');
+}
+
 .box {
 	background: var(--White);
 	opacity: 1;

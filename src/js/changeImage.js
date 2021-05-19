@@ -42,11 +42,9 @@ document.getElementById('next-button').onclick = function() {
 
         document.getElementById('image-number').textContent = currentImageNumber
 
+        cI = 0
 
         pI ++
-
-        cI = 0
-        
         cI++
         nI++
 
@@ -62,39 +60,7 @@ document.getElementById('prev-button').onclick = function() {
 
     // alert(prevCurrentImageNumber)
 
-    if (nI <= 4) {
-        currentImage = 'image-' + (cI)
-        nextImage = 'image-' + (nI)
-    
-        document.getElementById(currentImage).id = nextImage
 
+    document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 1)  
 
-        currentImageNumber = '00' + (nI)
-
-        document.getElementById('image-number').textContent = currentImageNumber
-    
-        cI++
-        nI++
-    }
-
-    else {
-        cI = 4
-        nI = 1
-        
-        currentImage = 'image-' + (cI)
-        nextImage = 'image-' + (nI)
-    
-        document.getElementById(currentImage).id = nextImage
-    
-
-        currentImageNumber = '00' + (nI)
-
-        document.getElementById('image-number').textContent = currentImageNumber
-
-
-        cI = 0
-        
-        cI++
-        nI++
-    }
 }

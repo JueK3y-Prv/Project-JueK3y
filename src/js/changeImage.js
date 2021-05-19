@@ -55,16 +55,12 @@ document.getElementById('next-button').onclick = function() {
 }
 
 
-/*
 document.getElementById('prev-button').onclick = function() {
-    
-    use_pI(pI)
-    use_cI(cI)
-    use_nI(nI)
 
+    prevCurrentImageID = document.querySelector('.image').id
+    prevCurrentImageNumber = prevCurrentImageID.slice(-1)
 
-    console.log(pI, cI, nI)
-    
+    // alert(prevCurrentImageNumber)
 
     if (nI <= 4) {
         currentImage = 'image-' + (cI)
@@ -101,4 +97,4 @@ document.getElementById('prev-button').onclick = function() {
         cI++
         nI++
     }
-}*/
+}

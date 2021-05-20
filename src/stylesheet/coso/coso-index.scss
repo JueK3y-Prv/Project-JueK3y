@@ -92,22 +92,22 @@ a {
 	width: 30%;
 	height: 90vh;
 }
-.header-image img {
+.header-image .image {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	pointer-events: none;
 }
-.header-image #image-1 img {
+.header-image #image-1 {
 	content: url('/src/img/title2.jpg');
 }
-.header-image #image-2 img {
+.header-image #image-2 {
 	content: url('/src/img/picture3.jpg');
 }
-.header-image #image-3 img {
+.header-image #image-3 {
 	content: url('/src/img/Police-2.JPG');
 }
-.header-image #image-4 img {
+.header-image #image-4 {
 	content: url('/src/img/index-bg-2.jpg');
 }
 
@@ -249,7 +249,7 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-	.header-image img {
+	.header-image .image {
 		width: 140%;
 		height: 140%;
 		padding-top: 51px;
@@ -260,7 +260,7 @@ a {
 	.wrapper-img {
 		width: 90%;
 	}
-	.header-image img {
+	.header-image .image {
 		width: 110%;
 		height: 110%;
 		padding-top: 0;

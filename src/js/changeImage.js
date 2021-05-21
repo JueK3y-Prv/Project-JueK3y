@@ -1,47 +1,31 @@
 function nextImage() {
     prevCurrentImageID = document.querySelector('.image').id
     prevCurrentImageNumber = parseInt(prevCurrentImageID.slice(-1))
-    if (prevCurrentImageNumber <= 3) {
     
+    if (a && prevCurrentImageNumber <= 3) {
         document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber + 1)
         document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber + 1)    
-
+    }
+    else if (b && prevCurrentImageNumber >= 2) {
+        document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber - 1)
+        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 1)   
     }
     else {
- 
-        var test = document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber - 3)
-        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 3)  
-
+        document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber - b)
+        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - b)  
     }
 }
 
 
 document.getElementById('next-button').onclick = function() {
-    nextImage()    
+    nextImage(a, c = 3)    
 }
 
 
 document.getElementById('prev-button').onclick = function() {
-
-    prevCurrentImageID = document.querySelector('.image').id
-    prevCurrentImageNumber = parseInt(prevCurrentImageID.slice(-1))
-    // alert(prevCurrentImageNumber)
-
-    if (prevCurrentImageNumber >= 2) {
-    
-        document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber - 1)
-        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber - 1)    
-
-    }
-
-    else {
- 
-        var test = document.getElementById('image-number').textContent = '00' + (prevCurrentImageNumber + 3)
-        document.getElementById(prevCurrentImageID).id = 'image-' + (prevCurrentImageNumber + 3)  
-
-    }
+    nextImage(b, c = -3)    
 }
 
 setInterval(function() {
-    nextImage()
+    nextImage(a, c = 3)    
 }, 9000); 

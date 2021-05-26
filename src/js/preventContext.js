@@ -1,5 +1,5 @@
-if (window.location.href==="https://juek3y.netlify.app/") {
-    window.location.href = "https://juek3y.com"; 
+if (window.location.href==="https://juek3y.netlify.app/en/coming-soon") {
+    window.location.href = "https://juek3y.com/en/coming-soon"; 
 }
 
 console.log('%c 👋 Hey there! You found the secret Dev Tool Cookie 🍪\n Please keep in mind that the source code and images are copyright protected.\n ~ JueK3y', "display: block; font-size: 13px;")

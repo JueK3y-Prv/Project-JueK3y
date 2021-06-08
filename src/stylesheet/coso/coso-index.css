@@ -31,7 +31,6 @@ html {
   height: 100vh;
   font-family: "Monument Extended", sans-serif;
   overflow: hidden;
-  background: var(--White);
 }
 
 body {
@@ -41,7 +40,9 @@ body {
   height: 100vh;
   font-family: "Monument Extended", sans-serif;
   overflow: hidden;
-  background: var(--White);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(49.88%, #fff), color-stop(49.88%, #ddd), color-stop(50%, #ddd), color-stop(50%, #fff), color-stop(99.88%, #fff), color-stop(99.88%, #ddd), to(#ddd));
+  background-image: linear-gradient(90deg, #fff 49.88%, #ddd 49.88%, #ddd 50%, #fff 50%, #fff 99.88%, #ddd 99.88%, #ddd 100%);
+  background-size: 800px 800px;
 }
 
 nav {
@@ -154,9 +155,7 @@ a {
   left: 28%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  mix-blend-mode: difference;
+  color: var(--Black);
 }
 .header h1 {
   font-size: 90px;
@@ -303,6 +302,12 @@ a {
   }
 }
 @media screen and (max-width: 900px) {
+  body {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(49.67%, #fff), color-stop(49.67%, #ddd), color-stop(50%, #ddd), color-stop(50%, #fff), color-stop(99.67%, #fff), color-stop(99.67%, #ddd), to(#ddd));
+    background-image: linear-gradient(90deg, #fff 49.67%, #ddd 49.67%, #ddd 50%, #fff 50%, #fff 99.67%, #ddd 99.67%, #ddd 100%);
+    background-size: 302px 302px;
+  }
+
   .wrapper-img {
     width: 90%;
   }
@@ -317,12 +322,10 @@ a {
     top: 50%;
     left: 50%;
     text-align: center;
-    -webkit-filter: invert(0);
-            filter: invert(0);
   }
   .header h1 {
     font-size: 40px;
-    color: #fff;
+    color: var(--Black);
   }
 
   .projects {

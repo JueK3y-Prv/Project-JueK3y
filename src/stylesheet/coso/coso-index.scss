@@ -28,7 +28,6 @@ html {
 	height: 100vh;
 	font-family: "Monument Extended", sans-serif;
 	overflow: hidden;
-	background: var(--White);
 }
 
 body {
@@ -38,7 +37,11 @@ body {
 	height: 100vh;
 	font-family: "Monument Extended", sans-serif;
 	overflow: hidden;
-	background: var(--White);
+	
+	background-image: linear-gradient(90deg, #fff 49.88%,
+	#ddd 49.88%, #ddd 50%, #fff 50%, #fff 99.88%,
+	#ddd 99.88%, #ddd 100%);
+	background-size: 800.00px 800.00px;	
 	
 }
 nav {
@@ -126,8 +129,9 @@ a {
 	top: 60%;
 	left: 28%;
 	transform: translate(-50%, -50%);
-	filter: invert(1);
-	mix-blend-mode: difference;
+	color: var(--Black);
+	// filter: invert(1);
+	// mix-blend-mode: difference;
 	h1 {
 		font-size: 90px;
 		text-transform: uppercase;
@@ -259,6 +263,12 @@ a {
 }
 
 @media screen and (max-width: 900px) {
+	body {
+		background-image: linear-gradient(90deg, #fff 49.67%,
+		#ddd 49.67%, #ddd 50%, #fff 50%, #fff 99.67%,
+		#ddd 99.67%, #ddd 100%);
+		background-size: 302.00px 302.00px;	
+	}
 	.wrapper-img {
 		width: 90%;
 	}
@@ -271,10 +281,11 @@ a {
 		top: 50%;
 		left: 50%;
 		text-align: center;
-		filter: invert(0);
+		// filter: invert(0);
 		h1 {
 			font-size: 40px;
-			color: #fff;
+			// color: #fff;
+			color: var(--Black);
 		}
 	}
 	.projects {

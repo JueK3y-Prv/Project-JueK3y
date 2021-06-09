@@ -31,6 +31,7 @@ html {
   height: 100vh;
   font-family: "Monument Extended", sans-serif;
   overflow: hidden;
+  background-color: var(--White);
 }
 
 body {
@@ -40,8 +41,8 @@ body {
   height: 100vh;
   font-family: "Monument Extended", sans-serif;
   overflow: hidden;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(49.88%, #fff), color-stop(49.88%, #ddd), color-stop(50%, #ddd), color-stop(50%, #fff), color-stop(99.88%, #fff), color-stop(99.88%, #ddd), to(#ddd));
-  background-image: linear-gradient(90deg, #fff 49.88%, #ddd 49.88%, #ddd 50%, #fff 50%, #fff 99.88%, #ddd 99.88%, #ddd 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(49.88%, var(--White)), color-stop(49.88%, #ddd), color-stop(50%, #ddd), color-stop(50%, var(--White)), color-stop(99.88%, var(--White)), color-stop(99.88%, #ddd), to(#ddd));
+  background-image: linear-gradient(90deg, var(--White) 49.88%, #ddd 49.88%, #ddd 50%, var(--White) 50%, var(--White) 99.88%, #ddd 99.88%, #ddd 100%);
   background-size: 800px 800px;
 }
 
@@ -159,6 +160,9 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: var(--Black);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  mix-blend-mode: difference;
 }
 .header h1 {
   font-size: 90px;
@@ -329,6 +333,10 @@ a {
   .header h1 {
     font-size: 40px;
     color: var(--Black);
+  }
+
+  .menu-right .icon a.first-image {
+    display: none;
   }
 
   .projects {

@@ -1,3 +1,5 @@
+new CircleType(document.getElementById('rotated'));
+
 const theme = localStorage.getItem("theme");
 const iconSun = document.getElementById('sun-icon')
 const iconMoon = document.getElementById('moon-icon')

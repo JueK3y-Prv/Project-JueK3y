@@ -171,6 +171,27 @@ a {
 	text-transform: uppercase;
 }
 
+.circular-text {
+	position: absolute;
+	bottom: 30%;
+	right: 15%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(359deg);
+		}
+	}
+	animation: rotation 15s linear;
+	animation-iteration-count: infinite;
+	#rotated {
+		text-decoration: underline; // Doesnt work?
+	}
+}
+
 .lineThrough {
     color: hsl(222, 25%, 14%);
     text-decoration: none;

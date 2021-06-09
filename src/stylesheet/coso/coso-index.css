@@ -98,6 +98,9 @@ a {
   width: 18px;
   height: auto;
 }
+.menu-right .icon a#first-image {
+  padding-right: 5px;
+}
 
 .menu-link {
   padding: 0 30px;

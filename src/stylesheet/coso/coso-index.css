@@ -319,6 +319,9 @@ a {
   position: absolute;
   bottom: 30%;
   right: 15%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
@@ -346,6 +349,16 @@ a {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
   }
+}
+
+.circle {
+  position: absolute;
+  bottom: 16.2%;
+  right: 16%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 1px solid var(--Black);
 }
 
 .lineThrough {
@@ -488,7 +501,7 @@ a {
 
   .circular-text {
     bottom: 7%;
-    right: 50%;
+    right: 30%;
   }
 
   .projects {

@@ -195,6 +195,11 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	position: absolute;
 	bottom: 30%;
 	right: 15%;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	// background-color: rgb(255, 78, 78);
+	// border: 1px solid var(--Black);
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
 	@keyframes rotation {
@@ -207,6 +212,16 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	}
 	animation: rotation 15s linear;
 	animation-iteration-count: infinite;
+}
+
+.circle {
+	position: absolute;
+	bottom: 16.2%;
+	right: 16%;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	border: 1px solid var(--Black);
 }
 
 .lineThrough {
@@ -332,7 +347,7 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	}
 	.circular-text {
 		bottom: 7%;
-		right: 50%;
+		right: 30%;
 	}
 	.projects {
 		display: none;

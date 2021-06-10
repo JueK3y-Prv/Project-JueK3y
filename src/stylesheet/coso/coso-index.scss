@@ -145,7 +145,7 @@ a {
 
 
 $delay: .02s;
-$duration: .7s;
+$duration: .6s;
 $easing: cubic-bezier(0.76, 0, 0.24, 1);
 
 
@@ -160,8 +160,6 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .header-1, .header-2 {
-	height: 100px;
-	overflow: hidden;
 	&:hover, &.play {
 	  .letter {
 		transform: translateY(-100%);
@@ -209,9 +207,6 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	}
 	animation: rotation 15s linear;
 	animation-iteration-count: infinite;
-	#rotated {
-		text-decoration: underline; // Doesnt work?
-	}
 }
 
 .lineThrough {
@@ -335,10 +330,14 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	.menu-right .icon a.first-image {
 		display: none;
 	}
+	.circular-text {
+		bottom: 7%;
+		right: 50%;
+	}
 	.projects {
 		display: none;
 	}
 	.img-nav {
-		display: none;
+		display: none;	// Change position for mobile view
 	}
 }

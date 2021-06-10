@@ -15,6 +15,15 @@ setTimeout(function() {
     parentHeader.appendChild(soonText)
 
 
+    var style = document.createElement('style')
+    style.innerHTML = `
+    .header-1, .header-2 {
+        height: 103px;
+        overflow: hidden;
+    }
+    `
+    document.head.appendChild(style)
+
 
     let elements = document.querySelectorAll('.header-1')
 

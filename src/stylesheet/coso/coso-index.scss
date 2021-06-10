@@ -142,18 +142,40 @@ a {
 		mix-blend-mode: overlay;
 	}
 }
-.header-1 {
+
+
+$delay: .02s;
+$duration: .7s;
+$easing: cubic-bezier(0.76, 0, 0.24, 1);
+
+
+.animationHeader {
+	transition: transform $duration $easing;
+}
+
+@for $i from 0 through 20 {
+	.animationHeader:nth-child(#{$i + 1}) {
+	  transition-delay: $delay * $i;
+	}
+}
+
+.header-1, .header-2 {
+	height: 100px;
+	overflow: hidden;
+	&:hover, &.play {
+	  .letter {
+		transform: translateY(-100%);
+	  }
+	}
+	.block:last-child{
+		color: #d3a13b;
+	  }
 	.letter {
 		display: inline-block;
 		line-height: 1em;
 	}
 }
-.header-2 {
-	.letter {
-		display: inline-block;
-		line-height: 1em;
-	}
-}
+
 .sidebar-text {
 	position: absolute;
 	top: 20%;

@@ -15,59 +15,43 @@ setTimeout(function() {
     parentHeader.appendChild(soonText)
 
 
-    var style = document.createElement('style')
-    style.innerHTML = `
-    .header-1, .header-2 {
-        height: 103px;
-        overflow: hidden;
+    if (window.matchMedia('(min-device-width: 905px)').matches) {
+        var style = document.createElement('style')
+        style.innerHTML = `
+        .header-1, .header-2 {
+            height: 103px;
+            overflow: hidden;
+        }
+        `
+        document.head.appendChild(style)
+
+
+        let elements = document.querySelectorAll('.header-1')
+        repeatPr()
+
+        function repeatPr() {
+            elements.forEach(element => {
+            let innerText = element.innerText
+            element.innerHTML = ''
+            
+            let textContainer = document.createElement('div')
+            textContainer.classList.add('block')
+            
+            for (let letter of innerText) {
+                let span = document.createElement('span')
+                span.innerText = letter.trim() === '' ? '\xa0': letter
+                span.classList.add('letter')
+                span.classList.add('animationHeader')
+                textContainer.appendChild(span)
+            }
+            
+            element.appendChild(textContainer)
+            element.appendChild(textContainer.cloneNode(true))
+            });
+
+            elements = document.querySelectorAll('.header-2')
+        }
+        repeatPr()
     }
-    `
-    document.head.appendChild(style)
-
-
-    let elements = document.querySelectorAll('.header-1')
-
-    elements.forEach(element => {
-    let innerText = element.innerText
-    element.innerHTML = ''
-    
-    let textContainer = document.createElement('div')
-    textContainer.classList.add('block')
-    
-    for (let letter of innerText) {
-        let span = document.createElement('span')
-        span.innerText = letter.trim() === '' ? '\xa0': letter
-        span.classList.add('letter')
-        span.classList.add('animationHeader')
-        textContainer.appendChild(span)
-    }
-    
-    element.appendChild(textContainer)
-    element.appendChild(textContainer.cloneNode(true))
-    });
-    
-    
-
-    let elements2 = document.querySelectorAll('.header-2')
-
-    elements2.forEach(element => {
-    let innerText = element.innerText
-    element.innerHTML = ''
-    
-    let textContainer = document.createElement('div')
-    textContainer.classList.add('block')
-    
-    for (let letter of innerText) {
-        let span = document.createElement('span')
-        span.innerText = letter.trim() === '' ? '\xa0': letter
-        span.classList.add('letter')
-        span.classList.add('animationHeader')
-        textContainer.appendChild(span)
-    }
-    
-    element.appendChild(textContainer)
-    element.appendChild(textContainer.cloneNode(true))
-    });
-
-
+        
 }, 6470)

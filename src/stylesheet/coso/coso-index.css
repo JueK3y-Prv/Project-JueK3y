@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
+@font-face {
+  font-family: "NeueMetana";
+  src: url("/src/fonts/BoldTitle/NeueMetana-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neutro";
+  src: url("/src/fonts/BoldTitle/Neutro-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   cursor: none;
   --Black: #111213;
@@ -513,11 +525,9 @@ a {
     display: none;
   }
 
-  .circular-text {
+  .accept-cookie {
     bottom: 7%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    left: calc(50% - 60px);
   }
 
   .projects {

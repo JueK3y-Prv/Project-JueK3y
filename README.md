@@ -34,10 +34,10 @@ The official domain for the website is [juek3y.com](https://juek3y.com).
 
 ## You have found an error in the code or the page is behaving incorrectly?
 This may well occur in an unfinished website.
-<br>I would appreciate it if you would then open a [new issue](https://github.com/JueK3y/Project-JueK3y/issues/new) so I can take care of the bug.
+<br>I would appreciate it if you would then open a [new issue](https://github.com/JueK3y-Prv/Project-JueK3y/issues/new) so I can take care of the bug.
 
 _<br>Please keep in mind that you can only report technical errors (e.g. 404 errors) here.
-<br>All other problems, such as accessibility problems (i.e. visual things) can be reported [on the official JueK3yOrg info sheet](https://github.com/JueK3yOrg/Project-JueK3y/issues)._
+<br>All other problems, such as accessibility problems (i.e. visual things) can be reported [on the official JueK3yOrg info sheet](https://github.com/JueK3y/Project-JueK3y/issues)._
 
 <br>Thanks for your help!
 

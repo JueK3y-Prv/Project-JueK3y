@@ -325,8 +325,6 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
-  -webkit-animation: rotation 15s linear;
-          animation: rotation 15s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -350,13 +348,18 @@ a {
             transform: rotate(359deg);
   }
 }
+.circular-text:hover {
+  background-color: #ff4e4e;
+}
 
 .circle {
   position: absolute;
-  bottom: 16.2%;
-  right: 16%;
+  top: 50%;
+  left: 50%;
   width: 85px;
   height: 85px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid var(--Black);
 }
@@ -501,7 +504,9 @@ a {
 
   .circular-text {
     bottom: 7%;
-    right: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 
   .projects {

@@ -12,6 +12,7 @@ anime.timeline()
     delay: (el, i) => 4800 + 50 * i
 });
 
+
 var textWrapper = document.querySelector('.header-2');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -32,6 +33,7 @@ TweenMax.to(".wrapper", 2, {
     delay: 3.6
 });
 
+
 var tl = new TimelineMax();
 
 tl.from(".loader", 1.6, {
@@ -50,9 +52,9 @@ tl.to(".loader", 1.6, {
 });
 
 TweenMax.to(".box", 2.4, {
-y: "-100%",
-ease: Expo.easeInOut,
-delay: 3.8,
+    y: "-100%",
+    ease: Expo.easeInOut,
+    delay: 3.8,
 });
 
 var tl = new TweenMax.staggerFrom(".menu > div", 2, {
@@ -68,3 +70,6 @@ var tl = new TweenMax.staggerFrom(".hero-container > div", 2, {
     ease: Expo.easeInOut,
     delay: 4.2
 }, 0.1);
+
+
+// Cookie Banner needs to be moved up

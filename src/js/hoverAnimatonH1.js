@@ -15,11 +15,11 @@ setTimeout(function() {
     parentHeader.appendChild(soonText)
 
 
-    if (window.matchMedia('(min-device-width: 905px)').matches) {
+    if (window.matchMedia('(min-device-width: 905px)').matches) {       // height: 95px would be better
         var style = document.createElement('style')
         style.innerHTML = `
         .header-1, .header-2 {
-            height: 103px;
+            height: 112px;
             overflow: hidden;
         }
         `

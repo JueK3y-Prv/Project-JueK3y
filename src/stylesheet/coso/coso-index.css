@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
 * {
   cursor: none;
   --Black: #111213;
@@ -169,6 +170,7 @@ a {
   text-transform: uppercase;
   margin: 0;
   mix-blend-mode: overlay;
+  font-family: "Red Rose", Roboto;
 }
 
 .animationHeader {
@@ -289,6 +291,7 @@ a {
 }
 .header-1 .block:last-child, .header-2 .block:last-child {
   color: #d3a13b;
+  margin-top: -22px;
 }
 .header-1 .letter, .header-2 .letter {
   display: inline-block;
@@ -315,7 +318,7 @@ a {
   text-transform: uppercase;
 }
 
-.circular-text {
+.accept-cookie {
   position: absolute;
   bottom: 30%;
   right: 15%;
@@ -325,8 +328,12 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
+  -webkit-animation: rotation 15s linear;
+          animation: rotation 15s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 @-webkit-keyframes rotation {
   from {
@@ -348,8 +355,10 @@ a {
             transform: rotate(359deg);
   }
 }
-.circular-text:hover {
+.accept-cookie:hover {
   background-color: #ff4e4e;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .circle {
@@ -451,6 +460,8 @@ a {
 
 .cursor {
   position: fixed;
+  bottom: -20px;
+  right: -20px;
   width: 20px;
   height: 20px;
   border-radius: 50%;

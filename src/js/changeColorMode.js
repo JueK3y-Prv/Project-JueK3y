@@ -1,4 +1,4 @@
-const circleType = new CircleType(document.getElementById('rotated')).radius(0)
+const circleType = new CircleType(document.getElementById('rotated')).radius(60)
 circleType.forceWidth(true)
 
 const theme = localStorage.getItem("theme");

@@ -1,13 +1,16 @@
-document.getElementById('a-c').onclick = () => {
-    // alert("Well... I haven't prepared this yet ")
-    setCookie()
-};
+if (document.cookie.match(/^(.*;)?\s*accept_cookies\s*=\s*[^;]+(.*)?$/)) {
+    // alert("Cookies can come")
+    document.__defineGetter__("cookie", function() { return '';} );
+    document.__defineSetter__("cookie", function() {} );
+}
 
-function setCookie(exdays) {
-    var d = new Date()
-    // alert(d)
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))  // d.getTime() displays big number
-    var expires = "expires=" + d.toUTCString();
-    // alert(expires)
-    document.cookie = "accept_cookie=true; " + expires + "; path=/"
+document.getElementById("test1").onclick = () => {
+    var cookieName = 'accept_cookies'
+    var consent = 'true'
+    var cookieTimeout = 31536000000
+
+    var date = new Date()
+    date.setTime(date.getTime() + cookieTimeout)
+
+    document.cookie = cookieName + '=' + consent + ';expires=' + date.toGMTString() + ';path=/'
 }

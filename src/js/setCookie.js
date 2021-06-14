@@ -4,7 +4,7 @@ if (document.cookie.match(/^(.*;)?\s*accept_cookies\s*=\s*[^;]+(.*)?$/)) {
     document.__defineSetter__("cookie", function() {} );
 }
 
-document.getElementById("test1").onclick = () => {
+document.getElementById("a-c-banner").onclick = () => {
     var cookieName = 'accept_cookies'
     var consent = 'true'
     var cookieTimeout = 31536000000

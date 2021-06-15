@@ -1,7 +1,7 @@
 [[headers]]
   for ="*"
     [headers.values]
-      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; img-src 'self' img.icons8.com; media-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' ajax.cloudflare.com static.cloudflareinsights.com; style-src 'self' fonts.googleapis.com 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'sha256-F5C5iVpYdB5b55oprxIMq0oFt0G6oVIlYVOpsLLtbsM='; font-src 'self' fonts.googleapis.com fonts.gstatic.com"
+      Content-Security-Policy = "default-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; img-src 'self' img.icons8.com; media-src 'self'; object-src 'none'; script-src 'self' ajax.cloudflare.com static.cloudflareinsights.com; style-src 'self' fonts.googleapis.com 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'sha256-F5C5iVpYdB5b55oprxIMq0oFt0G6oVIlYVOpsLLtbsM='; font-src 'self' fonts.googleapis.com fonts.gstatic.com"
       Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
       Referrer-Policy = "same-origin"
       Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"

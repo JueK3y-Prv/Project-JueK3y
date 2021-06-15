@@ -54,4 +54,4 @@ setTimeout(function() {
         repeatPr()
     }
         
-}, 6470)
+}, 6480)

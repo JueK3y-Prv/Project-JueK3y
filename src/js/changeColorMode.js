@@ -1,6 +1,3 @@
-const circleType = new CircleType(document.getElementById('rotated')).radius(60)
-circleType.forceWidth(true)
-
 const theme = localStorage.getItem("theme");
 const iconSun = document.getElementById('sun-icon')
 const iconMoon = document.getElementById('moon-icon')

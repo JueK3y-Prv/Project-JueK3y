@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
-
-
-@font-face {
+@font-face {	
+	font-family: 'Red Rose';
+	src: url('/src/fonts/BoldTitle/RedRose-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {	
 		font-family: 'NeueMetana';
 		src: url('/src/fonts/BoldTitle/NeueMetana-Bold.otf') format('opentype');
 		font-weight: normal;

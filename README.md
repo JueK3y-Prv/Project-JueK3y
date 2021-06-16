@@ -30,7 +30,7 @@ Currently, the website is still a work in progress.
 ## What is the URL of the website?
 The official domain for the website is [juek3y.com](https://juek3y.com).
 <br>However, the website can also be accessed as a Netlify subdomain via [juek3y.netlify.app](https://juek3y.netlify.app).
-<br>**This is not an official way and will be used as an automatic redirect to the main domain in the near future.**
+<br>**This is not an official way and will be used as an automatic redirect to the main domain.**
 
 <br>
 

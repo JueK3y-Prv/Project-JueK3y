@@ -1,4 +1,6 @@
 # Project JueK3y | A personal website
+
+_Note: The website is currently getting a new design. The old design was already a bit outdated (ca. 2019)._
 <br>
 
 ## What is the JueK3y website?

@@ -1,3 +1,9 @@
+const changeAn = document.getElementById("accept-cookie")
+changeAn.onclick = () => { 
+    changeAn.style.display = "none"
+    document.getElementById("cookie-accepted").style.display = "block"
+ }
+
 
 setTimeout(function() {
     const parentHeader = document.getElementById("delete-text")
@@ -15,7 +21,7 @@ setTimeout(function() {
     parentHeader.appendChild(soonText)
 
 
-    if (window.matchMedia('(min-device-width: 905px)').matches) {       // height: 95px would be better
+    if (window.matchMedia('(min-device-width: 905px)').matches) {
         var style = document.createElement('style')
         style.innerHTML = `
         .header-1, .header-2 {

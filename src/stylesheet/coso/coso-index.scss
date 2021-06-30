@@ -212,7 +212,33 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	text-transform: uppercase;
 }
 
-.accept-cookie {
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes rotation-other {
+	from {
+		transform: rotate(359deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+#accept-cookie {
+	animation: rotation 15s linear;
+}
+
+#cookie-accepted {
+	display: none;
+	animation: rotation-other 15s linear;
+}
+
+#accept-cookie, #cookie-accepted {
 	position: absolute;
 	bottom: 30%;
 	right: 15%;
@@ -223,15 +249,6 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	// border: 1px solid var(--Black);
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
-	@keyframes rotation {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(359deg);
-		}
-	}
-	animation: rotation 15s linear;
 	animation-iteration-count: infinite;
 	transition: .2s;
 	&:hover {

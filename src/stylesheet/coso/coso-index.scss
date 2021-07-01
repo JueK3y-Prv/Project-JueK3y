@@ -602,7 +602,7 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	.menu-right .icon a.first-image {
 		display: none;
 	}
-	.accept-cookie {
+	#accept-cookie, #cookie-accepted {
 		bottom: 7%;
 		left: calc(50% - 60px);
 	}

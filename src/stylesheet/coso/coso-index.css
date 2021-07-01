@@ -840,7 +840,7 @@ a {
     display: none;
   }
 
-  .accept-cookie {
+  #accept-cookie, #cookie-accepted {
     bottom: 7%;
     left: calc(50% - 60px);
   }

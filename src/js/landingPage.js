@@ -33,6 +33,10 @@ TweenMax.to(".wrapper", 2, {
     delay: 3.6
 });
 
+setTimeout( function() {
+    document.getElementById("loading-screen").style.display = "none"
+}, 6000 ); 
+
 
 var tl = new TimelineMax();
 
@@ -71,5 +75,3 @@ var tl = new TweenMax.staggerFrom(".hero-container > div", 2, {
     delay: 4.2
 }, 0.1);
 
-
-// Cookie Banner needs to be moved up

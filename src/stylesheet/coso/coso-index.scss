@@ -240,7 +240,6 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 	// border: 1px solid var(--Black);
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
-	animation-iteration-count: infinite;
 	transition: .2s;
 	&:hover {
 		background-color: rgb(253, 90, 90);
@@ -250,6 +249,7 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 
 #accept-cookie {
 	animation: rotation 15s linear;
+	animation-iteration-count: infinite;
 	#a-c-banner #rotated div span {
 		position: absolute;
 		bottom: auto;
@@ -363,6 +363,7 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 #cookie-accepted {
 	display: none;
 	animation: rotation-other 15s linear;
+	animation-iteration-count: infinite;
 	#a-c-banner-changed #rotated-changed div span {
 		position: absolute;
 		bottom: auto;

@@ -386,8 +386,6 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -400,6 +398,8 @@ a {
 #accept-cookie {
   -webkit-animation: rotation 15s linear;
           animation: rotation 15s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 #accept-cookie #a-c-banner #rotated div span {
   position: absolute;
@@ -549,6 +549,8 @@ a {
   display: none;
   -webkit-animation: rotation-other 15s linear;
           animation: rotation-other 15s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 #cookie-accepted #a-c-banner-changed #rotated-changed div span {
   position: absolute;

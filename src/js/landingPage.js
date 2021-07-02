@@ -34,7 +34,7 @@ TweenMax.to(".wrapper", 2, {
 });
 
 TweenMax.to(".wrapper", 2, {
-    delay: 5.7,
+    delay: 5.65,
     opacity: 0
 });
 

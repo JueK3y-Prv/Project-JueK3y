@@ -33,9 +33,14 @@ TweenMax.to(".wrapper", 2, {
     delay: 3.6
 });
 
+TweenMax.to(".wrapper", 2, {
+    delay: 5.7,
+    opacity: 0
+});
+
 setTimeout( function() {
     document.getElementById("loading-screen").style.display = "none"
-}, 6000 ); 
+}, 7600 ); 
 
 
 var tl = new TimelineMax();

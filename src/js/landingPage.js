@@ -40,7 +40,7 @@ TweenMax.to(".wrapper", 2, {
 
 setTimeout( function() {
     document.getElementById("loading-screen").style.display = "none"
-}, 5700 ); 
+}, 7650 ); 
 
 
 var tl = new TimelineMax();

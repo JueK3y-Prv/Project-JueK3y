@@ -60,4 +60,4 @@ setTimeout(function() {
         repeatPr()
     }
         
-}, 6480)
+}, 6500)

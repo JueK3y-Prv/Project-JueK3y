@@ -341,8 +341,8 @@ a {
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -352,14 +352,14 @@ a {
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 @-webkit-keyframes rotation-other {
   from {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -368,8 +368,8 @@ a {
 }
 @keyframes rotation-other {
   from {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -396,8 +396,8 @@ a {
 }
 
 #accept-cookie {
-  -webkit-animation: rotation 15s linear;
-          animation: rotation 15s linear;
+  -webkit-animation: rotation 10s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation 10s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -547,8 +547,8 @@ a {
 
 #cookie-accepted {
   display: none;
-  -webkit-animation: rotation-other 15s linear;
-          animation: rotation-other 15s linear;
+  -webkit-animation: rotation-other 10s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation-other 10s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }

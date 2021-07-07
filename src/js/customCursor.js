@@ -1,10 +1,15 @@
 $(document).ready(function(){
-      var cursor = $(".cursor");
+      const cursor = $(".cursor");
+      const smallCursor = $('.small-cursor');
       
           $(window).mousemove(function(e) {
               cursor.css({
                   top: e.clientY - cursor.height() / 2,
                   left: e.clientX - cursor.width() / 2
+              });
+              smallCursor.css({
+                top: e.clientY - smallCursor.height() / 2,
+                left: e.clientX - smallCursor.width() / 2
               });
           });
       
@@ -13,10 +18,16 @@ $(document).ready(function(){
                   cursor.css({
                       opacity: "0"
                   });
+                  smallCursor.css({
+                    opacity: "0"
+                  });
               })
               .mouseenter(function() {
                   cursor.css({
                       opacity: "1"
+                  });
+                  smallCursor.css({
+                    opacity: "1"
                   });
               });
       

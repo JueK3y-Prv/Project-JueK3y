@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: juek3y.com
+Token: 7773055c5ec24e1122f3dfcf19a7f3c90a578184cbe8bc0fd1e49270990cd49c

@@ -35,10 +35,14 @@ else {
 
 
 iconSun.onclick = () => {
-    localStorage.setItem("theme", "light");
+    if (localStorage.getItem("cookieAccepted") == "true") {
+        localStorage.setItem("theme", "light");
+    }
     modeToLight();
 };
 iconMoon.onclick = () => {
-    localStorage.setItem("theme", "dark");
+    if (localStorage.getItem("cookieAccepted") == "true") {
+        localStorage.setItem("theme", "dark");
+    }
     modeToDark();
 };

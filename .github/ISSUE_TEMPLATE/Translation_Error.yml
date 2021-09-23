@@ -1,0 +1,51 @@
+name: "Translation error 📚"
+description: Report an incorrect or missing translation
+labels: Translation, New request
+assignees: JueK3y-Prv
+body:
+- type: markdown
+  attributes:
+    value: Please make sure to [search for existing issues](https://github.com/JueK3y-Prv/Project-JueK3y/issues) before filing a new one!
+
+- type: dropdown
+  attributes:
+    label: In what language is the translation error?
+    options:
+      - German
+      - English
+      - Some other language
+  validations:
+    required: true
+
+ - type: input
+  attributes:
+    label: URL
+    placeholder: "https://juek3y.com/de/contact"
+    description: Enter the URL that leads to the translation error. 
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Where is the incorrect / missing translation located?
+    description: Briefly describe how to find the translation error
+    placeholder: |
+      1. Scroll down to '....'
+      2. Click on '....'
+      3. See missing translation in line '...'
+  validations:
+    required: true
+ 
+- type: textarea
+  attributes:
+    label: What is the incorrect / missing translation?
+    placeholder: This is ein Feld with german text.
+  validations:
+    required: true
+ 
+- type: textarea
+  attributes:
+    label: What translation do you suggest?
+    placeholder: This is a field with german text.
+  validations:
+    required: false

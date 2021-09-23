@@ -1,0 +1,66 @@
+name: "Bug report 🐛"
+description: Report errors or unexpected behavior
+labels: Bug, New request
+assignees: JueK3y-Prv
+body:
+- type: markdown
+  attributes:
+    value: Please make sure to [search for existing issues](https://github.com/JueK3y-Prv/Project-JueK3y/issues) before filing a new one!
+
+- type: input
+  attributes:
+    label: Browser version
+    placeholder: "Brave Version 1.30.19"
+    description: Enter the name and version of your browser.
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: URL
+    placeholder: "https://juek3y.com/de/contact"
+    description: Enter the URL that leads to the error. 
+  validations:
+    required: true
+
+- type: dropdown
+  attributes:
+    label: Choose the type of error.
+    options:
+      - Broken hyperlink
+      - Error with color theme
+      - Error with submitting form
+      - Image missing (Image alt text instead of picture)
+      - Content missing (Blank / White page)
+      - Page missing (404 error)
+      - Service unavailable (503 error)
+      - Errors shown in DevTool / Inspector Tool
+      - Some other error
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: Tell us the steps required to trigger your bug.
+    placeholder: |
+      1. Click on '....'
+      2. Scroll down to '....'
+      3. See error
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: If you want to include screenshots, paste them into the markdown editor below.
+    placeholder: A clear and concise description of what you expected to happen.
+  validations:
+    required: false
+
+- type: textarea
+  attributes:
+    label: Actual Behavior
+    placeholder: What happened instead?
+  validations:
+    required: true

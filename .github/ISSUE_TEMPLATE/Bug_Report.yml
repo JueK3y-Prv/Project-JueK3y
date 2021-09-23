@@ -47,8 +47,7 @@ body:
       1. Click on '....'
       2. Scroll down to '....'
       3. See error
-  validations:
-    required: true
+
 
 - type: textarea
   attributes:

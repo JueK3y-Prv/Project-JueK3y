@@ -17,13 +17,13 @@ body:
   validations:
     required: true
 
- - type: input
-   attributes:
-     label: URL
-     placeholder: "https://juek3y.com/de/contact"
-     description: Enter the URL that leads to the translation error. 
-   validations:
-     required: true
+- type: input
+  attributes:
+    label: URL
+    placeholder: "https://juek3y.com/de/contact"
+    description: Enter the URL that leads to the translation error. 
+  validations:
+    required: true
 
 - type: textarea
   attributes:

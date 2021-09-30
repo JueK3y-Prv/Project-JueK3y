@@ -547,8 +547,8 @@ a {
 
 #cookie-accepted {
   display: none;
-  -webkit-animation: rotation-other 10s cubic-bezier(0.65, 0, 0.35, 1);
-          animation: rotation-other 10s cubic-bezier(0.65, 0, 0.35, 1);
+  -webkit-animation: rotation-other 9s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation-other 9s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }

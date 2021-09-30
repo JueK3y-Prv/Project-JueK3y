@@ -125,6 +125,19 @@ a {
   padding: 0 30px;
 }
 
+.coming-soon-banner {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+}
+.coming-soon-banner #coso-banner-1 {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
 .wrapper-img {
   overflow: hidden;
   position: relative;
@@ -547,8 +560,8 @@ a {
 
 #cookie-accepted {
   display: none;
-  -webkit-animation: rotation-other 9s cubic-bezier(0.65, 0, 0.35, 1);
-          animation: rotation-other 9s cubic-bezier(0.65, 0, 0.35, 1);
+  -webkit-animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }

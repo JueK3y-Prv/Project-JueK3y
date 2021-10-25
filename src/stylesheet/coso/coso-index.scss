@@ -63,6 +63,16 @@ body {
 	background-size: 800.00px 800.00px;	
 	
 }
+
+#no-js {
+	border: 1px solid grey;
+	text-align: center;
+	padding: 10px;
+	span {
+		color: rgb(226, 80, 80);
+	}
+}
+
 nav {
 	width: 80%;
 	height: 100px;

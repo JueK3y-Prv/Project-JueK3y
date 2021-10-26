@@ -17,7 +17,7 @@ The website is a portfolio about me (JueK3y).
   - Switch between those two modes
   - Automatic detection of EN or DE language
   - Change between EN and DE
-  - Download
+  - Download Page
 <br>
 
 ## When will the website be ready?
@@ -36,7 +36,7 @@ The official domain for the website is [juek3y.com](https://juek3y.com).
 
 ## You have found an error in the code or the page is behaving incorrectly?
 This may well occur in an unfinished website.
-<br>I would appreciate it if you would then open a [new issue](https://github.com/JueK3y-Prv/Project-JueK3y/issues/new) so I can take care of the bug.
+<br>I would appreciate it if you would then open a [new issue](https://github.com/JueK3y-Prv/Project-JueK3y/issues/new/choose) so I can take care of the bug.
 
 _<br>Please keep in mind that you can only report technical errors (e.g. 404 errors) here.
 <br>All other problems, such as accessibility problems (i.e. visual things) can be reported [on the official JueK3y info sheet](https://github.com/JueK3y/Project-JueK3y/issues)._

@@ -53,9 +53,12 @@
         <script defer src="/src/js/changeColorMode.js"></script>
         <script defer src="/src/js/hoverAnimatonH1.js"></script>
         <script async src="/src/js/customCursor.js"></script>
-        <script async src="/src/js/changeImage.js"></script>
+        <!-- <script async src="/src/js/changeImage.js"></script> -->
         <script defer src="/src/js/landingPage.js"></script>
         <script defer src="/src/js/setCookie.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+        <script src="/src/js/hover-effect.umd.js"></script>
 
         <!-------   IMG  ------->
         <!--Fav Icon-->
@@ -98,14 +101,24 @@
                 <i id="coso-banner-2"></i>
             </div>
             <div class="wrapper-img">
-                <div class="box"></div>
+                <!-- <div class="box"></div>
                 <div class="header-image" id="image-filter">
-                    <!-- <div id="rgbKineticSlider" class="rgbKineticSlider image"></div> -->
                     <div id="image-3" class="image">
                         <img>
                     </div>
-                </div>
+                </div> -->
             </div>
+
+            <script>
+            var hoverDistort = new hoverEffect({
+                    parent: document.querySelector('.wrapper-img'),
+                    intensity: 0.4,
+                    image1: "/src/img/img_one.jpg",
+                    image2: "/src/img/img_two.jpg",
+                    displacementImage: "/src/img/displacement/4.png" //4.png 7.jpg 14.jpg
+            });
+            </script>
+
             <div class="header" id="delete-text">
                 <h1 class="header-1">Coming</h1>
                 <h1 class="header-2">Soon</h1>
@@ -215,12 +228,6 @@
         </div>        
         <div class="cursor"></div>
         <div class="small-cursor"></div>
-        <!-- <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script> 
-        <script src="/src/js/imageTransition.js"></script> -->
     </body>
     <!-- Basic layout and GASAP (landingPage.js) Code by CodeGrid - This page will be replaced when the main page is finished -->
 </html>

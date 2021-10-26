@@ -1,7 +1,7 @@
 const theme = localStorage.getItem("theme");
 const iconSun = document.getElementById('sun-icon')
 const iconMoon = document.getElementById('moon-icon')
-const image = document.getElementById('image-filter')
+const image = document.querySelector('.image-filter')
 
 
 function modeToLight() {

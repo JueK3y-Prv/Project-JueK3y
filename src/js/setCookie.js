@@ -1,5 +1,4 @@
 if (document.cookie.match(/^(.*;)?\s*accept_cookies\s*=\s*[^;]+(.*)?$/)) {
-    // alert("Cookies can come")
     document.__defineGetter__("cookie", function() { return '';} );
     document.__defineSetter__("cookie", function() {} );
 

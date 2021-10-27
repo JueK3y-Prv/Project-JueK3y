@@ -172,18 +172,23 @@ nav {
 		height: 100%;
 		object-fit: cover;
 	}
-	/*#image-1 {
-		content: url('/src/img/title2.jpg');
+	.image-1, .image-2, .image-3, .image-4 {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	} 
+	#image-1 {
+		display: none;
 	}
 	#image-2 {
-		content: url('/src/img/picture3.jpg');
+		display: none;
 	}
 	#image-3 {
-		content: url('/src/img/Police-2.JPG');
+		display: none;
 	}
 	#image-4 {
-		content: url('/src/img/index-bg-2.jpg');
-	}*/
+		display: none;
+	}
 }
 
 .header {

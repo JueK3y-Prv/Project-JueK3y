@@ -170,6 +170,18 @@ nav .menu-link {
           transform: translate(-50%, 0%);
   width: 30%;
   height: 90vh;
+  /*#image-1 {
+  	content: url('/src/img/title2.jpg');
+  }
+  #image-2 {
+  	content: url('/src/img/picture3.jpg');
+  }
+  #image-3 {
+  	content: url('/src/img/Police-2.JPG');
+  }
+  #image-4 {
+  	content: url('/src/img/index-bg-2.jpg');
+  }*/
 }
 .wrapper-img .box {
   background: var(--White);
@@ -186,19 +198,6 @@ nav .menu-link {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  pointer-events: none;
-}
-.wrapper-img #image-1 {
-  content: url("/src/img/title2.jpg");
-}
-.wrapper-img #image-2 {
-  content: url("/src/img/picture3.jpg");
-}
-.wrapper-img #image-3 {
-  content: url("/src/img/Police-2.JPG");
-}
-.wrapper-img #image-4 {
-  content: url("/src/img/index-bg-2.jpg");
 }
 
 .header {

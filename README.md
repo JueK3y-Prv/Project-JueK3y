@@ -24,7 +24,7 @@ The website is a portfolio about me (JueK3y).
 Currently, the website is still a work in progress.
 <br>Since the scope of the site is quite complex, it may take some time until completion.
 <br>As soon as an exact date is known, this paragraph will be updated _(*)_. 
-###### _(*) Paragraph updated on 09. March 2021_
+###### _(*) Paragraph updated on 28. October 2021_
 <br>
 
 ## What is the URL of the website?

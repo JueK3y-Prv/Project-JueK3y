@@ -167,25 +167,15 @@ nav {
 		left: 0;
 		z-index: 2;
 	}
-	.header-image {
-		.image {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			pointer-events: none;
-		}
-		#image-1 {
-			content: url('/src/img/title2.jpg');
-		}
-		#image-2 {
-			content: url('/src/img/picture3.jpg');
-		}
-		#image-3 {
-			content: url('/src/img/Police-2.JPG');
-		}
-		#image-4 {
-			content: url('/src/img/index-bg-2.jpg');
-		}
+	.image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.image-1, .image-2, .image-3, .image-4 {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
@@ -559,7 +549,7 @@ nav {
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
 	color: grey;
-	.next {
+	#next-button {
 		position: relative;
 		top: 40px;
 		left: 80px;

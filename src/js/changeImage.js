@@ -1,61 +1,56 @@
 function nextImage() {
-    currentImageID = document.querySelector('.image').id
-    currentImageNumber = parseInt(currentImageID.slice(-1))
+    const currentImageID = document.querySelector('.image').id
+    const idChange = document.getElementById(currentImageID)
+    const currentImageNumber = parseInt(currentImageID.slice(-1))
+    const imgNumber = document.getElementById('image-number')
+    const amountChildren = document.querySelector('.image').children.length
 
-    if (a && currentImageNumber <= 3) {
-        document.getElementById('image-number').textContent = '00' + (currentImageNumber + 1)
-        document.getElementById(currentImageID).id = 'image-' + (currentImageNumber + 1)
+    if (a && currentImageNumber <= (amountChildren - 1)) {
+        // If next image & image ID is less than the max. children
+        imgNumber.textContent = '00' + (currentImageNumber + 1)
+        idChange.id = 'image-' + (currentImageNumber + 1)
+        showImage(1)
     }
     else if (b && currentImageNumber >= 2) {
-        document.getElementById('image-number').textContent = '00' + (currentImageNumber - 1)
-        document.getElementById(currentImageID).id = 'image-' + (currentImageNumber - 1)
+        // If prev image & image ID is bigger than 1
+        imgNumber.textContent = '00' + (currentImageNumber - 1)
+        idChange.id = 'image-' + (currentImageNumber - 1)
+        showImage(-1)
     }
     else {
-        document.getElementById('image-number').textContent = '00' + (currentImageNumber - c)
-        document.getElementById(currentImageID).id = 'image-' + (currentImageNumber - c)
+        // For the switch-points: If image ID is 4 or 1
+        imgNumber.textContent = '00' + (currentImageNumber - c)
+        idChange.id = 'image-' + (currentImageNumber - c)
+        showImage(-c)
     }
+
+    function showImage(n) {
+        for (i = 0; i < amountChildren; i++) {
+            if (i == (currentImageNumber + n)) {
+                $('.image-' + (currentImageNumber + n)).css('display', 'block')
+            }
+            else if (n == -1) {
+                $('.image-' - i).css('display', 'none')
+            }
+            else {
+                $('.image-' + i).css('display', 'none')
+            }
+        }
+    }
+
     a = false
     b = false
-
-    // Needs to be simplified ASAP
-    // Start-Image shows IMG 001, not IMG 003
-    // Still wrong images when showing prev img
-
-    if ((currentImageNumber + 1) == 2) {
-        $('.image-1').css('display', 'none')
-        $('.image-2').css('display', 'block')
-        $('.image-3').css('display', 'none')
-        $('.image-4').css('display', 'none')
-    }
-    else if ((currentImageNumber + 1) == 3) {
-        $('.image-1').css('display', 'none')
-        $('.image-2').css('display', 'none')
-        $('.image-3').css('display', 'block')
-        $('.image-4').css('display', 'none')
-    }
-    else if ((currentImageNumber + 1) == 4) {
-        $('.image-1').css('display', 'none')
-        $('.image-2').css('display', 'none')
-        $('.image-3').css('display', 'none')
-        $('.image-4').css('display', 'block')
-    }
-    else if ((currentImageNumber + 1) == 5) {
-        $('.image-1').css('display', 'block')
-        $('.image-2').css('display', 'none')
-        $('.image-3').css('display', 'none')
-        $('.image-4').css('display', 'none')
-    }
 }
 
-document.getElementById('next-button').onclick = function() {
+document.getElementById('next-button').onclick = () => {
     nextImage(a = true, b = false, c = 3)    
 }
 
-document.getElementById('prev-button').onclick = function() {
+document.getElementById('prev-button').onclick = () => {
     nextImage(b = true, c = -3)    
 }
 
-setInterval(function() {
+setInterval(() => {
     nextImage(a = true, b = false, c = 3)
 }, 9000)
 

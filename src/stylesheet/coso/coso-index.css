@@ -193,18 +193,6 @@ nav .menu-link {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrapper-img #image-1 {
-  display: none;
-}
-.wrapper-img #image-2 {
-  display: none;
-}
-.wrapper-img #image-3 {
-  display: none;
-}
-.wrapper-img #image-4 {
-  display: none;
-}
 
 .header {
   position: absolute;
@@ -782,7 +770,7 @@ nav .menu-link {
   text-transform: uppercase;
   color: grey;
 }
-.img-nav .next {
+.img-nav #next-button {
   position: relative;
   top: 40px;
   left: 80px;

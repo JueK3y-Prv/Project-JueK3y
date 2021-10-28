@@ -184,14 +184,10 @@ nav .menu-link {
 .wrapper-img .image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.wrapper-img .image-1, .wrapper-img .image-2, .wrapper-img .image-3, .wrapper-img .image-4 {
+.wrapper-img .image .image-1, .wrapper-img .image .image-2, .wrapper-img .image .image-3, .wrapper-img .image .image-4 {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .header {

@@ -623,7 +623,7 @@ nav {
 		display: none;
 	}
 	#accept-cookie, #cookie-accepted {
-		bottom: 7%;
+		bottom: 7% !important;
 		left: calc(50% - 60px);
 	}
 	.projects {
@@ -631,5 +631,14 @@ nav {
 	}
 	.img-nav {
 		display: none;	// Change position for mobile view
+	}
+}
+
+@media screen and (max-width: 420px) {
+	* {
+		cursor: pointer;
+	}
+	.cursor, .small-cursor {
+		display: none;
 	}
 }

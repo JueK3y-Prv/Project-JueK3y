@@ -58,7 +58,7 @@ var hoverDistort1 = new hoverEffect({
     parent: document.querySelector('.image-1'),
     intensity: 0.4,
     image1: '/src/img/displacement/Image-Desert-1.jpg',
-    image2: '/src/img/displacement/Image-Desert-2.jpg',
+    image2: '/src/img/displacement/Image-Desert-3.jpg',
     displacementImage: '/src/img/displacement/filter/4.png'
 });
 
@@ -73,8 +73,8 @@ var hoverDistort2 = new hoverEffect({
 var hoverDistort3 = new hoverEffect({
     parent: document.querySelector('.image-3'),
     intensity: 0.4,
-    image1: '/src/img/displacement/img_one.jpg',
-    image2: '/src/img/displacement/img_two.jpg',
+    image1: '/src/img/displacement/Image-Desert-2.jpg',
+    image2: '/src/img/displacement/Image-Plane-1.jpg',
     displacementImage: '/src/img/displacement/filter/4.png'
 });
 

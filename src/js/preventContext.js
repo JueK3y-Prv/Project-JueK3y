@@ -4,14 +4,14 @@ if (window.location.href==="https://juek3y.netlify.app/en/coming-soon") {
 
 console.log('%c 👋 Hey there! You found the secret Dev Tool Cookie 🍪\n Please keep in mind that the source code and images are copyright protected.\n ~ JueK3y', "display: block; font-size: 13px;")
 
-console.warn('You are getting errors that are not because of your browser settings (e.g. ERR_BLOCKED_BY_CLIENT)?\nPlease report them here: https://github.com/JueK3y-Prv/Project-JueK3y/issues/new')
+console.warn('You are getting errors that are not because of your browser settings (e.g. ERR_BLOCKED_BY_CLIENT)?\nPlease report them here: https://github.com/JueK3y-Prv/Project-JueK3y/issues/new/choose')
 
 console.log('%c(C)2020 - ' +  new Date().getFullYear() + ' by JueK3y', "color: grey;")
 
 
-/* document.oncontextmenu = function() {
+document.oncontextmenu = function() {
     return false;
-} */
+}
 
 document.onkeydown = function(e) {
     if(event.keyCode == 123) {

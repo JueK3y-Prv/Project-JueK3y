@@ -81,7 +81,7 @@ var hoverDistort3 = new hoverEffect({
 var hoverDistort4 = new hoverEffect({
     parent: document.querySelector('.image-4'),
     intensity: 0.4,
-    image1: '/src/img/displacement/Image-Neon-1.jpg',
-    image2: '/src/img/displacement/Image-Neon-2.jpg',
+    image1: '/src/img/displacement/Image-Palme-1.jpg',
+    image2: '/src/img/displacement/Image-Building-1.jpg',
     displacementImage: '/src/img/displacement/filter/4.png'
 });

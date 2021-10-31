@@ -18,7 +18,7 @@
 }
 
 * {
-	cursor: none;
+	// cursor: none;
     ::selection {
         color: var(--White);
         background: var(--Black);
@@ -554,7 +554,7 @@ nav {
 	}
 }
 
-.cursor {
+/* .cursor {
 	position: fixed;
 	bottom: -20px;
 	right: -20px;
@@ -583,7 +583,7 @@ nav {
 	background-color: var(--Black);
 	transition-duration: 300ms;
 	transition-timing-function: ease-out;
-}
+} */
 
 @media screen and (max-width: 1024px) {
 	.header-image .image {
@@ -629,11 +629,5 @@ nav {
 	}
 	.img-nav {
 		display: none;	// Change position for mobile view
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.cursor, .small-cursor {
-		display: none;
 	}
 }

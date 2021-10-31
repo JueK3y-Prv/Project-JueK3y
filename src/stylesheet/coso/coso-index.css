@@ -857,10 +857,6 @@ nav .menu-link {
   }
 }
 @media screen and (max-width: 420px) {
-  * {
-    cursor: pointer;
-  }
-
   .cursor, .small-cursor {
     display: none;
   }

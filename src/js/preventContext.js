@@ -9,9 +9,9 @@ console.warn('You are getting errors that are not because of your browser settin
 console.log('%c(C)2020 - ' +  new Date().getFullYear() + ' by JueK3y', "color: grey;")
 
 
-document.oncontextmenu = function() {
+/* document.oncontextmenu = function() {
     return false;
-}
+} */
 
 document.onkeydown = function(e) {
     if(event.keyCode == 123) {

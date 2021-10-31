@@ -856,4 +856,9 @@ nav .menu-link {
     display: none;
   }
 }
+@media screen and (max-width: 420px) {
+  .cursor, .small-cursor {
+    display: none;
+  }
+}
 /*# sourceMappingURL=coso-index.css.map */

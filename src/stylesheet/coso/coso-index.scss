@@ -631,3 +631,9 @@ nav {
 		display: none;	// Change position for mobile view
 	}
 }
+
+@media screen and (max-width: 420px) {
+	.cursor, .small-cursor {
+		display: none;
+	}
+}

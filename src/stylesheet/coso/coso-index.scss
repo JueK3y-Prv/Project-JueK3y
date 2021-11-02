@@ -5,14 +5,8 @@
 	font-style: normal;
 }
 @font-face {	
-		font-family: 'NeueMetana';
-		src: url('/src/fonts/BoldTitle/NeueMetana-Bold.otf') format('opentype');
-		font-weight: normal;
-		font-style: normal;
-}
-@font-face {
-		font-family: 'Neutro';
-		src: url('/src/fonts/BoldTitle/Neutro-Bold.otf') format('opentype');
+		font-family: 'Monument Extended';
+		src: url('/src/fonts/BoldTitle/MonumentExtended-Regular.otf') format('opentype');
 		font-weight: normal;
 		font-style: normal;
 }
@@ -44,7 +38,7 @@ html {
 	padding: 0;
 	width: 100%;
 	height: 100vh;
-	font-family: "Monument Extended", sans-serif;	// Replace font
+	font-family: 'Monument Extended', sans-serif;	// Replace font
 	overflow: hidden;
 	background-color: var(--White);
 }
@@ -54,7 +48,7 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100vh;
-	font-family: "Monument Extended", sans-serif;
+	font-family: 'Monument Extended', sans-serif;
 	overflow: hidden;
 	
 	background-image: linear-gradient(90deg, var(--White) 49.88%,
@@ -190,7 +184,7 @@ nav {
 		text-transform: uppercase;
 		margin: 0;
 		mix-blend-mode: overlay;
-		font-family: "Red Rose", Roboto;
+		font-family: 'Red Rose', Roboto;
 	}
 	.header-1, .header-2 {
 		&:hover, &.play {
@@ -297,6 +291,7 @@ nav {
 		width: 130px;
 		height: 130px;
 		border-radius: 50%;
+		font-family: sans-serif;
 		// background-color: rgb(255, 78, 78);
 		// border: 1px solid var(--Black);
 		transform: translate(-50%, -50%);

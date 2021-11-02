@@ -5,14 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "NeueMetana";
-  src: url("/src/fonts/BoldTitle/NeueMetana-Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Neutro";
-  src: url("/src/fonts/BoldTitle/Neutro-Bold.otf") format("opentype");
+  font-family: "Monument Extended";
+  src: url("/src/fonts/BoldTitle/MonumentExtended-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -443,6 +437,7 @@ nav .menu-link {
   width: 130px;
   height: 130px;
   border-radius: 50%;
+  font-family: sans-serif;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;

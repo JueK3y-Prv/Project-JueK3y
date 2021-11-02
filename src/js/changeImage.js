@@ -57,31 +57,31 @@ setInterval(() => {
 var hoverDistort1 = new hoverEffect({
     parent: document.querySelector('.image-1'),
     intensity: 0.4,
-    image1: '/src/img/displacement/Image-Desert-1.jpg',
-    image2: '/src/img/displacement/Image-Desert-3.jpg',
+    image1: '/src/img/displacement/Image-Desert-1.webp',
+    image2: '/src/img/displacement/Image-Desert-3.webp',
     displacementImage: '/src/img/displacement/filter/4.png'
 });
 
 var hoverDistort2 = new hoverEffect({
     parent: document.querySelector('.image-2'),
     intensity: 0.4,
-    image1: '/src/img/displacement/Image-Goat-1.jpg',
-    image2: '/src/img/displacement/Image-Goat-2.jpg',
+    image1: '/src/img/displacement/Image-Goat-1.webp',
+    image2: '/src/img/displacement/Image-Goat-2.webp',
     displacementImage: '/src/img/displacement/filter/4.png'
 });
 
 var hoverDistort3 = new hoverEffect({
     parent: document.querySelector('.image-3'),
     intensity: 0.4,
-    image1: '/src/img/displacement/Image-Desert-2.jpg',
-    image2: '/src/img/displacement/Image-Plane-1.jpg',
+    image1: '/src/img/displacement/Image-Desert-2.webp',
+    image2: '/src/img/displacement/Image-Plane-1.webp',
     displacementImage: '/src/img/displacement/filter/4.png'
 });
 
 var hoverDistort4 = new hoverEffect({
     parent: document.querySelector('.image-4'),
     intensity: 0.4,
-    image1: '/src/img/displacement/Image-Palme-1.jpg',
-    image2: '/src/img/displacement/Image-Building-1.jpg',
+    image1: '/src/img/displacement/Image-Palme-1.webp',
+    image2: '/src/img/displacement/Image-Building-1.webp',
     displacementImage: '/src/img/displacement/filter/4.png'
 });

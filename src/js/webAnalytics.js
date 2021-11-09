@@ -1,5 +1,11 @@
 if (localStorage.getItem("cookieAccepted") == "true") {
     startAnalytics()
+    document.getElementById("bio-href").onclick = () => {
+        woopra.track("bio", {
+            pageLeave: "true",
+            newPage: "Biographie"
+        })
+    }
   }
   
 function startAnalytics() {

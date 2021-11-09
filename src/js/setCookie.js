@@ -16,4 +16,5 @@ document.getElementById("a-c-banner").onclick = () => {
 
     document.cookie = cookieName + '=' + consent + ';expires=' + date.toGMTString() + ';path=/'
     localStorage.setItem('cookieAccepted', 'true')
+    startAnalytics()
 }

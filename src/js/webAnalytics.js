@@ -4,11 +4,13 @@ if (localStorage.getItem("cookieAccepted") == "true") {
         var hrID = $(this).attr('id');
         var hrURL = $(this).attr("href");
         var hrText = document.getElementById(hrID).innerText;
-        woopra.track("leave page", {
-            hyperlink_id: hrID,
-            hyperlink_text: hrText,
-            leaving_url: hrURL
-        })
+        if (hrText != "NEXT" || hrText != "PREV") {
+            woopra.track("leave page", {
+                hyperlink_id: hrID,
+                hyperlink_text: hrText,
+                leaving_url: hrURL
+            })
+        }
     })
   }
   

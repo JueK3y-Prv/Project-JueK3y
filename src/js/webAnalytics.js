@@ -1,9 +1,9 @@
 if (localStorage.getItem("cookieAccepted") == "true") {
     startAnalytics()
     document.getElementById("bio-href").onclick = () => {
-        woopra.track("bio", {
-            pageLeave: "true",
-            newPage: "Biographie"
+        woopra.track("leave page", {
+            name: document.getElementById("bio-href").id,
+            outgoing_url: document.getElementById("bio-href").href
         })
     }
   }

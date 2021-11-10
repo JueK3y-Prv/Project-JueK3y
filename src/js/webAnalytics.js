@@ -15,9 +15,7 @@ function startAnalytics() {
 
     woopra.config({
         domain: "juek3y.com",
-        outgoing_tracking: true,
-        download_tracking: true,
-        click_tracking: true
+        download_tracking: true
     });
 
     woopra.track();

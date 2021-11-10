@@ -4,8 +4,8 @@ if (localStorage.getItem("cookieAccepted") == "true") {
         var hrID = $(this).attr('id');
         var hrURL = $(this).attr("href");
         woopra.track("leave page", {
-            "Hyperlink ID": hrID,
-            "Leaving URL": hrURL
+            hyperlink_id: hrID,
+            leaving_url: hrURL
         })
     })
   }

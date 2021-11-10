@@ -1,11 +1,13 @@
 if (localStorage.getItem("cookieAccepted") == "true") {
     startAnalytics()
-    document.getElementById("bio-href").onclick = () => {
+    $(document).on("click", "a", function() {
+        var hrID = $(this).attr('id');
+        var hrURL = $(this).attr("href");
         woopra.track("leave page", {
-            name: document.getElementById("bio-href").id,
-            outgoing_url: document.getElementById("bio-href").href
+            "Hyperlink ID": hrID,
+            "Leaving URL": hrURL
         })
-    }
+    })
   }
   
 function startAnalytics() {

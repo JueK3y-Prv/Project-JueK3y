@@ -41,18 +41,23 @@ function nextImage() {
     b = false
 }
 
+function intervalTimer() {
+    nextImage(a = true, b = false, c = 3)
+}
+
+var timeOutHandle = setInterval(intervalTimer, 8000)
+
 document.getElementById('next-button').onclick = () => {
-    nextImage(a = true, b = false, c = 3)    
+    nextImage(a = true, b = false, c = 3)
+    clearInterval(timeOutHandle);
+    timeOutHandle = setInterval(intervalTimer, 8000)
 }
 
 document.getElementById('prev-button').onclick = () => {
-    nextImage(b = true, c = -3)    
+    nextImage(b = true, c = -3)
+    clearInterval(timeOutHandle);
+    timeOutHandle = setInterval(intervalTimer, 8000)
 }
-
-setInterval(() => {
-    nextImage(a = true, b = false, c = 3)
-}, 9000)
-
 
 var hoverDistort1 = new hoverEffect({
     parent: document.querySelector('.image-1'),

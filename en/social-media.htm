@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <!-------   META  ------->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+
+        <meta name="og:site_name"     content="Social Media | JueK3y">
+        <meta name="og:url"           content="https://juek3y.com/en/social-media">
+        <meta name="og:title"         content="Social Media | JueK3y">
+        <meta name="og:type"          content="portfolio">
+        <meta name="og:description"   content="JueK3y">
+        <meta name="og:locale"        content="en_EN">
+        
+        <meta name="twitter:card"     content="summary">
+        <meta name="twitter:domain"   content="juek3y.com">
+        <meta name="twitter:title"    property="og:title"           itemprop="name"         content="Social Media | JueK3y">
+        <meta name="twitter:description" property="og:description"  itemprop="description"  content="This is the brief overview of all projects and profiles in social media of JueK3y.">
+
+
+        <meta name="author"           content="Julian Kennedy (alias JueK3y) and CodeGrid">
+        <meta name="publisher"        content="Julian Kennedy (alias JueK3y)">
+        <meta name="description"      content="TThis is the brief overview of all projects and profiles in social media of JueK3y.">
+        <meta name="keywords"         content="Portfolio, photography, Coding, Design, Social Media, JueK3y, Webdesign, Design">
+        <meta name="page-topic"       content="Landing Page | JueK3y">
+        <meta name="content-language" content="en">
+        <meta name="language"         content="English">
+        
+        <meta name="robots"           content="index, follow, archive">
+        <meta name="googlebot"        content="index, follow, archive">
+        <meta name="revisit"          content="After 3 days">
+
+        <!-------   Link  ------->
+        <link rel="alternate" href="https://juek3y.com/en/social-media" hreflang="x-default">
+        <link rel="canonical" href="https://juek3y.com/en/social-media">
+
+        <link rel="preload" href="/src/js/lib/three.min.js" as="script" />
+        <link rel="preload" href="/src/stylesheet/coso/coso-index.min.css" as="style" type="text/css" />
+
+        <link rel="preload" href="/src/fonts/BoldTitle/RedRose-Bold.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/src/fonts/BoldTitle/MonumentExtended-Regular.otf" as="font" type="font/otf" crossorigin />
+
+        <!-------   CSS  ------->  
+        <link rel="stylesheet" href="/src/stylesheet/coso/coso-index.min.css">
+
+        <!-------   JS  ------->    
+        <script src="/src/js/lib/anime.min.js"></script>
+        <script src="/src/js/preventContext.js"></script>
+        <script src="/src/js/lib/TweenMax.min.js"></script>
+        <script src="/src/js/lib/jquery-3.5.1.min.js"></script>
+        <script src="/src/js/lib/three.min.js"></script>
+        <script src="/src/js/lib/hover-effect.umd.js"></script>
+
+        <script defer src="/src/js/changeColorMode.js"></script>
+        <script defer src="/src/js/hoverAnimatonH1.js"></script>
+        <script async src="/src/js/customCursor.js"></script>
+        <script async src="/src/js/changeImage.js"></script>
+        <script defer src="/src/js/landingPage.js"></script>
+        <script defer src="/src/js/setCookie.js"></script>
+        <script src="/src/js/webAnalytics.js"></script>
+
+        <!-------   IMG  ------->
+        <!--Fav Icon-->
+        <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+        <link id="fav-png" rel="icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
+        <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/simple-favicon-dark.ico" type="image/ico" />
+        <title>Social Media | JueK3y</title>
+    </head>
+    <body draggable="false">
+        <noscript>
+            <div id="no-js">
+                <span>JavaScript must be enabled for this page to work.</span>
+            </div>
+        </noscript>
+        <div class="wrapper" id="loading-screen">
+            <div class="loader"></div>
+        </div>
+        <div class="container">
+            <nav class="menu">
+                <div class="menu-left menu-item">
+                        <a href="/de/bio" id="bio-href" title="Find out who JueK3y is. Note: You will be redirected to the old website."><span class="menu-link link">about</span></a>
+                        <a href="/de/contact/business" id="contact-href"><span class="menu-link link" title="Send JueK3y a message using the contact form. Note: You will be redirected to the old website.">contact</span></a>
+                </div>
+                <div class="menu-center menu-item">
+                    <div class="brand-logo" draggable="false">JueK3y</div>
+                </div>
+                <div class="menu-right menu-item">
+                        <div class="icon">
+                            <a class="first-image" id="moon-icon" title="Change to dark mode"><img class="link" src="/src/img/icons8/moon-symbol.png" alt="Icon for changing the color mode" draggable="false"/></a>
+                            <a class="first-image" id="sun-icon" title="Change to light mode"><img class="link" src="/src/img/icons8/sun.png" alt="Icon for changing the color mode" draggable="false"/></a>
+                            <a href="https://instagram.com/juek3y" target="_blank" title="JueK3y's Instagram Page"><img class="link" src="/src/img/icons8/instagram-new.png" alt="Link to JueK3y's Instagram Page"/></a>
+                            <a href="https://github.com/juek3y-prv" target="_blank" title="JueK3y's GitHub Page"><img class="link" src="/src/img/icons8/github.png" alt="Link to JueK3y's GitHub Page"/></a>
+                            <!-- Icons by Icon8 (needs to be added) -->
+                        </div>
+                </div>
+            </nav>
+            <div class="coming-soon-banner">
+                <i id="coso-banner-1"></i>
+                <i id="coso-banner-2"></i>
+            </div>
+            <div class="wrapper-img">
+                <div class="box"></div>
+                <div class="image" id="image-3">
+                    <div class="image-1"></div>
+                    <div class="image-2"></div>
+                    <div class="image-3"></div>
+                    <div class="image-4"></div>
+                </div>
+            </div>
+
+            <div class="header" id="delete-text">
+                <h1 class="header-1">Coming</h1>
+                <h1 class="header-2">Soon</h1>
+            </div>
+            <div class="hero-container">
+                <div class="sidebar-text">
+                    <span id="image-number">003</span>
+                </div>
+                <div class="projects link">
+                    <div class="lineThrough">projects</div>
+                </div>
+
+                <div id="accept-cookie">
+                    <a class="circular-text link" id="a-c-banner">
+                        <span id="rotated">
+                            <div aria-label="ACCEPT COOKIES ° ACCEPT COOKIES °">
+                                <span>&nbsp;</span>
+                                <span>A</span>
+                                <span>C</span>
+                                <span>C</span>
+                                <span>E</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>&nbsp;</span>
+                                <span>C</span>
+                                <span>O</span>
+                                <span>O</span>
+                                <span>K</span>
+                                <span>I</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>&nbsp;</span>
+                                <span>°</span>
+                                <span>&nbsp;</span>
+                                <span>A</span>
+                                <span>C</span>
+                                <span>C</span>
+                                <span>E</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>&nbsp;</span>
+                                <span>C</span>
+                                <span>O</span>
+                                <span>O</span>
+                                <span>K</span>
+                                <span>I</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>&nbsp;</span>
+                                <span>°</span>
+                            </div>
+                        </span>
+                        <div class="circle"></div>
+                        <div id="small-icon"><img></div>
+                    </a>
+                </div>      
+
+                <div id="cookie-accepted">
+                    <a class="circular-text link" id="a-c-banner-changed">
+                        <span id="rotated-changed">
+                            <div aria-label=" PHOTOGRAPHY ° DESIGN ° CODING °">
+                                <span>&nbsp;</span>
+                                <span>P</span>
+                                <span>H</span>
+                                <span>O</span>
+                                <span>T</span>
+                                <span>O</span>
+                                <span>G</span>
+                                <span>R</span>
+                                <span>A</span>
+                                <span>P</span>
+                                <span>H</span>
+                                <span>Y</span>
+                                <span>&nbsp;</span>
+                                <span>°</span>
+                                <span>&nbsp;</span>
+                                <span>D</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>I</span>
+                                <span>G</span>
+                                <span>N</span>
+                                <span>&nbsp;</span>
+                                <span>°</span>
+                                <span>&nbsp;</span>
+                                <span>C</span>
+                                <span>O</span>
+                                <span>D</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                                <span>&nbsp;</span>
+                                <span>°</span>
+                            </div>
+                        </span>
+                        <div class="circle"></div>
+                        <div id="small-other-icon"><img></div>
+                    </a>
+                </div>
+
+                <div class="img-nav">
+                    <a id="prev-button" class="main-nav link" data-nav="previous"><div class="prev">prev</div></a>
+                    <a id="next-button" class="main-nav link" data-nav="next"><div class="next">next</div></a>
+                </div>
+            </div>
+            
+        </div>        
+        <div class="cursor"></div>
+        <div class="small-cursor"></div>
+    </body>
+    <!-- Basic layout and GASAP (landingPage.js) Code by CodeGrid - This page will be replaced when the main page is finished -->
+</html>

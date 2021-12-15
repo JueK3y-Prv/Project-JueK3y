@@ -35,27 +35,22 @@
         <link rel="alternate" href="https://juek3y.com/en/social-media" hreflang="x-default">
         <link rel="canonical" href="https://juek3y.com/en/social-media">
 
-        <link rel="preload" href="/src/js/lib/three.min.js" as="script" />
-        <link rel="preload" href="/src/stylesheet/coso/coso-index.min.css" as="style" type="text/css" />
+        <link rel="preload" href="/src/stylesheet/some/social-media.min.css" as="style" type="text/css" />
 
         <link rel="preload" href="/src/fonts/BoldTitle/RedRose-Bold.ttf" as="font" type="font/ttf" crossorigin />
         <link rel="preload" href="/src/fonts/BoldTitle/MonumentExtended-Regular.otf" as="font" type="font/otf" crossorigin />
 
         <!-------   CSS  ------->  
-        <link rel="stylesheet" href="/src/stylesheet/coso/coso-index.min.css">
+        <link rel="stylesheet" href="/src/stylesheet/some/social-media.min.css">
 
         <!-------   JS  ------->    
         <script src="/src/js/lib/anime.min.js"></script>
-        <script src="/src/js/preventContext.js"></script>
+        <!-- <script src="/src/js/preventContext.js"></script> -->
         <script src="/src/js/lib/TweenMax.min.js"></script>
         <script src="/src/js/lib/jquery-3.5.1.min.js"></script>
-        <script src="/src/js/lib/three.min.js"></script>
-        <script src="/src/js/lib/hover-effect.umd.js"></script>
 
         <script defer src="/src/js/changeColorMode.js"></script>
-        <script defer src="/src/js/hoverAnimatonH1.js"></script>
         <script async src="/src/js/customCursor.js"></script>
-        <script async src="/src/js/changeImage.js"></script>
         <script defer src="/src/js/landingPage.js"></script>
         <script defer src="/src/js/setCookie.js"></script>
         <script src="/src/js/webAnalytics.js"></script>
@@ -83,7 +78,7 @@
                         <a href="/de/contact/business" id="contact-href"><span class="menu-link link" title="Send JueK3y a message using the contact form. Note: You will be redirected to the old website.">contact</span></a>
                 </div>
                 <div class="menu-center menu-item">
-                    <div class="brand-logo" draggable="false">JueK3y</div>
+                    <div class="brand-logo" draggable="false"><a href="/">JueK3y</a></div>
                 </div>
                 <div class="menu-right menu-item">
                         <div class="icon">
@@ -95,32 +90,114 @@
                         </div>
                 </div>
             </nav>
-            <div class="coming-soon-banner">
-                <i id="coso-banner-1"></i>
-                <i id="coso-banner-2"></i>
-            </div>
+
+            <!-- Image -->
+            
             <div class="wrapper-img">
-                <div class="box"></div>
-                <div class="image" id="image-3">
-                    <div class="image-1"></div>
-                    <div class="image-2"></div>
-                    <div class="image-3"></div>
-                    <div class="image-4"></div>
+                <div class="box-some"></div>
+                <div class="image">
+                    <img class="image-1" src="/src/img/displacement/Image-Desert-1.webp" alt="Road in desert">
                 </div>
+            </div>
+
+            <div class="low-title">
+                <p>Design. <em>Coding.</em> Photography.</p>
             </div>
 
             <div class="header" id="delete-text">
-                <h1 class="header-1">Coming</h1>
-                <h1 class="header-2">Soon</h1>
-            </div>
-            <div class="hero-container">
-                <div class="sidebar-text">
-                    <span id="image-number">003</span>
-                </div>
-                <div class="projects link">
-                    <div class="lineThrough">projects</div>
-                </div>
+                <h1 class="header-1"></h1>
+                <h1 class="header-2"></h1>
+            </div><!-- Comment out if not needed, animation is nice -->
 
+            <div class="main-content">
+                <div class="acc-toggle" data-collapse="">
+                    <div class="acc-block">
+                        <div class="acc-no">(01)</div>
+                        <div class="acc-title">Financial Statement</div>
+                        <div class="acc-toggle-icon">+</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
+                    </li>
+                    <li>Lorem Ipsum has been the industry's standard dummy text</li>
+                    <li>when an unknown printer took a galley of type and scrambled.</li>
+                </ul>
+        
+                <div class="acc-toggle" data-collapse="">
+                    <div class="acc-block">
+                        <div class="acc-no">(02)</div>
+                        <div class="acc-title">TAX</div>
+                        <div class="acc-toggle-icon">+</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
+                    </li>
+                    <li>Lorem Ipsum has been the industry's standard dummy text</li>
+                    <li>when an unknown printer took a galley of type and scrambled.</li>
+                </ul>
+        
+                <div class="acc-toggle" data-collapse="">
+                    <div class="acc-block">
+                        <div class="acc-no">(03)</div>
+                        <div class="acc-title">Accounting</div>
+                        <div class="acc-toggle-icon">+</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
+                    </li>
+                    <li>Lorem Ipsum has been the industry's standard dummy text</li>
+                    <li>when an unknown printer took a galley of type and scrambled.</li>
+                </ul>
+            </div>
+
+            <script>
+                let parent = document.querySelectorAll("[data-collapse");
+                parent.forEach((element) => {
+                    let clickTarget = element.querySelector("*");
+                    let collapseElement = element.nextElementSibling;
+                    let collapseElementChildren = collapseElement.children;
+                    let tl = new TimelineMax({
+                        reversed: true,
+                        paused: true,
+                    });
+    
+                    tl.from(
+                        collapseElement,
+                        1.6,
+                        {
+                            className: "+=heightZero",
+                            ease: Expo.easeInOut,
+                        },
+                        "open"
+                    );
+                    tl.staggerFrom(
+                        collapseElementChildren,
+                        1,
+                        {
+                            autoAlpha: 0,
+                            y: "40%",
+                            ease: Expo.easeInOut,
+                        },
+                        0.08,
+                        "open+=.1"
+                    );
+    
+                    clickTarget.addEventListener("click", () => {
+                        tl.reversed() ? tl.play() : tl.reverse();
+                    });
+                });
+            </script>
+
+            <div class="hero-container">
                 <div id="accept-cookie">
                     <a class="circular-text link" id="a-c-banner">
                         <span id="rotated">
@@ -208,16 +285,10 @@
                         <div id="small-other-icon"><img></div>
                     </a>
                 </div>
-
-                <div class="img-nav">
-                    <a id="prev-button" class="main-nav link" data-nav="previous"><div class="prev">prev</div></a>
-                    <a id="next-button" class="main-nav link" data-nav="next"><div class="next">next</div></a>
-                </div>
             </div>
             
         </div>        
         <div class="cursor"></div>
         <div class="small-cursor"></div>
     </body>
-    <!-- Basic layout and GASAP (landingPage.js) Code by CodeGrid - This page will be replaced when the main page is finished -->
 </html>

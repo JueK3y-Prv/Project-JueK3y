@@ -62,6 +62,12 @@ TweenMax.to(".box", 2.4, {
     delay: 3.8,
 });
 
+TweenMax.to(".box-some", 2.4, {
+    y: "-100%",
+    ease: Expo.easeInOut,
+    delay: 3.8,
+});
+
 var tl = new TweenMax.staggerFrom(".menu > div", 2, {
     opacity: 0,     
     y: 30,

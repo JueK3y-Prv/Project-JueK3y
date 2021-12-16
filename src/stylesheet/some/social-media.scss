@@ -12,6 +12,9 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 	cursor: none;
     ::selection {
         color: var(--White);
@@ -25,36 +28,32 @@
 	--White: #FAFAFA;
 }
 
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: 'Monument Extended', sans-serif;
+	overflow-x: hidden;
+}
+
+html {
+	background-color: var(--White);
+}
+
+body {
+	background-image: linear-gradient(90deg, var(--White) 49.88%,
+	#ddd 49.88%, #ddd 50%, var(--White) 50%, var(--White) 99.88%,
+	#ddd 99.88%, #ddd 100%);
+	background-size: 800.00px 800.00px;	
+}
+
 img, .icon, .sidebar-text, .img-nav, .brand-logo {
 	user-select: none;
 	-o-user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-}
-
-html {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100vh;
-	font-family: 'Monument Extended', sans-serif;	// Replace font
-	overflow: hidden;
-	background-color: var(--White);
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100vh;
-	font-family: 'Monument Extended', sans-serif;
-	overflow: hidden;
-	
-	background-image: linear-gradient(90deg, var(--White) 49.88%,
-	#ddd 49.88%, #ddd 50%, var(--White) 50%, var(--White) 99.88%,
-	#ddd 99.88%, #ddd 100%);
-	background-size: 800.00px 800.00px;	
 }
 
 a {
@@ -129,41 +128,45 @@ nav {
 	}
 }
 
-.wrapper-img {
-	overflow: hidden;
-	position: relative;
-	top: 50% !important;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	.box-some {
-		background: var(--White);
-		opacity: 1;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		z-index: 2;
-	}
-	.image {
-		width: 100%;
-		height: 100%;
-		.image-1 {
-			width: 100%;
-			height: 100%;
-		}
-	}
-}
-
-.low-title {
+.image-content {
 	position: relative;
 	top: 50%;
 	left: 50%;
-	transform: translate(-12.5%, 0%);
+	.wrapper-img {
+		overflow: hidden;
+		transform: translate(-50%, 0%);
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		.box-some {
+			background: var(--White);
+			opacity: 1;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: 2;
+		}
+		.image {
+			width: 100%;
+			height: 100%;
+			.image-1 {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.low-title {
+		position: relative;
+		right: 110px;
+		font-family: serif;
+		font-size: 22px;
+	}
 }
+
+
+
 
 .header {
 	position: absolute;
@@ -198,47 +201,43 @@ nav {
 }
 
 .main-content {
-	background: transparent;
 	width: 90%;
-	margin: 20px auto;
-	font-size: 40px;
-	.acc-block {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		padding: 40px;
-		align-items: center;
-		border-bottom: 1px solid #ddd;
+    margin: 40px auto;
+    .acc-block {
+        height: 160px;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+		font-size: 30px;
 		.acc-no {
-			color: rgb(253, 90, 90);
-		}
-		.acc-toggle-icon {
-			color: #383838;
-			margin-right: 85px;
-		}
-	}
-	ul {
-		padding: 0;
-		li {
-			padding: 4px 0;
-			list-style: none;
+            color: #02A5A5;
+        }        
+        .acc-toggle-icon {
+            color: #383838;
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            padding: 4px 0;
+            list-style: none;
 			font-family: serif;
-			font-size: 26px;
-			&:first-child {
-				padding-top: 40px;
-			}
-			&:last-child {
-				border-bottom: 1px solid #ddd;
-				padding-bottom: 40px;
-			}
-		}
-	}	  
-	.heightZero {
-		height: 0px;
-	}
+            font-size: 26px;
+            &:first-child {
+                padding-top: 40px;
+            }
+            &:last-child {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 40px;
+            }
+        }
+    }    
+    .heightZero {
+        height: 0px;
+    }
 }
-
-
 
 .animationHeader {
 	transition: transform .6s cubic-bezier(0.76, 0, 0.24, 1);
@@ -284,7 +283,7 @@ nav {
 		text-transform: uppercase;
 		transition: .2s;
 		&:hover {
-			background-color: rgb(253, 90, 90);
+			background-color: #FD5A5A;
 			transition: .2s;
 		}
 	}

@@ -25,36 +25,32 @@
 	--White: #FAFAFA;
 }
 
-img, .icon, .sidebar-text, .img-nav, .brand-logo {
-	user-select: none;
-	-o-user-select: none;
-	-ms-user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-}
-
-html {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100vh;
-	font-family: 'Monument Extended', sans-serif;	// Replace font
-	overflow: hidden;
-	background-color: var(--White);
-}
-
-body {
+html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100vh;
 	font-family: 'Monument Extended', sans-serif;
 	overflow: hidden;
-	
+}
+
+html {
+	background-color: var(--White);
+}
+
+body {
 	background-image: linear-gradient(90deg, var(--White) 49.88%,
 	#ddd 49.88%, #ddd 50%, var(--White) 50%, var(--White) 99.88%,
 	#ddd 99.88%, #ddd 100%);
 	background-size: 800.00px 800.00px;	
+}
+
+img, .icon, .sidebar-text, .img-nav, .brand-logo {
+	user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 a {

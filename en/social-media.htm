@@ -53,6 +53,7 @@
         <script async src="/src/js/customCursor.js"></script>
         <script defer src="/src/js/landingPage.js"></script>
         <script defer src="/src/js/setCookie.js"></script>
+        <script defer src="/src/js/dropdown.js"></script>
         <script src="/src/js/webAnalytics.js"></script>
 
         <!-------   IMG  ------->
@@ -74,11 +75,11 @@
         <div class="container">
             <nav class="menu">
                 <div class="menu-left menu-item">
-                        <a href="/de/bio" id="bio-href" title="Find out who JueK3y is. Note: You will be redirected to the old website."><span class="menu-link link">about</span></a>
-                        <a href="/de/contact/business" id="contact-href"><span class="menu-link link" title="Send JueK3y a message using the contact form. Note: You will be redirected to the old website.">contact</span></a>
+                        <a href="/de/bio" id="bio-href" class="menu-link link" title="Find out who JueK3y is. Note: You will be redirected to the old website.">about</a>
+                        <a href="/de/contact/business" id="contact-href" class="menu-link link" title="Send JueK3y a message using the contact form. Note: You will be redirected to the old website.">contact</a>
                 </div>
                 <div class="menu-center menu-item">
-                    <div class="brand-logo" draggable="false"><a href="/">JueK3y</a></div>
+                    <div class="brand-logo menu-link link" draggable="false"><a href="/">JueK3y</a></div>
                 </div>
                 <div class="menu-right menu-item">
                         <div class="icon">
@@ -112,92 +113,32 @@
             </div><!-- Comment out if not needed, animation is nice -->
 
             <div class="main-content">
-                <div class="acc-toggle" data-collapse="">
+                <div class="acc-toggle link" data-collapse="">
                     <div class="acc-block">
-                        <div class="acc-no">(01)</div>
-                        <div class="acc-title">Financial Statement</div>
+                        <div class="acc-no">(01)</div>      <!-- Make 0 out of 1, bc programming-->
+                        <div class="acc-title">Project JueK3y</div>
                         <div class="acc-toggle-icon">+</div>
                     </div>
                 </div>
                 <ul>
-                    <li>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                    </li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
                     <li>Lorem Ipsum has been the industry's standard dummy text</li>
                     <li>when an unknown printer took a galley of type and scrambled.</li>
                 </ul>
         
-                <div class="acc-toggle" data-collapse="">
+                <div class="acc-toggle link" data-collapse="">
                     <div class="acc-block">
                         <div class="acc-no">(02)</div>
-                        <div class="acc-title">TAX</div>
+                        <div class="acc-title">IAC 2.0</div>
                         <div class="acc-toggle-icon">+</div>
                     </div>
                 </div>
                 <ul>
-                    <li>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                    </li>
-                    <li>Lorem Ipsum has been the industry's standard dummy text</li>
-                    <li>when an unknown printer took a galley of type and scrambled.</li>
-                </ul>
-        
-                <div class="acc-toggle" data-collapse="">
-                    <div class="acc-block">
-                        <div class="acc-no">(03)</div>
-                        <div class="acc-title">Accounting</div>
-                        <div class="acc-toggle-icon">+</div>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                    </li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
                     <li>Lorem Ipsum has been the industry's standard dummy text</li>
                     <li>when an unknown printer took a galley of type and scrambled.</li>
                 </ul>
             </div>
-
-            <script>
-                let parent = document.querySelectorAll("[data-collapse");
-                parent.forEach((element) => {
-                    let clickTarget = element.querySelector("*");
-                    let collapseElement = element.nextElementSibling;
-                    let collapseElementChildren = collapseElement.children;
-                    let tl = new TimelineMax({
-                        reversed: true,
-                        paused: true,
-                    });
-    
-                    tl.from(
-                        collapseElement,
-                        1.6,
-                        {
-                            className: "+=heightZero",
-                            ease: Expo.easeInOut,
-                        },
-                        "open"
-                    );
-                    tl.staggerFrom(
-                        collapseElementChildren,
-                        1,
-                        {
-                            autoAlpha: 0,
-                            y: "40%",
-                            ease: Expo.easeInOut,
-                        },
-                        0.08,
-                        "open+=.1"
-                    );
-    
-                    clickTarget.addEventListener("click", () => {
-                        tl.reversed() ? tl.play() : tl.reverse();
-                    });
-                });
-            </script>
 
             <div class="hero-container">
                 <div id="accept-cookie">

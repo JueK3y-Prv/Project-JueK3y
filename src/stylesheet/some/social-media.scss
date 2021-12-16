@@ -135,8 +135,8 @@ nav {
 	.wrapper-img {
 		overflow: hidden;
 		transform: translate(-50%, 0%);
-		width: 150px;
-		height: 150px;
+		width: 135px;
+		height: 135px;
 		border-radius: 50%;
 		.box-some {
 			background: var(--White);
@@ -159,6 +159,7 @@ nav {
 	}
 	.low-title {
 		position: relative;
+		top: 20px;
 		right: 110px;
 		font-family: serif;
 		font-size: 22px;
@@ -272,8 +273,8 @@ nav {
 .hero-container {
 	#accept-cookie, #cookie-accepted {
 		position: absolute;
-		bottom: 30%;
-		right: 15%;
+		bottom: 10%;	// 10%
+		right: 10%;		// 49.5%
 		width: 130px;
 		height: 130px;
 		border-radius: 50%;

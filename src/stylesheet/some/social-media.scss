@@ -130,7 +130,7 @@ nav {
 
 .image-content {
 	position: relative;
-	top: 50%;
+	top: 10px;
 	left: 50%;
 	.wrapper-img {
 		overflow: hidden;
@@ -164,7 +164,7 @@ nav {
 		font-family: serif;
 		font-size: 17px;
 		letter-spacing: 6px;
-		animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+		animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
 		animation-iteration-count: infinite;
 	}
 	#low-title {
@@ -289,7 +289,7 @@ nav {
 		// border: 1px solid var(--Black);
 		transform: translate(-50%, -50%);
 		text-transform: uppercase;
-		animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+		animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
 		animation-iteration-count: infinite;
 		transition: .2s;
 		&:hover {

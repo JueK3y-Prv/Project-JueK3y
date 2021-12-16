@@ -3,7 +3,10 @@ if (document.cookie.match(/^(.*;)?\s*accept_cookies\s*=\s*[^;]+(.*)?$/)) {
     document.__defineSetter__("cookie", function() {} );
 
     document.getElementById("accept-cookie").style.display = "None"
-    document.getElementById("cookie-accepted").style.display = "Block"
+    try {
+        document.getElementById("cookie-accepted").style.display = "Block"
+    }
+    catch(err) {}
 }
 
 document.getElementById("a-c-banner").onclick = () => {
@@ -20,4 +23,10 @@ document.getElementById("a-c-banner").onclick = () => {
     var script= document.createElement('script');
     script.src= '/src/js/webAnalytics.js';
     document.getElementsByTagName('head')[0].appendChild(script);
+
+    document.getElementById("accept-cookie").style.display = "None"
+    try {
+        document.getElementById("cookie-accepted").style.display = "Block"
+    }
+    catch(err) {}
 }

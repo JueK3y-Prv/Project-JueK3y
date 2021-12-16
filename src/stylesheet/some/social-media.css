@@ -145,7 +145,7 @@ nav .menu-link {
 
 .image-content {
   position: relative;
-  top: 50%;
+  top: 10px;
   left: 50%;
 }
 .image-content .wrapper-img {
@@ -181,8 +181,8 @@ nav .menu-link {
   font-family: serif;
   font-size: 17px;
   letter-spacing: 6px;
-  -webkit-animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
-          animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+  -webkit-animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -434,8 +434,8 @@ nav .menu-link {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
-  -webkit-animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
-          animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+  -webkit-animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
+          animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-transition: 0.2s;

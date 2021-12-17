@@ -159,7 +159,7 @@ nav {
 	}
 	#image-circle {
 		position: absolute;
-		top: -26px;
+		top: -28px;
 		left: 0;
 		font-family: serif;
 		font-size: 17px;
@@ -243,8 +243,21 @@ nav {
         }
     }    
     .heightZero {
-        height: 0px;
+		height: 0;
     }
+}
+
+	
+#some-icons {
+	position: relative;
+	bottom: -50px;
+	left: 30%;
+	a {
+		margin: 0 40px;
+		img {
+			width: 32px;
+		}
+	}
 }
 
 .animationHeader {
@@ -485,6 +498,26 @@ nav {
 	.wrapper-img {
 		width: 100px;
 		height: 100px;
+	}
+	.main-content {
+		margin-top: 35px;
+		.acc-block {
+			height: 100px;
+			font-size: 18px;
+		}
+		ul li {
+			font-size: 18px;
+		}
+	}
+	#some-icons {
+		bottom: -70px;
+		left: 10%;
+		a  {
+			margin: 0 20px;
+			img {
+				width: 20px;
+			}
+		}
 	}
 	.cursor, .small-cursor {
 		display: none;

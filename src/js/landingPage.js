@@ -28,7 +28,7 @@ anime.timeline()
 });
 
 TweenMax.to(".wrapper", 2, {
-    top: "-100%",
+    top: "-100vh",
     ease: Expo.easeInOut,
     delay: 3.6
 });

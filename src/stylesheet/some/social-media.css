@@ -176,7 +176,7 @@ nav .menu-link {
 }
 .image-content #image-circle {
   position: absolute;
-  top: -26px;
+  top: -28px;
   left: 0;
   font-family: serif;
   font-size: 17px;
@@ -267,7 +267,19 @@ nav .menu-link {
   padding-bottom: 40px;
 }
 .main-content .heightZero {
-  height: 0px;
+  height: 0;
+}
+
+#some-icons {
+  position: relative;
+  bottom: -50px;
+  left: 30%;
+}
+#some-icons a {
+  margin: 0 40px;
+}
+#some-icons a img {
+  width: 32px;
 }
 
 .animationHeader {
@@ -668,6 +680,28 @@ nav .menu-link {
   .wrapper-img {
     width: 100px;
     height: 100px;
+  }
+
+  .main-content {
+    margin-top: 35px;
+  }
+  .main-content .acc-block {
+    height: 100px;
+    font-size: 18px;
+  }
+  .main-content ul li {
+    font-size: 18px;
+  }
+
+  #some-icons {
+    bottom: -70px;
+    left: 10%;
+  }
+  #some-icons a {
+    margin: 0 20px;
+  }
+  #some-icons a img {
+    width: 20px;
   }
 
   .cursor, .small-cursor {

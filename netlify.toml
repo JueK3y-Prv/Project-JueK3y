@@ -22,6 +22,10 @@
   to = "/en/page-not-found"
   status = 404  
 
+[[redirects]]
+  from = "https://juek3y.netlify.app"
+  to = "https://juek3y.com"
+  status = 200
 
 [[redirects]]
   from = "/*"

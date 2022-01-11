@@ -12,7 +12,7 @@
       X-Permitted-Cross-Domain-Policies = "none"
 
 [[redirects]]
-  from = "https://juek3y.netlify.app"
+  from = "https://juek3y.netlify.app/*"
   to = "https://juek3y.com"
   status = 200
 

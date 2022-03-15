@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap");
 @font-face {
   font-family: "Red Rose";
   src: url("/src/fonts/BoldTitle/RedRose-Bold.ttf") format("truetype");
@@ -10,11 +11,34 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Test1";
+  src: url("/src/fonts/Everyday/Butler_Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test2";
+  src: url("/src/fonts/PS-Aelyn-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test3";
+  src: url("/src/fonts/Didot.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test4";
+  src: url("/src/fonts/Cormorant-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   cursor: none;
   --Black: #111213;
   --White: #FAFAFA;
@@ -46,7 +70,6 @@ html {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(49.88%, var(--White)), color-stop(49.88%, #ddd), color-stop(50%, #ddd), color-stop(50%, var(--White)), color-stop(99.88%, var(--White)), color-stop(99.88%, #ddd), to(#ddd));
   background-image: linear-gradient(90deg, var(--White) 49.88%, #ddd 49.88%, #ddd 50%, var(--White) 50%, var(--White) 99.88%, #ddd 99.88%, #ddd 100%);
   background-size: 800px 800px;
 }
@@ -62,7 +85,6 @@ img, .icon, .sidebar-text, .img-nav, .brand-logo {
 a {
   text-decoration: none;
   color: var(--Black);
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -86,8 +108,7 @@ a {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 8%;
   height: 20vh;
   background: var(--White);
@@ -98,27 +119,15 @@ nav {
   width: 80%;
   height: 100px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   text-transform: uppercase;
 }
 nav .menu-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 nav .menu-left {
   text-align: left;
@@ -150,8 +159,7 @@ nav .menu-link {
 }
 .image-content .wrapper-img {
   overflow: hidden;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   width: 135px;
   height: 135px;
   border-radius: 50%;
@@ -186,11 +194,13 @@ nav .menu-link {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-.image-content #low-title {
+
+#low-title {
   position: relative;
+  width: 300px;
   top: 20px;
-  right: 110px;
-  font-family: serif;
+  left: -150px;
+  font-family: "Playfair Display", serif;
   font-size: 22px;
 }
 
@@ -198,11 +208,9 @@ nav .menu-link {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: var(--Black);
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
   mix-blend-mode: difference;
 }
 .header h1 {
@@ -213,8 +221,7 @@ nav .menu-link {
   font-family: "Red Rose", Roboto;
 }
 .header .header-1:hover .letter, .header .header-1.play .letter, .header .header-2:hover .letter, .header .header-2.play .letter {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .header .header-1 .block:last-child, .header .header-2 .block:last-child {
   color: #d3a13b;
@@ -226,21 +233,15 @@ nav .menu-link {
 }
 
 .main-content {
-  width: 90%;
+  width: 83.4%;
   margin: 40px auto;
 }
 .main-content .acc-block {
   height: 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-bottom: 1px solid #ddd;
   font-size: 30px;
 }
@@ -256,7 +257,7 @@ nav .menu-link {
 .main-content ul li {
   padding: 4px 0;
   list-style: none;
-  font-family: serif;
+  font-family: "Playfair Display", serif;
   font-size: 26px;
 }
 .main-content ul li:first-child {
@@ -266,14 +267,19 @@ nav .menu-link {
   border-bottom: 1px solid #ddd;
   padding-bottom: 40px;
 }
+.main-content ul li a {
+  font-style: italic;
+}
 .main-content .heightZero {
   height: 0;
 }
 
 #some-icons {
+  --some-icon-width: 351px;
   position: relative;
+  width: var(--some-icon-width);
   bottom: -50px;
-  left: 30%;
+  left: calc(50vw - var(--some-icon-width) / 2);
 }
 #some-icons a {
   margin: 0 40px;
@@ -283,156 +289,124 @@ nav .menu-link {
 }
 
 .animationHeader {
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
-  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .animationHeader:nth-child(1) {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .animationHeader:nth-child(2) {
-  -webkit-transition-delay: 0.02s;
-          transition-delay: 0.02s;
+  transition-delay: 0.02s;
 }
 
 .animationHeader:nth-child(3) {
-  -webkit-transition-delay: 0.04s;
-          transition-delay: 0.04s;
+  transition-delay: 0.04s;
 }
 
 .animationHeader:nth-child(4) {
-  -webkit-transition-delay: 0.06s;
-          transition-delay: 0.06s;
+  transition-delay: 0.06s;
 }
 
 .animationHeader:nth-child(5) {
-  -webkit-transition-delay: 0.08s;
-          transition-delay: 0.08s;
+  transition-delay: 0.08s;
 }
 
 .animationHeader:nth-child(6) {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .animationHeader:nth-child(7) {
-  -webkit-transition-delay: 0.12s;
-          transition-delay: 0.12s;
+  transition-delay: 0.12s;
 }
 
 .animationHeader:nth-child(8) {
-  -webkit-transition-delay: 0.14s;
-          transition-delay: 0.14s;
+  transition-delay: 0.14s;
 }
 
 .animationHeader:nth-child(9) {
-  -webkit-transition-delay: 0.16s;
-          transition-delay: 0.16s;
+  transition-delay: 0.16s;
 }
 
 .animationHeader:nth-child(10) {
-  -webkit-transition-delay: 0.18s;
-          transition-delay: 0.18s;
+  transition-delay: 0.18s;
 }
 
 .animationHeader:nth-child(11) {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .animationHeader:nth-child(12) {
-  -webkit-transition-delay: 0.22s;
-          transition-delay: 0.22s;
+  transition-delay: 0.22s;
 }
 
 .animationHeader:nth-child(13) {
-  -webkit-transition-delay: 0.24s;
-          transition-delay: 0.24s;
+  transition-delay: 0.24s;
 }
 
 .animationHeader:nth-child(14) {
-  -webkit-transition-delay: 0.26s;
-          transition-delay: 0.26s;
+  transition-delay: 0.26s;
 }
 
 .animationHeader:nth-child(15) {
-  -webkit-transition-delay: 0.28s;
-          transition-delay: 0.28s;
+  transition-delay: 0.28s;
 }
 
 .animationHeader:nth-child(16) {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .animationHeader:nth-child(17) {
-  -webkit-transition-delay: 0.32s;
-          transition-delay: 0.32s;
+  transition-delay: 0.32s;
 }
 
 .animationHeader:nth-child(18) {
-  -webkit-transition-delay: 0.34s;
-          transition-delay: 0.34s;
+  transition-delay: 0.34s;
 }
 
 .animationHeader:nth-child(19) {
-  -webkit-transition-delay: 0.36s;
-          transition-delay: 0.36s;
+  transition-delay: 0.36s;
 }
 
 .animationHeader:nth-child(20) {
-  -webkit-transition-delay: 0.38s;
-          transition-delay: 0.38s;
+  transition-delay: 0.38s;
 }
 
 .animationHeader:nth-child(21) {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 
 @-webkit-keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes rotation-other {
   from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes rotation-other {
   from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 .hero-container #accept-cookie {
@@ -443,163 +417,125 @@ nav .menu-link {
   height: 130px;
   border-radius: 50%;
   font-family: sans-serif;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   -webkit-animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
           animation: rotation-other 8.5s cubic-bezier(0.65, 0, 0.35, 1);
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .hero-container #accept-cookie:hover {
   background-color: #FD5A5A;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span {
   position: absolute;
   bottom: auto;
   left: 50%;
-  -webkit-transform-origin: center 4.07679em;
-          transform-origin: center 4.07679em;
+  transform-origin: center 4.07679em;
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(1) {
-  -webkit-transform: translateX(-0.13916em) rotate(-186.79deg);
-          transform: translateX(-0.13916em) rotate(-186.79deg);
+  transform: translateX(-0.13916em) rotate(-186.79deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(2) {
-  -webkit-transform: translateX(-0.333496em) rotate(-173.79deg);
-          transform: translateX(-0.333496em) rotate(-173.79deg);
+  transform: translateX(-0.333496em) rotate(-173.79deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(3) {
-  -webkit-transform: translateX(-0.361328em) rotate(-160.851deg);
-          transform: translateX(-0.361328em) rotate(-160.851deg);
+  transform: translateX(-0.361328em) rotate(-160.851deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(4) {
-  -webkit-transform: translateX(-0.361328em) rotate(-147.393deg);
-          transform: translateX(-0.361328em) rotate(-147.393deg);
+  transform: translateX(-0.361328em) rotate(-147.393deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(5) {
-  -webkit-transform: translateX(-0.333496em) rotate(-134.454deg);
-          transform: translateX(-0.333496em) rotate(-134.454deg);
+  transform: translateX(-0.333496em) rotate(-134.454deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(6) {
-  -webkit-transform: translateX(-0.333496em) rotate(-122.034deg);
-          transform: translateX(-0.333496em) rotate(-122.034deg);
+  transform: translateX(-0.333496em) rotate(-122.034deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(7) {
-  -webkit-transform: translateX(-0.296387em) rotate(-110.304deg);
-          transform: translateX(-0.296387em) rotate(-110.304deg);
+  transform: translateX(-0.296387em) rotate(-110.304deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(8) {
-  -webkit-transform: translateX(-0.13916em) rotate(-102.193deg);
-          transform: translateX(-0.13916em) rotate(-102.193deg);
+  transform: translateX(-0.13916em) rotate(-102.193deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(9) {
-  -webkit-transform: translateX(-0.361328em) rotate(-92.8733deg);
-          transform: translateX(-0.361328em) rotate(-92.8733deg);
+  transform: translateX(-0.361328em) rotate(-92.8733deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(10) {
-  -webkit-transform: translateX(-0.38916em) rotate(-78.8978deg);
-          transform: translateX(-0.38916em) rotate(-78.8978deg);
+  transform: translateX(-0.38916em) rotate(-78.8978deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(11) {
-  -webkit-transform: translateX(-0.38916em) rotate(-64.4039deg);
-          transform: translateX(-0.38916em) rotate(-64.4039deg);
+  transform: translateX(-0.38916em) rotate(-64.4039deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(12) {
-  -webkit-transform: translateX(-0.333496em) rotate(-50.9467deg);
-          transform: translateX(-0.333496em) rotate(-50.9467deg);
+  transform: translateX(-0.333496em) rotate(-50.9467deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(13) {
-  -webkit-transform: translateX(-0.13916em) rotate(-42.1449deg);
-          transform: translateX(-0.13916em) rotate(-42.1449deg);
+  transform: translateX(-0.13916em) rotate(-42.1449deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(14) {
-  -webkit-transform: translateX(-0.333496em) rotate(-33.3431deg);
-          transform: translateX(-0.333496em) rotate(-33.3431deg);
+  transform: translateX(-0.333496em) rotate(-33.3431deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(15) {
-  -webkit-transform: translateX(-0.333496em) rotate(-20.9224deg);
-          transform: translateX(-0.333496em) rotate(-20.9224deg);
+  transform: translateX(-0.333496em) rotate(-20.9224deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(16) {
-  -webkit-transform: translateX(-0.13916em) rotate(-12.1206deg);
-          transform: translateX(-0.13916em) rotate(-12.1206deg);
+  transform: translateX(-0.13916em) rotate(-12.1206deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(17) {
-  -webkit-transform: translateX(-0.200195em) rotate(-5.80117deg);
-          transform: translateX(-0.200195em) rotate(-5.80117deg);
+  transform: translateX(-0.200195em) rotate(-5.80117deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(18) {
-  -webkit-transform: translateX(-0.111328em) rotate(0deg);
-          transform: translateX(-0.111328em) rotate(0deg);
+  transform: translateX(-0.111328em) rotate(0deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(19) {
-  -webkit-transform: translateX(-0.333496em) rotate(8.28349deg);
-          transform: translateX(-0.333496em) rotate(8.28349deg);
+  transform: translateX(-0.333496em) rotate(8.28349deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(20) {
-  -webkit-transform: translateX(-0.361328em) rotate(21.2225deg);
-          transform: translateX(-0.361328em) rotate(21.2225deg);
+  transform: translateX(-0.361328em) rotate(21.2225deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(21) {
-  -webkit-transform: translateX(-0.361328em) rotate(34.6797deg);
-          transform: translateX(-0.361328em) rotate(34.6797deg);
+  transform: translateX(-0.361328em) rotate(34.6797deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(22) {
-  -webkit-transform: translateX(-0.333496em) rotate(47.6187deg);
-          transform: translateX(-0.333496em) rotate(47.6187deg);
+  transform: translateX(-0.333496em) rotate(47.6187deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(23) {
-  -webkit-transform: translateX(-0.333496em) rotate(60.0394deg);
-          transform: translateX(-0.333496em) rotate(60.0394deg);
+  transform: translateX(-0.333496em) rotate(60.0394deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(24) {
-  -webkit-transform: translateX(-0.296387em) rotate(71.769deg);
-          transform: translateX(-0.296387em) rotate(71.769deg);
+  transform: translateX(-0.296387em) rotate(71.769deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(25) {
-  -webkit-transform: translateX(-0.13916em) rotate(79.8798deg);
-          transform: translateX(-0.13916em) rotate(79.8798deg);
+  transform: translateX(-0.13916em) rotate(79.8798deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(26) {
-  -webkit-transform: translateX(-0.361328em) rotate(89.1998deg);
-          transform: translateX(-0.361328em) rotate(89.1998deg);
+  transform: translateX(-0.361328em) rotate(89.1998deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(27) {
-  -webkit-transform: translateX(-0.38916em) rotate(103.175deg);
-          transform: translateX(-0.38916em) rotate(103.175deg);
+  transform: translateX(-0.38916em) rotate(103.175deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(28) {
-  -webkit-transform: translateX(-0.38916em) rotate(117.669deg);
-          transform: translateX(-0.38916em) rotate(117.669deg);
+  transform: translateX(-0.38916em) rotate(117.669deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(29) {
-  -webkit-transform: translateX(-0.333496em) rotate(131.126deg);
-          transform: translateX(-0.333496em) rotate(131.126deg);
+  transform: translateX(-0.333496em) rotate(131.126deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(30) {
-  -webkit-transform: translateX(-0.13916em) rotate(139.928deg);
-          transform: translateX(-0.13916em) rotate(139.928deg);
+  transform: translateX(-0.13916em) rotate(139.928deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(31) {
-  -webkit-transform: translateX(-0.333496em) rotate(148.73deg);
-          transform: translateX(-0.333496em) rotate(148.73deg);
+  transform: translateX(-0.333496em) rotate(148.73deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(32) {
-  -webkit-transform: translateX(-0.333496em) rotate(161.151deg);
-          transform: translateX(-0.333496em) rotate(161.151deg);
+  transform: translateX(-0.333496em) rotate(161.151deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(33) {
-  -webkit-transform: translateX(-0.13916em) rotate(169.953deg);
-          transform: translateX(-0.13916em) rotate(169.953deg);
+  transform: translateX(-0.13916em) rotate(169.953deg);
 }
 .hero-container #accept-cookie #a-c-banner #rotated div span:nth-child(34) {
-  -webkit-transform: translateX(-0.200195em) rotate(176.272deg);
-          transform: translateX(-0.200195em) rotate(176.272deg);
+  transform: translateX(-0.200195em) rotate(176.272deg);
 }
 .hero-container .circle {
   position: absolute;
@@ -607,8 +543,7 @@ nav .menu-link {
   left: 50%;
   width: 85px;
   height: 85px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid var(--Black);
 }
@@ -624,10 +559,7 @@ nav .menu-link {
   border-radius: 50%;
   pointer-events: none;
   z-index: 999;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .small-cursor {
@@ -640,15 +572,12 @@ nav .menu-link {
   pointer-events: none;
   z-index: 999;
   background-color: var(--Black);
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 @media screen and (max-width: 900px) {
   body {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(49.67%, #fff), color-stop(49.67%, #ddd), color-stop(50%, #ddd), color-stop(50%, #fff), color-stop(99.67%, #fff), color-stop(99.67%, #ddd), to(#ddd));
     background-image: linear-gradient(90deg, #fff 49.67%, #ddd 49.67%, #ddd 50%, #fff 50%, #fff 99.67%, #ddd 99.67%, #ddd 100%);
     background-size: 302px 302px;
   }

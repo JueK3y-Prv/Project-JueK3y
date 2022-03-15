@@ -11,6 +11,33 @@
 		font-style: normal;
 }
 
+@font-face {	
+		font-family: 'Test1';
+		src: url('/src/fonts/Everyday/Butler_Regular.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+}
+@font-face {	
+		font-family: 'Test2';
+		src: url('/src/fonts/PS-Aelyn-Regular.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+}
+@font-face {	
+		font-family: 'Test3';
+		src: url('/src/fonts/Didot.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+}
+@font-face {	
+		font-family: 'Test4';
+		src: url('/src/fonts/Cormorant-Regular.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -167,13 +194,15 @@ nav {
 		animation: rotation 8.5s cubic-bezier(0.65, 0, 0.35, 1);
 		animation-iteration-count: infinite;
 	}
-	#low-title {
-		position: relative;
-		top: 20px;
-		right: 110px;
-		font-family: serif;
-		font-size: 22px;
-	}
+}
+
+#low-title {
+	position: relative;
+	width: 300px;
+	top: 20px;
+	left: -150px;
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
 }
 
 .header {
@@ -209,7 +238,7 @@ nav {
 }
 
 .main-content {
-	width: 90%;
+	width: 83.4%;
     margin: 40px auto;
     .acc-block {
         height: 160px;
@@ -231,7 +260,7 @@ nav {
         li {
             padding: 4px 0;
             list-style: none;
-			font-family: serif;
+			font-family: 'Playfair Display', serif;
             font-size: 26px;
             &:first-child {
                 padding-top: 40px;
@@ -240,6 +269,9 @@ nav {
                 border-bottom: 1px solid #ddd;
                 padding-bottom: 40px;
             }
+			a {
+				font-style: italic;
+			}
         }
     }    
     .heightZero {
@@ -249,9 +281,11 @@ nav {
 
 	
 #some-icons {
+	--some-icon-width: 351px;
 	position: relative;
+	width: var(--some-icon-width);
 	bottom: -50px;
-	left: 30%;
+	left: calc(50vw - var(--some-icon-width)/2);
 	a {
 		margin: 0 40px;
 		img {

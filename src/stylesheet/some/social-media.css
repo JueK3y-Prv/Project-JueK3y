@@ -11,30 +11,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Test1";
-  src: url("/src/fonts/Everyday/Butler_Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Test2";
-  src: url("/src/fonts/PS-Aelyn-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Test3";
-  src: url("/src/fonts/Didot.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Test4";
-  src: url("/src/fonts/Cormorant-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -132,6 +108,9 @@ nav .menu-item {
 nav .menu-left {
   text-align: left;
 }
+nav .menu-left a:last-child {
+  padding-left: 60px;
+}
 nav .menu-center {
   text-align: center;
 }
@@ -147,9 +126,6 @@ nav .menu-right .icon a img {
 }
 nav .menu-right .icon a#first-image {
   padding-right: 5px;
-}
-nav .menu-link {
-  padding: 0 30px;
 }
 
 .image-content {
@@ -269,6 +245,10 @@ nav .menu-link {
 }
 .main-content ul li a {
   font-style: italic;
+}
+.main-content ul li a img {
+  width: 24px;
+  height: 24px;
 }
 .main-content .heightZero {
   height: 0;
@@ -606,9 +586,21 @@ nav .menu-link {
   }
 }
 @media screen and (max-width: 420px) {
+  nav .menu-left {
+    padding: 0 30px;
+  }
+  nav .menu-left a:last-child {
+    padding-left: 0;
+  }
+
   .wrapper-img {
     width: 100px;
     height: 100px;
+  }
+
+  #low-title {
+    font-size: 18px;
+    left: -120px;
   }
 
   .main-content {
@@ -616,15 +608,26 @@ nav .menu-link {
   }
   .main-content .acc-block {
     height: 100px;
-    font-size: 18px;
+    font-size: 14px;
+  }
+  .main-content .acc-block .acc-no {
+    display: none;
+  }
+  .main-content .acc-block .acc-toggle-icon {
+    color: #02A5A5;
   }
   .main-content ul li {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .main-content ul li a img {
+    width: 16px;
+    height: auto;
   }
 
   #some-icons {
+    --some-icon-width: 200px;
+    width: 200px;
     bottom: -70px;
-    left: 10%;
   }
   #some-icons a {
     margin: 0 20px;

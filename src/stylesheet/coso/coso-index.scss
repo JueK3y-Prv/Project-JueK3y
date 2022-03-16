@@ -101,6 +101,9 @@ nav {
 	}
 	.menu-left {
 		text-align: left;
+		a:last-child {
+			padding-left: 60px;
+		}
 	}
 	.menu-center {
 		text-align: center;
@@ -119,9 +122,6 @@ nav {
 				padding-right: 5px;
 			}
 		}
-	}
-	.menu-link {
-		padding: 0 30px;
 	}
 }
 
@@ -624,7 +624,13 @@ nav {
 }
 
 @media screen and (max-width: 420px) {
+	nav .menu-left {
+		padding: 0 30px;
+		a:last-child {
+			padding-left: 0;
+		}
+	}
 	.cursor, .small-cursor {
 		display: none;
-	}	
+	}
 }

@@ -175,7 +175,7 @@ nav .menu-right .icon a#first-image {
   position: relative;
   width: 300px;
   top: 20px;
-  left: -150px;
+  left: -147.5px;
   font-family: "Playfair Display", serif;
   font-size: 22px;
 }
@@ -224,6 +224,9 @@ nav .menu-right .icon a#first-image {
 .main-content .acc-block .acc-no {
   color: #02A5A5;
 }
+.main-content .acc-block .acc-title {
+  margin-right: 61px;
+}
 .main-content .acc-block .acc-toggle-icon {
   color: #383838;
 }
@@ -258,8 +261,8 @@ nav .menu-right .icon a#first-image {
   --some-icon-width: 351px;
   position: relative;
   width: var(--some-icon-width);
-  bottom: -50px;
-  left: calc(50vw - var(--some-icon-width) / 2);
+  bottom: -70px;
+  left: calc(50vw - var(--some-icon-width) / 2 + 1px);
 }
 #some-icons a {
   margin: 0 40px;
@@ -586,6 +589,10 @@ nav .menu-right .icon a#first-image {
   }
 }
 @media screen and (max-width: 420px) {
+  .hero-container {
+    margin-bottom: 50px;
+  }
+
   nav .menu-left {
     padding: 0 30px;
   }
@@ -604,7 +611,7 @@ nav .menu-right .icon a#first-image {
   }
 
   .main-content {
-    margin-top: 35px;
+    margin-top: 45px;
   }
   .main-content .acc-block {
     height: 100px;
@@ -625,9 +632,9 @@ nav .menu-right .icon a#first-image {
   }
 
   #some-icons {
-    --some-icon-width: 200px;
+    --some-icon-width: 198px;
     width: 200px;
-    bottom: -70px;
+    bottom: -25px;
   }
   #some-icons a {
     margin: 0 20px;

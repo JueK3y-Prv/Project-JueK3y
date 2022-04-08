@@ -1,5 +1,6 @@
 User-Agent: *
 Disallow: /.private/
+Disallow: /cdn-cgi/
 
 User-agent: WebReaper
 User-agent: WebCopier

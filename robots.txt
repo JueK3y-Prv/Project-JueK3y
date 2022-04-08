@@ -10,4 +10,4 @@ User-agent: EmailCollector
 User-agent: penthesilea
 Disallow: /
 
-Sitemap: https://juek3y.com/sitemap.xml
+Sitemap: https://www.juek3y.com/sitemap.xml

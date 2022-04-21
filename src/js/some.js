@@ -42,3 +42,18 @@ $('#dd-3').on('click', () => {
         }
     }, 750)
 })
+
+
+$('#digital').on('click', () => {
+    $('.digital').css('display', 'block')
+    $('.crypto').css('display', 'none')
+})
+$('#crypto').on('click', () => {
+    $('.digital').css('display', 'none')
+    $('.crypto').css('display', 'block')
+})
+
+$('#dd-3').on('click', () => {
+    $('.digital').css('display', 'none')
+    $('.crypto').css('display', 'none')
+})

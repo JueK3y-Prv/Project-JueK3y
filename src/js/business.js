@@ -9,6 +9,7 @@ $(document).ready(function() {
         $('input[type="radio"]').prop('checked', false);
     });
     $('input[type="radio"]').click(function() {
+        anredeFc($(this).attr('id'))
         //Männlich
         if($(this).attr('id') == 'male') {
             $('.gender-t-m').show();
@@ -39,6 +40,23 @@ $(document).ready(function() {
         }
     });
 });
+
+function anredeFc(gender) {
+    let anrede = []
+    if (gender === 'female') {
+        $("#anrede-selection").attr('class', 'gender-t-f-a')
+        anrede = ['Frau', 'Frau Dr.', 'Frau Prof.', 'Frau Prof. Dr.']
+    }
+    else if (gender === 'male') {
+        $("#anrede-selection").attr('class', 'gender-t-m-a')
+        anrede = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
+    }
+    
+    for (let i = 0; i <= anrede.length; i++) {
+        $('#an-'+i).val(anrede[i])
+        $('#an-'+i).text(anrede[i])
+    }
+}
 
 // Required attribute
 $(document).ready(function() {
@@ -89,17 +107,3 @@ $(document).ready(() => {
         console.log($('.gender-s-f').val())
     })
 })
-
-
-/*
-<!-- Set this as one div and not 2 diffrent -->                
-<div id="anrede-selection"> <!-- class="gender-t-.-a"-->
-    <select class="anrede" name="Anrede" title="Auswahl der Anredemöglichkeiten"> <!-- class="gender-s-."-->
-        <option selected value="">Anrede</option>
-        <option id="an-1" value=""></option>    <!-- value="-", >.< -->
-        <option id="an-2" value=""></option> <!-- ... -->
-        <option id="an-3" value=""></option>
-        <option id="an-4" value=""></option>
-    </select>
-</div>
-*/

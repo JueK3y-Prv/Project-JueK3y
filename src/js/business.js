@@ -13,14 +13,18 @@ $(document).ready(function() {
         if($(this).attr('id') == 'male') {
             $('.gender-t-m').show();
             $('.gender-t-m-a').show();      
-            $('.gender-t-f').hide(); 
+            $('.gender-t-f').hide();  
+            $('.gender-t-f').prop('checked', false); 
             $('.gender-t-f-a').hide(); 
+            $('.gender-t-f-a').prop('checked', false); 
             $('.gender-wrong').show();       
         }
         //Weiblich
         else if($(this).attr('id') == 'female') {
-            $('.gender-t-m').hide();  
-            $('.gender-t-m-a').hide();      
+            $('.gender-t-m').hide(); 
+            $('.gender-t-m').prop('checked', false);  
+            $('.gender-t-m-a').hide();    
+            $('.gender-t-m-a').prop('checked', false);   
             $('.gender-t-f').show(); 
             $('.gender-t-f-a').show();  
             $('.gender-wrong').show();  
@@ -77,3 +81,25 @@ $(document).ready(function() {
         $('.resp4').remove();
     }
 })
+
+
+$(document).ready(() => {
+    $('.button_primary').click(() => {
+        console.log($('.gender-s-m').val())
+        console.log($('.gender-s-f').val())
+    })
+})
+
+
+/*
+<!-- Set this as one div and not 2 diffrent -->                
+<div id="anrede-selection"> <!-- class="gender-t-.-a"-->
+    <select class="anrede" name="Anrede" title="Auswahl der Anredemöglichkeiten"> <!-- class="gender-s-."-->
+        <option selected value="">Anrede</option>
+        <option id="an-1" value=""></option>    <!-- value="-", >.< -->
+        <option id="an-2" value=""></option> <!-- ... -->
+        <option id="an-3" value=""></option>
+        <option id="an-4" value=""></option>
+    </select>
+</div>
+*/

@@ -43,21 +43,24 @@ $(document).ready(function() {
 })
 
 function anredeFc(gender) {
-    let anrede = []
+    let anredeVal = []
+    let anredeTx = []
     if (gender === 'female') {
         $("#anrede-selection").attr('class', 'gender-t-f-a')
         $("#anrede-selection").children().attr('id', 'gender-s-f')
-        anrede = ['Frau', 'Frau Dr.', 'Frau Prof.', 'Frau Prof. Dr.']
+        anredeVal = ['Frau', 'Frau Doktor', 'Frau Professor', 'Frau Professor Doktor']
+        anredeTx = ['Frau', 'Frau Dr.', 'Frau Prof.', 'Frau Prof. Dr.']
     }
     else if (gender === 'male') {
         $("#anrede-selection").attr('class', 'gender-t-m-a')
         $("#anrede-selection").children().attr('id', 'gender-s-m')
-        anrede = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
+        anredeVal = ['Herr', 'Herr Doktor', 'Herr Professor', 'Herr Professor Doktor']
+        anredeTx = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
     }
     
     for (let i = 0; i <= anrede.length; i++) {
-        $('#an-'+i).val(anrede[i])
-        $('#an-'+i).text(anrede[i])
+        $('#an-'+i).val(anredeVal[i])
+        $('#an-'+i).text(anredeTx[i])
     }
 }
 

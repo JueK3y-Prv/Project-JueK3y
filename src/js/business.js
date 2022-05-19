@@ -58,7 +58,7 @@ function anredeFc(gender) {
         anredeTx = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
     }
     
-    for (let i = 0; i <= anrede.length; i++) {
+    for (let i = 0; i <= $(".anrede").length; i++) {
         $('#an-'+i).val(anredeVal[i])
         $('#an-'+i).text(anredeTx[i])
     }

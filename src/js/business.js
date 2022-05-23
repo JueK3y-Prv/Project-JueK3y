@@ -58,7 +58,7 @@ function anredeFc(gender) {
         anredeTx = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
     }
     
-    for (let i = 0; i <= $(".anrede").length; i++) {
+    for (let i = 0; i <= $('.anrede').length; i++) {
         $('#an-'+i).val(anredeVal[i])
         $('#an-'+i).text(anredeTx[i])
     }
@@ -66,18 +66,18 @@ function anredeFc(gender) {
 
 // Required attribute
 $(document).ready(function() {
-    $(".gender-t-m").click(function() {
+    $('.gender-t-m').click(function() {
         $('#gender-s-m').attr('required', true) 
     })
 }) 
 $(document).ready(function(){
-    $(".gender-t-f").click(function() {
+    $('.gender-t-f').click(function() {
         $('.gender-s-f').attr('required', true) 
         $('.gender-i-m-r').attr('required', false) 
     })
 })
 $(document).ready(function(){
-    $(".gender-wrong").click(function() {
+    $('.gender-wrong').click(function() {
         $('.gender-i-m-r').attr('required', true)
         $('.gender-s-f').attr('required', false) 
         $('#gender-s-m').attr('required', false) 

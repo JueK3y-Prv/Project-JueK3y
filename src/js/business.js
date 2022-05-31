@@ -49,7 +49,7 @@ function anredeFc(gender) {
         $("#anrede-selection").attr('class', 'gender-t-f-a')
         $("#anrede-selection").children().attr('id', 'gender-s-f')
         anredeVal = ['Frau', 'Frau Doktor', 'Frau Professor', 'Frau Professor Doktor']
-        anredeTx = ['Frau', 'Frau Doktor', 'Frau Professor', 'Frau Professor Doktor'] // Short type Frau Dr.
+        anredeTx = ['Frau', 'Frau Dr.', 'Frau Prof.', 'Frau Prof. Dr.']
     }
     else if (gender === 'male') {
         $("#anrede-selection").attr('class', 'gender-t-m-a')
@@ -58,7 +58,7 @@ function anredeFc(gender) {
         anredeTx = ['Herr', 'Herr Dr.', 'Herr Prof.', 'Herr Prof. Dr.']
     }
     
-    for (let i = 0; i <= $('.anrede').length; i++) {
+    for (let i = 0; i <= 3; i++) {
         $('#an-'+i).val(anredeVal[i])
         $('#an-'+i).text(anredeTx[i])
     }

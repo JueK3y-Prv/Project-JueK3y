@@ -12,11 +12,6 @@
       X-Permitted-Cross-Domain-Policies = "none"
 
 [[redirects]]
-  from = "https://juek3y.netlify.app/*"
-  to = "https://juek3y.com"
-  status = 200
-
-[[redirects]]
   from = "/de/*"
   to = "/de/page-not-found"
   status = 404

@@ -37,26 +37,27 @@
 
         <link rel="preload" href="/src/stylesheet/some/social-media.min.css" as="style" type="text/css" />
 
-        <link rel="preload" href="/src/fonts/BoldTitle/RedRose-Bold.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="/src/fonts/BoldTitle/MonumentExtended-Regular.otf" as="font" type="font/otf" crossorigin />
+        <link rel="preload" href="/src/fonts/RedRose-Bold.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/src/fonts/MonumentExtended-Regular.otf" as="font" type="font/otf" crossorigin />
 
         <!-------   CSS  ------->  
         <link rel="stylesheet" href="/src/stylesheet/some/social-media.min.css">
 
-        <!-------   JS  ------->    
-        <script src="/src/js/lib/anime.min.js"></script>
-        <!-- ADDME <script src="/src/js/preventContext.js"></script> -->
-        <script src="/src/js/lib/TweenMax.min.js"></script>
-        <script src="/src/js/lib/jquery.min.js"></script>
-
+        <!-------   JS  ------->
+    	<!-- CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="/src/js/preventContext.js"></script>
+        <script src="/src/js/webAnalytics.js"></script>
+        
+        <!-- Defer -->
         <script defer src="/src/js/changeColorMode.js"></script>
         <script async src="/src/js/customCursor.js"></script>
         <script defer src="/src/js/landingPage.js"></script>
         <script defer src="/src/js/setCookie.js"></script>
         <script defer src="/src/js/dropdown.js"></script>
-        <script src="/src/js/webAnalytics.js"></script>
-
-        <!-- FIXME <script src="/src/js/lib/circletype.min.js"></script> -->
         <script defer src="/src/js/some.js"></script>
 
         <!-------   IMG  ------->
@@ -64,6 +65,7 @@
         <link id="fav-app" rel="apple-touch-icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
         <link id="fav-png" rel="icon" href="/src/img/favicon/simple-favicon-dark.png" type="image/png" />
         <link id="fav-ico" rel="shortcut icon" href="/src/img/favicon/simple-favicon-dark.ico" type="image/ico" />
+        
         <title>Social Media | JueK3y</title>
     </head>
     <body draggable="false">

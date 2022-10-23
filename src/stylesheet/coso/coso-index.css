@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Red Rose";
-  src: url("/src/fonts/RedRose-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose&display=swap");
 @font-face {
   font-family: "Monument Extended";
   src: url("/src/fonts/MonumentExtended-Regular.otf") format("opentype");

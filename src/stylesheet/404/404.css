@@ -1,37 +1,25 @@
 /* latin */
-@font-face {
-  font-family: "Ubuntu";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/src/fonts/Ubuntu.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @-webkit-keyframes upndown {
   0% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    transform: translateY(5px);
   }
   50% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    transform: translateY(15px);
   }
   100% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    transform: translateY(5px);
   }
 }
 @keyframes upndown {
   0% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    transform: translateY(5px);
   }
   50% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    transform: translateY(15px);
   }
   100% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    transform: translateY(5px);
   }
 }
 @-webkit-keyframes smallnbig {
@@ -95,8 +83,7 @@ body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .box {
@@ -109,8 +96,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 30px 50px;
 }
 .box .box__ghost {
@@ -118,8 +104,7 @@ body {
   position: absolute;
   left: 50%;
   top: 30%;
-  -webkit-transform: translate(-50%, -30%);
-          transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
 }
 .box .box__ghost .symbol:nth-child(1) {
   opacity: 0.2;
@@ -135,8 +120,7 @@ body {
   border-radius: 5px;
   bottom: 65px;
   left: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .box .box__ghost .symbol:nth-child(1):after {
   content: "";
@@ -147,8 +131,7 @@ body {
   border-radius: 5px;
   bottom: 65px;
   left: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .box .box__ghost .symbol:nth-child(2) {
   position: absolute;
@@ -177,8 +160,7 @@ body {
   border-radius: 5px;
   top: 5px;
   left: 40px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .box .box__ghost .symbol:nth-child(3):after {
   content: "";
@@ -189,8 +171,7 @@ body {
   border-radius: 5px;
   top: 5px;
   left: 40px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .box .box__ghost .symbol:nth-child(4) {
   opacity: 0.2;
@@ -206,8 +187,7 @@ body {
   border-radius: 5px;
   top: 10px;
   right: 30px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .box .box__ghost .symbol:nth-child(4):after {
   content: "";
@@ -218,8 +198,7 @@ body {
   border-radius: 5px;
   top: 10px;
   right: 30px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .box .box__ghost .symbol:nth-child(5) {
   position: absolute;
@@ -248,8 +227,7 @@ body {
   border-radius: 5px;
   bottom: 65px;
   right: -5px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .box .box__ghost .symbol:nth-child(6):after {
   content: "";
@@ -260,8 +238,7 @@ body {
   border-radius: 5px;
   bottom: 65px;
   right: -5px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .box .box__ghost .box__ghost-container {
   background: #fff;
@@ -279,8 +256,7 @@ body {
   top: 45%;
   height: 12px;
   width: 70px;
-  -webkit-transform: translate(-12.0833%, -38.7354%);
-          transform: translate(-12.0833%, -38.7354%);
+  transform: translate(-12.0833%, -38.7354%);
 }
 .box .box__ghost .box__ghost-container .box__ghost-eyes .box__eye-left {
   width: 12px;
@@ -301,8 +277,6 @@ body {
   right: 0;
 }
 .box .box__ghost .box__ghost-container .box__ghost-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 100%;
@@ -310,9 +284,7 @@ body {
   right: 0;
 }
 .box .box__ghost .box__ghost-container .box__ghost-bottom div {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   position: relative;
   top: -10px;
   height: 20px;
@@ -327,8 +299,7 @@ body {
 }
 .box .box__ghost .box__ghost-shadow {
   height: 20px;
-  -webkit-box-shadow: 0 50px 15px 5px #3B3769;
-          box-shadow: 0 50px 15px 5px #3B3769;
+  box-shadow: 0 50px 15px 5px #3B3769;
   border-radius: 50%;
   margin: 0 auto;
   -webkit-animation: smallnbig 3s ease-in-out infinite;
@@ -338,8 +309,7 @@ body {
   position: absolute;
   bottom: 30px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .box .box__description .box__description-container {
   color: #fff;
@@ -372,7 +342,6 @@ body {
   padding: 0 70px;
   white-space: nowrap;
   margin-top: 25px;
-  -webkit-transition: background 0.5s ease;
   transition: background 0.5s ease;
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -386,19 +355,14 @@ body {
   bottom: -25px;
   left: 0;
   border: 2px solid #fff;
-  -webkit-transform: translateX(-50px) rotate(45deg);
-          transform: translateX(-50px) rotate(45deg);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
+  transform: translateX(-50px) rotate(45deg);
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 .box .box__description .box__button:hover {
   background: transparent;
   border-color: #fff;
 }
 .box .box__description .box__button:hover:before {
-  -webkit-transform: translateX(250px) rotate(45deg);
-          transform: translateX(250px) rotate(45deg);
+  transform: translateX(250px) rotate(45deg);
 }
 /*# sourceMappingURL=404.css.map */

@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
 @font-face {	
-		font-family: 'Monument Extended';
-		src: url('/src/fonts/MonumentExtended-Regular.otf') format('opentype');
-		font-weight: normal;
-		font-style: normal;
+	font-family: 'Red Rose';
+	src: url('/src/fonts/RedRose-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {	
+	font-family: 'Monument Extended';
+	src: url('/src/fonts/MonumentExtended-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {

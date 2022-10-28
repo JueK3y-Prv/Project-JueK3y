@@ -47,17 +47,21 @@ function intervalTimer() {
 
 var timeOutHandle = setInterval(intervalTimer, 8000)
 
-document.getElementById('next-button').onclick = () => {
-    nextImage(a = true, b = false, c = 3)
-    clearInterval(timeOutHandle);
-    timeOutHandle = setInterval(intervalTimer, 8000)
-}
+try {
+    document.getElementById('next-button').onclick = () => {
+        nextImage(a = true, b = false, c = 3)
+        clearInterval(timeOutHandle);
+        timeOutHandle = setInterval(intervalTimer, 8000)
+    }
 
-document.getElementById('prev-button').onclick = () => {
-    nextImage(b = true, c = -3)
-    clearInterval(timeOutHandle);
-    timeOutHandle = setInterval(intervalTimer, 8000)
+    document.getElementById('prev-button').onclick = () => {
+        nextImage(b = true, c = -3)
+        clearInterval(timeOutHandle);
+        timeOutHandle = setInterval(intervalTimer, 8000)
+    }
 }
+catch(err) { console.log(`Error in next- / prev-button: ${err}`) }
+
 
 var hoverDistort1 = new hoverEffect({
     parent: document.querySelector('.image-1'),

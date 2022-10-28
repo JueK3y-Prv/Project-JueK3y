@@ -44,7 +44,7 @@ if (localStorage.getItem("cookieAccepted") == "true") {
 
 function startAnalytics() {
     (function(){
-        var id="753188a6-baa3-48ef-94d0-6b797ea30bef";
+        var id="15295077-f5dc-40c6-8077-e7dd67bc85b5";
         var utcoffset="2";
         var server=document.currentScript.getAttribute("data-server")||"https://counter.dev";
         if(!sessionStorage.getItem("_swa")&&!document.referrer.startsWith(location.protocol+"//"+location.host)){

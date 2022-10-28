@@ -159,7 +159,7 @@ document.getElementById("a-c-banner").onclick = () => {
     localStorage.setItem('cookieAccepted', 'true')
 
     var script = document.createElement('script');
-    script.src = '/src/js/base.js';
+    script.src = '/src/js/webAnalytics.js';
     document.getElementsByTagName('head')[0].appendChild(script);
 
     document.getElementById("accept-cookie").style.display = "None"

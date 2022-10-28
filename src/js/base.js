@@ -1,28 +1,3 @@
-// INFO: webAnalytics.js -!- //
-if (localStorage.getItem("cookieAccepted") == "true") {
-    startAnalytics()
-}
-
-function startAnalytics() {
-    (function(){
-        var id="753188a6-baa3-48ef-94d0-6b797ea30bef";
-        var utcoffset="2";
-        var server=document.currentScript.getAttribute("data-server")||"https://counter.dev";
-        if(!sessionStorage.getItem("_swa")&&!document.referrer.startsWith(location.protocol+"//"+location.host)){
-            setTimeout(function(){
-                sessionStorage.setItem("_swa","1");fetch(
-                    server+"/track?"+new URLSearchParams({
-                        referrer:document.referrer,screen:screen.width+"x"+screen.height,id:id,utcoffset:utcoffset,
-                    })
-                );
-            },4500);
-        }
-        navigator.sendBeacon(server+"/trackpage",new URLSearchParams({
-            id:id,page:window.location.pathname,
-        }));
-    })();
-}
-
 // INFO: preventContext.js -!- //
 if (window.location.href==="https://juek3y.netlify.app/") {
     window.location.href = "https://juek3y.com/"; 
@@ -59,4 +34,30 @@ document.onkeydown = function(e) {
     if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){
         return false;
     }
+}
+
+
+// INFO: webAnalytics.js -!- //
+if (localStorage.getItem("cookieAccepted") == "true") {
+    startAnalytics()
+}
+
+function startAnalytics() {
+    (function(){
+        var id="753188a6-baa3-48ef-94d0-6b797ea30bef";
+        var utcoffset="2";
+        var server=document.currentScript.getAttribute("data-server")||"https://counter.dev";
+        if(!sessionStorage.getItem("_swa")&&!document.referrer.startsWith(location.protocol+"//"+location.host)){
+            setTimeout(function(){
+                sessionStorage.setItem("_swa","1");fetch(
+                    server+"/track?"+new URLSearchParams({
+                        referrer:document.referrer,screen:screen.width+"x"+screen.height,id:id,utcoffset:utcoffset,
+                    })
+                );
+            },4500);
+        }
+        navigator.sendBeacon(server+"/trackpage",new URLSearchParams({
+            id:id,page:window.location.pathname,
+        }));
+    })();
 }

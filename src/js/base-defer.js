@@ -158,8 +158,8 @@ document.getElementById("a-c-banner").onclick = () => {
     document.cookie = cookieName + '=' + consent + ';expires=' + date.toGMTString() + ';path=/'
     localStorage.setItem('cookieAccepted', 'true')
 
-    var script= document.createElement('script');
-    script.src= '/src/js/webAnalytics.js';
+    var script = document.createElement('script');
+    script.src = '/src/js/base.js';
     document.getElementsByTagName('head')[0].appendChild(script);
 
     document.getElementById("accept-cookie").style.display = "None"

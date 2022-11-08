@@ -57,8 +57,7 @@
         <script async src="/src/js/customCursor.js"></script>
 
         <!-- Defer -->
-        <script defer src="/src/js/min/base-defer.min.js"></script>
-        <script defer src="/src/js/hoverAnimatonH1.js"></script>
+        <script defer src="/src/js/base-defer.js"></script>
         <script defer src="/src/js/changeImage.js"></script>
 
         <!-------   IMG  ------->
@@ -69,7 +68,7 @@
         
         <title>Landing Page | JueK3y</title>
     </head>
-    <body draggable="false">
+ <body draggable="false">
         <noscript>
             <div id="no-js">
                 <span>JavaScript must be enabled for this page to work.</span>
@@ -101,20 +100,31 @@
                 <i id="coso-banner-1"></i>
                 <i id="coso-banner-2"></i>
             </div>
-            <div class="wrapper-img">
+
+
+
+
+
+
+
+            <!-- hero image  -->
+            <div class="wrapper-img" id="fake-img">
                 <div class="box"></div>
-                <div class="image" id="image-3">
-                    <div class="image-1"></div>
-                    <div class="image-2"></div>
-                    <div class="image-3"></div>
-                    <div class="image-4"></div>
+                <div class="image">
+                    <img class="image" id="fake-image" src="/src/img/displacement/Image-Coast-1.webp">
                 </div>
             </div>
+
+            <div class="sec-wrapper-img" id="real-img"></div>
+
+
+
 
             <div class="header" id="delete-text">
                 <h1 class="header-1">Coming</h1>
                 <h1 class="header-2">Soon</h1>
             </div>
+
             <div class="hero-container">
                 <div class="sidebar-text">
                     <span id="image-number">003</span>
@@ -123,6 +133,7 @@
                     <div class="lineThrough">projects</div>
                 </div>
 
+                
                 <div id="accept-cookie">
                     <a class="circular-text link" id="a-c-banner">
                         <span id="rotated">
@@ -213,9 +224,8 @@
                     <a id="prev-button" class="main-nav link" data-nav="previous"><div class="prev">prev</div></a>
                     <a id="next-button" class="main-nav link" data-nav="next"><div class="next">next</div></a>
                 </div>
-            </div>
-            
-        </div>        
+            </div>           
+        </div>
         <div class="cursor"></div>
         <div class="small-cursor"></div>
     </body>

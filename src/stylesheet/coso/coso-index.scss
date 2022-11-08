@@ -4,10 +4,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {	
 	font-family: 'Monument Extended';
 	src: url('/src/fonts/MonumentExtended-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {	
+	font-family: 'Estoria';
+	src: url('/src/fonts/testLab/Estoria.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -53,6 +59,11 @@ img, .icon, .sidebar-text, .img-nav, .brand-logo {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 }
+
+/*.brand-logo {
+	font-family: 'Estoria';
+	font-size: 1.5vw;
+}*/
 
 a {
 	text-decoration: none;
@@ -288,11 +299,8 @@ nav {
 		width: 130px;
 		height: 130px;
 		border-radius: 50%;
-		font-family: sans-serif;
-		// background-color: rgb(255, 78, 78);
-		// border: 1px solid var(--Black);
+		font-family: 'Red Rose';
 		transform: translate(-50%, -50%);
-		text-transform: uppercase;
 		transition: .2s;
 		&:hover {
 			background-color: rgb(253, 90, 90);

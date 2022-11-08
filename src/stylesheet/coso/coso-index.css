@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Estoria";
+  src: url("/src/fonts/testLab/Estoria.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   cursor: none;
   --Black: #111213;
@@ -54,6 +60,10 @@ img, .icon, .sidebar-text, .img-nav, .brand-logo {
   -webkit-user-select: none;
 }
 
+/*.brand-logo {
+	font-family: 'Estoria';
+	font-size: 1.5vw;
+}*/
 a {
   text-decoration: none;
   color: var(--Black);
@@ -371,9 +381,8 @@ nav .menu-right .icon a#first-image {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  font-family: sans-serif;
+  font-family: "Red Rose";
   transform: translate(-50%, -50%);
-  text-transform: uppercase;
   transition: 0.2s;
 }
 .hero-container #accept-cookie:hover, .hero-container #cookie-accepted:hover {

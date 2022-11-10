@@ -71,7 +71,7 @@ var tl = new TweenMax.staggerFrom(".hero-container > div", 2, {
 }, 0.1);
 
 // INFO: changeColorMode.js -!- //
-const theme = localStorage.getItem("theme");
+const theme = localStorage.getItem('theme')
 const iconSun = document.getElementById('sun-icon')
 const iconMoon = document.getElementById('moon-icon')
 const amountChildren = document.querySelector('.image').children.length

@@ -155,8 +155,12 @@ setTimeout(function() {
         displacementImage: '/src/img/displacement/filter/4.png'
     });
 
-    if (localStorage.getItem("theme")) {
-        if (localStorage.getItem("theme") == "dark") {
+    
+    const theme = localStorage.getItem('theme')
+    const amountChildren = document.querySelector('.image').children.length
+
+    if (theme) {
+        if (theme == "dark") {
             modeToDark()
             for (i = 0; i < amountChildren; i++) {
                 document.querySelector('.image-' + (i + 1)).style.filter = 'invert(1)'

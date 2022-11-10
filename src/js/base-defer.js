@@ -85,6 +85,7 @@ function modeToLight() {
         document.getElementById('fake-image').style.filter = 'invert(0)'
         for (i = 0; i < amountChildren; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(0)'
+            console.log("Changed to Light-Mode")
         }
     }
     catch(err) {}
@@ -95,8 +96,10 @@ function modeToDark() {
     document.documentElement.style.filter = 'invert(1)'
     try {
         document.getElementById('fake-image').style.filter = 'invert(1)'
+        // Error occurrs here
         for (i = 0; i < amountChildren; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(1)'
+            console.log("Changed to Dark-Mode")
         }
     }
     catch(err) {}
@@ -119,16 +122,16 @@ else {
 
 iconSun.onclick = () => {
     if (localStorage.getItem("cookieAccepted") == "true") {
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", "light")
     }
-    modeToLight();
-};
+    modeToLight()
+}
 iconMoon.onclick = () => {
     if (localStorage.getItem("cookieAccepted") == "true") {
-        localStorage.setItem("theme", "dark");
+        localStorage.setItem("theme", "dark")
     }
-    modeToDark();
-};
+    modeToDark()
+}
 
 
 // INFO: cookie -!- //
@@ -142,8 +145,8 @@ changeAn.onclick = () => {
 
 // INFO: setCookie.js -!- //
 if (document.cookie.match(/^(.*;)?\s*accept_cookies\s*=\s*[^;]+(.*)?$/)) {
-    document.__defineGetter__("cookie", function() { return '';} );
-    document.__defineSetter__("cookie", function() {} );
+    document.__defineGetter__("cookie", function() { return '';} )
+    document.__defineSetter__("cookie", function() {} )
 
     document.getElementById("accept-cookie").style.display = "None"
     try {
@@ -163,9 +166,9 @@ document.getElementById("a-c-banner").onclick = () => {
     document.cookie = cookieName + '=' + consent + ';expires=' + date.toGMTString() + ';path=/'
     localStorage.setItem('cookieAccepted', 'true')
 
-    var script = document.createElement('script');
-    script.src = '/src/js/webAnalytics.js';
-    document.getElementsByTagName('head')[0].appendChild(script);
+    var script = document.createElement('script')
+    script.src = '/src/js/webAnalytics.js'
+    document.getElementsByTagName('head')[0].appendChild(script)
 
     document.getElementById("accept-cookie").style.display = "None"
     try {

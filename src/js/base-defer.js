@@ -88,7 +88,6 @@ function modeToLight() {
     try {
         for (i = 0; i < 4; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(0)'
-            console.log("Changed to Light-Mode")
         }
     }
     catch(err) { }
@@ -104,7 +103,6 @@ function modeToDark() {
     try {
         for (i = 0; i < 4; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(1)'
-            console.log("Changed to Dark-Mode")
         }
     }
     catch(err) { }

@@ -74,7 +74,7 @@ var tl = new TweenMax.staggerFrom(".hero-container > div", 2, {
 const theme = localStorage.getItem('theme')
 const iconSun = document.getElementById('sun-icon')
 const iconMoon = document.getElementById('moon-icon')
-const amountChildren = document.querySelector('.image').children.length
+const amountChildren = document.querySelector('.image').children.length // Problem spotted
 // Needs to be simplified
 
 function modeToLight() {
@@ -83,12 +83,15 @@ function modeToLight() {
     document.documentElement.style.filter = 'invert(0)'
     try {
         document.getElementById('fake-image').style.filter = 'invert(0)'
-        for (i = 0; i < amountChildren; i++) {
+    }
+    catch(err) { }
+    try {
+        for (i = 0; i < 4; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(0)'
             console.log("Changed to Light-Mode")
         }
     }
-    catch(err) {}
+    catch(err) { }
 }
 function modeToDark() {
     iconMoon.style.display = 'none'
@@ -96,14 +99,25 @@ function modeToDark() {
     document.documentElement.style.filter = 'invert(1)'
     try {
         document.getElementById('fake-image').style.filter = 'invert(1)'
-        // Error occurrs here
-        for (i = 0; i < amountChildren; i++) {
+    }
+    catch(err) { }
+    try {
+        for (i = 0; i < 4; i++) {
             document.querySelector('.image-' + (i + 1)).style.filter = 'invert(1)'
             console.log("Changed to Dark-Mode")
         }
     }
-    catch(err) {}
+    catch(err) { }
 }
+
+setTimeout(() => {
+    if (theme == "dark") {
+        modeToDark()
+    }
+    else {
+        modeToLight()
+    }
+}, 6500)
 
 if (theme) {
     if (theme == "dark") {

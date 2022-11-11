@@ -48,7 +48,7 @@ function modeToDark() {
 }
 
 if (theme) {
-    if (theme == 'dark') {
+    if (theme === 'dark') {
         modeToDark()
     }
     else {
@@ -63,13 +63,13 @@ else {
 }
 
 iconSun.onclick = () => {
-    if (localStorage.getItem('cookieAccepted') == 'true') {
+    if (localStorage.getItem('cookieAccepted') === 'true') {
         localStorage.setItem('theme', 'light');
     }
     modeToLight();
 };
 iconMoon.onclick = () => {
-    if (localStorage.getItem('cookieAccepted') == 'true') {
+    if (localStorage.getItem('cookieAccepted') === 'true') {
         localStorage.setItem('theme', 'dark');
     }
     modeToDark();

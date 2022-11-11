@@ -1,4 +1,4 @@
-if (localStorage.getItem("cookieAccepted") == "true") {
+if (localStorage.getItem("cookieAccepted") === "true") {
     startAnalytics()
 }
 

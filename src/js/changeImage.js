@@ -69,19 +69,19 @@ setTimeout(function() {
         const amountChildren = document.querySelector('.image').children.length
     
         if (a && currentImageNumber <= (amountChildren - 1)) {
-            // If next image & image ID is less than the max. children
+            // INFO: If next image & image ID is less than the max. children -!- //
             imgNumber.textContent = '00' + (currentImageNumber + 1)
             idChange.id = 'image-' + (currentImageNumber + 1)
             showImage(1)
         }
         else if (b && currentImageNumber >= 2) {
-            // If prev image & image ID is bigger than 1
+            // INFO: If prev image & image ID is bigger than 1 -!- //
             imgNumber.textContent = '00' + (currentImageNumber - 1)
             idChange.id = 'image-' + (currentImageNumber - 1)
             showImage(-1)
         }
         else {
-            // For the switch-points: If image ID is 4 or 1
+            // INFO: For the switch-points: If image ID is 4 or 1 -!- //
             imgNumber.textContent = '00' + (currentImageNumber - c)
             idChange.id = 'image-' + (currentImageNumber - c)
             showImage(-c)
@@ -89,11 +89,8 @@ setTimeout(function() {
     
         function showImage(n) {
             for (i = 0; i < amountChildren; i++) {
-                if (i == (currentImageNumber + n)) {
+                if (i === (currentImageNumber + n)) {
                     $('.image-' + (currentImageNumber + n)).css('display', 'block')
-                }
-                else if (n == -1) {
-                    $('.image-' - i).css('display', 'none')
                 }
                 else {
                     $('.image-' + i).css('display', 'none')
@@ -112,13 +109,13 @@ setTimeout(function() {
     
     document.getElementById('next-button').onclick = () => {
         nextImage(a = true, b = false, c = 3)
-        clearInterval(timeOutHandle);
+        clearInterval(timeOutHandle)
         timeOutHandle = setInterval(intervalTimer, 8000)
     }
 
     document.getElementById('prev-button').onclick = () => {
-        nextImage(b = true, c = -3)
-        clearInterval(timeOutHandle);
+        nextImage(a = false, b = true, c = -3)
+        clearInterval(timeOutHandle)
         timeOutHandle = setInterval(intervalTimer, 8000)
     }
     
@@ -159,8 +156,8 @@ setTimeout(function() {
     const theme = localStorage.getItem('theme')
     const amountChildren = document.querySelector('.image').children.length
 
-    if (theme) {
-        if (theme == "dark") {
+    /* if (theme) {
+        if (theme === "dark") {
             modeToDark()
             for (i = 0; i < amountChildren; i++) {
                 document.querySelector('.image-' + (i + 1)).style.filter = 'invert(1)'
@@ -172,6 +169,6 @@ setTimeout(function() {
                 document.querySelector('.image-' + (i + 1)).style.filter = 'invert(0)'
             }
         }
-    }
+    } */
 
 }, 6300)

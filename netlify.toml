@@ -16,11 +16,6 @@
   status = 200
 
 [[redirects]]
-  from = "/de/*"
-  to = "/de/page-not-found"
-  status = 404
-
-[[redirects]]
   from = "/en/*"
   to = "/en/page-not-found"
   status = 404  

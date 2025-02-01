@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (img) {
             gsap.fromTo(
                 img, 
-                { scale: 1, maxWidth: '80vw' }, // Ensure image does not exceed 90% of the viewport width
+                { scale: 1 },
                 {
                     scale: 0.5,
                     ease: "none",

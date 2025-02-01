@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let img = section.querySelector(".img")
 
         let nextSection = sections[index + 1] || lastCard
-        let endScalePoint = `top+=${(nextSection.offsetTop - section.offsetTop) / 2} top` // Adjusted spacing
+        let endScalePoint = `top+=${nextSection.offsetTop - section.offsetTop} top`
 
         gsap.to(section, {
             scrollTrigger: {
@@ -26,29 +26,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
 
-        if (img) {
-            gsap.fromTo(
-                img, 
-                { scale: 1 },
-                {
-                    scale: 0.5,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top top",
-                        end: endScalePoint,
-                        scrub: 1
-                    }
-                }
-            )
-        }
+        gsap.fromTo(img, { scale: 1 }, {
+            scale: 0.5,
+            ease: "none",
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: endScalePoint,
+                scrub: 1
+            }
+        })
     })
 
     const header = document.querySelector(".hero h1")
     ScrollTrigger.create({
         trigger: document.body,
         start: "top top",
-        end: "+=600vh", // Reverted end value
+        end: "+=1000vh",
         scrub: 1,
         onUpdate: (self) => {
             let opacityProgress = self.progress

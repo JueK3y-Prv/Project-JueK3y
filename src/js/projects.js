@@ -71,12 +71,24 @@ function modeToLight() {
     iconSun.style.display = 'none'
     document.documentElement.style.filter = 'invert(0)'
     linkColor.style.color = '#ad1232'
+    try {
+        for (i = 0; i < 4; i++) {
+            document.getElementById('image-' + (i + 1)).style.filter = 'invert(0)'
+        }
+    }
+    catch(err) { }
 }
 function modeToDark() {
     iconMoon.style.display = 'none'
     iconSun.style.display = 'inline'
     document.documentElement.style.filter = 'invert(1)'
     linkColor.style.color = '#5000eb' // It's actually #afff14
+    try {
+        for (i = 0; i < 4; i++) {
+            document.getElementById('image-' + (i + 1)).style.filter = 'invert(1)'
+        }
+    }
+    catch(err) { }
 }
 
 if (theme) {

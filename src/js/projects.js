@@ -1,7 +1,7 @@
 // INFO: Gsap Scroll Trigger
 gsap.registerPlugin(ScrollTrigger)
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const footer = document.querySelector(".footer")
     const lastCard = document.querySelector(".card.scroll")
     const pinnedSections = gsap.utils.toArray(".pinned")
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let img = section.querySelector(".img")
 
         let nextSection = sections[index + 1] || lastCard
-        let endScalePoint = `top+=${nextSection.offsetTop - section.offsetTop} top`
+        let endScalePoint = `top+=${(nextSection.offsetTop - section.offsetTop) / 2} top` // Adjusted spacing
 
         gsap.to(section, {
             scrollTrigger: {
@@ -21,39 +21,42 @@ document.addEventListener("DOMContentLoaded", function() {
                         ? `+=${lastCard.offsetHeight / 2}`
                         : footer.offsetTop - window.innerHeight,
                 pin: true,
-                pinScaping: false,
+                pinSpacing: false,
                 scrub: 1
             }
         })
 
-        gsap.fromTo(
-            img, 
-            { scale: 1 },
-            {
-                scale: 0.5,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: endScalePoint,
-                    scrub: 1
+        if (img) {
+            gsap.fromTo(
+                img, 
+                { scale: 1 },
+                {
+                    scale: 0.5,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top top",
+                        end: endScalePoint,
+                        scrub: 1
+                    }
                 }
-            }
-        )
+            )
+        }
     })
 
-    const header = document.querySelector(".header a")
+    const header = document.querySelector(".hero h1")
     ScrollTrigger.create({
         trigger: document.body,
         start: "top top",
-        end: "+=400vh",
+        end: "+=600vh", // Reverted end value
         scrub: 1,
         onUpdate: (self) => {
             let opacityProgress = self.progress
-            header.style.opacity = 1- opacityProgress
+            header.style.opacity = 1 - opacityProgress
         }
     })
 })
+
 
 
 // INFO: changeColorMode.js -!- //

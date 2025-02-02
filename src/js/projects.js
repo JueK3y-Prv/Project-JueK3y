@@ -22,7 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         : footer.offsetTop - window.innerHeight,
                 pin: true,
                 pinSpacing: false,
-                scrub: 1
+                scrub: 1,
+                onLeave: () => {
+                    if (img) img.style.display = 'none'
+                },
+                onEnterBack: () => {
+                    if (img) img.style.display = 'block'
+                }
             }
         })
 

@@ -152,7 +152,7 @@ section {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 80vw;
-  height: 700px;
+  height: 75vh;
 }
 
 .footer {
@@ -198,7 +198,7 @@ section {
 
 @media screen and (max-width: 900px) {
   body {
-    background-image: linear-gradient(90deg, #fff 49.67%, #ddd 49.67%, #ddd 50%, #fff 50%, #fff 99.67%, #ddd 99.67%, #ddd 100%);
+    background-image: linear-gradient(90deg, var(--White) 49.67%, #ddd 49.67%, #ddd 50%, var(--White) 50%, var(--White) 99.67%, #ddd 99.67%, #ddd 100%);
     background-size: 50vw 50vw;
   }
   .menu-right .icon a.first-image {

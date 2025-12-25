@@ -20,8 +20,22 @@
   to = "/en/page-not-found"
   status = 404  
 
-
 [[redirects]]
   from = "/*"
   to = "/en/coming-soon"
   status = 302
+
+[[redirects]]
+  from = "/impressum"
+  to = "/impressum.html"
+  status = 200
+
+[[redirects]]
+  from = "/impressum.html"
+  to = "/impressum.html"
+  status = 200
+
+[[redirects]]
+  from = "/1000days/*"
+  to = "/1000days/:splat"
+  status = 200

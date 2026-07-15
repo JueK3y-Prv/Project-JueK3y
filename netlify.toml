@@ -39,3 +39,6 @@
   from = "/1000days/*"
   to = "/1000days/:splat"
   status = 200
+
+[functions]
+  node_bundler = "esbuild"

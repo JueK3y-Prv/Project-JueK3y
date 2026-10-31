@@ -1,5 +1,5 @@
 // TravelFlow flight — ERZEUGT, hier nicht bearbeiten.
-// Quelle: TravelFlow server/flight-netlify.mjs (Stand 27e666c)
+// Quelle: TravelFlow server/flight-netlify.mjs (Stand e76361a)
 // Neu bauen: npm run proxy:netlify -- --out <netlify/functions>
 // Netlify-Umgebungsvariablen: AERODATABOX_RAPIDAPI_KEY und/oder AVIATIONSTACK_KEY
 
@@ -214,7 +214,10 @@ async function fetchAeroDataBox(flight, date, store) {
   if (!res.ok) throw new Error(`aerodatabox ${res.status}`);
   await incrementQuota("aerodatabox", store);
   const rows = await res.json();
-  const row = Array.isArray(rows) ? rows[0] : rows;
+  const list = (Array.isArray(rows) ? rows : [rows]).filter(Boolean);
+  const row = list.find(
+    (r) => String(r.departure?.scheduledTime?.local ?? "").slice(0, 10) === date
+  ) ?? list[0];
   if (!row) return null;
   const dep = row.departure ?? {};
   const arr = row.arrival ?? {};

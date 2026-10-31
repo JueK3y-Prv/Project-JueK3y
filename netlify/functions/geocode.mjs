@@ -1,5 +1,5 @@
 // TravelFlow geocode — ERZEUGT, hier nicht bearbeiten.
-// Quelle: TravelFlow server/geocode-netlify.mjs (Stand 27e666c)
+// Quelle: TravelFlow server/geocode-netlify.mjs (Stand e76361a)
 // Neu bauen: npm run proxy:netlify -- --out <netlify/functions>
 // Netlify-Umgebungsvariablen: GEOCODE_USER_AGENT (Pflicht)
 

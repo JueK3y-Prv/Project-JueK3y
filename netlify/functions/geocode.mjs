@@ -1,7 +1,7 @@
-// TravelFlow Geocoding-Proxy — ERZEUGT, hier nicht bearbeiten.
-// Quelle: TravelFlow server/geocode-netlify.mjs (Stand 5ef3568)
+// TravelFlow geocode — ERZEUGT, hier nicht bearbeiten.
+// Quelle: TravelFlow server/geocode-netlify.mjs (Stand 27e666c)
 // Neu bauen: npm run proxy:netlify -- --out <netlify/functions>
-// Netlify-Umgebungsvariable: GEOCODE_USER_AGENT (Pflicht)
+// Netlify-Umgebungsvariablen: GEOCODE_USER_AGENT (Pflicht)
 
 // server/request-guard.mjs
 function createRateLimiter({

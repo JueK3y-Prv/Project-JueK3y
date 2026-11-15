@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutzungsbedingungen – TravelFlow | JueK3y</title>
+<meta name="description" content="Nutzungsbedingungen für TravelFlow, eine App von JueK3y.">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://juek3y.com/travelflow/nutzungsbedingungen">
+<link rel="alternate" hreflang="de" href="https://juek3y.com/travelflow/nutzungsbedingungen">
+<link rel="alternate" hreflang="en" href="https://juek3y.com/travelflow/terms">
+<link rel="preload" href="/src/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Schrift liegt auf juek3y.com selbst, nichts wird von fremden Servern geladen */
+  @font-face { font-family: "Geist"; src: url("/src/fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Geist Mono"; src: url("/src/fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+  /* Rollen wie auf der Website; die Seite folgt Hell und Dunkel des Systems */
+  :root {
+    color-scheme: light dark;
+    --bg: #F2F3F4; --surface: #FFFFFF; --ink: #0F0F10; --muted: #5A5D66; --border: #D4D6DB;
+    --accent: #1F4FFF; --link: #1F4FFF;
+    --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0F0F10; --surface: #18181B; --ink: #F4F4F5; --muted: #A2A5AE; --border: #2B2C31; --accent: #7C96FF; --link: #A9B9FF; }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 44rem; margin: 0 auto; padding: 1.25rem max(1rem, env(safe-area-inset-right)) 4rem max(1rem, env(safe-area-inset-left)); }
+
+  a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: -999rem; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: .5rem .75rem; border-radius: .5rem; z-index: 2; }
+
+  /* Kopf: Wortmarke mit Akzentpunkt, Sprachwechsel */
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: clamp(2.5rem, 9vw, 5rem); }
+  .mark { font-weight: 600; font-size: 1.1rem; letter-spacing: -.03em; color: var(--ink); text-decoration: none; }
+  .mark span { color: var(--accent); }
+  .top nav { font-size: .9375rem; }
+
+  /* kleine Zeilen in der Schreibmaschinenschrift */
+  .kind, .stand, .toc h2, footer { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+  h1 { font-size: clamp(2.4rem, 9vw, 4.5rem); font-weight: 600; letter-spacing: -.045em; line-height: 1; margin: .5rem 0 0; text-wrap: balance; overflow-wrap: anywhere; hyphens: auto; }
+  /* die Linie der Website mit ihrem Akzentpunkt, hier ruhig */
+  .rule { position: relative; width: min(100%, 14rem); height: 3px; margin: 1.5rem 0 1rem; background: var(--ink); border-radius: 2px; }
+  .rule::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--accent); }
+  .stand { margin: 0; }
+
+  /* Inhaltsverzeichnis */
+  .toc { margin: 2.5rem 0; padding: 1.25rem 1.25rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; }
+  .toc h2 { margin: 0 0 .5rem; font-weight: 400; }
+  .toc ol { margin: 0; padding-left: 1.5rem; columns: 2; column-gap: 2rem; }
+  .toc li { padding: .15rem 0; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration-color: var(--border); }
+  @media (max-width: 34rem) { .toc ol { columns: 1; } }
+
+  /* Text: Abschnitte werden automatisch nummeriert, passend zum Inhaltsverzeichnis */
+  article { counter-reset: abschnitt; }
+  article section { margin-top: 3rem; }
+  article h2 { counter-increment: abschnitt; font-size: 1.5rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.25; margin: 0 0 .75rem; }
+  article h2::before { content: counter(abschnitt) ". "; color: var(--muted); font-weight: 400; }
+  article h3 { font-size: 1.0625rem; font-weight: 600; margin: 1.75rem 0 .25rem; }
+  p, ul, ol, dl, address { margin: 0 0 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  address { font-style: normal; }
+  strong { font-weight: 600; }
+
+  /* Baustein: Angaben zu einer Verarbeitung (Daten, Zweck, Rechtsgrundlage, Speicherort, Speicherdauer) */
+  .fakten { display: grid; grid-template-columns: minmax(8rem, auto) minmax(0, 1fr); border-top: 1px solid var(--border); }
+  .fakten dt, .fakten dd { margin: 0; padding: .6rem 0; border-bottom: 1px solid var(--border); }
+  .fakten dt { color: var(--muted); padding-right: 1.25rem; }
+  @media (max-width: 34rem) { .fakten { grid-template-columns: minmax(0, 1fr); } .fakten dt { border-bottom: 0; padding-bottom: 0; } .fakten dd { padding-top: .1rem; } }
+
+  /* Baustein: Hinweis, z. B. „Die deutsche Fassung ist maßgeblich“ */
+  .hinweis { background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; padding: 1rem 1.25rem; }
+  .hinweis p:last-child { margin-bottom: 0; }
+
+  footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+  footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; }
+  footer li { margin: 0; }
+  footer a { color: var(--muted); }
+
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --ink: #000; --muted: #333; --border: #999; --link: #000; --accent: #000; }
+    .top nav, .skip, .toc { display: none; }
+    .page { max-width: none; padding: 0; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="page">
+
+  <header class="top">
+    <a class="mark" href="/" aria-label="JueK3y, zur Startseite">JueK3y<span>.</span></a>
+    <nav aria-label="Sprache"><a href="/travelflow/terms" hreflang="en" lang="en">English</a></nav>
+  </header>
+
+  <main id="inhalt">
+    <p class="kind">TravelFlow · eine App von JueK3y</p>
+    <h1>Nutzungsbedingungen</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="stand">Stand: <time datetime="2026-11-15">15.11.2026</time></p>
+
+    <nav class="toc" aria-labelledby="toc-titel">
+      <h2 id="toc-titel">Inhalt</h2>
+      <ol>
+        <li><a href="#anbieter-und-geltungsbereich">Anbieter und Geltungsbereich</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#nutzung">Nutzung</a></li>
+        <li><a href="#deine-daten-speicherung-und-sicherung">Deine Daten, Speicherung und Sicherung</a></li>
+        <li><a href="#daten-und-inhalte-dritter-keine-gewaehr">Daten und Inhalte Dritter – keine Gewähr</a></li>
+        <li><a href="#rechte-an-der-app">Rechte an der App</a></li>
+        <li><a href="#haftung">Haftung</a></li>
+        <li><a href="#laufzeit-und-beendigung">Laufzeit und Beendigung</a></li>
+        <li><a href="#aenderungen-dieser-bedingungen">Änderungen dieser Bedingungen</a></li>
+        <li><a href="#anwendbares-recht-streitbeilegung">Anwendbares Recht, Streitbeilegung</a></li>
+        <li><a href="#schlussbestimmung">Schlussbestimmung</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ol>
+    </nav>
+
+    <article>
+
+      <section id="anbieter-und-geltungsbereich">
+        <h2>Anbieter und Geltungsbereich</h2>
+<p>(1) Die App „TravelFlow“ (nachfolgend „App“) wird angeboten von:</p>
+<address>
+Julian Kennedy<br>
+Hauptstr. 32D<br>
+86922 Eresing<br>
+Deutschland<br>
+E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
+</address>
+<p>(2) Diese Bedingungen gelten für die Nutzung der App in ihrer jeweils aktuellen Fassung. Für den Bezug über Google Play gelten zusätzlich die Bedingungen von Google; diese regeln nur das Verhältnis zwischen dir und Google.</p>
+      </section>
+
+      <section id="leistungen">
+        <h2>Leistungen</h2>
+<p>(1) TravelFlow ist ein Reiseplaner. Du kannst Reisen mit Stationen, Unterkünften, Verbindungen, Aktivitäten, Aufgaben, Notizen und Budget planen, auf einer Karte ansehen, Buchungsbestätigungen übernehmen, Erinnerungen erhalten und Termine in einen Gerätekalender übertragen.</p>
+<p>(2) Die App ist <strong>kostenlos</strong>. Es gibt keine Konten, keine Werbung und keine In-App-Käufe.</p>
+<p>(3) Einige Funktionen nutzen Online-Dienste Dritter (Nr. <a href="#daten-und-inhalte-dritter-keine-gewaehr">5</a>) und setzen eine Internetverbindung voraus. Die Reiseplanung selbst funktioniert offline.</p>
+<p>(4) Ein Anspruch auf bestimmte Funktionen, auf Weiterentwicklung oder auf ständige Verfügbarkeit der Online-Funktionen besteht nicht. Ich darf die App ändern, Funktionen hinzufügen oder entfernen, sofern das für dich zumutbar ist.</p>
+      </section>
+
+      <section id="nutzung">
+        <h2>Nutzung</h2>
+<p>(1) Du darfst die App für private Zwecke unentgeltlich nutzen. Die App richtet sich an Personen ab 16 Jahren.</p>
+<p>(2) Untersagt ist, die App oder die von ihr genutzten Dienste missbräuchlich zu verwenden, insbesondere die Vermittlungsdienste der App (Ortssuche, Flugdaten) automatisiert oder außerhalb der App abzufragen oder deren Schutzmechanismen zu umgehen.</p>
+      </section>
+
+      <section id="deine-daten-speicherung-und-sicherung">
+        <h2>Deine Daten, Speicherung und Sicherung</h2>
+<p>(1) Deine Reisedaten werden ausschließlich auf deinem Gerät gespeichert. Ich habe keinen Zugriff darauf und kann sie <strong>nicht wiederherstellen</strong>.</p>
+<p>(2) Für die Sicherung bist du selbst verantwortlich. Die App bietet dafür eine verschlüsselte Sicherung an. Ohne den zugehörigen Sicherungscode lässt sie sich nicht öffnen; geht der Code verloren, sind die gesicherten Daten nicht mehr lesbar. Deinstallation, Zurücksetzen oder Verlust des Geräts sowie das Löschen der App-Daten entfernen alle nicht gesicherten Daten endgültig.</p>
+<p>(3) Die Inhalte, die du einträgst, bleiben deine. Ich erhalte an ihnen keine Rechte.</p>
+<p>(4) Wie personenbezogene Daten verarbeitet werden, beschreibt die <a href="https://juek3y.com/travelflow/datenschutz">Datenschutzerklärung</a>.</p>
+      </section>
+
+      <section id="daten-und-inhalte-dritter-keine-gewaehr">
+        <h2>Daten und Inhalte Dritter – keine Gewähr</h2>
+<p>(1) Die App zeigt Informationen, die von Dritten stammen oder automatisch ermittelt werden, insbesondere:</p>
+<ul>
+<li><strong>Flugdaten</strong> (Zeiten, Terminal, Gate, Status) von Flugdaten-Anbietern,</li>
+<li><strong>Wechselkurse</strong> (Referenzkurse der Europäischen Zentralbank über den Dienst Frankfurter) und daraus berechnete Beträge,</li>
+<li><strong>Karten und Ortsdaten</strong> von OpenStreetMap (Nominatim) und CARTO,</li>
+<li><strong>Ortsfotos und -beschreibungen</strong> von Wikimedia Commons, Wikipedia und Wikidata,</li>
+<li><strong>Reise- und Sicherheitshinweise</strong> des Auswärtigen Amts bzw. des US-Außenministeriums und Meldungen von GDACS,</li>
+<li>automatisch aus Buchungsbestätigungen <strong>übernommene Angaben</strong>, berechnete Ortszeiten, Zeitzonen, Wegezeiten, Hinweise auf Lücken oder Überschneidungen.</li>
+</ul>
+<p>(2) Diese Angaben können unvollständig, veraltet oder falsch sein. Sie ersetzen nicht die Angaben der Fluggesellschaft, Bahn, Unterkunft, Behörden oder des Veranstalters. <strong>Maßgeblich sind allein deine Buchungsunterlagen und die Auskünfte der jeweiligen Anbieter und Behörden.</strong> Prüfe insbesondere Abflug-, Abfahrts-, Check-in- und Einreisezeiten sowie Reisehinweise vor Reiseantritt selbst. Wechselkurse sind Richtwerte und keine Kurse, zu denen du tatsächlich tauschen oder zahlen kannst.</p>
+<p>(3) Erinnerungen und Benachrichtigungen werden vom Betriebssystem zugestellt. Energiesparfunktionen, entzogene Berechtigungen oder Geräteeinstellungen können sie verzögern oder verhindern. Verlasse dich für zeitkritische Termine nicht allein auf die App.</p>
+<p>(4) Für Inhalte Dritter gelten deren Lizenzen und Bedingungen; die Pflichtangaben (z. B. „© OpenStreetMap-Mitwirkende“, Urheber und Lizenz an Fotos) zeigt die App an der jeweiligen Stelle und unter „Lizenzen &amp; Quellen“.</p>
+      </section>
+
+      <section id="rechte-an-der-app">
+        <h2>Rechte an der App</h2>
+<p>(1) Die App, ihr Design und ihre Texte sind urheberrechtlich geschützt. Du erhältst ein einfaches, nicht übertragbares, jederzeit widerrufliches Recht, die App für die Zwecke nach Nr. <a href="#nutzung">3</a> zu nutzen.</p>
+<p>(2) Die App enthält Open-Source-Software. Für diese gelten vorrangig deren Lizenzbedingungen; sie sind in der App unter „Lizenzen &amp; Quellen“ aufgeführt.</p>
+      </section>
+
+      <section id="haftung">
+        <h2>Haftung</h2>
+<p>(1) Die App wird unentgeltlich überlassen. Ich hafte daher nur für <strong>Vorsatz und grobe Fahrlässigkeit</strong>.</p>
+<p>(2) Unberührt bleibt die Haftung</p>
+<ul>
+<li>für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, auch bei einfacher Fahrlässigkeit,</li>
+<li>nach dem Produkthaftungsgesetz,</li>
+<li>für arglistig verschwiegene Mängel und</li>
+<li>aus einer ausdrücklich übernommenen Garantie.</li>
+</ul>
+<p>(3) Ohne Vorsatz oder grobe Fahrlässigkeit hafte ich insbesondere nicht für Schäden, die daraus entstehen, dass Angaben Dritter nach Nr. <a href="#daten-und-inhalte-dritter-keine-gewaehr">5</a> unrichtig waren, Erinnerungen ausblieben oder Daten verloren gingen, die nicht nach Nr. <a href="#deine-daten-speicherung-und-sicherung">4</a> Abs. 2 gesichert waren (z. B. verpasste Verbindungen, Umbuchungs- oder Stornokosten).</p>
+<p>(4) Soweit meine Haftung ausgeschlossen oder beschränkt ist, gilt das auch für die persönliche Haftung von Erfüllungsgehilfen.</p>
+      </section>
+
+      <section id="laufzeit-und-beendigung">
+        <h2>Laufzeit und Beendigung</h2>
+<p>Du kannst die Nutzung jederzeit beenden, indem du die App deinstallierst. Ich kann die Bereitstellung der App oder einzelner Online-Funktionen jederzeit einstellen; die auf deinem Gerät gespeicherten Daten bleiben davon unberührt und lassen sich weiterhin sichern, solange die App installiert ist.</p>
+      </section>
+
+      <section id="aenderungen-dieser-bedingungen">
+        <h2>Änderungen dieser Bedingungen</h2>
+<p>Ich kann diese Bedingungen ändern, wenn sich Funktionen der App oder die Rechtslage ändern. Die jeweils aktuelle Fassung steht unter <a href="https://juek3y.com/travelflow/nutzungsbedingungen">juek3y.com</a>. Wesentliche Änderungen kündige ich mit einem Hinweis in der App an. Nutzt du die App danach weiter, gilt die neue Fassung; bist du nicht einverstanden, kannst du die Nutzung beenden.</p>
+      </section>
+
+      <section id="anwendbares-recht-streitbeilegung">
+        <h2>Anwendbares Recht, Streitbeilegung</h2>
+<p>(1) Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Bist du Verbraucher mit gewöhnlichem Aufenthalt in einem anderen Staat, bleiben die zwingenden Verbraucherschutzvorschriften dieses Staates unberührt.</p>
+<p>(2) Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </section>
+
+      <section id="schlussbestimmung">
+        <h2>Schlussbestimmung</h2>
+<p>Sollte eine Bestimmung unwirksam sein, bleibt der Rest wirksam; an die Stelle der unwirksamen Bestimmung tritt die gesetzliche Regelung.</p>
+      </section>
+
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+<p>Fragen zu diesen Bedingungen: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a></p>
+<p>Diese Bedingungen gibt es auf Deutsch und Englisch. Maßgeblich ist die deutsche Fassung.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 JueK3y</span>
+    <ul>
+      <li><a href="/">Startseite</a></li>
+      <li><a href="/impressum">Impressum</a></li>
+      <li><a href="/travelflow/datenschutz">Datenschutz</a></li>
+      <li><a href="/travelflow/nutzungsbedingungen" aria-current="page">Nutzungsbedingungen</a></li>
+      <li><a href="/datenschutz">Datenschutz der Website</a></li>
+    </ul>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -20,10 +20,11 @@
   to = "/en/page-not-found"
   status = 404  
 
+# Die Startseite ist index.html im Wurzelverzeichnis. Unbekannte Adressen landen auf der Fehlerseite.
 [[redirects]]
   from = "/*"
-  to = "/en/coming-soon"
-  status = 302
+  to = "/en/page-not-found"
+  status = 404
 
 [[redirects]]
   from = "/impressum"

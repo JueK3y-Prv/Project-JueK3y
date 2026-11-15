@@ -1,86 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum - JueK3y</title>
-    
-    <meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum – juek3y.com | JueK3y</title>
+<meta name="description" content="Impressum von juek3y.com: Anbieter, Anschrift und Kontakt.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://juek3y.com/impressum">
+<link rel="alternate" hreflang="de" href="https://juek3y.com/impressum">
+<link rel="alternate" hreflang="en" href="https://juek3y.com/legal-notice">
+<link rel="icon" type="image/png" href="/src/img/favicon/simple-favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="/src/img/favicon/simple-favicon-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="/src/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Schrift liegt auf juek3y.com selbst, nichts wird von fremden Servern geladen */
+  @font-face { font-family: "Geist"; src: url("/src/fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Geist Mono"; src: url("/src/fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        h1 { margin-bottom: 20px; color: #1a1a1a; }
-        h2 { margin-top: 30px; font-size: 1.2em; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        p { margin-bottom: 15px; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #777; text-align: center; }
-    </style>
+  /* Rollen wie auf der Website; die Seite folgt Hell und Dunkel des Systems */
+  :root {
+    color-scheme: light dark;
+    --bg: #F2F3F4; --surface: #FFFFFF; --ink: #0F0F10; --muted: #5A5D66; --border: #D4D6DB;
+    --accent: #1F4FFF; --link: #1F4FFF;
+    --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0F0F10; --surface: #18181B; --ink: #F4F4F5; --muted: #A2A5AE; --border: #2B2C31; --accent: #7C96FF; --link: #A9B9FF; }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 44rem; margin: 0 auto; padding: 1.25rem max(1rem, env(safe-area-inset-right)) 4rem max(1rem, env(safe-area-inset-left)); }
+
+  a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: -999rem; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: .5rem .75rem; border-radius: .5rem; z-index: 2; }
+
+  /* Kopf: Wortmarke mit Akzentpunkt, Sprachwechsel */
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: clamp(2.5rem, 9vw, 5rem); }
+  .mark { font-weight: 600; font-size: 1.1rem; letter-spacing: -.03em; color: var(--ink); text-decoration: none; }
+  .mark span { color: var(--accent); }
+  .top nav { font-size: .9375rem; }
+
+  /* kleine Zeilen in der Schreibmaschinenschrift */
+  .kind, .stand, .toc h2, footer { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+  h1 { font-size: clamp(2.4rem, 9vw, 4.5rem); font-weight: 600; letter-spacing: -.045em; line-height: 1; margin: .5rem 0 0; text-wrap: balance; overflow-wrap: anywhere; hyphens: auto; }
+  /* die Linie der Website mit ihrem Akzentpunkt, hier ruhig */
+  .rule { position: relative; width: min(100%, 14rem); height: 3px; margin: 1.5rem 0 1rem; background: var(--ink); border-radius: 2px; }
+  .rule::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--accent); }
+  .stand { margin: 0; }
+
+  /* Inhaltsverzeichnis */
+  .toc { margin: 2.5rem 0; padding: 1.25rem 1.25rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; }
+  .toc h2 { margin: 0 0 .5rem; font-weight: 400; }
+  .toc ol { margin: 0; padding-left: 1.5rem; columns: 2; column-gap: 2rem; }
+  .toc li { padding: .15rem 0; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration-color: var(--border); }
+  @media (max-width: 34rem) { .toc ol { columns: 1; } }
+
+  /* Text: Abschnitte werden automatisch nummeriert, passend zum Inhaltsverzeichnis */
+  article { counter-reset: abschnitt; }
+  article section { margin-top: 3rem; }
+  article h2 { counter-increment: abschnitt; font-size: 1.5rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.25; margin: 0 0 .75rem; }
+  article h2::before { content: counter(abschnitt) ". "; color: var(--muted); font-weight: 400; }
+  article h3 { font-size: 1.0625rem; font-weight: 600; margin: 1.75rem 0 .25rem; }
+  p, ul, ol, dl, address { margin: 0 0 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  address { font-style: normal; }
+  strong { font-weight: 600; }
+
+  /* Baustein: Angaben zu einer Verarbeitung (Daten, Zweck, Rechtsgrundlage, Speicherort, Speicherdauer) */
+  .fakten { display: grid; grid-template-columns: minmax(8rem, auto) minmax(0, 1fr); border-top: 1px solid var(--border); }
+  .fakten dt, .fakten dd { margin: 0; padding: .6rem 0; border-bottom: 1px solid var(--border); }
+  .fakten dt { color: var(--muted); padding-right: 1.25rem; }
+  @media (max-width: 34rem) { .fakten { grid-template-columns: minmax(0, 1fr); } .fakten dt { border-bottom: 0; padding-bottom: 0; } .fakten dd { padding-top: .1rem; } }
+
+  /* Baustein: Hinweis, z. B. „Die deutsche Fassung ist maßgeblich“ */
+  .hinweis { background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; padding: 1rem 1.25rem; }
+  .hinweis p:last-child { margin-bottom: 0; }
+
+  footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+  footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; }
+  footer li { margin: 0; }
+  footer a { color: var(--muted); }
+
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --ink: #000; --muted: #333; --border: #999; --link: #000; --accent: #000; }
+    .top nav, .skip, .toc { display: none; }
+    .page { max-width: none; padding: 0; }
+  }
+</style>
 </head>
 <body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="page">
 
-<div class="container">
+  <header class="top">
+    <a class="mark" href="/" aria-label="JueK3y, zur Startseite">JueK3y<span>.</span></a>
+    <nav aria-label="Sprache"><a href="/legal-notice" hreflang="en" lang="en">English</a></nav>
+  </header>
+
+  <main id="inhalt">
+    <p class="kind">juek3y.com · Website von JueK3y</p>
     <h1>Impressum</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="stand">Stand: <time datetime="2026-11-15">15.11.2026</time></p>
 
-    <h2>Angaben gemäß § 5 DDG</h2>
-    <p>
-        Julian Kennedy<br>
-        Hauptstr. 32D<br>
-        86922 Eresing<br>
-        Deutschland
-    </p>
+    <nav class="toc" aria-labelledby="toc-titel">
+      <h2 id="toc-titel">Inhalt</h2>
+      <ol>
+        <li><a href="#anbieter">Angaben gemäß § 5 DDG</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#verantwortlich">Verantwortlich für den Inhalt</a></li>
+        <li><a href="#streitbeilegung">Verbraucherstreitbeilegung</a></li>
+        <li><a href="#haftung-inhalte">Haftung für Inhalte</a></li>
+        <li><a href="#haftung-links">Haftung für Links</a></li>
+        <li><a href="#urheberrecht">Urheberrecht</a></li>
+      </ol>
+    </nav>
 
-    <h2>Kontakt</h2>
-    <p>
-        E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
-    </p>
+    <article>
 
-    <h2>Redaktionell verantwortlich</h2>
-    <p>
-        Julian Kennedy<br>
-        Hauptstr. 32D<br>
-        86922 Eresing
-    </p>
+      <section id="anbieter">
+        <h2>Angaben gemäß § 5 DDG</h2>
+<address>
+Julian Kennedy<br>
+Hauptstr. 32D<br>
+86922 Eresing<br>
+Deutschland
+</address>
+      </section>
 
-    <h2>EU-Streitschlichtung</h2>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br>
-    Meine E-Mail-Adresse finden Sie oben im Impressum.</p>
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+<p>E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a><br>
+Kontaktformular: <a href="/#kontakt">am Ende der Startseite</a></p>
+      </section>
 
-    <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-    <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <section id="verantwortlich">
+        <h2>Verantwortlich für den Inhalt</h2>
+<p>Verantwortlich nach § 18 Abs. 2 MStV:</p>
+<address>
+Julian Kennedy<br>
+Hauptstr. 32D<br>
+86922 Eresing
+</address>
+      </section>
 
-    <hr style="margin-top: 40px; border: 0; border-top: 1px solid #eee;">
+      <section id="streitbeilegung">
+        <h2>Verbraucherstreitbeilegung</h2>
+<p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      </section>
 
-    <h3>Haftung für Inhalte</h3>
-    <p>Als Diensteanbieter bin ich gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-    <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
+      <section id="haftung-inhalte">
+        <h2>Haftung für Inhalte</h2>
+<p>Als Diensteanbieter bin ich gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+<p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
+      </section>
 
-    <h3>Haftung für Links</h3>
-    <p>Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
-    <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+      <section id="haftung-links">
+        <h2>Haftung für Links</h2>
+<p>Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+<p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+      </section>
 
-    <h3>Urheberrecht</h3>
-    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-    <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
+      <section id="urheberrecht">
+        <h2>Urheberrecht</h2>
+<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+<p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Solltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2021–2026 JueK3y</span>
+    <ul>
+      <li><a href="/">Startseite</a></li>
+      <li><a href="/impressum" aria-current="page">Impressum</a></li>
+      <li><a href="/datenschutz">Datenschutz der Website</a></li>
+    </ul>
+  </footer>
+
 </div>
-
-<footer>
-    <p>&copy; 2025 Julian Kennedy. Alle Rechte vorbehalten.</p>
-</footer>
-
 </body>
 </html>

@@ -1,10 +1,10 @@
 # juek3y.com · Neuentwurf der Website
 
-Stand 2026-11-15 · Status: Entwurf, wartet auf Freigabe durch JueK3y
+Stand 2026-11-15 · Status: Entwurf ist als Startseite live. Stil und Programm liegen unter `src/`, Deutsch und Englisch sind eingebaut, die Rechtstexte sind umgezogen. Offen bleibt, was in Abschnitt 6 steht.
 
 Dieses Dokument hält fest, was in der Entwurfsphase entschieden wurde. Es soll reichen, um den Umbau zu planen, ohne die Unterhaltung zu kennen, in der es entstand.
 
-- **Entwurf zum Ansehen:** `docs/entwurf/startseite.html` (lokal über einen kleinen Webserver öffnen, nicht als Datei). Kein Produktionscode: eine Datei, Schriften und Bibliotheken kommen von fremden Servern.
+- **Entwurf zum Ansehen:** Der Entwurf ist zur Startseite geworden (`index.html`, `en/index.html`, `src/css/start.css`, `src/js/start/`). Die frühere Einzeldatei unter `docs/entwurf/` steht nur noch in der Git-Historie.
 - **Derselbe Entwurf online:** https://claude.ai/artifact/N2R56RgKn4spM1a5wEdNtJ (privat)
 - **Stilvorlage für Rechtstexte:** fertig, liegt aber nicht in diesem Repo. Sie gehört zum Studio-Standard und wurde JueK3y getrennt übergeben.
 
@@ -139,10 +139,10 @@ Die Seite besteht aus fertigen Dateien. Inhalte ändern heißt Datei ändern und
 2. **Texte:** Alle Texte im Entwurf sind Platzhalter. Reisestopps und Geldbeträge sind erfunden. Serien-Namen und Bildtitel stammen nicht von JueK3y.
 3. **Akzentfarben** von TravelFlow und Saldo sind unbekannt. 1000 Days: `#F76107`.
 4. **Inhalt der Unterseiten** (Live-Demo von Saldo, Details zu TravelFlow, Fotosessions) und ihre Übergänge im Detail.
-5. **Englische Texte** und der Sprachschalter sind im Entwurf nicht eingebaut.
+5. **Englische Texte** und der Sprachschalter: erledigt. Die englischen Texte sind Übersetzungen der Platzhalter und warten wie diese auf JueK3ys eigene Worte.
 6. **Handy neigen** bewegt den Raum: gewünscht, im Entwurf nicht möglich gewesen, braucht auf iOS eine Erlaubnis.
-7. **Formular:** Versandweg und Spamschutz (ohne Google-Dienst). Netlify-Funktionen sind im Repo schon in Gebrauch.
-8. **Bestehende Rechtstexte** (Saldo, 1000 Days, Impressum) auf die Stilvorlage umziehen, sobald sie im Studio-Standard liegt.
+7. **Formular:** erledigt als Netlify-Formular `kontakt` (Name, E-Mail, Nachricht), mit unsichtbarem Feld gegen Spam und ohne Google-Dienst. In Netlify müssen Formularerkennung und E-Mail-Benachrichtigung eingeschaltet sein.
+8. **Bestehende Rechtstexte:** Saldo, 1000 Days, Impressum und Website-Datenschutz liegen in der Stilvorlage, je Sprache eine Seite, Datenschutzerklärungen im Aufbau mit 13 Abschnitten. Offen: fachliche Prüfung, Barrierefreiheitserklärungen.
 9. **Fotos:** Der Entwurf nutzt 12 Bilder. Ein weiteres zeigt eine Person und bleibt bewusst draußen.
 10. **Geprüft** wurde der Entwurf nur als Standbilder im Testbrowser (Desktop und Handybreite). Wie sich Bewegung und Touch anfühlen, hat JueK3y am eigenen Gerät beurteilt. Leistung auf schwachen Handys ist ungeprüft.
 

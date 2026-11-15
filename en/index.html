@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- Home page, English version. The German one is /index.html and is the same except for the head and <noscript>.
+     Texts of the page: src/js/start/texte.en.js · content: src/js/start/inhalt.js · look: src/css/start.css -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JueK3y · Code and Photography</title>
+<meta name="description" content="JueK3y is Julian Kennedy. Apps he builds and photos he takes.">
+<meta name="author" content="Julian Kennedy (JueK3y)">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://juek3y.com/en/">
+<link rel="alternate" hreflang="de" href="https://juek3y.com/">
+<link rel="alternate" hreflang="en" href="https://juek3y.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://juek3y.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://juek3y.com/en/">
+<meta property="og:site_name" content="JueK3y">
+<meta property="og:title" content="JueK3y · Code and Photography">
+<meta property="og:description" content="Apps Julian Kennedy builds and photos he takes.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<script src="/src/js/einstellungen.js"></script>
+<link rel="icon" type="image/png" href="/src/img/favicon/simple-favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="/src/img/favicon/simple-favicon-dark.png" media="(prefers-color-scheme: dark)">
+<link rel="shortcut icon" type="image/x-icon" href="/src/img/favicon/simple-favicon-dark.ico">
+<link rel="apple-touch-icon" href="/src/img/favicon/simple-favicon-dark.png">
+<link rel="preload" href="/src/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/src/css/start.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="chrome">
+  <header class="top">
+    <button class="mark" id="home" data-t-label="nav.home">JueK3y<i class="pt">.</i></button>
+    <nav class="switch" data-t-label="nav.chapters">
+      <button data-go="c" aria-current="true" data-t="nav.code"></button>
+      <button data-go="p" aria-current="false" data-t="nav.photo"></button>
+      <button data-go="e" aria-current="false" data-t="nav.contact"></button>
+      <a id="lang" href="/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch">DE</a>
+    </nav>
+  </header>
+  <div class="prog" id="prog" aria-hidden="true"></div>
+  <div class="cue" id="hint" aria-hidden="true"><i></i></div>
+  <p class="legal mono" id="legal"><span id="legal-links"></span> · <button id="theme" class="mono"></button></p>
+  <button class="open pillbtn" id="open"><b id="open-l"></b><span aria-hidden="true">↗</span></button>
+  <form class="form" id="form" name="kontakt" method="POST" action="/" data-netlify="true" netlify-honeypot="website" novalidate>
+    <input type="hidden" name="form-name" value="kontakt">
+    <input type="hidden" name="language" value="en">
+    <p class="trap" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <div class="f"><label for="f-name" data-t="form.name"></label><input id="f-name" name="name" autocomplete="name"><i></i></div>
+    <div class="f"><label for="f-mail" data-t="form.email"></label><input id="f-mail" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="e-mail"><i></i><p class="err" id="e-mail" data-t="form.emailError" hidden></p></div>
+    <div class="f wide"><label for="f-msg" data-t="form.message"></label><textarea id="f-msg" name="message" rows="2" required aria-describedby="e-msg"></textarea><i></i><p class="err" id="e-msg" data-t="form.error" hidden></p></div>
+    <div class="f-foot"><button class="send pillbtn" type="submit" id="send"></button>
+      <p class="note" id="note"></p></div>
+    <p class="err" id="e-send" role="alert" hidden></p>
+    <p class="done" id="done" role="status" tabindex="-1" hidden></p>
+  </form>
+  <div class="ring" id="ring" aria-hidden="true"><svg viewBox="0 0 72 72"><circle class="bg" cx="36" cy="36" r="30"/><circle class="fg" id="ring-fg" cx="36" cy="36" r="30" pathLength="1"/></svg><span class="mono" id="ring-l"></span></div>
+</div>
+<div class="spacer" aria-hidden="true"></div>
+<article class="detail" id="detail" aria-hidden="true"><div class="d-in" id="d-in"></div></article>
+<main class="plain" id="plain"></main>
+<noscript>
+  <div class="plain">
+    <h1>JueK3y<i class="pt">.</i> Code and photography</h1>
+    <p>This page shows apps and photos by Julian Kennedy and needs JavaScript for that. You can write to me anyway: hello@juek3y.com</p>
+    <p class="legal-plain"><a href="/legal-notice">Legal notice</a><a href="/privacy">Privacy</a><a href="/" hreflang="de" lang="de">Deutsch</a></p>
+  </div>
+</noscript>
+
+<script src="/src/js/lib/gsap.min.js"></script>
+<script src="/src/js/lib/three.min.js"></script>
+<script type="module" src="/src/js/start/buehne.js"></script>
+</body>
+</html>

@@ -1,13 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.juek3y.com/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://juek3y.com/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/en/"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/en/"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/travelflow/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/travelflow/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/travelflow/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/travelflow/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/travelflow/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/travelflow/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/travelflow/nutzungsbedingungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/travelflow/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/travelflow/terms"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/travelflow/terms</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/travelflow/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/travelflow/terms"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/saldo/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/saldo/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/saldo/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/saldo/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/saldo/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/saldo/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/saldo/nutzungsbedingungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/saldo/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/saldo/terms"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/saldo/terms</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/saldo/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/saldo/terms"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/1000days/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/1000days/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/1000days/privacy"/>
+  </url>
+  <url>
+    <loc>https://juek3y.com/1000days/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://juek3y.com/1000days/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://juek3y.com/1000days/privacy"/>
   </url>
 </urlset>

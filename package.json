@@ -1,0 +1,9 @@
+{
+  "name": "juek3y.com",
+  "private": true,
+  "type": "module",
+  "description": "Website von JueK3y. Statische Seiten, kein Build-Schritt.",
+  "scripts": {
+    "test": "node tools/texte-pruefen.mjs"
+  }
+}

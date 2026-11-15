@@ -1,45 +1,58 @@
+# Kopfzeilen für alle Seiten
 [[headers]]
-  for ="*"
+  for = "/*"
     [headers.values]
+      # Nur eigene Inhalte: keine fremden Skripte, Schriften, Bilder oder Verbindungen. Die Rechtstexte tragen ihr Aussehen in der Seite, deshalb 'unsafe-inline' nur für Stile.
+      Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
       Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
       Referrer-Policy = "same-origin"
       Strict-Transport-Security = "max-age=2592000; includeSubdomains; preload"
-
       X-Frame-Options = "DENY"
-      X-XSS-Protection = "1; mode=block"
       X-Content-Type-Options = "nosniff"
       X-Permitted-Cross-Domain-Policies = "none"
 
+# Die Netlify-Adresse führt auf die eigene Domain
 [[redirects]]
   from = "https://juek3y.netlify.app/*"
-  to = "https://juek3y.com"
-  status = 200
+  to = "https://juek3y.com/:splat"
+  status = 301
+  force = true
+
+# Alte Adressen. Unbekannte Adressen brauchen keine Regel: Netlify zeigt dafür /404.html.
+[[redirects]]
+  from = "/saldo/tos"
+  to = "/saldo/nutzungsbedingungen"
+  status = 301
 
 [[redirects]]
-  from = "/en/*"
-  to = "/en/page-not-found"
-  status = 404  
-
-# Die Startseite ist index.html im Wurzelverzeichnis. Unbekannte Adressen landen auf der Fehlerseite.
-[[redirects]]
-  from = "/*"
-  to = "/en/page-not-found"
-  status = 404
+  from = "/saldo/tos.html"
+  to = "/saldo/nutzungsbedingungen"
+  status = 301
 
 [[redirects]]
-  from = "/impressum"
-  to = "/impressum.html"
-  status = 200
+  from = "/en/coming-soon"
+  to = "/en/"
+  status = 301
 
 [[redirects]]
-  from = "/impressum.html"
-  to = "/impressum.html"
-  status = 200
+  from = "/en/projects"
+  to = "/en/"
+  status = 301
 
 [[redirects]]
-  from = "/1000days/*"
-  to = "/1000days/:splat"
-  status = 200
+  from = "/en/social-media"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/un-index"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/page-not-found"
+  to = "/en/"
+  status = 301
 
 [functions]
   node_bundler = "esbuild"

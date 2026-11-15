@@ -1,49 +1,102 @@
-# Project JueK3y | A personal website
+# juek3y.com
 
-_Note: The website is currently getting a new design. The old design was already a bit outdated (ca. 2019)._
-<br>
+Die Website von JueK3y: Apps, die ich baue, und Fotos, die ich mache. Dazu die Rechtstexte aller Apps.
 
-## What is the JueK3y website?
-The website is a portfolio about me (JueK3y). 
-<br>There are the three main topics coding, photography and design. In addition,
-<br>the website contains the following items:
-- [Landing Page (Index)](https://www.juek3y.com/)
-- [Biographie](https://www.juek3y.com/de/bio)
-- Experience (Coding | Photography | Design)
-- [Contact](https://www.juek3y.com/de/contact) (Business | Personal)
-- [Settings](https://www.juek3y.com/de/settings) (FAQ | Issue Tracker | Legal)
-- It also includes:
-  - Automatic detection for Light / Dark mode
-  - Switch between those two modes
-  - Automatic detection of EN or DE language
-  - Change between EN and DE
-  - Download Page
-<br>
+[English version](README.en.md)
 
-## When will the website be ready?
-Currently, the website is still a work in progress.
-<br>Since the scope of the site is quite complex, it may take some time until completion.
-<br>As soon as an exact date is known, this paragraph will be updated _(*)_. 
-###### _(*) Paragraph updated on 28. October 2021_
-<br>
+## Auf einen Blick
 
-## What is the URL of the website?
-The official domain for the website is [juek3y.com](https://juek3y.com).
-<br>However, the website can also be accessed as a Netlify subdomain via [juek3y.netlify.app](https://juek3y.netlify.app).
-<br>**This is not an official way and will be used as an automatic redirect to the main domain.**
+- Startseite als eine Bühne mit zwei Welten, Code und Fotografie, gebaut mit three.js und GSAP
+- Deutsch unter `/`, Englisch unter `/en/`, Wechsel oben rechts
+- Hell und Dunkel folgen dem Gerät, die Wahl lässt sich am Seitenende umstellen
+- Keine Cookies, kein Tracking, nichts von fremden Servern
+- Rechtstexte aller Apps in einer Vorlage, je Sprache eine eigene Seite
+- Statische Dateien ohne Build-Schritt, ausgeliefert über Netlify
 
-<br>
+## Entstehung
 
-## You have found an error in the code or the page is behaving incorrectly?
-This may well occur in an unfinished website.
-<br>I would appreciate it if you would then open a [new issue](https://github.com/JueK3y-Prv/Project-JueK3y/issues/new/choose) so I can take care of the bug.
+Idee, Konzept und Tests: JueK3y. Umgesetzt mit KI-Unterstützung.
 
-_<br>Please keep in mind that you can only report technical errors (e.g. 404 errors) here.
-<br>All other problems, such as accessibility problems (i.e. visual things) can be reported [on the official JueK3y info sheet](https://github.com/JueK3y/Project-JueK3y/issues)._
+## Loslegen
 
-<br>Thanks for your help!
+Es gibt nichts zu installieren. Zum Ansehen reicht ein kleiner Webserver im Wurzelverzeichnis, der Adressen ohne `.html` versteht, zum Beispiel:
 
-<br>
+```
+npx serve
+```
 
+Für die beiden Netlify-Funktionen (Ortssuche und Flugdaten der App TravelFlow) braucht es `netlify dev` und die Schlüssel als Umgebungsvariablen.
 
-###### _Legal Note: The German copyright regulations apply. The source code of the files and ALL images (in the img folder) are subject to German copyright law and are protected by copyright according to § 2 UrhG. Any use beyond personal use is only allowed with permission of the owner of this website (Julian Kennedy).<br>DO NOT indicate used program sections and images as your own. Certain program sections and images were not developed by me and are therefore subject to a different copyright. See [this page](https://juek3y.com/de/settings#urheberrecht) for more inforamtion. <br>©2020 - 2022 by Julian Kennedy (aka JueK3y)_
+## Befehle
+
+| Befehl | Wofür |
+|---|---|
+| `npm test` | prüft, ob deutsche und englische Texte der Startseite vollständig und gleich aufgebaut sind |
+
+Veröffentlicht wird durch einen Push auf `v2`. Netlify übernimmt den Rest.
+
+## Aufbau des Codes
+
+```
+index.html, en/index.html     Startseite, deutsch und englisch (nur Kopf und Gerüst)
+404.html                      Fehlerseite
+impressum.html                Impressum (englisch: legal-notice.html)
+datenschutz.html              Datenschutz der Website (englisch: privacy.html)
+travelflow/, saldo/, 1000days/  Rechtstexte je App
+src/css/start.css             Aussehen der Startseite
+src/js/einstellungen.js       gemerkte Sprache und Farbe, läuft vor dem ersten Bild
+src/js/start/inhalt.js        welche Apps und Fotoserien es gibt
+src/js/start/texte.de.js      alle Texte der Startseite, deutsch
+src/js/start/texte.en.js      dieselben Texte, englisch
+src/js/start/buehne.js        die Bühne: Bewegung, Welten, Übergänge
+src/js/lib/                   three.js und GSAP, selbst ausgeliefert
+src/fonts/, src/img/          Schriften und Bilder
+netlify/functions/            Ortssuche und Flugdaten für TravelFlow
+netlify.toml                  Kopfzeilen und Weiterleitungen
+tools/texte-pruefen.mjs       Prüfung der Texte
+docs/                         Entwurfsdokument der Website
+```
+
+### Eine App oder Fotoserie ergänzen
+
+1. Eintrag in `src/js/start/inhalt.js`.
+2. Texte unter derselben `id` in `texte.de.js` und `texte.en.js`.
+3. Bei einer Serie die Bilder nach `src/img/start/` legen.
+4. `npm test` ausführen.
+
+### Sprache
+
+Die Adresse entscheidet über die Sprache. Deutsche Seiten haben deutsche Adressen, englische haben englische:
+
+| Seite | Deutsch | Englisch |
+|---|---|---|
+| Startseite | `/` | `/en/` |
+| Impressum | `/impressum` | `/legal-notice` |
+| Datenschutz der Website | `/datenschutz` | `/privacy` |
+| Datenschutz einer App | `/{app}/datenschutz` | `/{app}/privacy` |
+| Nutzungsbedingungen einer App | `/{app}/nutzungsbedingungen` | `/{app}/terms` |
+
+Jede Seite verlinkt oben auf ihr Gegenstück. Nur die Startadresse `/` schaut beim Aufruf nach: Wer die Sprache einmal selbst gewählt hat, bekommt diese. Sonst gilt die Sprache des Geräts, alles außer Deutsch führt nach `/en/`.
+
+### Kontaktformular
+
+Das Formular am Ende der Startseite ist ein Netlify-Formular mit dem Namen `kontakt`. Netlify erkennt es beim Veröffentlichen im HTML beider Sprachfassungen, speichert jede Nachricht und schickt sie per E-Mail weiter. Dafür muss in Netlify die Formularerkennung eingeschaltet und eine E-Mail-Benachrichtigung für `kontakt` angelegt sein. Gegen Spam gibt es ein unsichtbares Feld (`website`) und Netlifys eigene Prüfung, kein Captcha. Lokal gibt es kein Netlify: Das Absenden endet dort mit der Fehlermeldung.
+
+### Ein Rechtstext
+
+Jede Seite ist eine eigene Datei ohne Skripte, mit dem Aussehen in der Datei selbst. Für einen neuen Text eine bestehende Seite derselben Art kopieren und füllen. Die deutsche Fassung ist maßgeblich, die englische sagt das in ihrem ersten Abschnitt.
+
+## Konventionen
+
+- Keine festen Texte im Programm: Alles Sichtbare der Startseite steht in den beiden Textdateien.
+- Nichts von fremden Servern laden. `netlify.toml` erzwingt das mit einer Inhaltsrichtlinie.
+- Rechtstexte ändern sich nur mit neuem Datum bei „Stand“ und einer kurzen Begründung im Commit.
+- Hintergründe zum Entwurf: `docs/superpowers/specs/2026-11-15-website-neuentwurf-design.md`
+
+## Rechtliches
+
+Quelltext und alle Bilder sind urheberrechtlich geschützt (§ 2 UrhG). Jede Nutzung über den privaten Gebrauch hinaus braucht meine Zustimmung. Ausgenommen sind die mitgelieferten Fremdwerke mit eigener Lizenz: three.js und GSAP unter `src/js/lib/`, die Schriften Geist, Geist Mono und Instrument Serif unter `src/fonts/` (Lizenztexte liegen daneben).
+
+[Impressum](https://juek3y.com/impressum) · [Datenschutz](https://juek3y.com/datenschutz)
+
+© 2020–2026 Julian Kennedy (JueK3y)

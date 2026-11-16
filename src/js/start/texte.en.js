@@ -23,11 +23,12 @@ export default {
     message: 'Message',
     error: 'Please write briefly what it is about.',
     send: 'Send message',
-    note: 'I use your details only to answer you. {privacy} · {mail}',
+    note: 'I use your details only to answer you.',
     done: 'Thanks, your message has arrived.',
     doneHint: 'I will get back to you by email.',
     failed: 'Sending did not work. Try again or write to {mail}.'
   },
+  quick: { github: 'GitHub', instagram: 'Instagram', coffee: 'Buy me a coffee' },
   theme: {
     button: 'Color: {mode}',
     label: 'Color scheme, active: {mode}. Tap to switch.',
@@ -40,7 +41,7 @@ export default {
     terms: { label: 'Terms', slug: 'terms' }
   },
   apps: {
-    travelflow: { kind: 'App · Travel', desc: 'A trip as a timeline, day by day.',
+    travelflow: { kind: 'App · Travel', desc: 'Your guide to planning and making trips.',
       facts: ['Itinerary as a timeline', 'Place search and flights built in', 'Built for the phone'] },
     saldo: { kind: 'App · Finance', desc: 'Your own finances, on your own server.',
       facts: ['Runs on your own server', 'Read-only bank sync', 'Sign-in with a passkey'] },

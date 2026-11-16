@@ -1,7 +1,7 @@
 /* Die Bühne der Startseite: eine feste Fläche, zwei Welten (Code und Fotografie), ein Übergang.
    Inhalt steht in inhalt.js, alle Wörter in texte.de.js und texte.en.js. Hier steht nur, wie es sich bewegt.
    Braucht gsap und THREE (src/js/lib), die vor dieser Datei geladen werden. */
-import { APPS as APP_LIST, SERIEN, MAIL } from './inhalt.js';
+import { APPS as APP_LIST, SERIEN, MAIL, LINKS } from './inhalt.js';
 import de from './texte.de.js';
 import en from './texte.en.js';
 
@@ -33,16 +33,18 @@ const REGION = navigator.language || LANG;                            // words f
   $$('[data-t-label]').forEach(el => { el.setAttribute('aria-label', txt(el.dataset.tLabel)); });
   $('#send').innerHTML = `${txt('form.send')} <span aria-hidden="true">↗</span>`;
   const MAIL_LINK = `<a href="mailto:${MAIL}">${MAIL}</a>`;
-  $('#note').innerHTML = txt('form.note', { privacy: `<a href="${txt('legal.site.path')}">${txt('legal.site.label')}</a>`, mail: MAIL_LINK });
+  $('#note').textContent = txt('form.note');
   $('#done').innerHTML = `${txt('form.done')}<small>${txt('form.doneHint')}</small>`;
   $('#e-send').innerHTML = txt('form.failed', { mail: MAIL_LINK });
   const SITE_LEGAL = ['imprint', 'site'].map(k => `<a href="${txt('legal.' + k + '.path')}">${txt('legal.' + k + '.label')}</a>`);
   $('#legal-links').innerHTML = SITE_LEGAL.join(' · ');
+  const QUICK = LINKS.map(l => `<a href="${l.href}" target="_blank" rel="noopener">${txt('quick.' + l.id)}</a>`);
+  $('#quick').innerHTML = QUICK.join(' · ');
   // the plain document is generated from the same lists: it is what readers, reduced motion and browsers without WebGL get
   const other = $('#lang');
   $('#plain').innerHTML = `<h1>JueK3y<i class="pt">.</i> ${txt('plain.title')}</h1><section><h2>${txt('nav.code')}</h2><ul>${APPS.map(a => `<li><b>${a.name}</b>${a.desc}</li>`).join('')}</ul></section>` +
     SERIES.map(s => `<section><h2>${s.name}</h2><div class="shots">${s.shots.map(x => `<img src="/src/img/start/${x[1]}.jpg" alt="${x[0]}" loading="lazy">`).join('')}</div></section>`).join('') +
-    `<section id="kontakt"><h2>${txt('nav.contact')}</h2><div id="plain-form"></div><p class="mail">${MAIL}</p></section>` +
+    `<section id="kontakt"><h2>${txt('nav.contact')}</h2><div id="plain-form"></div><p class="mail">${MAIL}</p><p class="legal-plain">${QUICK.join('')}</p></section>` +
     `<footer>${SITE_LEGAL.join('')}<a href="${other.getAttribute('href')}" hreflang="${other.hreflang}" lang="${other.lang}" data-lang="${other.dataset.lang}">${other.getAttribute('aria-label')}</a></footer>`;
   // a language chosen by hand is remembered; the start address follows it from then on (src/js/einstellungen.js)
   $$('[data-lang]').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('juek3y.lang', a.dataset.lang); } catch (e) { /* private mode: the link still works */ } }));
@@ -522,15 +524,19 @@ const REGION = navigator.language || LANG;                            // words f
       ptr.sx += (ptr.x - ptr.sx) * .16; ptr.sy += (ptr.y - ptr.sy) * .16;
 
       tx.globalCompositeOperation = 'source-over'; tx.fillStyle = 'rgba(0,0,0,.075)'; tx.fillRect(0, 0, trail.width, trail.height);
-      const rad = Math.min(W, H) * lerp(.06, .165, 1 - sstep(.008, .045, pS));
-      if (FINE && ptr.moved && ptr.inside) { const steps = clamp(Math.ceil(Math.hypot(ptr.sx - ptr.lx, ptr.sy - ptr.ly) / (rad * .25)), 1, 8); for (let i = 1; i <= steps; i++) stamp(lerp(ptr.lx, ptr.sx, i / steps), lerp(ptr.ly, ptr.sy, i / steps), rad, .2); ptr.lx = ptr.sx; ptr.ly = ptr.sy; }
+      const big = Math.max(1 - sstep(.008, .045, pS), pS > X1 ? 1 - sstep(P_OF.p + .004, P_OF.p + .03, pS) : 0);   // large at both chapter titles, small while travelling
+      const rad = Math.min(W, H) * lerp(.06, .165, big);
+      // near the form and the footer links the lens stays away: it would turn the ground under their text
+      const guarded = pS > .975 && [form, legal].some(el => { const r = el.getBoundingClientRect(); return ptr.sx > r.left - rad && ptr.sx < r.right + rad && ptr.sy > r.top - rad && ptr.sy < r.bottom + rad; });
+      if (guarded) { tx.fillStyle = 'rgba(0,0,0,.3)'; tx.fillRect(0, 0, trail.width, trail.height); ptr.lx = ptr.sx; ptr.ly = ptr.sy; }
+      else if (FINE && ptr.moved && ptr.inside) { const steps = clamp(Math.ceil(Math.hypot(ptr.sx - ptr.lx, ptr.sy - ptr.ly) / (rad * .25)), 1, 8); for (let i = 1; i <= steps; i++) stamp(lerp(ptr.lx, ptr.sx, i / steps), lerp(ptr.ly, ptr.sy, i / steps), rad, .2); ptr.lx = ptr.sx; ptr.ly = ptr.sy; }
       else if (!ptr.moved && t < 7.3 && t > 4.6 && pS < .02) { const u = (t - 4.6) / 2.7, k = Math.sin(Math.PI * u); stamp(W * (.16 + .68 * u), H * (.5 + .16 * Math.sin(u * 7)), rad * (.5 + .7 * k), .22 * k + .02); }
       trailTex.needsUpdate = true;
 
       // each world's own timeline; the hidden one follows as the sibling station and swaps while nobody can see it
       mixNow = mixAt(pS);
-      const quiet = (1 - sstep(X0 - .05, X0 - .01, pS) * (1 - sstep(X1 + .01, X1 + .05, pS))) * (1 - sstep(X2 - .06, X2 - .02, pS) * (1 - sstep(X3 + .005, X3 + .03, pS)));
-      uc = pS < X1 + .03 ? ucAt(pS) : lerp(upAt(pS), 1, sstep(X2 - .05, X2 - .005, pS)); up = pS > X0 - .03 ? upAt(pS) : ucAt(pS);
+      const quiet = (1 - sstep(X0 - .05, X0 - .01, pS) * (1 - sstep(X1 + .0008, X1 + .004, pS))) * (1 - sstep(X2 - .06, X2 - .02, pS) * (1 - sstep(X3 + .005, X3 + .03, pS)));
+      uc = pS < X1 + .0005 ? ucAt(pS) : lerp(upAt(pS), 1, sstep(X2 - .05, X2 - .005, pS)); up = pS > X0 - .03 ? upAt(pS) : ucAt(pS);
       if (jump.on) { mixNow = lerp(jump.from, jump.to, jump.v); if (jump.to) up = 0; else uc = 0; }       // the incoming world is set to its opening while it is still hidden
       updateC(t, dt); updateP(t);
       UC.uMix.value = mixNow; UC.uHold.value = hold.v * quiet; UC.uLens.value = quiet; UC.uTime.value = t; UC.uPos.value.copy(jump.on ? jump.pos : dotPos);

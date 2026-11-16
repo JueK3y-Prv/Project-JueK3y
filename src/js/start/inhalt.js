@@ -12,6 +12,13 @@
 
 export const MAIL = 'hello@juek3y.com';
 
+// Verweise nach außen, stehen am Seitenende über Impressum und Datenschutz. Beschriftung: quick.<id> in den Textdateien.
+export const LINKS = [
+  { id: 'github', href: 'https://github.com/JueK3y-Prv' },
+  { id: 'instagram', href: 'https://www.instagram.com/juek3y' },
+  { id: 'coffee', href: 'https://buymeacoffee.com/juek3y' }
+];
+
 export const APPS = [
   { id: 'travelflow', name: 'TravelFlow', scene: 'route', legal: ['privacy', 'terms'] },
   { id: 'saldo', name: 'Saldo', scene: 'balance', legal: ['privacy', 'terms'] },

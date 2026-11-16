@@ -23,11 +23,12 @@ export default {
     message: 'Nachricht',
     error: 'Schreib bitte kurz, worum es geht.',
     send: 'Nachricht senden',
-    note: 'Deine Angaben nutze ich nur, um dir zu antworten. {privacy} · {mail}',
+    note: 'Deine Angaben nutze ich nur, um dir zu antworten.',
     done: 'Danke, deine Nachricht ist angekommen.',
     doneHint: 'Ich melde mich per E-Mail bei dir.',
     failed: 'Das Senden hat nicht geklappt. Versuch es noch einmal oder schreib an {mail}.'
   },
+  quick: { github: 'GitHub', instagram: 'Instagram', coffee: 'Kaffee ausgeben' },
   theme: {
     button: 'Farbe: {mode}',
     label: 'Farbschema, aktiv: {mode}. Antippen wechselt.',
@@ -40,7 +41,7 @@ export default {
     terms: { label: 'Nutzungsbedingungen', slug: 'nutzungsbedingungen' }
   },
   apps: {
-    travelflow: { kind: 'App · Reisen', desc: 'Eine Reise als Zeitleiste, Tag für Tag.',
+    travelflow: { kind: 'App · Reisen', desc: 'Dein Begleiter für Reiseplanung und Durchführung.',
       facts: ['Reiseplan als Zeitleiste', 'Ortssuche und Flüge eingebaut', 'Für das Telefon gebaut'] },
     saldo: { kind: 'App · Finanzen', desc: 'Die eigenen Finanzen, auf dem eigenen Server.',
       facts: ['Läuft auf dem eigenen Server', 'Bankabruf nur lesend', 'Anmeldung mit Passkey'] },

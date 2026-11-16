@@ -110,7 +110,7 @@
     <p class="kind">TravelFlow · an app by JueK3y</p>
     <h1>Privacy Policy</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="stand">Last updated: <time datetime="2026-11-15">15 November 2026</time></p>
+    <p class="stand">Last updated: <time datetime="2026-11-16">16 November 2026</time></p>
 
     <nav class="toc" aria-labelledby="toc-titel">
       <h2 id="toc-titel">Contents</h2>
@@ -161,7 +161,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
       <section id="what-data-for-what-purpose-on-what-legal-basis">
         <h2>What data, for what purpose, on what legal basis</h2>
 <p>You are not obliged to provide any data. Without an internet connection, the map, place search, photos, current rates, flight data and travel alerts are unavailable. Trip planning itself works offline.</p>
-<p>Whatever is stored on your device stays there until you delete it or uninstall the app. Uninstalling removes all app data. Files you saved or shared yourself (backup, calendar file, budget image) and trip calendars you created remain until you remove them.</p>
+<p>Whatever is stored on your device stays there until you delete it or uninstall the app. “Delete all data” in the settings and uninstalling both remove all app data. Files you saved or shared to other apps yourself (backup, calendar file, budget image) stay there until you remove them; TravelFlow deletes its copy for sharing the next time it starts. “Delete all data” also removes trip calendars you created; after uninstalling, they stay until you remove them.</p>
 <p>What is generally transmitted when content is loaded from the internet (IP address, time, app environment) is described in section <a href="#recipients-and-third-party-services">7</a>.</p>
 <h3 id="trip-planning">4.1 Trip planning</h3>
 <dl class="fakten">
@@ -208,7 +208,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Data</dt><dd>a short text per notification, e.g. &quot;Kyoto · Boat tour&quot;. It contains no booking references, notes or amounts.</dd>
 <dt>Purpose</dt><dd>telling you about the day each morning and reminding you of appointments.</dd>
 <dt>Legal basis</dt><dd>Art. 6(1)(b) GDPR.</dd>
-<dt>Storage location</dt><dd>The text is handed to Android in advance and stored there unencrypted until it is shown. It may be visible on the lock screen.</dd>
+<dt>Storage location</dt><dd>The text is handed to Android in advance and stored there unencrypted until it is shown. Whether it appears on the lock screen depends on your Android setting for sensitive content.</dd>
 <dt>Retention</dt><dd>until it is shown or until you turn the reminder off.</dd>
 </dl>
 <h3 id="map">4.7 Map</h3>
@@ -222,7 +222,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="my-location">4.8 My location</h3>
 <dl class="fakten">
 <dt>Data</dt><dd>your device's position.</dd>
-<dt>Purpose</dt><dd>showing your position as a dot on the map and centring the map on it.</dd>
+<dt>Purpose</dt><dd>showing your position as a dot on the map and centring the map on it. If you have already granted access, the app also suggests your outbound and return journey from your location when you create a trip – on the device only.</dd>
 <dt>How it works</dt><dd>The app only asks when you tap &quot;My location&quot; on the map. A sentence explains why first. Only then does Android's prompt appear.</dd>
 <dt>Legal basis</dt><dd>Art. 6(1)(b) GDPR.</dd>
 <dt>Storage location</dt><dd>The position is only displayed, not stored and not sent. The app only remembers whether you granted access. If you centre the map on yourself, it loads the map tiles for that area from CARTO (<a href="#map">4.7</a>), which roughly reveals where you are.</dd>
@@ -247,8 +247,8 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dl class="fakten">
 <dt>Data</dt><dd>name or Wikidata ID of the place, file name of the image, your IP address.</dd>
 <dt>Purpose</dt><dd>preview and background images of places from freely licensed sources. Author and licence are shown with the image.</dd>
-<dt>Legal basis</dt><dd>Art. 6(1)(f) GDPR. Legitimate interest: a vivid place preview without running my own image server.</dd>
-<dt>Recipient</dt><dd>Wikimedia Foundation (section <a href="#place-photos-wikimedia">7.4</a>), directly from the app.</dd>
+<dt>Legal basis</dt><dd>Art. 6(1)(f) GDPR. Legitimate interest: a vivid place preview.</dd>
+<dt>Recipient</dt><dd>my relay service (section <a href="#juek3y-servers">8</a>), which fetches image and credit from Wikimedia – without your IP address (section <a href="#place-photos-wikimedia">7.4</a>).</dd>
 <dt>Storage on the device</dt><dd>Previews and photos are cached while the app is unlocked and deleted when it locks (section <a href="#security">9</a>).</dd>
 </dl>
 <h3 id="exchange-rates">4.12 Exchange rates</h3>
@@ -263,7 +263,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dl class="fakten">
 <dt>Data</dt><dd>no trip data, only the request itself and your IP address.</dd>
 <dt>Purpose</dt><dd>showing travel and safety advice and natural hazards at your places.</dd>
-<dt>How it works</dt><dd>At most every six hours, the app loads the complete lists from GDACS and – depending on the app language – from the German Federal Foreign Office (German) or the U.S. Department of State (English). It works out which alerts concern your trip on the device only. Travel alerts stay on until you turn them off in the settings. Tapping an alert opens the source's page in the browser.</dd>
+<dt>How it works</dt><dd>At most every six hours, the app loads the complete lists from GDACS and – depending on the app language – from the German Federal Foreign Office (German) or the U.S. Department of State (English, via my relay service, section <a href="#juek3y-servers">8</a>). It works out which alerts concern your trip on the device only. Travel alerts stay on until you turn them off in the settings. Tapping an alert opens the source's page in the browser.</dd>
 <dt>Legal basis</dt><dd>Art. 6(1)(f) GDPR. Legitimate interest: advice about your own trip from official sources.</dd>
 <dt>Recipients</dt><dd>German Federal Foreign Office (<a href="#travel-alerts-german-federal-foreign-office">7.6</a>) or U.S. Department of State (<a href="#travel-alerts-u-s-department-of-state">7.7</a>), GDACS (<a href="#travel-alerts-gdacs">7.8</a>).</dd>
 <dt>Storage on the device</dt><dd>the most recently loaded lists, until new ones arrive. If you turn travel alerts off, they are deleted.</dd>
@@ -306,7 +306,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <p>TravelFlow only asks for permissions when you use the related feature. You can revoke them at any time in the Android settings; the rest of the app keeps working.</p>
 <h3 id="location-approximate-precise-foreground-only">6.1 Location (approximate/precise, foreground only)</h3>
 <dl class="fakten">
-<dt>What for</dt><dd>Your position on the map, &quot;My location&quot; (<a href="#my-location">4.8</a>)</dd>
+<dt>What for</dt><dd>Your position on the map, &quot;My location&quot;, suggesting outbound and return journeys (<a href="#my-location">4.8</a>)</dd>
 <dt>Without it</dt><dd>No dot for you on the map; everything else works.</dd>
 <dt>Leaves the device</dt><dd>Not the position itself. When centring, the map loads the tiles for that area (<a href="#map">4.7</a>).</dd>
 </dl>
@@ -354,17 +354,17 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="flight-data-aviationstack-aerodatabox">7.3 Flight data (aviationstack, AeroDataBox)</h3>
 <p>My relay service (section <a href="#juek3y-servers">8</a>) queries flight times, terminal and status from a flight data provider – without your IP address. Only flight number and date are transmitted, i.e. no data that can be linked to you. Providers are aviationstack (apilayer Data Products GmbH, Vienna, Austria) and, as a fallback, AeroDataBox (British Columbia, Canada), reached via the RapidAPI marketplace. Legal basis: Art. 6(1)(b) GDPR (<a href="#flight-data">4.10</a>).</p>
 <h3 id="place-photos-wikimedia">7.4 Place photos (Wikimedia)</h3>
-<p>For preview and background images, the app asks Wikimedia Commons, Wikipedia and Wikidata directly for a suitable, freely licensed image and loads it from there. The operator is the Wikimedia Foundation, Inc., 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA. The name or ID of the place and your IP address are transmitted. Legal basis: Art. 6(1)(f) GDPR (<a href="#place-photos">4.11</a>). Privacy notice: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></p>
+<p>For preview and background images, my relay service (section <a href="#juek3y-servers">8</a>) asks Wikimedia Commons, Wikipedia and Wikidata for a suitable, freely licensed image and loads it from there. The operator is the Wikimedia Foundation, Inc., 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA. Wikimedia only receives the name or ID of the place and the file name, not your IP address; this does not allow any conclusions about you. Legal basis: Art. 6(1)(f) GDPR (<a href="#place-photos">4.11</a>). Privacy notice: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></p>
 <h3 id="exchange-rates-frankfurter">7.5 Exchange rates (Frankfurter)</h3>
 <p>The app loads the European Central Bank's reference rates via the Frankfurter service (Line of Flight B.V., Amsterdam, Netherlands). The request contains no trip or budget data. According to the operator, IP addresses are not logged. Legal basis: Art. 6(1)(f) GDPR (<a href="#exchange-rates">4.12</a>).</p>
 <h3 id="travel-alerts-german-federal-foreign-office">7.6 Travel alerts: German Federal Foreign Office</h3>
 <p>If the app is set to German, it loads the complete list of travel and safety advice from the open data service of the German Federal Foreign Office (Auswärtiges Amt, Werderscher Markt 1, 10117 Berlin, Germany). The request contains no trip data. Legal basis: Art. 6(1)(f) GDPR (<a href="#travel-alerts">4.13</a>). Privacy notice: <a href="https://www.auswaertiges-amt.de/de/datenschutz-node">auswaertiges-amt.de</a></p>
 <h3 id="travel-alerts-u-s-department-of-state">7.7 Travel alerts: U.S. Department of State</h3>
-<p>If the app is set to English, it loads the complete list of travel advisories of the U.S. Department of State (travel.state.gov, Washington D.C., USA) instead of the Federal Foreign Office's list. The request contains no trip data; only the IP address is transmitted (<a href="#transfers-to-third-countries">7.13</a>). Legal basis: Art. 6(1)(f) GDPR (<a href="#travel-alerts">4.13</a>). Privacy notice: <a href="https://www.state.gov/privacy-policy">state.gov</a></p>
+<p>If the app is set to English, it loads the complete list of travel advisories of the U.S. Department of State (travel.state.gov, Washington D.C., USA) instead of the Federal Foreign Office's list. My relay service (section <a href="#juek3y-servers">8</a>) fetches the list; the U.S. Department of State receives neither trip data nor your IP address. Legal basis: Art. 6(1)(f) GDPR (<a href="#travel-alerts">4.13</a>). Privacy notice: <a href="https://www.state.gov/privacy-policy">state.gov</a></p>
 <h3 id="travel-alerts-gdacs">7.8 Travel alerts: GDACS</h3>
 <p>The app loads the current event list of the Global Disaster Alert and Coordination System (GDACS), a joint service of the European Commission's Joint Research Centre (Ispra, Italy) and the United Nations. The request contains no trip data. Legal basis: Art. 6(1)(f) GDPR (<a href="#travel-alerts">4.13</a>). Terms of use: <a href="https://www.gdacs.org/About/termofuse.aspx">gdacs.org</a></p>
-<h3 id="netlify">7.9 Netlify</h3>
-<p>My relay services run at Netlify, Inc. (101 2nd Street, San Francisco, CA 94105, USA) on my behalf, under Netlify's data processing agreement pursuant to Art. 28 GDPR. What arrives there and how long it stays is described in section <a href="#juek3y-servers">8</a>.</p>
+<h3 id="netlify-and-cloudflare">7.9 Netlify and Cloudflare</h3>
+<p>My relay services run at Netlify, Inc. (101 2nd Street, San Francisco, CA 94105, USA) on my behalf. Requests reach them through the network of Cloudflare, Inc. (101 Townsend Street, San Francisco, CA 94107, USA), which delivers juek3y.com and protects it against attacks. Both see your IP address and the request, i.e. the search term or coordinates or the flight number. This is based on their data processing agreements pursuant to Art. 28 GDPR. What arrives there and how long it stays is described in section <a href="#juek3y-servers">8</a>.</p>
 <h3 id="google-maps-and-apple-maps">7.10 Google Maps and Apple Maps</h3>
 <p>Only when you tap &quot;Start navigation&quot; or have a place looked up in the maps app does Google Maps or Apple Maps open with the destination. From then on, that provider's privacy policy applies.</p>
 <h3 id="google-play">7.11 Google Play</h3>
@@ -374,10 +374,10 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="transfers-to-third-countries">7.13 Transfers to third countries</h3>
 <p>Some recipients are located outside the EU:</p>
 <dl class="fakten">
-<dt>Netlify, Inc. and Google LLC (USA)</dt><dd>certified under the EU-U.S. Data Privacy Framework. The European Commission's adequacy decision therefore applies (Art. 45 GDPR).</dd>
+<dt>Netlify, Inc., Cloudflare, Inc. and Google LLC (USA)</dt><dd>certified under the EU-U.S. Data Privacy Framework. The European Commission's adequacy decision therefore applies (Art. 45 GDPR).</dd>
 <dt>CARTO (USA)</dt><dd>the European Commission's standard contractual clauses in the data processing agreement (Art. 46(2)(c) GDPR).</dd>
 <dt>OpenStreetMap Foundation (United Kingdom)</dt><dd>the European Commission's adequacy decision (Art. 45 GDPR).</dd>
-<dt>Wikimedia Foundation and U.S. Department of State (USA)</dt><dd>There is neither an adequacy decision nor standard contractual clauses for them. Only your IP address is transmitted when public content is loaded, and only because you use the feature (Art. 49(1)(b) GDPR). The app only loads place photos when you view a place; you can turn travel alerts off in the settings.</dd>
+<dt>Wikimedia Foundation and U.S. Department of State (USA)</dt><dd>receive no personal data; requests go through my relay service (<a href="#place-photos-wikimedia">7.4</a>, <a href="#travel-alerts-u-s-department-of-state">7.7</a>).</dd>
 <dt>AeroDataBox (Canada)</dt><dd>receives no personal data (<a href="#flight-data-aviationstack-aerodatabox">7.3</a>).</dd>
 </dl>
 <p>In the USA, authorities may under certain circumstances access data without you having effective legal remedies against this.</p>
@@ -385,19 +385,21 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 
       <section id="juek3y-servers">
         <h2>JueK3y servers</h2>
-<p>I do not run a server that receives your trip data. There are two small relay services on juek3y.com, hosted by Netlify (<a href="#netlify">7.9</a>):</p>
+<p>I do not run a server that receives your trip data. There are three small relay services on juek3y.com, hosted by Netlify and delivered via Cloudflare (<a href="#netlify-and-cloudflare">7.9</a>). They make sure the providers behind them do not see your IP address:</p>
 <ul>
 <li><strong>Place search</strong> (<a href="#place-search">4.9</a>): receives the search term or tapped coordinates, language setting, search area and your IP address. Only the search is passed on to Nominatim.</li>
 <li><strong>Flight data</strong> (<a href="#flight-data">4.10</a>): receives flight number, date and your IP address. Only flight number and date are passed on to the flight data provider.</li>
+<li><strong>Media</strong> (<a href="#place-photos">4.11</a>, <a href="#travel-alerts">4.13</a>): receives the name or ID of the place or the image's file name, or the request for the U.S. travel advisories, and your IP address. Only the request is passed on to Wikimedia or the U.S. Department of State.</li>
 </ul>
 <p><strong>How long it stays:</strong></p>
 <ul>
-<li>The services use your <strong>IP address</strong> only to limit excessive requests (place search at most 40, flight data at most 12 requests per minute). It is only held in the memory of the respective function instance and discarded when the instance ends, usually after a few minutes.</li>
+<li>The services use your <strong>IP address</strong> only to limit excessive requests (place search at most 15, flight data at most 12, media at most 120 requests per minute; for IPv6 per connection). It is only held in the memory of the respective function instance and discarded when the instance ends, usually after a few minutes.</li>
 <li><strong>Place search results</strong> are cached without any link to you, so the same search does not reach Nominatim again: up to 7 days, at most one more day while refreshing.</li>
 <li><strong>Flight data</strong> is only kept, without any link to you, in the memory of the function instance.</li>
+<li><strong>Place photos, image credits and U.S. travel advisories</strong> are cached without any link to you: photos for up to 30 days, search results for up to 4 days, advisories for up to 12 hours.</li>
 </ul>
 <p><strong>What is logged:</strong> The services themselves do not write IP addresses, search terms or flight numbers to logs, only error messages without personal data. Netlify keeps technical function logs for at most 7 days.</p>
-<p>Legal basis: Art. 6(1)(b) GDPR for the request (<a href="#place-search">4.9</a>, <a href="#flight-data">4.10</a>); for rate limiting via the IP address, Art. 6(1)(f) GDPR. Legitimate interest: protecting the services from abuse.</p>
+<p>Legal basis: Art. 6(1)(b) GDPR for place search and flight data (<a href="#place-search">4.9</a>, <a href="#flight-data">4.10</a>), Art. 6(1)(f) for media (<a href="#place-photos">4.11</a>, <a href="#travel-alerts">4.13</a>); for rate limiting via the IP address, Art. 6(1)(f) GDPR. Legitimate interest: protecting the services from abuse.</p>
 <p><strong>Visiting this page:</strong> When you visit this page, Netlify processes technically necessary access data (IP address, time, page requested, browser type) to deliver the page and keep it secure. This page sets no cookies and loads no third-party content.</p>
       </section>
 
@@ -409,7 +411,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Backups</dt><dd>The app opts out of Android cloud backup and device-to-device transfer. You create backups yourself (<a href="#backup-calendar-file-budget-image-and-sharing">4.4</a>); they are encrypted with their own backup code.</dd>
 <dt>Transmission</dt><dd>HTTPS only.</dd>
 <dt>Screenshot protection</dt><dd>optional (<a href="#screenshot-protection">4.15</a>).</dd>
-<dt>What is not encrypted</dt><dd>Caches for place previews and photos are stored unencrypted on the device while the app is unlocked. They are deleted when it locks. The app keeps the map area in memory only. Outside TravelFlow, the trip calendar (<a href="#trip-in-the-device-calendar">4.5</a>) and the text of notifications (<a href="#reminders-and-daily-briefing">4.6</a>) are also stored.</dd>
+<dt>What is not encrypted</dt><dd>Caches for place previews and photos are stored unencrypted on the device while the app is unlocked. They are deleted when it locks, as is the app view's cache of map tiles and photos. The app keeps the map area in memory only. Outside TravelFlow, the trip calendar (<a href="#trip-in-the-device-calendar">4.5</a>) and the text of notifications (<a href="#reminders-and-daily-briefing">4.6</a>) are also stored.</dd>
 </dl>
       </section>
 
@@ -418,7 +420,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <p>You have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to <strong>object</strong> to processing based on legitimate interests (Art. 21 GDPR).</p>
 <p>As I do not store any data about you, I can generally not provide information about stored data. You manage your trip data yourself in the app:</p>
 <dl class="fakten">
-<dt>change and remove</dt><dd>directly in the trip. You delete a whole trip permanently in the archive.</dd>
+<dt>change and remove</dt><dd>directly in the trip. You delete a whole trip permanently in the archive, and everything at once with “Delete all data” in the settings.</dd>
 <dt>take it with you</dt><dd>as a backup or calendar file (<a href="#backup-calendar-file-budget-image-and-sharing">4.4</a>).</dd>
 <dt>object</dt><dd>turn travel alerts off in the settings. The app only loads the map and place photos when you view them.</dd>
 </dl>
@@ -449,7 +451,7 @@ Promenade 18<br>
 
       <section id="version">
         <h2>Version</h2>
-<p>Last updated: 15 November 2026 · Version 1.0</p>
+<p>Last updated: 16 November 2026 · Version 1.3</p>
 <p>This policy is available in German and English. The German version is legally binding.</p>
       </section>
 

@@ -25,10 +25,11 @@
   <p class="mono lost-kind">404</p>
   <h1 lang="de">Hier endet die Linie.</h1>
   <h1 lang="en">The line ends here.</h1>
-  <!-- die Linie der Startseite: Sie läuft los, bricht ab, der Punkt fällt heraus -->
-  <svg class="lost-line" viewBox="0 0 600 120" aria-hidden="true" focusable="false">
-    <path d="M4 34 C 90 4, 150 70, 240 42 S 380 18, 452 40" pathLength="1"/>
-    <circle cx="452" cy="40" r="9"/>
+  <!-- die Linie der Startseite: Sie läuft los und bricht ab. Der Punkt fällt, springt und rollt aus; die Bewegung ist in start.css berechnet -->
+  <svg class="lost-line" viewBox="0 0 600 170" aria-hidden="true" focusable="false">
+    <path class="ground" d="M0 160 H600"/>
+    <path class="way" d="M4 40 C 70 8, 120 72, 190 44 S 262 22, 310 46" pathLength="1"/>
+    <circle r="9"/>
   </svg>
   <p class="lost-text" lang="de">Diese Adresse gibt es nicht oder nicht mehr.</p>
   <p class="lost-text" lang="en">This address does not exist, or not anymore.</p>

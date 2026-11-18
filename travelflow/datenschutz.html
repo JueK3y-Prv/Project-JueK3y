@@ -110,7 +110,11 @@
     <p class="kind">TravelFlow · eine App von JueK3y</p>
     <h1>Datenschutzerklärung</h1>
     <div class="rule" aria-hidden="true"></div>
+<<<<<<< HEAD
     <p class="stand">Stand: <time datetime="2026-11-17">17.11.2026</time></p>
+=======
+    <p class="stand">Stand: <time datetime="2026-11-16">16.11.2026</time></p>
+>>>>>>> origin/ccr-cf690df6-83w344
 
     <nav class="toc" aria-labelledby="toc-titel">
       <h2 id="toc-titel">Inhalt</h2>
@@ -363,7 +367,11 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="lagebild-gdacs">6.8 Lagebild: GDACS</h3>
 <p>Die App lädt die aktuelle Ereignisliste des Global Disaster Alert and Coordination System (GDACS), eines gemeinsamen Dienstes der Gemeinsamen Forschungsstelle der Europäischen Kommission (Ispra, Italien) und der Vereinten Nationen. Die Anfrage enthält keine Reisedaten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (<a href="#lagebild">3.13</a>). Nutzungsbedingungen: <a href="https://www.gdacs.org/About/termofuse.aspx">gdacs.org</a></p>
 <h3 id="netlify-und-cloudflare">6.9 Netlify und Cloudflare</h3>
+<<<<<<< HEAD
 <p>Meine Vermittlungsdienste laufen unter api.juek3y.com bei Cloudflare, Inc. (101 Townsend Street, San Francisco, CA 94107, USA) in meinem Auftrag; Cloudflare liefert auch juek3y.com aus und schützt beides vor Angriffen. Die Website juek3y.com selbst liegt bei Netlify, Inc. (101 2nd Street, San Francisco, CA 94105, USA). Cloudflare sieht bei den Vermittlungsdiensten deine IP-Adresse und die Anfrage, also Suchbegriff bzw. Koordinaten, Flugnummer oder Ort des Fotos. Grundlage sind die Auftragsverarbeitungsverträge nach Art. 28 DSGVO. Was ankommt und wie lange es bleibt, steht in Abschnitt <a href="#server-von-juek3y">7</a>.</p>
+=======
+<p>Meine Vermittlungsdienste laufen bei Netlify, Inc. (101 2nd Street, San Francisco, CA 94105, USA) in meinem Auftrag. Die Anfragen erreichen sie über das Netzwerk von Cloudflare, Inc. (101 Townsend Street, San Francisco, CA 94107, USA), das juek3y.com ausliefert und vor Angriffen schützt. Beide sehen dabei deine IP-Adresse und die Anfrage, also Suchbegriff bzw. Koordinaten oder Flugnummer. Grundlage sind ihre Auftragsverarbeitungsverträge nach Art. 28 DSGVO. Was ankommt und wie lange es bleibt, steht in Abschnitt <a href="#server-von-juek3y">7</a>.</p>
+>>>>>>> origin/ccr-cf690df6-83w344
 <h3 id="google-maps-und-apple-maps">6.10 Google Maps und Apple Maps</h3>
 <p>Nur wenn du „Navigation starten“ antippst oder einen Ort in der Karten-App suchen lässt, öffnet sich Google Maps oder Apple Maps mit dem Ziel. Ab dann gilt die Datenschutzerklärung dieses Anbieters.</p>
 <h3 id="google-play">6.11 Google Play</h3>
@@ -384,7 +392,11 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 
       <section id="server-von-juek3y">
         <h2>Server von JueK3y</h2>
+<<<<<<< HEAD
 <p>Ich betreibe keinen Server, der deine Reisedaten empfängt. Es gibt drei kleine Vermittlungsdienste unter api.juek3y.com, betrieben bei Cloudflare (<a href="#netlify-und-cloudflare">6.9</a>). Sie sorgen dafür, dass die Anbieter dahinter deine IP-Adresse nicht sehen:</p>
+=======
+<p>Ich betreibe keinen Server, der deine Reisedaten empfängt. Es gibt drei kleine Vermittlungsdienste auf juek3y.com, gehostet bei Netlify und ausgeliefert über Cloudflare (<a href="#netlify-und-cloudflare">6.9</a>). Sie sorgen dafür, dass die Anbieter dahinter deine IP-Adresse nicht sehen:</p>
+>>>>>>> origin/ccr-cf690df6-83w344
 <ul>
 <li><strong>Ortssuche</strong> (<a href="#ortssuche">3.9</a>): Hier kommen an: Suchbegriff bzw. angetippte Koordinaten, Sprachangabe, Suchbereich bzw. Bezugspunkt und deine IP-Adresse. Weitergegeben an komoot (Vorschläge) bzw. Nominatim wird nur die Suche.</li>
 <li><strong>Flugdaten</strong> (<a href="#flugdaten">3.10</a>): Hier kommen an: Flugnummer, Datum und deine IP-Adresse. Weitergegeben an den Flugdaten-Anbieter werden nur Flugnummer und Datum.</li>
@@ -392,12 +404,21 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 </ul>
 <p><strong>Wie lange es bleibt:</strong></p>
 <ul>
+<<<<<<< HEAD
 <li>Deine <strong>IP-Adresse</strong> nutzen die Dienste nur, um missbräuchlich viele Anfragen zu begrenzen (Ortssuche höchstens 15, Vorschläge beim Tippen höchstens 60, Flugdaten höchstens 12, Medien höchstens 120 Anfragen pro Minute; bei IPv6 je Anschluss). Sie wird nur im Arbeitsspeicher der jeweiligen Funktionsinstanz gehalten und mit deren Ende, in der Regel nach wenigen Minuten, verworfen.</li>
 <li><strong>Treffer der Ortssuche und Vorschläge</strong> werden ohne Bezug zu dir zwischengespeichert, damit dieselbe Suche Nominatim bzw. komoot nicht erneut erreicht: bis zu 7 Tage, beim Nachladen höchstens einen Tag länger.</li>
 <li><strong>Flugdaten</strong> bleiben ohne Bezug zu dir nur im Arbeitsspeicher der Funktionsinstanz.</li>
 <li><strong>Ortsfotos, Bildnachweise und US-Reisehinweise</strong> werden ohne Bezug zu dir zwischengespeichert: Fotos bis zu 30 Tage, Fundstellen bis zu 4 Tage, Reisehinweise bis zu 12 Stunden.</li>
 </ul>
 <p><strong>Was protokolliert wird:</strong> Die Dienste selbst schreiben weder IP-Adressen noch Suchbegriffe oder Flugnummern in Protokolle, nur Fehlermeldungen ohne Personenbezug.</p>
+=======
+<li>Deine <strong>IP-Adresse</strong> nutzen die Dienste nur, um missbräuchlich viele Anfragen zu begrenzen (Ortssuche höchstens 15, Flugdaten höchstens 12, Medien höchstens 120 Anfragen pro Minute; bei IPv6 je Anschluss). Sie wird nur im Arbeitsspeicher der jeweiligen Funktionsinstanz gehalten und mit deren Ende, in der Regel nach wenigen Minuten, verworfen.</li>
+<li><strong>Treffer der Ortssuche</strong> werden ohne Bezug zu dir zwischengespeichert, damit dieselbe Suche Nominatim nicht erneut erreicht: bis zu 7 Tage, beim Nachladen höchstens einen Tag länger.</li>
+<li><strong>Flugdaten</strong> bleiben ohne Bezug zu dir nur im Arbeitsspeicher der Funktionsinstanz.</li>
+<li><strong>Ortsfotos, Bildnachweise und US-Reisehinweise</strong> werden ohne Bezug zu dir zwischengespeichert: Fotos bis zu 30 Tage, Fundstellen bis zu 4 Tage, Reisehinweise bis zu 12 Stunden.</li>
+</ul>
+<p><strong>Was protokolliert wird:</strong> Die Dienste selbst schreiben weder IP-Adressen noch Suchbegriffe oder Flugnummern in Protokolle, nur Fehlermeldungen ohne Personenbezug. Netlify speichert technische Funktionsprotokolle höchstens 7 Tage.</p>
+>>>>>>> origin/ccr-cf690df6-83w344
 <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO für Ortssuche und Flugdaten (<a href="#ortssuche">3.9</a>, <a href="#flugdaten">3.10</a>), lit. f für Medien (<a href="#ortsfotos">3.11</a>, <a href="#lagebild">3.13</a>); für die Begrenzung über die IP-Adresse Art. 6 Abs. 1 lit. f DSGVO. Berechtigtes Interesse: die Dienste vor Missbrauch schützen.</p>
 <p><strong>Aufruf dieser Seite:</strong> Beim Aufruf dieser Seite verarbeitet Netlify technisch notwendige Zugriffsdaten (IP-Adresse, Zeitpunkt, abgerufene Seite, Browser-Typ), um die Seite auszuliefern und den Betrieb abzusichern. Diese Seite setzt keine Cookies und lädt keine fremden Inhalte.</p>
       </section>
@@ -450,7 +471,7 @@ Promenade 18<br>
 
       <section id="stand">
         <h2>Stand</h2>
-<p>Stand: 17.11.2026 · Version 1.5</p>
+<p>Stand: 16.11.2026 · Version 1.3</p>
 <p>Diese Erklärung gibt es auf Deutsch und Englisch. Maßgeblich ist die deutsche Fassung.</p>
       </section>
 

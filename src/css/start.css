@@ -93,7 +93,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .back{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:500;font-size:.9375rem;transition:background .2s,color .2s}
 .back:hover{background:var(--ink);color:var(--bg)}
 .d-head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 28px}
-.d-head svg{width:clamp(64px,9vw,112px);height:auto;flex:none}
+.d-head img{width:clamp(64px,9vw,112px);height:auto;aspect-ratio:1;flex:none;border-radius:22.9%}
 .d-head h2{font-size:clamp(3rem,12vw,9.5rem);font-weight:600;letter-spacing:-.055em;line-height:.92}
 .d-lead{font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:-.02em;line-height:1.25;max-width:24ch;text-wrap:balance}
 .d-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(20px,4vw,56px);align-items:start}
@@ -103,7 +103,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .d-shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px}
 .d-shot{flex:none;width:min(38vw,200px);aspect-ratio:9/19;border:1px solid var(--line);border-radius:24px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:12px}
 .d-act{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
-.d-act .pillbtn{background:var(--ink);color:var(--bg)}
+.d-act .pillbtn{background:var(--ink);color:var(--bg);text-decoration:none}
 .d-legal{color:var(--muted)}
 @media (max-width:760px){ .d-grid{grid-template-columns:minmax(0,1fr)} }
 .ring{position:fixed;z-index:60;left:0;top:0;width:72px;height:72px;margin:-36px 0 0 -36px;pointer-events:none;color:var(--blend);mix-blend-mode:difference;opacity:0;transition:opacity .3s}
@@ -118,6 +118,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .plain h2{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:12px}
 .plain li{border-top:1px solid var(--line);padding-block:12px;color:var(--muted)}
 .plain li b{color:var(--ink);font-weight:600;margin-right:8px}
+.plain li a{color:inherit;text-underline-offset:3px}
 .plain .shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
 .plain .shots img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;display:block}
 .plain .mail{font-size:1.25rem;user-select:all}

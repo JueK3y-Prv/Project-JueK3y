@@ -18,6 +18,40 @@
   status = 301
   force = true
 
+# Unterseiten der Apps: Die Startseite öffnet die Unterseite selbst, aus dem Akzentpunkt der Station.
+# Deshalb liefern diese Adressen die Startseite aus (Status 200, die Adresse bleibt stehen).
+# Die Rechtstexte darunter (/saldo/datenschutz usw.) sind echte Dateien und bleiben davon unberührt.
+# Neue App: hier eintragen, deutsch und englisch. Die id steht in src/js/start/inhalt.js.
+[[redirects]]
+  from = "/travelflow"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/saldo"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/1000days"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/travelflow"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/saldo"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/1000days"
+  to = "/en/index.html"
+  status = 200
+
 # Alte Adressen. Unbekannte Adressen brauchen keine Regel: Netlify zeigt dafür /404.html.
 [[redirects]]
   from = "/saldo/tos"

@@ -15,6 +15,8 @@ export default {
     orbit: { day: 'Day {n}' }
   },
   detail: { open: 'View {name}', back: 'Back' },
+  status: { beta: 'Beta', live: 'Available' },
+  store: { beta: 'Beta on Google Play', live: 'Get it on Google Play' },
   contact: { title: 'Say hello.' },
   form: {
     name: 'Name',
@@ -46,7 +48,7 @@ export default {
     saldo: { kind: 'App · Finance', desc: 'Your own finances, on your own server.',
       facts: ['Runs on your own server', 'Read-only bank sync', 'Sign-in with a passkey'] },
     '1000days': { kind: 'App · Habits', desc: 'Habits turn into your own universe.',
-      facts: ['Every habit helps build your own universe', 'Beta on the Play Store'] }
+      facts: ['Every habit helps build your own universe'] }
   },
   serien: {
     meer: { name: 'Sea', shots: { surf: 'Surf', cliff: 'Cliffs', jelly: 'Jellyfish', palm: 'Evening light' } },

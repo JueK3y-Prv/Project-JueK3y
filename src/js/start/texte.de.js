@@ -15,6 +15,8 @@ export default {
     orbit: { day: 'Tag {n}' }
   },
   detail: { open: '{name} ansehen', back: 'Zurück' },
+  status: { beta: 'Beta', live: 'Erhältlich' },
+  store: { beta: 'Beta bei Google Play', live: 'Bei Google Play laden' },
   contact: { title: 'Schreib mir.' },
   form: {
     name: 'Name',
@@ -46,7 +48,7 @@ export default {
     saldo: { kind: 'App · Finanzen', desc: 'Die eigenen Finanzen, auf dem eigenen Server.',
       facts: ['Läuft auf dem eigenen Server', 'Bankabruf nur lesend', 'Anmeldung mit Passkey'] },
     '1000days': { kind: 'App · Gewohnheiten', desc: 'Aus Gewohnheiten wird dein eigenes Universum.',
-      facts: ['Jede Gewohnheit baut am eigenen Universum mit', 'Beta im Play Store'] }
+      facts: ['Jede Gewohnheit baut am eigenen Universum mit'] }
   },
   serien: {
     meer: { name: 'Meer', shots: { surf: 'Brandung', cliff: 'Steilküste', jelly: 'Quallen', palm: 'Abendlicht' } },

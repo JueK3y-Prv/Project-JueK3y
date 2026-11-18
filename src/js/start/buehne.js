@@ -18,6 +18,11 @@ const REGION = navigator.language || LANG;                            // words f
   const caps = s => String(s).toLocaleUpperCase(LANG);
   // content: structure from inhalt.js, words from the language file, joined into what the stage works with
   const APPS = APP_LIST.map(a => Object.assign({}, a, TX.apps[a.id], { legal: (a.legal || []).map(k => [txt('legal.' + k + '.label'), '/' + a.id + '/' + txt('legal.' + k + '.slug')]) }));
+  // the stand of an app (beta, available) goes after its kind: "App · Reisen · Beta"
+  APPS.forEach(a => { a.line = a.status ? a.kind + ' · ' + txt('status.' + a.status) : a.kind; a.storeLabel = a.store ? txt('store.' + (a.status || 'live')) : ''; });
+  // every app has its own address (/1000days, /en/1000days); netlify.toml hands it this page, which then opens the app
+  const BASE = LANG === 'en' ? '/en/' : '/';
+  const appAt = () => { const m = location.pathname.match(/^(?:\/en)?\/([^/]+)\/?$/); return m ? APPS.findIndex(a => a.id === m[1]) : -1; };
   const SERIES = SERIEN.map(s => ({ layout: s.layout, name: TX.serien[s.id].name, shots: s.shots.map(x => [TX.serien[s.id].shots[x[0]], x[0], x[1]]) }));
   const NSHOTS = SERIES.reduce((n, s) => n + s.shots.length, 0);
 
@@ -42,7 +47,7 @@ const REGION = navigator.language || LANG;                            // words f
   $('#quick').innerHTML = QUICK.join(' · ');
   // the plain document is generated from the same lists: it is what readers, reduced motion and browsers without WebGL get
   const other = $('#lang');
-  $('#plain').innerHTML = `<h1>JueK3y<i class="pt">.</i> ${txt('plain.title')}</h1><section><h2>${txt('nav.code')}</h2><ul>${APPS.map(a => `<li><b>${a.name}</b>${a.desc}</li>`).join('')}</ul></section>` +
+  $('#plain').innerHTML = `<h1>JueK3y<i class="pt">.</i> ${txt('plain.title')}</h1><section><h2>${txt('nav.code')}</h2><ul>${APPS.map(a => `<li id="${a.id}"><b>${a.name}</b>${a.desc}${a.status ? ' · ' + txt('status.' + a.status) : ''}${a.store ? ` · <a href="${a.store}" target="_blank" rel="noopener">${a.storeLabel}</a>` : ''}</li>`).join('')}</ul></section>` +
     SERIES.map(s => `<section><h2>${s.name}</h2><div class="shots">${s.shots.map(x => `<img src="/src/img/start/${x[1]}.jpg" alt="${x[0]}" loading="lazy">`).join('')}</div></section>`).join('') +
     `<section id="kontakt"><h2>${txt('nav.contact')}</h2><div id="plain-form"></div><p class="mail">${MAIL}</p><p class="legal-plain">${QUICK.join('')}</p></section>` +
     `<footer>${SITE_LEGAL.join('')}<a href="${other.getAttribute('href')}" hreflang="${other.hreflang}" lang="${other.lang}" data-lang="${other.dataset.lang}">${other.getAttribute('aria-label')}</a></footer>`;
@@ -63,11 +68,27 @@ const REGION = navigator.language || LANG;                            // words f
     } catch (err) { failed.hidden = false; }
     send.disabled = false; form.classList.remove('busy'); });
   // without the stage the form sits in the plain document, under "Kontakt"
-  const plainForm = () => { $('#plain-form').append(form); };
+  const plainForm = () => { $('#plain-form').append(form); const i = appAt(); if (i >= 0) { const el = document.getElementById(APPS[i].id); if (el) el.scrollIntoView(); } };
   if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof THREE === 'undefined' || typeof gsap === 'undefined') return plainForm();
   let renderer;
   try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: 'high-performance' }); } catch (e) { return plainForm(); }
   root.classList.add('fx');
+
+  // the page of an app: built from the same lists as everything else
+  const detail = $('#detail'), din = $('#d-in'), openBtn = $('#open'), openL = $('#open-l'), langA = $('#lang'), canon = $('link[rel=canonical]'), descM = $('meta[name=description]');
+  const HOME = { title: document.title, lang: langA.getAttribute('href'), canon: canon ? canon.href : '', desc: descM ? descM.content : '' };
+  const fill = a => { din.innerHTML = `<div class="d-bar"><button class="back" id="back">← ${txt('detail.back')}</button><span class="mono">${a.line}</span></div>`
+    + `<header class="d-head">${a.icon ? `<img src="${a.icon}" alt="" width="112" height="112">` : ''}<h2>${a.name}</h2></header><p class="d-lead">${a.desc}</p>`
+    + `<ul class="d-facts">${a.facts.map(f => `<li>${f}</li>`).join('')}</ul>`
+    + (a.store ? `<div class="d-act"><a class="pillbtn" href="${a.store}" target="_blank" rel="noopener">${a.storeLabel} <span aria-hidden="true">↗</span></a></div>` : '')
+    + `<p class="d-legal mono">${a.legal.concat([[txt('legal.imprint.label'), txt('legal.imprint.path')]]).map(l => `<a href="${l[1]}">${l[0]}</a>`).join(' · ')}</p>`; };
+  // title, language switch, canonical address and description follow the open page
+  const markPage = i => { const a = APPS[i]; document.title = a ? `${a.name} · JueK3y` : HOME.title; langA.setAttribute('href', a ? HOME.lang + a.id : HOME.lang);
+    if (canon) canon.href = a ? location.origin + BASE + a.id : HOME.canon; if (descM) descM.content = a ? a.desc : HOME.desc; };
+  const showDetail = i => { fill(APPS[i]); markPage(i); detail.classList.add('on'); detail.scrollTop = 0; detail.setAttribute('aria-hidden', 'false'); root.style.overflow = 'hidden'; };
+  // straight to an app's address: its page is there at once, the stage gets ready behind it
+  const early = appAt();
+  if (early >= 0) { showDetail(early); detail.style.clipPath = 'none'; }
 
   const FINE = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const DPR = Math.min(devicePixelRatio || 1, 2);
@@ -151,15 +172,15 @@ const REGION = navigator.language || LANG;                            // words f
     const inkMat = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, depthTest: false }); inkMat.color = COL.ink;
     const bgMat = new THREE.MeshBasicMaterial({ depthTest: false }); bgMat.color = COL.bg;
     const gpos = new Float32Array(N * 6), ggeo = new THREE.BufferGeometry(); ggeo.setAttribute('position', new THREE.BufferAttribute(gpos, 3)); ggeo.setIndex(idx);
-    const ghostMat = basic('ink'), ghostLine = new THREE.Mesh(ggeo, ghostMat); ghostMat.side = THREE.DoubleSide; ghostLine.frustumCulled = false; sC.add(ghostLine);   // the stretch of a route not yet travelled
+    const ghostMat = new THREE.MeshBasicMaterial({ depthTest: false, side: THREE.DoubleSide, color: new THREE.Color() }), ghostLine = new THREE.Mesh(ggeo, ghostMat); ghostLine.renderOrder = -1; ghostLine.frustumCulled = false; sC.add(ghostLine);   // the stretch of a route not yet travelled
     const line = new THREE.Mesh(lgeo, inkMat); line.frustumCulled = false; sC.add(line);
     const over = new THREE.Group(); sC.add(over);                         // things that sit on the line
     const hairMat = basic('ink'), hair = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), hairMat); sC.add(hair);   // the level at which text is wiped, shown only while it moves
     const disc = new THREE.CircleGeometry(1, 40);
     const capA = new THREE.Mesh(disc, inkMat);
     const dotCol = new THREE.Color(), dotMat = new THREE.MeshBasicMaterial({ depthTest: false }); dotMat.color = dotCol;
-    const capB = new THREE.Mesh(disc, dotMat);
-    sC.add(capA, capB);
+    const capB = new THREE.Mesh(disc, dotMat), capE = new THREE.Mesh(disc, inkMat);   // capE rounds the end of the line when the dot sits elsewhere
+    sC.add(capA, capE, capB);
 
     const resample = pts => {
       const d = [0]; for (let i = 1; i < pts.length; i++) d.push(d[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
@@ -168,12 +189,46 @@ const REGION = navigator.language || LANG;                            // words f
       return out;
     };
     const bez = (a, b, c, d, n) => { const o = []; for (let i = 0; i <= n; i++) { const t = i / n, u = 1 - t; o.push([u * u * u * a[0] + 3 * u * u * t * b[0] + 3 * u * t * t * c[0] + t * t * t * d[0], u * u * u * a[1] + 3 * u * u * t * b[1] + 3 * u * t * t * c[1] + t * t * t * d[1]]); } return o; };
+    // thick strokes as triangles (WebGL lines are one pixel): mitred joins, round ends on open paths. `sub` cuts each edge into pieces so a path can be drawn in bit by bit
+    const strokeGeo = (paths, w, into) => { const pos = [], ind = [], h = w / 2; let segs = 0;
+      const dir = (p, q) => { const dx = q[0] - p[0], dy = q[1] - p[1], l = Math.hypot(dx, dy) || 1; return [dx / l, dy / l]; };
+      paths.forEach(({ pts: raw, closed, sub }) => { let pts = raw;
+        if (sub) { pts = []; const n = raw.length; for (let i = 0; i < (closed ? n : n - 1); i++) { const a = raw[i], b = raw[(i + 1) % n]; for (let k = 0; k < sub; k++) pts.push([lerp(a[0], b[0], k / sub), lerp(a[1], b[1], k / sub)]); } if (!closed) pts.push(raw[n - 1]); }
+        const n = pts.length, b0 = pos.length / 3;
+        for (let i = 0; i < n; i++) { const p = pts[i], pv = closed ? pts[(i - 1 + n) % n] : pts[Math.max(0, i - 1)], nx = closed ? pts[(i + 1) % n] : pts[Math.min(n - 1, i + 1)];
+          const d0 = i === 0 && !closed ? dir(p, nx) : dir(pv, p), d1 = i === n - 1 && !closed ? d0 : dir(p, nx);
+          let mx = -(d0[1] + d1[1]), my = d0[0] + d1[0]; const ml = Math.hypot(mx, my) || 1; mx /= ml; my /= ml;
+          const k = h / Math.max(.3, -mx * d1[1] + my * d1[0]);
+          pos.push(p[0] + mx * k, p[1] + my * k, 0, p[0] - mx * k, p[1] - my * k, 0); }
+        const m = closed ? n : n - 1; for (let i = 0; i < m; i++) { const a = b0 + i * 2, b = b0 + ((i + 1) % n) * 2; ind.push(a, a + 1, b, a + 1, b + 1, b); } segs += m;
+        if (!closed) [[pts[0], dir(pts[1], pts[0])], [pts[n - 1], dir(pts[n - 2], pts[n - 1])]].forEach(([p, d]) => { const c = pos.length / 3, a0 = Math.atan2(d[1], d[0]) - Math.PI / 2; pos.push(p[0], p[1], 0);
+          for (let j = 0; j <= 10; j++) { const a = a0 + Math.PI * j / 10; pos.push(p[0] + Math.cos(a) * h, p[1] + Math.sin(a) * h, 0); } for (let j = 1; j <= 10; j++) ind.push(c, c + j, c + j + 1); }); });
+      const old = into && into.attributes.position;                     // a path that moves every frame keeps its buffers
+      if (old && old.array.length === pos.length) { old.array.set(pos); old.needsUpdate = true; return into; }
+      const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(ind); g.userData.segs = segs; if (into) into.dispose(); return g; };
+    const strokeMesh = (mat, parent, order) => { const m = new THREE.Mesh(new THREE.BufferGeometry(), mat); m.frustumCulled = false; m.renderOrder = order || 0; parent.add(m); return m; };
+    // drawings behind the line are mixed with the ground instead of see-through, so they are painted first and line, rings and dot always lie on top.
+    // holes: up to 24 boxes (x, y, half width, half height) where the drawing gives way, so no line runs through a name or a label
+    const KN = 24, knock = Array.from({ length: KN }, () => new THREE.Vector4(0, 0, -1, -1)), noHoles = Array.from({ length: KN }, () => new THREE.Vector4(0, 0, -1, -1));
+    const flatMat = (tint, holes) => new THREE.ShaderMaterial({ depthTest: false, depthWrite: false, side: THREE.DoubleSide,
+      uniforms: { uCol: { value: COL[tint] }, uBg: { value: COL.bg }, uOp: { value: 1 }, uK: { value: holes || noHoles } },
+      vertexShader: 'varying vec2 vP; void main(){ vP=position.xy; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+      fragmentShader: `uniform vec3 uCol,uBg; uniform float uOp; uniform vec4 uK[${KN}]; varying vec2 vP;
+        void main(){ float a=uOp; for(int i=0;i<${KN};i++){ if(uK[i].z>0.0){ float r=min(uK[i].z,uK[i].w); vec2 d=abs(vP-uK[i].xy)-uK[i].zw+r;   // a rounded box that fades out softly, so a line thins away instead of being cut
+            a*=smoothstep(0.0,clamp(r*1.2,10.0,26.0),length(max(d,0.0))+min(max(d.x,d.y),0.0)-r); } }
+          gl_FragColor=vec4(mix(uBg,uCol,a),1.0); }` });
+    const hole = (i, x, y, hw, hh) => { if (i < KN) knock[i].set(x, y, hw, hh); }, noHole = i => { if (i < KN) knock[i].z = -1; };
+    // TravelFlow's symbol, drawn on a 512 grid: the folded map spans 131..380 by 153..358. Shapes are kept relative to the map, -1..1 each way, y up.
+    const TF = (x, y) => [(x - 255.5) / 124.5, -(y - 255.5) / 102.5];
+    const MAP = [TF(131, 179), TF(208, 153), TF(304, 178), TF(380, 153), TF(380, 333), TF(304, 358), TF(208, 333), TF(131, 358)];
+    const FOLDS = [[TF(208, 153), TF(208, 333)], [TF(304, 178), TF(304, 358)]], FOLD_AT = [[1, 6], [2, 5]], MSUB = 24;   // folds join corners 1–6 and 2–5 of the outline
+    const MAPS = []; MAP.forEach((a, i) => { const b = MAP[(i + 1) % MAP.length]; for (let k = 0; k < MSUB; k++) MAPS.push([lerp(a[0], b[0], k / MSUB), lerp(a[1], b[1], k / MSUB)]); });   // the outline in even pieces
     const smooth = (p, n) => { for (let k = 0; k < n; k++) for (let i = 1; i < p.length - 1; i++) p[i] = [(p[i - 1][0] + p[i][0] * 2 + p[i + 1][0]) / 4, (p[i - 1][1] + p[i][1] * 2 + p[i + 1][1]) / 4]; return p; };
     const TILT = .92, ell = (a, r) => { const x = Math.cos(a) * r, y = Math.sin(a) * r * .5; return [x * Math.cos(TILT) - y * Math.sin(TILT), x * Math.sin(TILT) + y * Math.cos(TILT)]; };
     const orbitPts = Array.from({ length: N }, () => [0, 0]), beamPts = Array.from({ length: N }, (_, i) => [-1 + 2 * i / (N - 1), 0]);
     const SHAPE = {
       flat: resample([[-1, 0], [1, 0]]),
-      route: resample(bez([-1, -.8], [-.4, -.8], [-.55, 0], [0, 0], 40).concat(bez([0, 0], [.55, 0], [.4, .8], [1, .8], 40))),
+      route: resample(smooth(bez(TF(165, 307), TF(178, 293), TF(205, 284), TF(232, 276), 30).concat(bez(TF(232, 276), TF(258, 268), TF(262, 230), TF(290, 219), 30), bez(TF(290, 219), TF(304, 214), TF(318, 220), TF(337, 220), 20)), 40)),   // the route on the map, ending where the symbol has its dot
       balance: beamPts,                                                  // recomputed every frame: a beam that tips with its load
       orbit: orbitPts                                                    // recomputed every frame: the dot keeps travelling its orbit
     };
@@ -186,9 +241,11 @@ const REGION = navigator.language || LANG;                            // words f
     T.apps = textMesh(caps(plural('count.apps', APPS.length)), { family: F.mono, px: 26, tint: 'muted', ls: .06 });
     T.caret = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), basic('accent')); T.caret.userData = { o: 1 };
     gC[0].add(T.apps); T.brand.list.forEach(g => over.add(g.m)); T.code.list.forEach(g => over.add(g.m)); over.add(T.caret);
-    // small text scrolls with the page and is rubbed out where it meets the line; names of route and balance scenes ride on the line
-    T.app = APPS.map((a, i) => { const o = { kind: textMesh(caps(a.kind), { family: F.mono, px: 26, tint: 'muted', ls: .06, side: -1 }), desc: textMesh(a.desc, { family: F.sans, px: 40, tint: 'muted', side: -1 }) };
-      if (a.scene === 'orbit') { o.name = textMesh(a.name, { family: F.sans, weight: 600, px: 180, ls: -.045, side: -1 }); gC[i + 1].add(o.name); }
+    // small text scrolls with the page and is rubbed out where it meets the line.
+    // A name rides on the line where the line has a free stretch for it (the route); where the symbol fills the line (scales, orbit) it stands in the text beside it.
+    const RIDES = { route: true };
+    T.app = APPS.map((a, i) => { const o = { kind: textMesh(caps(a.line), { family: F.mono, px: 26, tint: 'muted', ls: .06, side: -1 }), desc: textMesh(a.desc, { family: F.sans, px: 40, tint: 'muted', side: -1 }) };
+      if (!RIDES[a.scene]) { o.name = textMesh(a.name, { family: F.sans, weight: 600, px: 180, ls: -.045, side: -1 }); gC[i + 1].add(o.name); }
       else { o.run = glyphRun(a.name, { family: F.sans, weight: 600, px: 180, ls: -.005, side: 1 }); o.run.list.forEach(g => g.m && over.add(g.m)); }
       gC[i + 1].add(o.kind, o.desc); CST[i + 1].txt = o; return o; });
     T.end = textMesh(txt('contact.title'), { family: F.sans, weight: 600, px: 200, ls: -.05 });
@@ -208,38 +265,91 @@ const REGION = navigator.language || LANG;                            // words f
     const mkRing = () => { const g = new THREE.Group(); g.add(new THREE.Mesh(disc, bgMat), new THREE.Mesh(new THREE.RingGeometry(.6, 1, 40), inkMat)); g.children[0].scale.setScalar(.62); over.add(g); return g; };
     const euroS = new Intl.NumberFormat(REGION, { style: 'currency', currency: 'EUR', signDisplay: 'exceptZero' });
     const SCENE = {
-      route: { ghost: true,                                              // the dot travels the route and pulls the name behind it; stops open as it reaches them
-        init(st) { st.stops = [.03, .34, .65, .97].map((k, j) => [caps(txt('scene.route.stops')[j]), k]).map(([label, k], j) => {
-          const lab = textMesh(label, { family: F.mono, px: 26, tint: 'muted', ls: .06, side: -1 }); over.add(lab); return { g: mkRing(), lab, k, j }; }); },
-        layout: () => wide ? { c: [0, -H * .07], s: [W * .43, H * .27] } : { c: [0, H * .17], s: [W * .42, H * .1] },
-        head: dp => sstep(-.4, .26, dp / STEP),
-        update(st, a, q, t, pull, dp, head) { const o = st.txt, L = arc[N - 1], size = Math.min(o.size, L * .56 * o.run.px / o.run.w);
+      route: { ghost: true,                                              // TravelFlow: the folded map of its symbol opens as you arrive, then the dot travels the route and pulls the name behind it; stops open as it reaches them
+        init(st) { const T2 = txt('scene.route.stops');
+          st.stops = [.03, .34, .65, 1].map((k, j) => { const parts = caps(T2[j]).split(' · '), mk = str => { const m = textMesh(str, { family: F.mono, px: 26, tint: 'muted', ls: .06, side: -1 }); over.add(m); return m; };
+            return { g: mkRing(), lab: mk(caps(T2[j])), two: [mk(parts[0]), mk(parts.slice(1).join(' · ') || ' ')], k, j }; });   // one line on a wide screen, two on a phone; the last stop is where the dot arrives
+          st.foldMat = flatMat('muted', knock); st.mapMat = flatMat('ink', knock); st.folds = strokeMesh(st.foldMat, under, -3); st.map = strokeMesh(st.mapMat, under, -2);
+          st.mo = new Float32Array(MAPS.length * 2); st.mv = new Float32Array(MAPS.length * 2); st.gk = 0; st.trip = -1e9;
+          st.tap = (x, y) => { const mx = x - W / 2, my = H / 2 - y; for (let i = 0; i < MAPS.length; i++) { const p = st.rest[i], dx = p[0] - mx, dy = p[1] - my, d = Math.hypot(dx, dy) + 1, f = 900 / (1 + d * d / 12000); st.mv[i * 2] += dx / d * f; st.mv[i * 2 + 1] += dy / d * f; }
+            st.trip = performance.now(); };                              // a click shakes the map and sends the dot on the trip once more
+          st.rest = MAPS.map(() => [0, 0]); },
+        layout: () => { const fw = wide ? Math.min(W * .54, H * .6 * 1.55) : Math.min(W * .9, H * .42), fh = fw / (wide ? 1.55 : 1.15); return { c: [0, wide ? H * .05 : H * .08], s: [fw / 2, fh / 2] }; },
+        build(st) { st.walls = [-1, FOLDS[0][0][0], FOLDS[1][0][0], 1].map(x => st.l.c[0] + x * st.l.s[0]); },   // where the open map has upright lines
+        head: (dp, st) => { const h = sstep(-.45, -.04, dp / STEP), k = clamp((performance.now() - st.trip) / 2200, 0, 1); return k < 1 ? h * ease(k) : h; },   // the whole route is travelled by the time the station is reached
+        update(st, a, q, t, pull, dp, head, dt) { const o = st.txt, L = arc[N - 1], size = Math.min(o.size, L * .78 * o.run.px / o.run.w), S = st.l;
+          // the map unfolds: everything right of the first fold is pressed together and opens out; the untravelled route only shows on an open map
+          const u = sstep(.02, .55, q), F1 = FOLDS[0][0][0], open = lerp(.1, 1, u); st.gk = u * u;
+          const mx = ptr.sx - W / 2, my = H / 2 - ptr.sy, RR = Math.max(90, Math.min(W, H) * .14);
+          for (let i = 0; i < MAPS.length; i++) { const nx = MAPS[i][0] < F1 ? MAPS[i][0] : F1 + (MAPS[i][0] - F1) * open, rx = S.c[0] + nx * S.s[0], ry = S.c[1] + MAPS[i][1] * S.s[1];
+            let fx = 0, fy = 0; if (ptr.inside && a > .5) { const dx = rx + st.mo[i * 2] - mx, dy = ry + st.mo[i * 2 + 1] - my, d = Math.hypot(dx, dy); if (d < RR) { const k = Math.pow(1 - d / RR, 2) * 2600; fx = dx / (d + .001) * k; fy = dy / (d + .001) * k; } }   // the map gives way to the pointer like the line does
+            st.mv[i * 2] += (fx - st.mo[i * 2] * 150 - st.mv[i * 2] * 12) * dt; st.mv[i * 2 + 1] += (fy - st.mo[i * 2 + 1] * 150 - st.mv[i * 2 + 1] * 12) * dt;
+            st.mo[i * 2] += st.mv[i * 2] * dt; st.mo[i * 2 + 1] += st.mv[i * 2 + 1] * dt; st.rest[i][0] = rx + st.mo[i * 2]; st.rest[i][1] = ry + st.mo[i * 2 + 1]; }
+          if (a > .01) { st.map.geometry = strokeGeo([{ pts: st.rest, closed: true }], thick * .5, st.map.geometry);
+            st.folds.geometry = strokeGeo(FOLD_AT.map(([p, b]) => ({ pts: [st.rest[p * MSUB], st.rest[b * MSUB]] })), thick * .35, st.folds.geometry); }
+          st.map.geometry.setDrawRange(0, Math.round(sstep(.02, .45, q) * MAPS.length) * 6); st.mapMat.uniforms.uOp.value = .32 * a; st.map.visible = a > .01;
+          const fo = .5 * a * sstep(.3, .6, q); st.foldMat.uniforms.uOp.value = fo; st.folds.visible = fo > .01;
           ride(o.run, size, head * L - o.run.w * size / o.run.px - size * .32, a);
-          st.stops.forEach(s => { const i = Math.round(s.k * (N - 1)), x = cur[i * 2], y = cur[i * 2 + 1], pop = back(sstep(s.k - .04, s.k + .05, head + .001));
-            s.g.position.set(x, y, 0); s.g.scale.setScalar(thick * 2 * pop * a); s.g.visible = pop * a > .01;
-            const last = s.j === st.stops.length - 1;            // labels hang below and to the side the route has not reached, so the line never runs through them
-            place(s.lab, x + (last ? thick * 2 : -thick), y - (thick * 2 + (wide ? 17 : 15)), wide ? 12 : 11, last ? 'r' : 'l'); op(s.lab, sstep(.3, 1, pop) * a); }); }
+          o.run.list.forEach((g, j) => { if (j >= 16) return; const r = g.m ? g.m.rotation.z : 0;   // map and folds give way around each letter
+            if (!g.m || !g.m.visible) noHole(j); else hole(j, g.m.position.x - Math.sin(r) * size * .15, g.m.position.y + Math.cos(r) * size * .15, size * .26, size * .26); });
+          // labels hang below the route, to the side it has not reached yet. A side is taken only if the line stays above the label all along it;
+          // folds and the edge of the map are avoided where possible, and otherwise give way to the label
+          const below = (x0, x1, top) => { for (let c = Math.max(0, Math.floor((x0 + W / 2) / W * 256)); c <= Math.min(255, Math.ceil((x1 + W / 2) / W * 256)); c++) if (envY[c] < 1e8 && envY[c] - thick * .7 < top) return false; return x0 > -W / 2 + 6 && x1 < W / 2 - 6; };
+          st.stops.forEach(s => { const i = Math.round(s.k * (N - 1)), x = cur[i * 2], y = cur[i * 2 + 1], pop = back(sstep(s.k - .07, s.k, head + .001)), last = s.j === st.stops.length - 1;
+            s.g.position.set(x, y, 0); s.g.scale.setScalar(thick * 2 * pop * a); s.g.visible = !last && pop * a > .01;   // no ring at the end: the dot is the destination
+            const fs = wide ? 12 : 11, lines = wide ? [s.lab] : s.two, ws = lines.map(m => m.userData.w * fs / m.userData.px - m.userData.pad * fs / m.userData.px * 2);
+            const bw = Math.max(...ws), ly = y - (thick * 2 + (wide ? 17 : 14)), top = ly + fs * .6, bot = ly - fs * 1.35 * (lines.length - 1) - fs * .6;
+            // where the label may start: beside the stop on the side not yet travelled, then the other side, centred, or slid just clear of a fold
+            const dl = thick * (last ? 2.4 : 1), pref = last ? [x + dl - bw, x - dl, x - bw / 2] : [x - dl, x + dl - bw, x - bw / 2], gap = 8;
+            const starts = pref.concat(...st.walls.map(v => [v - gap - bw, v + gap])).filter(x0 => x0 < x + bw * .2 && x0 + bw > x - bw * .2);
+            const free = x0 => below(x0, x0 + bw, top), clear = x0 => !st.walls.some(v => v > x0 - gap + 1 && v < x0 + bw + gap - 1);
+            const x0 = starts.find(x0 => free(x0) && clear(x0)) ?? starts.find(free) ?? pref[0], x1 = x0 + bw, vis = sstep(.3, 1, pop) * a;
+            [s.lab].concat(s.two).forEach(m => op(m, 0)); lines.forEach((m, k) => { place(m, x0, ly - fs * 1.35 * k, fs, 'l'); op(m, vis); });
+            if (vis > .05) hole(16 + s.j, (x0 + x1) / 2, (top + bot) / 2, bw / 2 + 5, (top - bot) / 2 + 3); else noHole(16 + s.j); }); }
       },
-      balance: {                                                         // stand-in until Saldo has its mark: income (filled) and spending (rings) land on a beam, sized by amount
-        init(st) { st.th = 0; st.om = 0; st.coins = []; st.sum = 0; st.shown = 0; st.auto = 0;
-          const tri = new THREE.Shape(); tri.moveTo(0, 0); tri.lineTo(.62, -1); tri.lineTo(-.62, -1); tri.closePath(); st.pivot = new THREE.Mesh(new THREE.ShapeGeometry(tri), inkMat); under.add(st.pivot);
+      balance: {                                                         // Saldo: the scales of its symbol. The beam is the line and tips with the load; the pans hang from its ends and swing.
+        init(st) { st.th = 0; st.om = 0; st.coins = []; st.sum = 0; st.shown = 0; st.auto = 0; st.kick = 0; st.last = 0; st.away = true;   // income (filled) and spending (rings) drop into the pans, sized by amount
+          st.mat = flatMat('ink'); st.post = strokeMesh(st.mat, under, -1); st.pans = [strokeMesh(st.mat, under, -1), strokeMesh(st.mat, under, -1)];
+          st.sw = [0, 1].map(() => ({ a: 0, w: 0, x: 0, y: 0, vx: 0, on: false }));
           st.num = textMesh(euroS.format(0), { family: F.mono, px: 64, ls: -.02, widest: euroS.format(-8888.88), side: -1 }); st.note = textMesh(caps(txt('scene.balance.note')), { family: F.mono, px: 26, tint: 'muted', ls: .06, side: -1 }); over.add(st.num, st.note);
           const PLUS = [620, 410.5, 254, 120, 80, 45], MINUS = [180, 95.5, 60, 35, 20, 12];
-          st.drop = side => { const n = st.coins.filter(c => c.side === side).length; if (n >= 6) return; const v = (side > 0 ? PLUS : MINUS)[n]; let g;
+          const lose = c => { over.remove(c.g); if (c.landed) st.sum -= c.side * c.v; };
+          st.clear = side => { st.coins.filter(c => side == null || c.side === side).forEach(lose); st.coins = st.coins.filter(c => side != null && c.side !== side); };
+          st.drop = side => { if (st.coins.filter(c => c.side === side).length >= 6) st.clear(side);   // a full pan is tipped out and filling starts again
+            const n = st.coins.filter(c => c.side === side).length, v = (side > 0 ? PLUS : MINUS)[n]; let g;
             if (side > 0) { g = new THREE.Mesh(disc, inkMat); over.add(g); } else g = mkRing();
-            st.coins.push({ side, n, g, r: 1.15 + Math.sqrt(v) / 20, born: performance.now() }); st.sum += side * v; st.om -= side * (1 + Math.sqrt(v) / 22); }; },
-        layout: () => { const S = wide ? Math.min(W * .3, H * .5) : W * .4; return { c: wide ? [W * .1, H * .04] : [0, H * .18], s: [S, S] }; },
-        update(st, a, q, t, pull, dp, head, dt, soft) { const AUTO = [[.2, 1], [.34, -1], [.48, 1], [.62, 1], [.76, -1]]; while (st.auto < AUTO.length && q > AUTO[st.auto][0]) st.drop(AUTO[st.auto++][1]);
-          const load = st.coins.reduce((n, c) => n + c.side * c.r, 0), target = clamp(-load * .045, -.26, .26);
+            st.coins.push({ side, n, g, v, r: 1.15 + Math.sqrt(v) / 20, born: performance.now(), y: 0, rr: 0, landed: false }); }; },
+        // sizes follow the symbol (512 grid): half the beam is 104, the post rises 28 above it and stands 168 below, the pans hang 108 under the ends with a bowl of 40
+        layout: () => { const S = wide ? Math.min(W * .17, H * .28) : Math.min(W * .3, H * .15), u = S / 104; return { c: wide ? [W * .2, u * 70 + 40] : [0, H * .3], s: [S, S], u }; },
+        build(st) { const u = st.l.u;
+          st.post.geometry = strokeGeo([{ pts: [[0, 28 * u], [0, -168 * u]] }, { pts: [[-52 * u, -168 * u], [52 * u, -168 * u]] }], thick, st.post.geometry);
+          const bowl = Array.from({ length: 25 }, (_, i) => { const a = -Math.PI * i / 24; return [40 * u * Math.cos(a), -108 * u + 40 * u * Math.sin(a)]; });
+          const pan = strokeGeo([{ pts: [[-40 * u, -108 * u], [0, 0]] }, { pts: [[0, 0], [40 * u, -108 * u]] }, { pts: bowl }], thick, st.pans[0].geometry); st.pans.forEach(m => { m.geometry = pan; }); },
+        dotAt: st => [st.l.c[0], st.l.c[1] + 28 * st.l.u],                 // the accent dot sits on top of the post
+        update(st, a, q, t, pull, dp, head, dt, soft) { const AUTO = [[.2, 1], [.34, -1], [.48, 1], [.62, 1], [.76, -1]], t0 = performance.now();
+          if (soft < .01) { if (!st.away) { st.clear(); Object.assign(st, { sum: 0, shown: 0, auto: 0, th: 0, om: 0, away: true }); } } else st.away = false;   // out of sight the scales are emptied, so every visit fills them again
+          if (!st.away && st.auto < AUTO.length && q > AUTO[st.auto][0] && t0 - st.last > 170) { st.drop(AUTO[st.auto++][1]); st.last = t0; }   // one coin at a time, also when arriving from below
+          const load = st.coins.reduce((n, c) => n + (c.landed ? c.side * c.r : 0), 0), target = clamp(-load * .045, -.26, .26);   // a coin weighs only once it lies in its pan
           st.om += ((target - st.th) * 46 - st.om * 5) * dt; st.th += st.om * dt;
-          const L = st.l, o = st.txt, len = arc[N - 1], size = Math.min(o.size, len * .3 * o.run.px / o.run.w), now = performance.now();
-          ride(o.run, size, len / 2 - o.run.w * size / o.run.px / 2 - st.th * size * 1.5, a);
-          st.coins.forEach(c => { const u = .5 + c.side * (.275 + (c.n % 3) * .085), i = Math.round(u * (N - 1)), p0 = Math.max(0, i - 3), p1 = Math.min(N - 1, i + 3), r = thick * c.r;
-            const ang = Math.atan2(cur[p1 * 2 + 1] - cur[p0 * 2 + 1], cur[p1 * 2] - cur[p0 * 2]), f = back(clamp((now - c.born) / 520, 0, 1)), upx = thick * .5 + r + (c.n > 2 ? thick * 5.6 : 0) + (1 - f) * H * .3;
-            c.g.position.set(cur[i * 2] - Math.sin(ang) * upx, cur[i * 2 + 1] + Math.cos(ang) * upx, 0); c.g.scale.setScalar(r * a); c.g.visible = a > .01; });
-          st.pivot.position.set(L.c[0], L.c[1] - thick * .5, 0); st.pivot.scale.setScalar(thick * 4.2 * soft); st.pivot.visible = soft > .01;
-          st.shown += (st.sum - st.shown) * .14; const v = Math.round(st.shown * 100) / 100; st.num.set(euroS.format(Math.abs(v) < .005 ? 0 : v));
-          const y0 = L.c[1] - thick * 4.9 - (wide ? 56 : 38); place(st.num, L.c[0], y0, wide ? 42 : 24, 'c'); place(st.note, L.c[0], y0 - (wide ? 40 : 26), wide ? 12 : 11, 'c'); op(st.num, a); op(st.note, a); }
+          const L = st.l, u = L.u, R = 40 * u, len = (108 + 30) * u, now = performance.now(), mx = ptr.sx - W / 2, my = H / 2 - ptr.sy, RR = Math.max(80, R * 1.6);
+          st.post.position.set(L.c[0], L.c[1], 0);
+          // the pans hang from the live ends of the line, so they follow the beam, the pointer pushing the line, and every wobble, and swing like pendulums
+          const hang = [0, N - 1].map((i, k) => { const ex = L.c[0] + (k ? 1 : -1) * L.s[0] * Math.cos(st.th), ey = L.c[1] + (k ? 1 : -1) * L.s[0] * Math.sin(st.th), w = soft * soft; return [lerp(ex, cur[i * 2], w), lerp(ey, cur[i * 2 + 1], w)]; });
+          st.sw.forEach((p, k) => { const [hx, hy] = hang[k];
+            if (soft < .05 || !p.on || dt <= 0) { Object.assign(p, { a: 0, w: 0, x: hx, y: hy, vx: 0, on: soft >= .05 }); }
+            else { const vx = (hx - p.x) / dt, ax = clamp((vx - p.vx) / dt, -9000, 9000); p.vx = vx; p.x = hx; p.y = hy;
+              let push = 0; const bx = hx + Math.sin(p.a) * len, by = hy - Math.cos(p.a) * len; if (ptr.inside) { const d = Math.hypot(bx - mx, by - my); if (d < RR) push = Math.sign(bx - mx) * Math.pow(1 - d / RR, 2) * 14; }   // the pointer nudges a pan away
+              p.w += (-(2600 / len) * Math.sin(p.a) - ax / len * Math.cos(p.a) * .25 + push - p.w * 3.4) * dt; p.a = clamp(p.a + p.w * dt, -.32, .32); }
+            st.pans[k].position.set(hx, hy, 0); st.pans[k].rotation.z = p.a; });
+          st.mat.uniforms.uOp.value = soft; st.post.visible = st.pans[0].visible = st.pans[1].visible = soft > .01;
+          st.coins.forEach(c => { const k = c.side > 0 ? 1 : 0, [hx, hy] = hang[k], an = st.sw[k].a, x = (c.n % 3 - 1) * R * .58, r = thick * c.r, f = back(clamp((now - c.born) / 520, 0, 1));   // three on the bottom of the pan, three on top of those
+            const under0 = c.n > 2 ? st.coins.find(o => o.side === c.side && o.n === c.n - 3) : null;
+            c.rr = r; c.y = under0 ? under0.y + under0.rr + r : -108 * u - Math.sqrt(Math.max(0, R * R - x * x)) + thick * .5 + r;
+            if (!c.landed && now - c.born > 380) { c.landed = true; st.sum += c.side * c.v; st.om -= c.side * (1 + Math.sqrt(c.v) / 22); st.sw[k].w += (c.n % 3 - 1) * .35 + (c.side > 0 ? .18 : -.18); st.kick = 1; }   // landing: the pan swings, the beam tips, the sum jumps
+            const cs = Math.cos(an), sn = Math.sin(an);
+            c.g.position.set(hx + x * cs - c.y * sn, hy + x * sn + c.y * cs + (1 - f) * H * .3, 0); c.g.scale.setScalar(r * a); c.g.visible = a > .01; });
+          st.shown += (st.sum - st.shown) * .14; const v = Math.round(st.shown * 100) / 100; st.num.set(euroS.format(Math.abs(v) < .005 ? 0 : v)); st.kick = Math.max(0, st.kick - dt * 3);
+          const y0 = L.c[1] - 168 * u - (wide ? 56 : 34); place(st.num, L.c[0], y0, (wide ? 42 : 24) * (1 + st.kick * st.kick * .12), 'c'); place(st.note, L.c[0], y0 - (wide ? 40 : 26), wide ? 12 : 11, 'c'); op(st.num, a); op(st.note, a); }
       },
       orbit: {                                                           // 1000 Days: habits become a small universe; a click adds a planet
         init(st) { st.sun = new THREE.Mesh(disc, inkMat); over.add(st.sun); st.planets = []; st.loopMat = new THREE.LineBasicMaterial({ transparent: true, depthTest: false }); st.loopMat.color = COL.ink;
@@ -262,6 +372,7 @@ const REGION = navigator.language || LANG;                            // words f
     CST.forEach(st => { if (st.app) SCENE[st.sh].init(st); });
     const BAL = CST.find(s => s.sh === 'balance');
     const ORB = CST.find(s => s.sh === 'orbit');
+    const ROU = CST.find(s => s.sh === 'route');
     const accentOf = CST.map(s => s.app && s.app.accent ? new THREE.Color(s.app.accent) : null);
 
     let thick = 6;
@@ -273,13 +384,14 @@ const REGION = navigator.language || LANG;                            // words f
       place(T.apps, 0, hc * .78, wide ? 13 : 12, 'c'); T.caret.scale.set(hc * .3, hc * .62, 1);
       thick = Math.max(4, Math.min(W, H) * .011);
       const ns = wide ? Math.min(W * .085, H * .16) : Math.min(W * .15, 68), x0 = -W / 2 + Math.max(W * .08, 28), ds = Math.max(17, Math.min(21, W * .015));
-      T.app.forEach((o, i) => { o.size = ns; const bal = CST[i + 1].sh === 'balance', bx = bal ? x0 : W * .13, by = bal ? -H * .14 : -H * .15;
-        if (o.run) { if (wide) { place(o.kind, bx, by, 13, 'l'); place(o.desc, bx, by - 36, ds, 'l'); } else { place(o.kind, 0, -H * .2, 12, 'c'); place(o.desc, 0, -H * .2 - 30, 15, 'c'); } }
+      const he = Math.min(W * .125, H * .2), ye = H * .2, we = place(T.end, 0, ye, he, 'c');
+      CST.forEach((st, i) => { st.l = st.app ? SCENE[st.sh].layout() : i === 0 ? { c: [0, -hc * .3], s: [wc / 2 + hc * .42, 1] } : { c: [0, ye - he * .68], s: [we / 2, 1] }; if (st.app && SCENE[st.sh].build) SCENE[st.sh].build(st); });
+      T.app.forEach((o, i) => { o.size = ns; const l = CST[i + 1].l;
+        if (o.run) { const lx = l.c[0] - l.s[0], ly = l.c[1] - l.s[1];   // a name on the line leaves the small text under the scene
+          if (wide) { place(o.kind, lx, ly - 40, 13, 'l'); place(o.desc, lx, ly - 76, ds, 'l'); } else { place(o.kind, 0, ly - 30, 12, 'c'); place(o.desc, 0, ly - 58, 15, 'c'); } }
         else if (wide) { const y0 = H * .1; place(o.kind, x0, y0 + ns * .82, 13, 'l'); place(o.name, x0, y0, ns, 'l'); place(o.desc, x0, y0 - ns * .85, ds, 'l'); }
         else { const y0 = -H * .12; place(o.kind, 0, y0 + ns * .9, 12, 'c'); place(o.name, 0, y0, ns, 'c'); place(o.desc, 0, y0 - ns * .9, 15, 'c'); } });
-      const he = Math.min(W * .125, H * .2), ye = H * .2, we = place(T.end, 0, ye, he, 'c');
-      CST.forEach((st, i) => { st.l = st.app ? SCENE[st.sh].layout() : i === 0 ? { c: [0, -hc * .3], s: [wc / 2 + hc * .42, 1] } : { c: [0, ye - he * .68], s: [we / 2, 1] }; });
-      CST.forEach((st, i) => { const l = st.l, top = st.sh === 'route' ? l.c[1] + l.s[1] * .8 : st.sh === 'orbit' ? l.c[1] + l.s[1] * .9 : st.sh === 'balance' ? l.c[1] + l.s[0] * .27 : l.c[1]; let bt = -1e9, bb = 1e9;
+      CST.forEach((st, i) => { const l = st.l, top = st.sh === 'route' ? l.c[1] + l.s[1] + thick : st.sh === 'orbit' ? l.c[1] + l.s[1] * .9 : st.sh === 'balance' ? l.c[1] + 28 * l.u + thick * 2 : l.c[1]; let bt = -1e9, bb = 1e9;
         if (st.app) gC[i].children.forEach(m => { bt = Math.max(bt, m.position.y + m.scale.y * .4); bb = Math.min(bb, m.position.y - m.scale.y * .4); });
         st.level = Math.max(top, bt) + 14; st.low = bb - 16; });
     };
@@ -294,8 +406,8 @@ const REGION = navigator.language || LANG;                            // words f
       if (BAL) { const cs = Math.cos(BAL.th), sn = Math.sin(BAL.th); for (let i = 0; i < N; i++) { const x = -1 + 2 * i / (N - 1); beamPts[i][0] = x * cs; beamPts[i][1] = x * sn; } }
       const A = SHAPE[a.sh], B = SHAPE[b.sh], sa = a.app && SCENE[a.sh], sb = b.app && SCENE[b.sh];
       // e runs 0 to 1 between two stations: the line turns straight into the next shape
-      const hA = sa && sa.head ? sa.head(uc - a.p) : 1, hB = sb && sb.head ? sb.head(uc - b.p) : 1, head = lerp(hA, hB, e), hi = Math.max(1, Math.round(head * (N - 1)));
-      const ghost = (sa && sa.ghost ? 1 - e : 0) + (sb && sb.ghost ? e : 0), own = e < .5 ? i0 : i0 + 1, pk = 1 - pull * .12, dipK = Math.sin(Math.PI * e);
+      const hA = sa && sa.head ? sa.head(uc - a.p, a) : 1, hB = sb && sb.head ? sb.head(uc - b.p, b) : 1, head = lerp(hA, hB, e), hi = Math.max(1, Math.round(head * (N - 1)));
+      const ghost = (sa && sa.ghost ? (1 - e) * (a.gk == null ? 1 : a.gk) : 0) + (sb && sb.ghost ? e * (b.gk == null ? 1 : b.gk) : 0), own = e < .5 ? i0 : i0 + 1, pk = 1 - pull * .12, dipK = Math.sin(Math.PI * e);
       const dy = 0;
       hair.visible = false;
       const wob = dipK * Math.min(W, H) * .04 + Math.abs(vel) * 900, idle = (1 - sstep(0, STEP * .4, uc)) * thick * (.9 + 1.6 * Math.pow(Math.max(0, Math.sin(t * .8)), 6));
@@ -317,11 +429,13 @@ const REGION = navigator.language || LANG;                            // words f
         lpos[i * 6] = x + nx; lpos[i * 6 + 1] = y + ny; lpos[i * 6 + 2] = 0; lpos[i * 6 + 3] = x - nx; lpos[i * 6 + 4] = y - ny; lpos[i * 6 + 5] = 0;
         gpos[i * 6] = x + nx * .3; gpos[i * 6 + 1] = y + ny * .3; gpos[i * 6 + 2] = 0; gpos[i * 6 + 3] = x - nx * .3; gpos[i * 6 + 4] = y - ny * .3; gpos[i * 6 + 5] = 0;
       }
-      lgeo.attributes.position.needsUpdate = true; lgeo.setDrawRange(0, hi * 6); ggeo.attributes.position.needsUpdate = true; ghostMat.opacity = .34 * ghost; ghostLine.visible = ghost > .01;
+      lgeo.attributes.position.needsUpdate = true; lgeo.setDrawRange(0, hi * 6); ggeo.attributes.position.needsUpdate = true; ghostMat.color.copy(COL.bg).lerp(COL.ink, .34 * ghost); ghostLine.visible = ghost > .01;
       capA.position.set(cur[0], cur[1], 0); capA.scale.setScalar(thick / 2);
-      const ex = cur[hi * 2], ey = cur[hi * 2 + 1];
-      capB.position.set(ex, ey, 0); capB.scale.setScalar(thick * (1.7 + Math.sin(t * 3) * .12 + pull * 2.2));
-      dotPos.set((ex + W / 2) / W, (ey + H / 2) / H);
+      const ex = cur[hi * 2], ey = cur[hi * 2 + 1]; let bx = ex, by = ey;
+      CST.forEach(st => { const sc = st.app && SCENE[st.sh]; if (sc && sc.dotAt) { const w = 1 - sstep(STEP * .3, STEP * .7, Math.abs(uc - st.p)), d = sc.dotAt(st); bx = lerp(bx, d[0], w); by = lerp(by, d[1], w); } });   // a scene may seat the dot where its symbol has it
+      capE.position.set(ex, ey, 0); capE.scale.setScalar(thick / 2);
+      capB.position.set(bx, by, 0); capB.scale.setScalar(thick * (1.7 + Math.sin(t * 3) * .12 + pull * 2.2));
+      dotPos.set((bx + W / 2) / W, (by + H / 2) / H);
       arc[0] = 0; for (let i = 1; i < N; i++) arc[i] = arc[i - 1] + Math.hypot(cur[i * 2] - cur[i * 2 - 2], cur[i * 2 + 1] - cur[i * 2 - 1]);
       // where the line is, column by column: this is what text is rubbed out against
       envY.fill(1e9);
@@ -355,18 +469,20 @@ const REGION = navigator.language || LANG;                            // words f
     const UP = { uVel: { value: 0 }, uBg: { value: COL.pbg }, uTime: { value: 0 } };
     const loader = new THREE.TextureLoader(), pgeo = new THREE.PlaneGeometry(1, 1, 24, 24);
     /* ---- series layouts: each one decides where its photos hang and how they move through its stretch of scroll (q runs 0 to 1) ---- */
+    // photos are sized by the shape of the window, not its width: a tall desktop window gets the portrait arrangement, like a phone
+    let land = W > H;
     const LAYOUT = {
       wave: { hold: true,                                                 // a strip that rolls past like a swell; it only slides as far as needed to show every print in full
-        put(se, it, j, n, q, t) { const gap = wide ? 2.75 : 1.95, w = it.h * it.asp, vis = 2 * 7.5 * TAN * camP.aspect * .84, over = Math.max(wide ? 1.2 : 0, (n - 1) * gap + w - vis);
+        put(se, it, j, n, q, t) { const gap = land ? 2.75 : 1.95, w = it.h * it.asp, vis = 2 * 7.5 * TAN * camP.aspect * .84, over = Math.max(land ? 1.2 : 0, (n - 1) * gap + w - vis);
           const x = (j - (n - 1) / 2) * gap - (sstep(.22, .6, q) - .5) * over, ph = x * .7 + t * .8;
-          it.h = wide ? 3 : 2.3; it.pos.set(x, Math.sin(ph) * .32 + (wide ? .15 : .6), se.zc - 7.5 - Math.abs(x) * .12); it.rot.set(0, -x * .07, Math.cos(ph) * .1); } },
+          it.h = land ? 3 : 2.3; it.pos.set(x, Math.sin(ph) * .32 + (land ? .45 : .6), se.zc - 7.5 - Math.abs(x) * .12); it.rot.set(0, -x * .07, Math.cos(ph) * .1); } },
       tunnel: { hold: false, len: n => (n - 1) * 5.5,                       // photos on both walls, you fly through; wide prints stand further out so nothing is clipped
-        put(se, it, j, n) { const side = j % 2 ? 1 : -1, ry = wide ? .5 : .28; it.h = (wide ? 3 : 2) * (it.asp > 1 ? .72 : 1);
-          it.pos.set(side * ((wide ? 1.15 : .45) + it.h * it.asp * .5 * Math.cos(ry)), ((j % 3) - 1) * .3, se.zc - 6 - j * 5.5); it.rot.set(0, -side * ry, 0); } },
+        put(se, it, j, n) { const side = j % 2 ? 1 : -1, ry = land ? .5 : .28; it.h = (land ? 3 : 2) * (it.asp > 1 ? .72 : 1);
+          it.pos.set(side * ((land ? 1.15 : .45) + it.h * it.asp * .5 * Math.cos(ry)), ((j % 3) - 1) * .3, se.zc - 6 - j * 5.5); it.rot.set(0, -side * ry, 0); } },
       stack: { hold: true,                                                // a pile; each scroll step throws the top print aside, the last one stays
         put(se, it, j, n, q) { const dir = j % 2 ? 1 : -1, a0 = .24 + j * (.36 / Math.max(1, n - 1)), f = j < n - 1 ? sstep(a0, a0 + .13, q) : 0, r = Math.sin(j * 12.9898) * .07;
-          it.bend = 0; it.h = (wide ? 3.3 : 2.5) * (it.asp > 1 ? .7 : 1);
-          it.pos.set(dir * f * (wide ? 9.5 : 5), (wide ? .25 : .7) + f * 1.1, se.zc - 7.5 - j * .22 + f * 1.4); it.rot.set(0, dir * f * .5, r + dir * f * .8);
+          it.bend = 0; it.h = (land ? 3.3 : 2.5) * (it.asp > 1 ? .7 : 1);
+          it.pos.set(dir * f * (land ? 9.5 : 5), (land ? .4 : .7) + f * 1.1, se.zc - 7.5 - j * .22 + f * 1.4); it.rot.set(0, dir * f * .5, r + dir * f * .8);
           it.capA = (1 - sstep(0, .5, f)) * (j > 0 ? sstep(a0 - .36 / Math.max(1, n - 1) + .06, a0 - .36 / Math.max(1, n - 1) + .13, q) : 1); } }
     };
     const photos = [], KZ = [[0, 7]]; let zc = -12.5;
@@ -379,15 +495,16 @@ const REGION = navigator.language || LANG;                            // words f
       se.shots.forEach((s, k) => {
         const tex = loader.load('/src/img/start/' + s[1] + '.jpg'); tex.minFilter = THREE.LinearFilter; tex.generateMipmaps = false;
         const m = new THREE.Mesh(pgeo, new THREE.ShaderMaterial({
-          uniforms: Object.assign({ uTex: { value: tex }, uHov: { value: 0 }, uBend: { value: 1 }, uSeed: { value: photos.length * 1.7 } }, UP),
+          uniforms: Object.assign({ uTex: { value: tex }, uHov: { value: 0 }, uBend: { value: 1 }, uSeed: { value: photos.length * 1.7 }, uNear: { value: L.hold ? 1 : 0 } }, UP),
           vertexShader: `uniform float uVel,uTime,uSeed,uHov,uBend; varying vec2 vUv; varying float vD;
             void main(){ vUv=uv; vec3 p=position; float w=sin(uv.y*3.1416)*sin(uv.x*3.1416);
               p.z+=(w*clamp(uVel,-1.0,1.0)*0.9 + sin(uv.x*4.0+uTime*1.2+uSeed)*0.04*(1.0-uHov))*uBend;
               vec4 mv=modelViewMatrix*vec4(p,1.0); vD=-mv.z; gl_Position=projectionMatrix*mv; }`,
-          fragmentShader: `uniform sampler2D uTex; uniform vec3 uBg; uniform float uVel,uHov; varying vec2 vUv; varying float vD;
+          fragmentShader: `uniform sampler2D uTex; uniform vec3 uBg; uniform float uVel,uHov,uNear; varying vec2 vUv; varying float vD;
             void main(){ vec2 uv=(vUv-0.5)*(1.0-uHov*0.06)+0.5; float s=clamp(uVel,-1.0,1.0)*0.03;
               vec3 c=vec3(texture2D(uTex,uv+vec2(0.0,s)).r, texture2D(uTex,uv).g, texture2D(uTex,uv-vec2(0.0,s)).b);
               float g=dot(c,vec3(0.3,0.59,0.11)); c=mix(vec3(g),c,0.8+uHov*0.2);
+              c=mix(c,uBg,uNear*(1.0-smoothstep(2.2,5.2,vD)));   // prints of a held series fade before the camera passes through them
               gl_FragColor=vec4(mix(c,uBg,smoothstep(10.0,24.0,vD)*0.95),1.0); }`
         }));
         const it = { m, i: photos.length, name: s[0], asp: s[2], sc: 1, pos: new THREE.Vector3(), rot: new THREE.Euler(), h: 3, capA: 1 };
@@ -402,12 +519,14 @@ const REGION = navigator.language || LANG;                            // words f
     };
     Object.values(P).forEach(m => sP.add(m)); P.end.userData.o = 0;
     const layoutP = () => {
-      const asp = W / H, big = asp > 1; camP.aspect = asp; camP.updateProjectionMatrix();
+      const asp = W / H, big = asp > 1; land = big; camP.aspect = asp; camP.updateProjectionMatrix();
       const vw = 2 * 7 * TAN * asp, th = fitW(P.title, vw * (big ? .56 : .9), 0, 0, 0); fitW(P.sub, vw * (big ? .07 : .2), 0, th * .5, 0);
       SERIES.forEach(se => {
-        const hold = LAYOUT[se.layout].hold, tw = vw * (big ? .3 : .62) * clamp(se.name.length / 5, .8, big ? 1.3 : 1.05);
-        const h = fitW(se.title, tw, 0, hold ? (big ? -1.6 : -1.7) : 0, se.zc - (hold ? 5.9 : 4.5));
-        fitW(se.sub, vw * (big ? .13 : .4), 0, se.title.position.y - h * .44, se.title.position.z);
+        // under a held series the title stands below the prints and keeps its line inside the frame, in any window: it is no taller than 1.2 (1 upright), and its line ends .25 above the bottom edge
+        const hold = LAYOUT[se.layout].hold, ar = se.title.userData.w / se.title.userData.h, tw = Math.min(vw * (big ? .3 : .62) * clamp(se.name.length / 5, .8, big ? 1.3 : 1.05), ar * (big ? 1.2 : 1));
+        const sw = vw * (big ? .13 : .4), sh = sw * se.sub.userData.h / se.sub.userData.w, th = tw / ar, half = 5.9 * TAN;
+        const h = fitW(se.title, tw, 0, hold ? -half + .25 + sh / 2 + th * .44 : big ? 0 : 1.45, se.zc - (hold ? 5.9 : 4.5));   // upright, a tunnel title floats above the prints, which stand close to the middle
+        fitW(se.sub, sw, 0, se.title.position.y - h * .44, se.title.position.z);
       });
       const vw2 = 2 * 7.5 * TAN * asp, eh = fitW(P.end, vw2 * (big ? .5 : .86), 0, big ? 1.5 : 1.75, ZE);
     };
@@ -426,7 +545,8 @@ const REGION = navigator.language || LANG;                            // words f
           it.m.position.copy(it.pos); it.m.position.y += Math.sin(t * .7 + it.i * 1.3) * .04; it.m.rotation.copy(it.rot); it.m.scale.set(it.h * it.asp * it.sc, it.h * it.sc, 1);
           const d = z - it.pos.z; it.cap.rotation.copy(it.rot); fitW(it.cap, Math.min(it.h * it.asp * .5, it.cap.userData.w / 190), it.pos.x, it.pos.y - it.h / 2 - .15, it.pos.z + .01);
           op(it.cap, (1 - sstep(8, 14, d)) * sstep(.6, 2, d) * it.capA); });
-        const d = z - se.title.position.z, a = (1 - sstep(8.5, 14, d)) * sstep(.4, 2.2, d); op(se.title, a); op(se.sub, a * sstep(3, 5, d)); });
+        // a held title is gone before the camera moves up to it, so it never grows past the frame; a tunnel title is flown through
+        const d = z - se.title.position.z, a = (1 - sstep(8.5, 14, d)) * (LAYOUT[se.layout].hold ? sstep(3.4, 5.4, d) : sstep(.4, 2.2, d)); op(se.title, a); op(se.sub, a * sstep(3.6, 5.4, d)); });
       op(P.title, sstep(.3, 2.2, z)); op(P.sub, sstep(4.5, 6.5, z));
       const dE = z - ZE; op(P.end, 1 - sstep(9, 17, dE));
     };
@@ -478,19 +598,30 @@ const REGION = navigator.language || LANG;                            // words f
       showMode(); });
     const atOrbit = () => ORB && mixNow < .5 && Math.abs(uc - ORB.p) < STEP * .3;
     const atBal = () => BAL && mixNow < .5 && Math.abs(uc - BAL.p) < STEP * .3;
-    const poke = (x, y) => { pluck(x, y, 1000); if (atOrbit()) ORB.add(); if (atBal()) BAL.drop(x - W / 2 < BAL.l.c[0] ? -1 : 1); };
-    // a station opens into its own page out of the accent dot; on the real site this is a real address
-    const detail = $('#detail'), din = $('#d-in'), openBtn = $('#open'), openL = $('#open-l'); let shown = -1, dOpen = false, dx = 0, dy = 0;
-    const fill = a => { din.innerHTML = `<div class="d-bar"><button class="back" id="back">← ${txt('detail.back')}</button><span class="mono">${a.kind}</span></div>`
-      + `<header class="d-head">${a.icon || ''}<h2>${a.name}</h2></header><p class="d-lead">${a.desc}</p>`
-      + `<ul class="d-facts">${a.facts.map(f => `<li>${f}</li>`).join('')}</ul>`
-      + `<p class="d-legal mono">${a.legal.concat([[txt('legal.imprint.label'), txt('legal.imprint.path')]]).map(l => `<a href="${l[1]}">${l[0]}</a>`).join(' · ')}</p>`; };
-    const openDetail = () => { if (shown < 0 || dOpen) return; dOpen = true; fill(APPS[shown]); dx = dotPos.x * W; dy = (1 - dotPos.y) * H; const R = Math.hypot(Math.max(dx, W - dx), Math.max(dy, H - dy)) + 40;
-      detail.classList.add('on'); detail.scrollTop = 0; detail.setAttribute('aria-hidden', 'false'); root.style.overflow = 'hidden';
-      gsap.fromTo(detail, { clipPath: `circle(0px at ${dx}px ${dy}px)` }, { clipPath: `circle(${R}px at ${dx}px ${dy}px)`, duration: .95, ease: 'expo.inOut' });
-      gsap.fromTo(din.children, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .9, ease: 'expo.out', stagger: .07, delay: .32 }); setTimeout(() => { const b = $('#back'); if (b) b.focus(); }, 80); };
-    const closeDetail = () => { if (!dOpen) return; gsap.to(detail, { clipPath: `circle(0px at ${dx}px ${dy}px)`, duration: .7, ease: 'expo.inOut', onComplete: () => { detail.classList.remove('on'); detail.setAttribute('aria-hidden', 'true'); root.style.overflow = ''; dOpen = false; openBtn.focus(); } }); };
-    openBtn.addEventListener('click', openDetail); detail.addEventListener('click', e => { if (e.target.closest('#back')) closeDetail(); }); addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+    const atRoute = () => ROU && mixNow < .5 && Math.abs(uc - ROU.p) < STEP * .3;
+    const poke = (x, y) => { pluck(x, y, 1000); if (atOrbit()) ORB.add(); if (atBal()) BAL.drop(x - W / 2 < BAL.l.c[0] ? -1 : 1); if (atRoute()) ROU.tap(x, y); };
+    // a station opens into its own page out of the accent dot, and closes back into it. The page has its own address (/1000days):
+    // the browser's back button closes it, and a visit straight to the address finds it open with its station waiting behind it
+    let shown = -1, dOpen = false, dIdx = -1, pushed = false, closing = false;
+    const station = i => { const p = (i + 1) * STEP * .44 / ULAST, o = root.style.overflow; root.style.overflow = ''; scrollTo(0, (root.scrollHeight - innerHeight) * p); root.style.overflow = o; pT = pS = p; vel = 0; skip = true; };
+    const reach = () => { const dx = dotPos.x * W, dy = (1 - dotPos.y) * H; return [dx, dy, Math.hypot(Math.max(dx, W - dx), Math.max(dy, H - dy)) + 40]; };
+    const openDetail = (i, how) => { if (i < 0 || dOpen) return; dOpen = true; dIdx = i; showDetail(i);
+      if (how === 'click') { history.pushState({ app: APPS[i].id }, '', BASE + APPS[i].id); pushed = true; }
+      if (how === 'direct') gsap.set(detail, { clipPath: 'none' });
+      else { const [dx, dy, R] = reach(); gsap.fromTo(detail, { clipPath: `circle(0px at ${dx}px ${dy}px)` }, { clipPath: `circle(${R}px at ${dx}px ${dy}px)`, duration: .95, ease: 'expo.inOut' });
+        gsap.fromTo(din.children, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .9, ease: 'expo.out', stagger: .07, delay: .32 }); }
+      setTimeout(() => { const b = $('#back'); if (b) b.focus({ preventScroll: true }); }, 80); };
+    const closeDetail = how => { if (!dOpen || closing) return;
+      if (how !== 'pop' && pushed) return history.back();                  // opened from this page: walk back, popstate closes it
+      if (how !== 'pop') history.replaceState(null, '', BASE);              // came straight to the address: the start page takes its place
+      closing = true; pushed = false; markPage(-1); const [dx, dy, R] = reach();
+      gsap.fromTo(detail, { clipPath: `circle(${R}px at ${dx}px ${dy}px)` }, { clipPath: `circle(0px at ${dx}px ${dy}px)`, duration: .7, ease: 'expo.inOut', onComplete: () => {
+        detail.classList.remove('on'); detail.setAttribute('aria-hidden', 'true'); root.style.overflow = ''; dOpen = false; closing = false; dIdx = -1; openBtn.focus({ preventScroll: true }); } }); };
+    addEventListener('popstate', () => { const i = appAt();
+      if (i >= 0 && !dOpen) { station(i); pushed = true; requestAnimationFrame(() => requestAnimationFrame(() => openDetail(i, 'pop'))); }   // forward again: back to the station, then open
+      else if (i < 0 && dOpen) closeDetail('pop');
+      else if (i >= 0 && i !== dIdx) { dIdx = i; showDetail(i); } });
+    openBtn.addEventListener('click', () => openDetail(shown, 'click')); detail.addEventListener('click', e => { if (e.target.closest('#back')) closeDetail('ui'); }); addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail('ui'); });
     const holdStart = (x, y) => { UC.uHPos.value.set(x / W, 1 - y / H); if (hold.tw) hold.tw.kill(); hold.tw = gsap.to(hold, { v: 1, duration: 1.1 * (1 - hold.v) + .05, delay: .16, ease: 'power2.in', onComplete: () => { if (!looked) { looked = true; ringL.textContent = ''; } } }); };
     const holdEnd = () => { clearTimeout(hold.timer); hold.touch = false; if (hold.v <= 0 && !hold.tw) return; if (hold.tw) hold.tw.kill(); hold.tw = gsap.to(hold, { v: 0, duration: .5, ease: 'power3.out', onComplete: () => { hold.tw = null; } }); };
     canvas.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse' || e.button !== 0) return; e.preventDefault(); const w = onTitle(e.clientX, e.clientY); if (w) return goWorld(w, e.clientX, e.clientY); poke(e.clientX, e.clientY); holdStart(e.clientX, e.clientY); });
@@ -552,9 +683,10 @@ const REGION = navigator.language || LANG;                            // words f
       nav.forEach(n => n.setAttribute('aria-current', String(n.dataset.go === (atEnd ? 'e' : inP ? 'p' : 'c'))));
       ring.style.transform = `translate(${ptr.sx}px,${ptr.sy}px) scale(${1 + hold.v * .35})`; ringFg.style.strokeDashoffset = 1 - hold.v;
       ringL.textContent = hover >= 0 ? photos[hover].name : '';
-      canvas.style.cursor = hover >= 0 || atOrbit() || atBal() || onTitle(ptr.x, ptr.y) ? 'pointer' : 'default';
+      canvas.style.cursor = hover >= 0 || atOrbit() || atBal() || atRoute() || onTitle(ptr.x, ptr.y) ? 'pointer' : 'default';
     };
     if (location.hash === '#kontakt') scrollTo(0, root.scrollHeight);   // a link from the legal notice leads straight to the form
+    if (early >= 0) { station(early); openDetail(early, 'direct'); }
     requestAnimationFrame(frame);
   };
 

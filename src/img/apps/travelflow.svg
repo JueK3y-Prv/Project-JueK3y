@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="TravelFlow">
+  <!-- Zeichen „Gefaltete Karte mit Route“, nach dem App-Symbol nachgezeichnet: Grund #0F0F10, weiße Linien, graue Falze, Route im Akzent. -->
+  <rect width="512" height="512" fill="#0F0F10"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M208 153 V333 M304 178 V358" stroke="#929293" stroke-width="12"/>
+    <path d="M131 179 L208 153 L304 178 L380 153 V333 L304 358 L208 333 L131 358 Z" stroke="#ffffff" stroke-width="18"/>
+    <path d="M165 307 C178 293 205 284 232 276 C258 268 262 230 290 219 C304 214 318 220 337 220" stroke="#FF6B00" stroke-width="17"/>
+  </g>
+  <circle cx="337" cy="220" r="18" fill="#FF6B00"/>
+</svg>

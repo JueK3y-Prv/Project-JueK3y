@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Saldo">
+  <!-- Zeichen „Waage im Gleichgewicht“ (Saldo heißt Ausgleich), Studio-Standard BR-05: Grund #0F0F10, weiße Linien,
+       Strichstärke 28, ein Akzent in der Markenfarbe. Entscheidung: docs/entscheidungen.md P57. -->
+  <rect width="512" height="512" fill="#0F0F10"/>
+  <g fill="none" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 156 V352 M204 352 H308" stroke="#ffffff"/>
+    <path d="M152 184 L112 292 M152 184 L192 292 M112 292 A40 40 0 0 0 192 292" stroke="#ffffff"/>
+    <path d="M360 184 L320 292 M360 184 L400 292 M320 292 A40 40 0 0 0 400 292" stroke="#ffffff"/>
+    <path d="M152 184 H360" stroke="#8e82f0"/>
+  </g>
+</svg>

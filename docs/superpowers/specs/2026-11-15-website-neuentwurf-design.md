@@ -1,6 +1,6 @@
 # juek3y.com · Neuentwurf der Website
 
-Stand 2026-11-15 · Status: Entwurf ist als Startseite live. Stil und Programm liegen unter `src/`, Deutsch und Englisch sind eingebaut, die Rechtstexte sind umgezogen. Offen bleibt, was in Abschnitt 6 steht.
+Stand 2026-11-18 · Status: Entwurf ist als Startseite live. Stil und Programm liegen unter `src/`, Deutsch und Englisch sind eingebaut, die Rechtstexte sind umgezogen. Offen bleibt, was in Abschnitt 6 steht.
 
 Dieses Dokument hält fest, was in der Entwurfsphase entschieden wurde. Es soll reichen, um den Umbau zu planen, ohne die Unterhaltung zu kennen, in der es entstand.
 
@@ -80,9 +80,17 @@ Es gibt genau zwei Weltwechsel: hinein in die Fotografie, am Schluss zurück.
 - **Touch:** Tippen und Scrollen öffnen nie die Linse. Kurz tippen stupst die Szene an, nur langes ruhiges Drücken öffnet den Blick hinüber.
 - **Auftritt je Station.** Jede App und jede Serie hat eine eigene Szene. Stand:
   - 1000 Days: Umlaufbahn aus dem App-Symbol, Planeten, Tageszähler, Klick fügt einen Planeten hinzu. **Gilt als gelungen und als Maßstab.**
-  - TravelFlow (Route, Punkt zieht den Namen) und Saldo (Waage): **Platzhalter**, siehe Abschnitt 6.
-  - Serien: Welle (zieht seitlich), Tunnel (Durchflug), Stapel (Bilder werden weggeworfen). Das letzte Bild ist immer ganz zu sehen, bevor es weitergeht.
-- **Unterseiten.** An jeder App-Station steht „… ansehen“. Die Unterseite öffnet sich aus dem Akzentpunkt. Sie ist eine normale Seite mit eigener Adresse (`/1000days`), Zurück-Knopf des Browsers funktioniert.
+  - TravelFlow: Die gefaltete Karte aus dem Symbol faltet sich beim Heranscrollen auf und zeichnet sich, dann fährt der Punkt (Akzent `#FF6B00`) die Route und zieht den Namen. Der Kartenrand weicht der Maus aus wie die Linie; ein Klick schüttelt die Karte und schickt den Punkt noch einmal los. Der letzte Stopp ist der Punkt selbst. Beschriftungen stehen nur dort, wo die Linie über ihnen bleibt, und rücken vor oder hinter einen Falz; am Handy sind sie zweizeilig. Wo sich ein Falz nicht vermeiden lässt (Buchstaben des Namens), blendet er weich aus statt abzubrechen.
+  - Saldo: die Waage aus dem Symbol. Der Balken ist die Linie und kippt mit der Last. Die Schalen hängen an den lebendigen Enden der Linie und schwingen: wenn der Balken kippt, wenn die Maus sie anschubst, wenn eine Münze landet. Einnahmen (Scheiben) und Ausgaben (Ringe) zählen erst, wenn sie in der Schale liegen; dann springt der Betrag. Außer Sicht wird die Waage geleert, jeder Besuch füllt sie neu; ein Klick auf eine volle Schale leert sie. Der Akzentpunkt (`#8E82F0`) sitzt oben auf der Säule, die Linie bleibt in Textfarbe.
+  - Was hinter der Linie liegt (Karte, Waage, Restroute), wird mit dem Grund gemischt statt durchscheinend gezeichnet, damit Linie, Ringe und Punkt immer obenauf liegen.
+  - Serien: Welle (zieht seitlich), Tunnel (Durchflug), Stapel (Bilder werden weggeworfen). Das letzte Bild ist immer ganz zu sehen, bevor es weitergeht. Die Anordnung richtet sich nach dem Seitenverhältnis des Fensters, nicht nach seiner Breite: Ein hohes Fenster am Desktop bekommt die Hochkant-Anordnung. Der Titel einer stehenden Serie (Welle, Stapel) steht unter den Bildunterschriften, seine Unterzeile bleibt in jedem Fenster im Bild; er und die Bilder verblassen, bevor die Kamera sie erreicht. Im Hochformat schwebt der Tunnel-Titel über den Bildern.
+- **Unterseiten.** An jeder App-Station steht „… ansehen“. Die Unterseite öffnet sich aus dem Akzentpunkt und hat eine eigene Adresse (`/1000days`, `/en/1000days`). Gebaut ist sie als Ebene über der Startseite, nicht als eigener Seitenwechsel, damit der Übergang erhalten bleibt (Entscheidung 2026-11-18, „Variante A“):
+  - Öffnen setzt die Adresse, der Zurück-Knopf des Browsers und „Zurück“ auf der Seite schließen sie mit derselben Bewegung, Vor öffnet sie wieder.
+  - Netlify liefert für `/1000days` die Startseite aus (`netlify.toml`). Sie öffnet die Unterseite sofort und stellt die Station dahinter bereit; „Zurück“ schließt dann zur Station.
+  - Titel, Sprachschalter, kanonische Adresse und Beschreibung folgen der offenen Unterseite. Suchmaschinen sehen im HTML trotzdem die Startseite; das ist der bewusste Preis gegenüber einer eigenen Datei je App (Variante B).
+  - Die Unterseite zeigt das App-Symbol (`src/img/apps/`), Stand und, wenn vorhanden, einen Knopf zum Play Store.
+- **Stand einer App** steht hinter ihrer Art: „App · Reisen · Beta“, „App · Gewohnheiten · Erhältlich“. Er hängt nicht an der Gestaltung der Station.
+- **Name auf der Linie oder im Text.** Hängt an der Form der Szene, nicht am Stand: Hat die Linie ein freies Stück (Route), fährt der Name darauf mit. Füllt das Symbol die Linie (Waage, Umlaufbahn), steht der Name groß im Text daneben.
 - **Kontakt.** Formular (Name, E-Mail, Nachricht) plus sichtbare Adresse `hello@juek3y.com`. Die Linie zeichnet sich unter das aktive Feld. Fehler stehen am Feld.
 
 ### Sprache, Farbe, Recht
@@ -123,7 +131,7 @@ Jeder Eintrag hat `startseite: ja/nein` und `reihenfolge`. Stationen, Scroll-Lä
 - **Regel:** Der Auftritt entsteht aus dem App-Symbol. 1000 Days zeigt, wie: Die Linie wird zur Form des Symbols, der Akzentpunkt sitzt dort, wo er im Symbol sitzt, dazu eine Bewegung, die zum Zweck der App passt.
 - **Standard-Auftritt „Zeichen“ (Vorschlag):** Jede App liefert ihr Symbol als einen einzigen Linienzug (SVG-Pfad) und die Stelle des Akzentpunkts. Die Linie formt sich zu diesem Zeichen. Das braucht keine Programmierarbeit und gilt für jede neue App. Die App-Symbole (Liniengrafik mit einem Akzent) passen genau dazu.
 - **Eigener Auftritt** nur für ausgewählte Apps, als abgeschlossener Baustein mit fester Schnittstelle: Form der Linie, Lage, was beim Ankommen passiert, was ein Klick tut.
-- **Wenn die Logos von Saldo und TravelFlow feststehen:** Pfad und Akzentfarbe eintragen, Standard-Auftritt prüfen, dann entscheiden, ob ein eigener Auftritt lohnt.
+- **Saldo und TravelFlow** haben seit 2026-11-18 eigene Auftritte nach ihren Symbolen (siehe Abschnitt 4).
 
 ### Anordnungen der Serien
 
@@ -135,9 +143,9 @@ Die Seite besteht aus fertigen Dateien. Inhalte ändern heißt Datei ändern und
 
 ## 6 · Offen
 
-1. **Saldo und TravelFlow:** Auftritte sind Platzhalter. Saldo ist laut JueK3y „viel mehr als eine Waage“. Was die App ausmacht, ist noch nicht besprochen. Beides wartet auf die Logos.
+1. **Saldo und TravelFlow:** Auftritte folgen jetzt den Symbolen. Saldo ist laut JueK3y „viel mehr als eine Waage“; was die App ausmacht, ist für Texte und Unterseite noch nicht besprochen. Der Play-Store-Link von TravelFlow (`com.juek3y.travelflow`) ist angenommen, nicht geprüft.
 2. **Texte:** Alle Texte im Entwurf sind Platzhalter. Reisestopps und Geldbeträge sind erfunden. Serien-Namen und Bildtitel stammen nicht von JueK3y.
-3. **Akzentfarben** von TravelFlow und Saldo sind unbekannt. 1000 Days: `#F76107`.
+3. **Akzentfarben:** erledigt. TravelFlow `#FF6B00` (aus dem Symbol gemessen), Saldo `#8E82F0`, 1000 Days `#F76107`. TravelFlow und 1000 Days sind beide orange, Saldo steht dazwischen.
 4. **Inhalt der Unterseiten** (Live-Demo von Saldo, Details zu TravelFlow, Fotosessions) und ihre Übergänge im Detail.
 5. **Englische Texte** und der Sprachschalter: erledigt. Die englischen Texte sind Übersetzungen der Platzhalter und warten wie diese auf JueK3ys eigene Worte.
 6. **Handy neigen** bewegt den Raum: gewünscht, im Entwurf nicht möglich gewesen, braucht auf iOS eine Erlaubnis.

@@ -34,6 +34,11 @@ for (const s of SERIEN) {
   for (const [file] of s.shots) if (!(`serien.${s.id}.shots.${file}` in D)) errors.push(`Text fehlt: serien.${s.id}.shots.${file}`);
 }
 
+// jede App hat ihre Adresse (/saldo, /en/saldo); Netlify muss sie auf die Startseite leiten
+const toml = readFileSync(new URL('../netlify.toml', import.meta.url), 'utf8');
+for (const a of APPS) for (const pre of ['', '/en']) if (!toml.includes(`from = "${pre}/${a.id}"`)) errors.push(`Adresse fehlt in netlify.toml: ${pre}/${a.id}`);
+for (const a of APPS) if (a.status && !(`status.${a.status}` in D)) errors.push(`Text fehlt: status.${a.status}`);
+
 // was Seite und Programm verlangen
 const root = new URL('..', import.meta.url);
 const used = new Set();

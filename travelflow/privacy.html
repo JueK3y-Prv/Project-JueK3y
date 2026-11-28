@@ -110,7 +110,7 @@
     <p class="kind">TravelFlow · an app by JueK3y</p>
     <h1>Privacy Policy</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="stand">Last updated: <time datetime="2026-11-26">26 November 2026</time></p>
+    <p class="stand">Last updated: <time datetime="2026-11-28">28 November 2026</time></p>
 
     <nav class="toc" aria-labelledby="toc-titel">
       <h2 id="toc-titel">Contents</h2>
@@ -176,7 +176,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Data</dt><dd>language, appearance (light, dark, system), reminders and daily briefing with time, protection mode, travel alerts on or off, preferred navigation app, whether you granted location access, home screen layout.</dd>
 <dt>Purpose</dt><dd>showing the app the way you set it up.</dd>
 <dt>Legal basis</dt><dd>no transmission; storage under Section 25(2) no. 2 TDDDG (section <a href="#storage-of-and-access-to-information-on-the-device-section-25-tdddg">5</a>).</dd>
-<dt>Storage location</dt><dd>on the device only. None of it is sent, not even the language.</dd>
+<dt>Storage location</dt><dd>on the device only. Only the language is sent, and only indirectly: as the order of languages in place search (<a href="#place-search">4.9</a>) and through the choice of source for travel advisories (<a href="#travel-alerts">4.13</a>).</dd>
 <dt>Retention</dt><dd>until you change the setting or uninstall the app.</dd>
 </dl>
 <h3 id="importing-a-booking-or-plan">4.3 Importing a booking or plan</h3>
@@ -223,14 +223,14 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="my-location">4.8 My location</h3>
 <dl class="fakten">
 <dt>Data</dt><dd>your device's position.</dd>
-<dt>Purpose</dt><dd>showing your position as a dot on the map and centring the map on it. If you have already granted access, the app also suggests your outbound and return journey from your location when you create a trip – on the device only.</dd>
+<dt>Purpose</dt><dd>showing your position as a dot on the map and centering the map on it. If you have already granted access, the app also suggests your outbound and return journey from your location when you create a trip – on the device only.</dd>
 <dt>How it works</dt><dd>The app only asks when you tap &quot;My location&quot; on the map. A sentence explains why first. Only then does Android's prompt appear.</dd>
 <dt>Legal basis</dt><dd>Art. 6(1)(b) GDPR.</dd>
-<dt>Storage location</dt><dd>The position is only displayed, not stored and not sent. The app only remembers whether you granted access. If you centre the map on yourself, it loads the map tiles for that area from OpenFreeMap (<a href="#map">4.7</a>), which roughly reveals where you are.</dd>
+<dt>Storage location</dt><dd>The position is only displayed, not stored and not sent. The app only remembers whether you granted access. If you center the map on yourself, it loads the map tiles for that area from OpenFreeMap (<a href="#map">4.7</a>), which roughly reveals where you are.</dd>
 </dl>
 <h3 id="place-search">4.9 Place search</h3>
 <dl class="fakten">
-<dt>Data</dt><dd>your search term, a fixed language setting (German and English) and a rough search area around the current stop; if you tap the map, the tapped coordinates. While you type, the app fetches suggestions after a short pause; for this, the term typed so far, the language and a reference point of the trip rounded to about 10 km (not your location) are sent. The full search only runs when you trigger it (enter key or &quot;Search&quot;).</dd>
+<dt>Data</dt><dd>your search term, a fixed language setting (German and English) and a rough search area around the current stop (center rounded to about 10 km); if you tap the map, the tapped coordinates. While you type, the app fetches suggestions after a short pause; for this, the term typed so far, the language and a reference point of the trip rounded to about 10 km (not your location) are sent. The full search only runs when you trigger it (enter key or &quot;Search&quot;).</dd>
 <dt>Purpose</dt><dd>finding places and putting them on the map.</dd>
 <dt>Legal basis</dt><dd>Art. 6(1)(b) GDPR.</dd>
 <dt>Recipient</dt><dd>my relay service (section <a href="#juek3y-servers">8</a>), which only passes the search term or coordinates on – suggestions while typing to komoot, the full search to the OpenStreetMap Foundation, in both cases without your IP address (section <a href="#place-search-photon-by-komoot-openstreetmap-nominatim">7.2</a>).</dd>
@@ -309,7 +309,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dl class="fakten">
 <dt>What for</dt><dd>Your position on the map, &quot;My location&quot;, suggesting outbound and return journeys (<a href="#my-location">4.8</a>)</dd>
 <dt>Without it</dt><dd>No dot for you on the map; everything else works.</dd>
-<dt>Leaves the device</dt><dd>Not the position itself. When centring, the map loads the tiles for that area (<a href="#map">4.7</a>).</dd>
+<dt>Leaves the device</dt><dd>Not the position itself. When centering, the map loads the tiles for that area (<a href="#map">4.7</a>). Android determines the position through Google Play services. If &quot;Google Location Accuracy&quot; is on in Android, Android sends Wi-Fi and mobile network data to Google for this; Google is responsible for that (<a href="#google-play">7.11</a>).</dd>
 </dl>
 <h3 id="calendar-read-write">6.2 Calendar (read/write)</h3>
 <dl class="fakten">
@@ -348,7 +348,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <p>Every time content is loaded from the internet, the server necessarily receives your <strong>IP address</strong>, date and time and details of the app environment (e.g. the Android WebView user agent). Beyond that, only what is listed below is transmitted. All connections are encrypted via HTTPS.</p>
 <p>TravelFlow contains no analytics, tracking, advertising or crash reporting services and does not create usage profiles. The font ships with the app; no fonts are loaded from third parties.</p>
 <h3 id="map-openfreemap-openstreetmap">7.1 Map (OpenFreeMap, OpenStreetMap)</h3>
-<p>The map is built from map tiles by OpenFreeMap (Hyperknot Software Kft., Petőfi Sándor utca 48., 2724 Újlengyel, Hungary), based on OpenStreetMap data. When you view and move the map, the app loads the map style, the map fonts and the tiles for the visible area directly from OpenFreeMap. This shows which area you are looking at – and if you centre the map on your position, roughly where you are.</p>
+<p>The map is built from map tiles by OpenFreeMap (Hyperknot Software Kft., Petőfi Sándor utca 48., 2724 Újlengyel, Hungary), based on OpenStreetMap data. When you view and move the map, the app loads the map style, the map fonts and the tiles for the visible area directly from OpenFreeMap. This shows which area you are looking at – and if you center the map on your position, roughly where you are.</p>
 <p>OpenFreeMap sets no cookies, needs no key and, by its own account, keeps no IP addresses in its access logs. Only error logs may contain the IP address; they are deleted after 7 days, or after at most 30 days during an attack on the service. OpenFreeMap may use Cloudflare as a content delivery network (<a href="#transfers-to-third-countries">7.13</a>). Legal basis: Art. 6(1)(f) GDPR (<a href="#map">4.7</a>). Privacy notice: <a href="https://openfreemap.org/privacy/">openfreemap.org</a></p>
 <h3 id="place-search-photon-by-komoot-openstreetmap-nominatim">7.2 Place search (Photon by komoot, OpenStreetMap Nominatim)</h3>
 <p>My relay service (section <a href="#juek3y-servers">8</a>) only passes the search term or coordinates on – without your IP address:</p>
@@ -358,7 +358,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 </ul>
 <p>Both services are based on OpenStreetMap data. Legal basis: Art. 6(1)(b) GDPR (<a href="#place-search">4.9</a>).</p>
 <h3 id="flight-data-aviationstack-aerodatabox">7.3 Flight data (aviationstack, AeroDataBox)</h3>
-<p>My relay service (section <a href="#juek3y-servers">8</a>) queries flight times, terminal and status from a flight data provider – without your IP address. Only flight number and date are transmitted, i.e. no data that can be linked to you. Providers are aviationstack (apilayer Data Products GmbH, Vienna, Austria) and, as a fallback, AeroDataBox (British Columbia, Canada), reached via the RapidAPI marketplace. Legal basis: Art. 6(1)(b) GDPR (<a href="#flight-data">4.10</a>).</p>
+<p>My relay service (section <a href="#juek3y-servers">8</a>) queries flight times, terminal and status from a flight data provider – without your IP address. Only flight number and date are transmitted, i.e. no data that can be linked to you. Providers are aviationstack (apilayer Data Products GmbH, Vienna, Austria) and, as a fallback, AeroDataBox (British Columbia, Canada), reached via the RapidAPI marketplace (USA). RapidAPI also receives only flight number and date. Legal basis: Art. 6(1)(b) GDPR (<a href="#flight-data">4.10</a>).</p>
 <h3 id="place-photos-wikimedia">7.4 Place photos (Wikimedia)</h3>
 <p>For preview and background images, my relay service (section <a href="#juek3y-servers">8</a>) asks Wikimedia Commons, Wikipedia and Wikidata for a suitable, freely licensed image and loads it from there. The operator is the Wikimedia Foundation, Inc., 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA. Wikimedia only receives the name or ID of the place and the file name, not your IP address; this does not allow any conclusions about you. Legal basis: Art. 6(1)(f) GDPR (<a href="#place-photos">4.11</a>). Privacy notice: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></p>
 <h3 id="exchange-rates-frankfurter">7.5 Exchange rates (Frankfurter)</h3>
@@ -374,7 +374,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="google-maps-and-apple-maps">7.10 Google Maps and Apple Maps</h3>
 <p>Only when you tap &quot;Start navigation&quot; or have a place looked up in the maps app does Google Maps or Apple Maps open with the destination. From then on, that provider's privacy policy applies.</p>
 <h3 id="google-play">7.11 Google Play</h3>
-<p>TravelFlow is distributed via Google Play. Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, is independently responsible for download and updates. If you agreed in Android to share usage and diagnostics data with Google, Google provides me with aggregated statistics and crash reports that are not linked to you. Privacy policy: <a href="https://policies.google.com/privacy">policies.google.com</a></p>
+<p>TravelFlow is distributed via Google Play. When it starts, the app asks Google Play whether an update is available. Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, is independently responsible for download, updates and this check. If you agreed in Android to share usage and diagnostics data with Google, Google provides me with aggregated statistics and crash reports that are not linked to you. Privacy policy: <a href="https://policies.google.com/privacy">policies.google.com</a></p>
 <h3 id="email-google-workspace">7.12 Email (Google Workspace)</h3>
 <p>If you send me an email, it is stored in my mailbox at Google Workspace. The provider is Google Ireland Limited (address in <a href="#google-play">7.11</a>) as processor under Art. 28 GDPR. Google may transfer data to Google LLC in the USA (<a href="#transfers-to-third-countries">7.13</a>).</p>
 <h3 id="transfers-to-third-countries">7.13 Transfers to third countries</h3>
@@ -383,7 +383,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Netlify, Inc., Cloudflare, Inc. (also as OpenFreeMap's delivery network) and Google LLC (USA)</dt><dd>certified under the EU-U.S. Data Privacy Framework. The European Commission's adequacy decision therefore applies (Art. 45 GDPR).</dd>
 <dt>OpenStreetMap Foundation (United Kingdom)</dt><dd>the European Commission's adequacy decision (Art. 45 GDPR).</dd>
 <dt>Wikimedia Foundation and U.S. Department of State (USA)</dt><dd>receive no personal data; requests go through my relay service (<a href="#place-photos-wikimedia">7.4</a>, <a href="#travel-alerts-u-s-department-of-state">7.7</a>).</dd>
-<dt>AeroDataBox (Canada)</dt><dd>receives no personal data (<a href="#flight-data-aviationstack-aerodatabox">7.3</a>).</dd>
+<dt>AeroDataBox (Canada) and RapidAPI (USA)</dt><dd>receive no personal data (<a href="#flight-data-aviationstack-aerodatabox">7.3</a>).</dd>
 </dl>
 <p>In the USA, authorities may under certain circumstances access data without you having effective legal remedies against this.</p>
       </section>
@@ -403,7 +403,7 @@ Email: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <li><strong>Flight data</strong> is only kept, without any link to you, in the memory of the function instance.</li>
 <li><strong>Place photos, image credits and U.S. travel advisories</strong> are cached without any link to you: photos for up to 30 days, search results for up to 6 hours, advisories for up to 12 hours.</li>
 </ul>
-<p><strong>What is logged:</strong> The services themselves do not write IP addresses, search terms or flight numbers to logs, only error messages without personal data.</p>
+<p><strong>What is logged:</strong> The services themselves do not write IP addresses, search terms or flight numbers to logs, only error messages without personal data. In front of the services, Cloudflare protects them with rules against abuse. If Cloudflare blocks or slows down a request, Cloudflare records the IP address and the request (e.g. search term or flight number) in a security log that I can view in my account. How long it is kept depends on Cloudflare's plan; I only use it to fend off attacks.</p>
 <p>Legal basis: Art. 6(1)(b) GDPR for place search and flight data (<a href="#place-search">4.9</a>, <a href="#flight-data">4.10</a>), Art. 6(1)(f) for media (<a href="#place-photos">4.11</a>, <a href="#travel-alerts">4.13</a>); for rate limiting via the IP address, Art. 6(1)(f) GDPR. Legitimate interest: protecting the services from abuse.</p>
 <p><strong>Visiting this page:</strong> When you visit this page, Netlify processes technically necessary access data (IP address, time, page requested, browser type) to deliver the page and keep it secure. This page sets no cookies and loads no third-party content.</p>
       </section>
@@ -457,7 +457,7 @@ Promenade 18<br>
 
       <section id="version">
         <h2>Version</h2>
-<p>Last updated: 26 November 2026 · Version 1.7</p>
+<p>Last updated: 28 November 2026 · Version 1.9</p>
 <p>This policy is available in German and English. The German version is legally binding.</p>
       </section>
 

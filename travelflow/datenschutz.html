@@ -110,7 +110,7 @@
     <p class="kind">TravelFlow · eine App von JueK3y</p>
     <h1>Datenschutzerklärung</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="stand">Stand: <time datetime="2026-11-26">26.11.2026</time></p>
+    <p class="stand">Stand: <time datetime="2026-11-28">28.11.2026</time></p>
 
     <nav class="toc" aria-labelledby="toc-titel">
       <h2 id="toc-titel">Inhalt</h2>
@@ -170,7 +170,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Daten</dt><dd>Sprache, Darstellung (Hell, Dunkel, System), Erinnerungen und Tagesüberblick mit Uhrzeit, Schutzmodus, Reisehinweise an oder aus, bevorzugte Navigations-App, ob du die Standortfreigabe erteilt hast, Anordnung der Startseite.</dd>
 <dt>Zweck</dt><dd>die App so zeigen, wie du sie eingestellt hast.</dd>
 <dt>Rechtsgrundlage</dt><dd>keine Übermittlung; Speichern nach § 25 Abs. 2 Nr. 2 TDDDG (Abschnitt <a href="#speichern-und-zugriff-auf-dem-geraet-25-tdddg">4</a>).</dd>
-<dt>Speicherort</dt><dd>nur auf dem Gerät. Nichts davon wird gesendet, auch nicht die Sprache.</dd>
+<dt>Speicherort</dt><dd>nur auf dem Gerät. Gesendet wird davon nur die Sprache, und nur mittelbar: als Reihenfolge der Sprachen bei der Ortssuche (<a href="#ortssuche">3.9</a>) und über die Wahl der Quelle für Reisehinweise (<a href="#reisehinweise">3.13</a>).</dd>
 <dt>Speicherdauer</dt><dd>bis du die Einstellung änderst oder die App deinstallierst.</dd>
 </dl>
 <h3 id="buchung-oder-plan-uebernehmen">3.3 Buchung oder Plan übernehmen</h3>
@@ -224,7 +224,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 </dl>
 <h3 id="ortssuche">3.9 Ortssuche</h3>
 <dl class="fakten">
-<dt>Daten</dt><dd>dein Suchbegriff, eine feste Sprachangabe (Deutsch und Englisch) und ein grober Suchbereich um die aktuelle Station; tippst du auf die Karte, die angetippten Koordinaten. Beim Tippen holt die App nach einer kurzen Pause Vorschläge; dafür gehen der bisher getippte Begriff, die Sprache und ein auf etwa 10 km gerundeter Bezugspunkt der Reise (nicht dein Standort) hinaus. Die ausführliche Suche läuft erst, wenn du sie auslöst (Eingabetaste oder „Suchen“).</dd>
+<dt>Daten</dt><dd>dein Suchbegriff, eine feste Sprachangabe (Deutsch und Englisch) und ein grober Suchbereich um die aktuelle Station (Mittelpunkt auf etwa 10 km gerundet); tippst du auf die Karte, die angetippten Koordinaten. Beim Tippen holt die App nach einer kurzen Pause Vorschläge; dafür gehen der bisher getippte Begriff, die Sprache und ein auf etwa 10 km gerundeter Bezugspunkt der Reise (nicht dein Standort) hinaus. Die ausführliche Suche läuft erst, wenn du sie auslöst (Eingabetaste oder „Suchen“).</dd>
 <dt>Zweck</dt><dd>Orte finden und auf die Karte setzen.</dd>
 <dt>Rechtsgrundlage</dt><dd>Art. 6 Abs. 1 lit. b DSGVO.</dd>
 <dt>Empfänger</dt><dd>mein Vermittlungsdienst (Abschnitt <a href="#server-von-juek3y">7</a>), der nur Suchbegriff bzw. Koordinaten weitergibt – Vorschläge beim Tippen an komoot, die ausführliche Suche an die OpenStreetMap Foundation, jeweils ohne deine IP-Adresse (Abschnitt <a href="#ortssuche-photon-von-komoot-openstreetmap-nominatim">6.2</a>).</dd>
@@ -303,7 +303,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dl class="fakten">
 <dt>Wofür</dt><dd>Deine Position auf der Karte, „Mein Standort“, Vorschlag für An- und Rückreise (<a href="#mein-standort">3.8</a>)</dd>
 <dt>Ohne sie</dt><dd>Kein Punkt für dich auf der Karte; alles andere geht.</dd>
-<dt>Verlässt das Gerät</dt><dd>Die Position selbst nicht. Beim Zentrieren lädt die Karte die Kacheln dieses Ausschnitts (<a href="#karte">3.7</a>).</dd>
+<dt>Verlässt das Gerät</dt><dd>Die Position selbst nicht. Beim Zentrieren lädt die Karte die Kacheln dieses Ausschnitts (<a href="#karte">3.7</a>). Die Ortung selbst übernimmt Android über die Google-Play-Dienste. Ist in Android „Google-Standortgenauigkeit“ eingeschaltet, sendet Android dafür WLAN- und Mobilfunkdaten an Google; dafür ist Google verantwortlich (<a href="#google-play">6.11</a>).</dd>
 </dl>
 <h3 id="kalender-lesen-schreiben">5.2 Kalender (lesen/schreiben)</h3>
 <dl class="fakten">
@@ -352,7 +352,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 </ul>
 <p>Beide Dienste beruhen auf Daten von OpenStreetMap. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (<a href="#ortssuche">3.9</a>).</p>
 <h3 id="flugdaten-aviationstack-aerodatabox">6.3 Flugdaten (aviationstack, AeroDataBox)</h3>
-<p>Mein Vermittlungsdienst (Abschnitt <a href="#server-von-juek3y">7</a>) fragt Flugzeiten, Terminal und Status bei einem Flugdaten-Anbieter ab – ohne deine IP-Adresse. Übermittelt werden nur Flugnummer und Datum, also keine Daten, die sich dir zuordnen lassen. Anbieter sind aviationstack (apilayer Data Products GmbH, Wien, Österreich) und als Rückfall AeroDataBox (British Columbia, Kanada), erreicht über den API-Marktplatz RapidAPI. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (<a href="#flugdaten">3.10</a>).</p>
+<p>Mein Vermittlungsdienst (Abschnitt <a href="#server-von-juek3y">7</a>) fragt Flugzeiten, Terminal und Status bei einem Flugdaten-Anbieter ab – ohne deine IP-Adresse. Übermittelt werden nur Flugnummer und Datum, also keine Daten, die sich dir zuordnen lassen. Anbieter sind aviationstack (apilayer Data Products GmbH, Wien, Österreich) und als Rückfall AeroDataBox (British Columbia, Kanada), erreicht über den API-Marktplatz RapidAPI (USA). Auch RapidAPI erhält nur Flugnummer und Datum. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (<a href="#flugdaten">3.10</a>).</p>
 <h3 id="ortsfotos-wikimedia">6.4 Ortsfotos (Wikimedia)</h3>
 <p>Für Vorschau- und Hintergrundbilder fragt mein Vermittlungsdienst (Abschnitt <a href="#server-von-juek3y">7</a>) bei Wikimedia Commons, Wikipedia und Wikidata nach einem passenden, frei lizenzierten Bild und lädt es von dort. Betreiber ist die Wikimedia Foundation, Inc., 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA. Wikimedia erhält nur den Namen bzw. die Kennung des Ortes und den Dateinamen, nicht deine IP-Adresse; das lässt keinen Rückschluss auf dich zu. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (<a href="#ortsfotos">3.11</a>). Datenschutzhinweise: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org</a></p>
 <h3 id="wechselkurse-frankfurter">6.5 Wechselkurse (Frankfurter)</h3>
@@ -368,7 +368,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <h3 id="google-maps-und-apple-maps">6.10 Google Maps und Apple Maps</h3>
 <p>Nur wenn du „Navigation starten“ antippst oder einen Ort in der Karten-App suchen lässt, öffnet sich Google Maps oder Apple Maps mit dem Ziel. Ab dann gilt die Datenschutzerklärung dieses Anbieters.</p>
 <h3 id="google-play">6.11 Google Play</h3>
-<p>TravelFlow wird über Google Play vertrieben. Für Download und Updates ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, eigenständig verantwortlich. Hast du in Android zugestimmt, Nutzungs- und Diagnosedaten mit Google zu teilen, stellt Google mir daraus zusammengefasste Statistiken und Absturzberichte ohne Bezug zu deiner Person bereit. Datenschutzerklärung: <a href="https://policies.google.com/privacy">policies.google.com</a></p>
+<p>TravelFlow wird über Google Play vertrieben. Beim Start fragt die App über Google Play, ob ein Update bereitsteht. Für Download, Updates und diese Abfrage ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, eigenständig verantwortlich. Hast du in Android zugestimmt, Nutzungs- und Diagnosedaten mit Google zu teilen, stellt Google mir daraus zusammengefasste Statistiken und Absturzberichte ohne Bezug zu deiner Person bereit. Datenschutzerklärung: <a href="https://policies.google.com/privacy">policies.google.com</a></p>
 <h3 id="e-mail-google-workspace">6.12 E-Mail (Google Workspace)</h3>
 <p>Schreibst du mir eine E-Mail, liegt sie in meinem Postfach bei Google Workspace. Anbieter ist Google Ireland Limited (Anschrift <a href="#google-play">6.11</a>) als Auftragsverarbeiter nach Art. 28 DSGVO. Dabei kann Google Daten an die Google LLC in den USA übermitteln (<a href="#uebermittlung-in-drittlaender">6.13</a>).</p>
 <h3 id="uebermittlung-in-drittlaender">6.13 Übermittlung in Drittländer</h3>
@@ -377,7 +377,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <dt>Netlify, Inc., Cloudflare, Inc. (auch als Auslieferungsnetz von OpenFreeMap) und Google LLC (USA)</dt><dd>unter dem EU-US Data Privacy Framework zertifiziert. Damit gilt der Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).</dd>
 <dt>OpenStreetMap Foundation (Vereinigtes Königreich)</dt><dd>Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).</dd>
 <dt>Wikimedia Foundation und US-Außenministerium (USA)</dt><dd>erhalten keine personenbezogenen Daten; die Abrufe laufen über meinen Vermittlungsdienst (<a href="#ortsfotos-wikimedia">6.4</a>, <a href="#reisehinweise-us-aussenministerium">6.7</a>).</dd>
-<dt>AeroDataBox (Kanada)</dt><dd>erhält keine personenbezogenen Daten (<a href="#flugdaten-aviationstack-aerodatabox">6.3</a>).</dd>
+<dt>AeroDataBox (Kanada) und RapidAPI (USA)</dt><dd>erhalten keine personenbezogenen Daten (<a href="#flugdaten-aviationstack-aerodatabox">6.3</a>).</dd>
 </dl>
 <p>In den USA können Behörden unter Umständen auf Daten zugreifen, ohne dass dir dagegen wirksame Rechtsbehelfe zustehen.</p>
       </section>
@@ -397,7 +397,7 @@ E-Mail: <a href="mailto:hello@juek3y.com">hello@juek3y.com</a>
 <li><strong>Flugdaten</strong> bleiben ohne Bezug zu dir nur im Arbeitsspeicher der Funktionsinstanz.</li>
 <li><strong>Ortsfotos, Bildnachweise und US-Reisehinweise</strong> werden ohne Bezug zu dir zwischengespeichert: Fotos bis zu 30 Tage, Fundstellen bis zu 6 Stunden, Reisehinweise bis zu 12 Stunden.</li>
 </ul>
-<p><strong>Was protokolliert wird:</strong> Die Dienste selbst schreiben weder IP-Adressen noch Suchbegriffe oder Flugnummern in Protokolle, nur Fehlermeldungen ohne Personenbezug.</p>
+<p><strong>Was protokolliert wird:</strong> Die Dienste selbst schreiben weder IP-Adressen noch Suchbegriffe oder Flugnummern in Protokolle, nur Fehlermeldungen ohne Personenbezug. Vor den Diensten schützt Cloudflare sie mit Regeln gegen Missbrauch. Blockiert oder bremst Cloudflare eine Anfrage, hält Cloudflare IP-Adresse und Anfrage (z. B. Suchbegriff oder Flugnummer) in einem Sicherheitsprotokoll fest, das ich in meinem Konto einsehen kann. Wie lange es bleibt, legt Cloudflare je nach Tarif fest; ich werte es nur aus, um Angriffe abzuwehren.</p>
 <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO für Ortssuche und Flugdaten (<a href="#ortssuche">3.9</a>, <a href="#flugdaten">3.10</a>), lit. f für Medien (<a href="#ortsfotos">3.11</a>, <a href="#reisehinweise">3.13</a>); für die Begrenzung über die IP-Adresse Art. 6 Abs. 1 lit. f DSGVO. Berechtigtes Interesse: die Dienste vor Missbrauch schützen.</p>
 <p><strong>Aufruf dieser Seite:</strong> Beim Aufruf dieser Seite verarbeitet Netlify technisch notwendige Zugriffsdaten (IP-Adresse, Zeitpunkt, abgerufene Seite, Browser-Typ), um die Seite auszuliefern und den Betrieb abzusichern. Diese Seite setzt keine Cookies und lädt keine fremden Inhalte.</p>
       </section>
@@ -451,7 +451,7 @@ Promenade 18<br>
 
       <section id="stand">
         <h2>Stand</h2>
-<p>Stand: 26.11.2026 · Version 1.7</p>
+<p>Stand: 28.11.2026 · Version 1.9</p>
 <p>Diese Erklärung gibt es auf Deutsch und Englisch. Maßgeblich ist die deutsche Fassung.</p>
       </section>
 
